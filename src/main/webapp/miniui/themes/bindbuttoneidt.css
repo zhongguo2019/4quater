@@ -1,0 +1,8 @@
+.mini-bindbuttonedit-icon
+{
+    display:block;
+    width:15px;
+    height:15px;
+    overflow:hidden;
+    background:url(default/images/buttonedit/icon1.gif) no-repeat 50% 50%;
+}
