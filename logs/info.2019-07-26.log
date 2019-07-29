@@ -233,3 +233,668 @@
 2019-07-26 09:56:57,927 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
 2019-07-26 09:56:58,099 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
 2019-07-26 09:56:58,209 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 10:51:16,854 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 14860 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-07-26 10:51:16,857 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-07-26 10:51:17,138 [main] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b81ce95: startup date [Fri Jul 26 10:51:17 CST 2019]; root of context hierarchy
+2019-07-26 10:51:17,192 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-07-26 10:51:18,730 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9080 (http)
+2019-07-26 10:51:18,740 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-26 10:51:18,741 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-07-26 10:51:18,999 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-07-26 10:51:19,002 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-26 10:51:19,002 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1865 ms
+2019-07-26 10:51:19,155 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-26 10:51:19,159 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-26 10:51:19,160 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-26 10:51:19,160 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-26 10:51:19,160 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-26 10:51:19,160 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'addressFilter' to urls: [/main/*]
+2019-07-26 10:51:19,382 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$d5c87254 - weeklyplan.
+2019-07-26 10:51:20,245 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b81ce95: startup date [Fri Jul 26 10:51:17 CST 2019]; root of context hierarchy
+2019-07-26 10:51:20,317 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/titleid]}" onto java.lang.String com.boot.web.BaseAction.main(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,319 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/save]}" onto java.lang.String com.boot.web.BaseAction.save(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 10:51:20,319 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/search]}" onto java.lang.String com.boot.web.BaseAction.search(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,319 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenance]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenance(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,319 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenancesave]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenancesave(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 10:51:20,320 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getsystem]}" onto java.lang.String com.boot.web.BaseAction.getsystem(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,320 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/firstpage]}" onto java.lang.String com.boot.web.BaseAction.login(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,320 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/doing]}" onto java.lang.String com.boot.web.BaseAction.doing(java.util.Map<java.lang.String, java.lang.Object>)
+2019-07-26 10:51:20,320 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getTitle]}" onto java.lang.String com.boot.web.BaseAction.getTitle(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,320 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getPingYinFild]}" onto java.lang.String com.boot.web.BaseAction.getPingYinFild(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,321 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/export]}" onto java.lang.String com.boot.web.BaseAction.export(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,321 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/nosearch]}" onto java.lang.String com.boot.web.BaseAction.nosearch(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,321 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/new]}" onto java.lang.String com.boot.web.BaseAction.mainnew(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,322 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginpage]}" onto org.springframework.web.servlet.ModelAndView com.boot.web.sysuser.controller.SysUserController.loginpage(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,322 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginCheck]}" onto java.lang.String com.boot.web.sysuser.controller.SysUserController.loginCheck(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException
+2019-07-26 10:51:20,326 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-26 10:51:20,326 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-26 10:51:20,354 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 10:51:20,354 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 10:51:20,395 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 10:51:20,725 [main] INFO  o.s.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-07-26 10:51:20,925 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-26 10:51:20,940 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-07-26 10:51:20,954 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-07-26 10:51:20,964 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-07-26 10:51:20,993 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9080 (http)
+2019-07-26 10:51:20,997 [main] INFO  com.boot.Application - Started Application in 4.541 seconds (JVM running for 4.861)
+2019-07-26 10:51:31,603 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-26 10:51:31,605 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-26 10:51:31,626 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2019-07-26 10:51:32,994 [http-nio-9080-exec-2] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 10:51:33,009 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 10:51:33,009 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 10:51:33,027 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 10:51:33,221 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 10:51:33,315 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 11:54:39,244 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-07-26 11:54:39,245 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-07-26 11:58:09,855 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 16660 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-07-26 11:58:09,857 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-07-26 11:58:10,169 [main] INFO  org.springframework.web.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@28261e8e: startup date [Fri Jul 26 11:58:10 CST 2019]; root of context hierarchy
+2019-07-26 11:58:10,221 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-07-26 11:58:11,640 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$23743cec - weeklyplan.
+2019-07-26 11:58:12,899 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@28261e8e: startup date [Fri Jul 26 11:58:10 CST 2019]; root of context hierarchy
+2019-07-26 11:58:12,981 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/titleid]}" onto java.lang.String com.boot.web.BaseAction.main(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,982 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/save]}" onto java.lang.String com.boot.web.BaseAction.save(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 11:58:12,982 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/search]}" onto java.lang.String com.boot.web.BaseAction.search(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,982 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/firstpage]}" onto java.lang.String com.boot.web.BaseAction.login(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,983 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/nosearch]}" onto java.lang.String com.boot.web.BaseAction.nosearch(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,983 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/new]}" onto java.lang.String com.boot.web.BaseAction.mainnew(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,983 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/doing]}" onto java.lang.String com.boot.web.BaseAction.doing(java.util.Map<java.lang.String, java.lang.Object>)
+2019-07-26 11:58:12,984 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getTitle]}" onto java.lang.String com.boot.web.BaseAction.getTitle(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,984 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getsystem]}" onto java.lang.String com.boot.web.BaseAction.getsystem(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,984 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/export]}" onto java.lang.String com.boot.web.BaseAction.export(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,984 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getPingYinFild]}" onto java.lang.String com.boot.web.BaseAction.getPingYinFild(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,984 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenancesave]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenancesave(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 11:58:12,985 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenance]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenance(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,986 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginCheck]}" onto java.lang.String com.boot.web.sysuser.controller.SysUserController.loginCheck(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException
+2019-07-26 11:58:12,986 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginpage]}" onto org.springframework.web.servlet.ModelAndView com.boot.web.sysuser.controller.SysUserController.loginpage(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,989 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-26 11:58:12,990 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-26 11:58:13,027 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 11:58:13,027 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 11:58:13,075 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 11:58:13,500 [main] INFO  o.s.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-07-26 11:58:13,809 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 4.382 seconds (JVM running for 5.149)
+2019-07-26 11:58:13,903 [Thread-4] INFO  org.springframework.web.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@28261e8e: startup date [Fri Jul 26 11:58:10 CST 2019]; root of context hierarchy
+2019-07-26 12:52:12,222 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 20720 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-07-26 12:52:12,225 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-07-26 12:52:12,634 [main] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b81ce95: startup date [Fri Jul 26 12:52:12 CST 2019]; root of context hierarchy
+2019-07-26 12:52:12,677 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-07-26 12:52:14,661 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9080 (http)
+2019-07-26 12:52:14,680 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-26 12:52:14,682 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-07-26 12:52:14,998 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-07-26 12:52:15,004 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-26 12:52:15,004 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2370 ms
+2019-07-26 12:52:15,156 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-26 12:52:15,162 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-26 12:52:15,163 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-26 12:52:15,163 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-26 12:52:15,163 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-26 12:52:15,163 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'addressFilter' to urls: [/main/*]
+2019-07-26 12:52:15,439 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$112c5fe5 - weeklyplan.
+2019-07-26 12:52:16,421 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b81ce95: startup date [Fri Jul 26 12:52:12 CST 2019]; root of context hierarchy
+2019-07-26 12:52:16,530 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/titleid]}" onto java.lang.String com.boot.web.BaseAction.main(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,531 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/save]}" onto java.lang.String com.boot.web.BaseAction.save(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 12:52:16,532 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/search]}" onto java.lang.String com.boot.web.BaseAction.search(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,532 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/nosearch]}" onto java.lang.String com.boot.web.BaseAction.nosearch(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,532 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getsystem]}" onto java.lang.String com.boot.web.BaseAction.getsystem(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,533 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/doing]}" onto java.lang.String com.boot.web.BaseAction.doing(java.util.Map<java.lang.String, java.lang.Object>)
+2019-07-26 12:52:16,533 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getPingYinFild]}" onto java.lang.String com.boot.web.BaseAction.getPingYinFild(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,533 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getTitle]}" onto java.lang.String com.boot.web.BaseAction.getTitle(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,534 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/export]}" onto java.lang.String com.boot.web.BaseAction.export(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,534 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/firstpage]}" onto java.lang.String com.boot.web.BaseAction.login(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,535 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/new]}" onto java.lang.String com.boot.web.BaseAction.mainnew(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,535 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenance]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenance(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,535 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenancesave]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenancesave(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 12:52:16,536 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginpage]}" onto org.springframework.web.servlet.ModelAndView com.boot.web.sysuser.controller.SysUserController.loginpage(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,536 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginCheck]}" onto java.lang.String com.boot.web.sysuser.controller.SysUserController.loginCheck(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException
+2019-07-26 12:52:16,541 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-26 12:52:16,541 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-26 12:52:16,578 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 12:52:16,578 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 12:52:16,633 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 12:52:17,048 [main] INFO  o.s.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-07-26 12:52:17,294 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-26 12:52:17,317 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-07-26 12:52:17,342 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-07-26 12:52:17,356 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-07-26 12:52:17,392 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9080 (http)
+2019-07-26 12:52:17,399 [main] INFO  com.boot.Application - Started Application in 5.72 seconds (JVM running for 6.205)
+2019-07-26 12:52:33,605 [http-nio-9080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-26 12:52:33,605 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-26 12:52:33,635 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2019-07-26 12:52:35,368 [http-nio-9080-exec-1] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 12:52:35,381 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 12:52:35,382 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 12:52:35,397 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 12:52:35,563 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 12:52:35,639 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 12:52:40,598 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 12:56:16,545 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 12:56:16,809 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 12:56:17,056 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:35:55,864 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 3200 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-07-26 14:35:55,869 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-07-26 14:35:56,372 [main] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b81ce95: startup date [Fri Jul 26 14:35:56 CST 2019]; root of context hierarchy
+2019-07-26 14:35:56,419 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-07-26 14:35:58,437 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9080 (http)
+2019-07-26 14:35:58,452 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-26 14:35:58,453 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-07-26 14:35:58,752 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-07-26 14:35:58,757 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-26 14:35:58,757 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2386 ms
+2019-07-26 14:35:58,945 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-26 14:35:58,951 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-26 14:35:58,951 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-26 14:35:58,951 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-26 14:35:58,951 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-26 14:35:58,951 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'addressFilter' to urls: [/main/*, /informanage/*]
+2019-07-26 14:35:59,212 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$47b552f1 - weeklyplan.
+2019-07-26 14:36:00,488 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b81ce95: startup date [Fri Jul 26 14:35:56 CST 2019]; root of context hierarchy
+2019-07-26 14:36:00,606 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/titleid]}" onto java.lang.String com.boot.web.BaseAction.main(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,607 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/save]}" onto java.lang.String com.boot.web.BaseAction.save(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 14:36:00,608 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/search]}" onto java.lang.String com.boot.web.BaseAction.search(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,608 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/export]}" onto java.lang.String com.boot.web.BaseAction.export(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,609 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getsystem]}" onto java.lang.String com.boot.web.BaseAction.getsystem(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,610 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/firstpage]}" onto java.lang.String com.boot.web.BaseAction.login(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,610 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getTitle]}" onto java.lang.String com.boot.web.BaseAction.getTitle(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,611 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getPingYinFild]}" onto java.lang.String com.boot.web.BaseAction.getPingYinFild(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,612 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/nosearch]}" onto java.lang.String com.boot.web.BaseAction.nosearch(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,613 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/doing]}" onto java.lang.String com.boot.web.BaseAction.doing(java.util.Map<java.lang.String, java.lang.Object>)
+2019-07-26 14:36:00,614 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/new]}" onto java.lang.String com.boot.web.BaseAction.mainnew(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,615 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenancesave]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenancesave(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 14:36:00,615 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenance]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenance(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,616 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginCheck]}" onto java.lang.String com.boot.web.sysuser.controller.SysUserController.loginCheck(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException
+2019-07-26 14:36:00,617 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginpage]}" onto org.springframework.web.servlet.ModelAndView com.boot.web.sysuser.controller.SysUserController.loginpage(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,623 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-26 14:36:00,624 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-26 14:36:00,669 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 14:36:00,669 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 14:36:00,721 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 14:36:01,245 [main] INFO  o.s.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-07-26 14:36:01,513 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-26 14:36:01,538 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-07-26 14:36:01,558 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-07-26 14:36:01,570 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-07-26 14:36:01,606 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9080 (http)
+2019-07-26 14:36:01,611 [main] INFO  com.boot.Application - Started Application in 6.329 seconds (JVM running for 6.879)
+2019-07-26 14:37:17,190 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-26 14:37:17,191 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-26 14:37:17,220 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2019-07-26 14:37:22,095 [http-nio-9080-exec-2] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 14:37:22,128 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:37:22,130 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 14:37:22,167 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:37:22,459 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:37:22,669 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:37:26,827 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:44:06,101 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:44:06,371 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:44:06,571 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:44:10,379 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:44:31,163 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:44:31,415 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:44:31,618 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:44:33,296 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:46:24,323 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:46:24,584 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:46:24,790 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:46:28,029 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:47:19,476 [http-nio-9080-exec-2] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 14:47:19,491 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:47:19,492 [http-nio-9080-exec-10] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 14:47:19,698 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:47:19,794 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:47:21,829 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:47:44,231 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:47:44,375 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:47:51,500 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:49:55,209 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-07-26 14:49:55,209 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-07-26 14:50:17,892 [http-nio-9080-exec-8] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 14:50:17,916 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:50:17,917 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 14:50:17,980 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:50:18,234 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:50:18,431 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:50:27,165 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:51:05,597 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-07-26 14:51:05,597 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-07-26 14:51:07,248 [http-nio-9080-exec-10] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 14:51:07,274 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:51:07,274 [http-nio-9080-exec-1] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 14:51:07,314 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:51:07,563 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:51:07,767 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:51:11,029 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:52:06,296 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:52:06,561 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:52:06,793 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:52:12,927 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:56:13,305 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:56:13,581 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:56:13,779 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:56:17,742 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:58:59,494 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:58:59,764 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:58:59,940 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:59:00,975 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 14:59:01,216 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:00:21,246 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:00:21,480 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:00:21,646 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:00:26,059 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:00:26,247 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:20,321 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:20,561 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:20,711 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:22,644 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:24,219 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:37,597 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-07-26 15:01:37,597 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-07-26 15:01:39,242 [http-nio-9080-exec-6] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 15:01:39,263 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:39,263 [http-nio-9080-exec-7] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 15:01:39,305 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:39,553 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:39,750 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:41,283 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:01:42,904 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:02:05,244 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-07-26 15:02:05,245 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-07-26 15:02:06,551 [http-nio-9080-exec-3] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 15:02:06,563 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:02:06,564 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 15:02:06,591 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:02:06,825 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:02:06,985 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:02:07,846 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:04:49,950 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:04:50,205 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:04:50,391 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:04:51,735 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:04:51,930 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:04:51,930 [http-nio-9080-exec-7] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:04:51,954 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:05:50,568 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:05:50,804 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:05:50,947 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:05:52,647 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:05:52,834 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:05:52,834 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:05:52,866 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:22:53,512 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:22:53,839 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:22:54,022 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:22:55,247 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:22:55,443 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:22:55,444 [http-nio-9080-exec-1] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:22:55,468 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:22:55,506 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:22:55,507 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:23:53,650 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:23:53,930 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:23:54,086 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:23:54,867 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:23:55,049 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:23:55,049 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:23:55,072 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:23:55,115 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:23:55,116 [http-nio-9080-exec-7] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:29:02,458 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:29:02,724 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:29:02,891 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:29:04,043 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:29:04,212 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:29:04,213 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:29:04,233 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:29:04,276 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:29:04,277 [http-nio-9080-exec-7] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:31:51,518 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:31:51,787 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:31:51,960 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:31:53,371 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:31:53,543 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:31:53,544 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:31:53,565 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:31:53,614 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:31:53,614 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:32:16,316 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-07-26 15:32:16,316 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-07-26 15:32:19,436 [http-nio-9080-exec-7] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 15:32:19,447 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:19,447 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 15:32:19,513 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:19,775 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:19,945 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:20,962 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:21,166 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:21,167 [http-nio-9080-exec-10] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:32:21,196 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:21,242 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:21,242 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:32:40,502 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:40,736 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:40,893 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:42,224 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:42,396 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:42,397 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:32:42,418 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:42,464 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:32:42,464 [http-nio-9080-exec-8] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:33:29,634 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:33:29,909 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:33:30,091 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:33:31,590 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:33:31,765 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:33:31,765 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:33:31,800 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:33:31,848 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:33:31,849 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:34:30,236 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:34:30,504 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:34:30,701 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:34:32,164 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:34:32,342 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:34:32,342 [http-nio-9080-exec-8] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:34:32,366 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:34:32,408 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:34:32,409 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:35:43,388 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:35:43,660 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:35:43,874 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:35:44,356 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:35:44,535 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:35:44,536 [http-nio-9080-exec-8] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:35:44,559 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:35:44,612 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:35:44,612 [http-nio-9080-exec-10] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:36:21,559 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:36:21,843 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:36:22,012 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:36:22,524 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:36:22,704 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:36:22,704 [http-nio-9080-exec-7] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:36:22,727 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:36:22,765 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:36:22,765 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:37:28,913 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:29,179 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:29,371 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:31,092 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:31,304 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:31,305 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:37:31,326 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:31,365 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:31,366 [http-nio-9080-exec-9] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:37:52,632 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-07-26 15:37:52,632 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-07-26 15:37:54,088 [http-nio-9080-exec-8] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 15:37:54,099 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:54,099 [http-nio-9080-exec-9] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 15:37:54,119 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:54,353 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:54,546 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:55,568 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:55,760 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:55,760 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:37:55,788 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:55,830 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:37:55,830 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:38:37,331 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:38:37,618 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:38:37,852 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:38:38,366 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:38:38,554 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:38:38,554 [http-nio-9080-exec-9] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:38:38,583 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:38:38,631 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:38:38,632 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:52:49,689 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:52:49,951 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:52:50,102 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:52:51,659 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:52:51,834 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:52:51,835 [http-nio-9080-exec-1] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:52:51,872 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:52:51,914 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:52:51,915 [http-nio-9080-exec-7] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:54:37,038 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:54:37,308 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:54:37,501 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:54:38,822 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:54:38,999 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:54:38,999 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:54:39,035 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:54:39,085 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:54:39,085 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:55:57,460 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:55:57,681 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:55:57,851 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:56:00,344 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:56:00,562 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:56:00,563 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:56:00,587 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:56:00,598 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:56:00,599 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 15:56:00,628 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 15:56:00,628 [http-nio-9080-exec-10] INFO  com.boot.web.BaseAction - 本月第4周,2019-07-22至2019-07-28
+2019-07-26 16:13:07,368 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 15880 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-07-26 16:13:07,371 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-07-26 16:13:07,645 [main] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b81ce95: startup date [Fri Jul 26 16:13:07 CST 2019]; root of context hierarchy
+2019-07-26 16:13:07,709 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-07-26 16:13:09,542 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9080 (http)
+2019-07-26 16:13:09,554 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-26 16:13:09,555 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-07-26 16:13:09,833 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-07-26 16:13:09,838 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-26 16:13:09,838 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2193 ms
+2019-07-26 16:13:10,013 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-26 16:13:10,019 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-26 16:13:10,019 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-26 16:13:10,020 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-26 16:13:10,020 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-26 16:13:10,020 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'addressFilter' to urls: [/main/*, /informanage/*]
+2019-07-26 16:13:10,268 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$47a47d51 - weeklyplan.
+2019-07-26 16:13:11,309 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b81ce95: startup date [Fri Jul 26 16:13:07 CST 2019]; root of context hierarchy
+2019-07-26 16:13:11,387 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/titleid]}" onto java.lang.String com.boot.web.BaseAction.main(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,388 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/save]}" onto java.lang.String com.boot.web.BaseAction.save(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 16:13:11,388 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/search]}" onto java.lang.String com.boot.web.BaseAction.search(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,389 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenancesave]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenancesave(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException,java.sql.SQLException
+2019-07-26 16:13:11,389 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/systemmaintenance]}" onto java.lang.String com.boot.web.BaseAction.systemmaintenance(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,389 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/export]}" onto java.lang.String com.boot.web.BaseAction.export(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,389 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getsystem]}" onto java.lang.String com.boot.web.BaseAction.getsystem(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,390 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/nosearch]}" onto java.lang.String com.boot.web.BaseAction.nosearch(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,390 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getTitle]}" onto java.lang.String com.boot.web.BaseAction.getTitle(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,390 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/getPingYinFild]}" onto java.lang.String com.boot.web.BaseAction.getPingYinFild(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,391 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/doing]}" onto java.lang.String com.boot.web.BaseAction.doing(java.util.Map<java.lang.String, java.lang.Object>)
+2019-07-26 16:13:11,391 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/firstpage]}" onto java.lang.String com.boot.web.BaseAction.login(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,391 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/main/new]}" onto java.lang.String com.boot.web.BaseAction.mainnew(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,393 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginCheck]}" onto java.lang.String com.boot.web.sysuser.controller.SysUserController.loginCheck(javax.servlet.http.HttpServletRequest) throws java.io.UnsupportedEncodingException
+2019-07-26 16:13:11,393 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/sysuser/loginpage]}" onto org.springframework.web.servlet.ModelAndView com.boot.web.sysuser.controller.SysUserController.loginpage(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,399 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-26 16:13:11,399 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-26 16:13:11,435 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 16:13:11,435 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 16:13:11,473 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-26 16:13:11,897 [main] INFO  o.s.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-07-26 16:13:12,155 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-26 16:13:12,176 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-07-26 16:13:12,194 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-07-26 16:13:12,208 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-07-26 16:13:12,265 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9080 (http)
+2019-07-26 16:13:12,273 [main] INFO  com.boot.Application - Started Application in 5.321 seconds (JVM running for 5.661)
+2019-07-26 16:13:45,874 [http-nio-9080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-26 16:13:45,874 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-26 16:13:45,899 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2019-07-26 16:13:45,923 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-07-26 16:13:45,923 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-07-26 16:13:47,589 [http-nio-9080-exec-5] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-07-26 16:13:47,602 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:13:47,603 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-07-26 16:13:47,635 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:13:47,864 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:13:47,995 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:13:49,197 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:13:49,362 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:13:49,363 [http-nio-9080-exec-7] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:13:49,396 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:13:49,398 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:13:49,399 [http-nio-9080-exec-10] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:13:49,463 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:13:49,463 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:16:36,956 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:16:37,194 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:16:37,341 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:16:38,326 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:16:38,497 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:16:38,498 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:16:38,524 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:16:38,536 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:16:38,537 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:16:38,564 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:16:38,565 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:16:51,727 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:16:51,728 [http-nio-9080-exec-1] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:19:03,409 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:03,637 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:03,789 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:12,955 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:13,137 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:13,138 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:19:13,166 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:13,178 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:13,179 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:19:13,205 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:13,206 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:19:35,810 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:36,076 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:36,235 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:38,146 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:38,309 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:38,310 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:19:38,330 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:38,346 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:38,347 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:19:38,375 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:19:38,376 [http-nio-9080-exec-10] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:20:13,133 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:13,342 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:13,497 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:15,303 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:15,469 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:15,470 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:20:15,499 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:15,510 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:15,511 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:20:15,538 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:15,539 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:20:22,531 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:22,557 [http-nio-9080-exec-6] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2019-07-26 16:20:22,610 [http-nio-9080-exec-6] INFO  org.springframework.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2019-07-26 16:20:23,921 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:24,354 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:24,633 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:24,947 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:25,544 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:20:26,511 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:01,056 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:01,280 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:01,428 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:02,865 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:03,029 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:03,030 [http-nio-9080-exec-7] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:21:03,051 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:03,066 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:03,066 [http-nio-9080-exec-10] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:21:03,096 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:03,096 [http-nio-9080-exec-8] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:21:41,370 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:41,582 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:41,766 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:44,866 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:45,030 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:45,031 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:21:45,059 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:45,074 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:45,074 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:21:45,102 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:45,102 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:21:46,053 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:46,053 [http-nio-9080-exec-7] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:21:46,878 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:46,878 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:21:47,063 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:21:47,064 [http-nio-9080-exec-10] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:28:07,822 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:08,077 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:08,253 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:09,767 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:09,965 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:09,966 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:28:43,558 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:43,811 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:43,973 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:45,414 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:45,634 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:28:45,635 [http-nio-9080-exec-9] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:29:48,993 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:29:49,234 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:29:49,415 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:29:50,407 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:29:50,619 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:29:50,619 [http-nio-9080-exec-10] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:29:58,241 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:31:56,378 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:31:56,600 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:31:56,767 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:31:57,746 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:31:57,981 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:31:57,981 [http-nio-9080-exec-8] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:35:09,867 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:35:10,100 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:35:10,266 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:35:11,664 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:35:11,863 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:35:11,863 [http-nio-9080-exec-1] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:35:12,956 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:40:19,910 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:40:20,132 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:40:20,279 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:40:21,473 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:40:21,679 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:40:21,679 [http-nio-9080-exec-1] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:40:22,955 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:28,455 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:28,719 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:28,891 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:35,361 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:35,737 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:35,990 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:37,798 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:38,098 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:38,099 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:41:40,420 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:41:41,685 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:45:40,395 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:45:40,660 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:45:40,872 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:45:41,936 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:45:42,149 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:45:42,150 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 2019年第4周[2019-07-22至2019-07-28]
+2019-07-26 16:45:43,343 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:45:54,757 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:45:55,815 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:45:56,213 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:46:00,354 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:46:00,362 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:46:00,371 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:46:00,378 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:46:02,418 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:46:02,424 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:46:02,429 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:46:02,436 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-07-26 16:46:12,773 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------

@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 import com.boot.web.sysuser.model.SysUser;
 import com.krm.common.constant.Constant;
 
-@WebFilter(filterName = "addressFilter", urlPatterns = "/main/*")
+@WebFilter(filterName = "addressFilter", urlPatterns = { "/main/*","/informanage/*"})
 public class AddressFilter implements Filter {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Override

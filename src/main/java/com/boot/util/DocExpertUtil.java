@@ -75,7 +75,7 @@ public class DocExpertUtil {
         }
         FileSystemView fsv = FileSystemView.getFileSystemView();
         File com=fsv.getHomeDirectory();    //这便是读取桌面路径的方法了
-        String filename=list.size()!=0?(""+list.get(0).get("work_title").toString()+"周报["+list.get(0).get("begindate1").toString()+"-"+list.get(0).get("enddate1").toString()+"]"):("许春林"+CurrentWeek.getYear()+"年"+CurrentWeek.getMonth()+"月第"+CurrentWeek.getWeek()+"周周报["+CurrentWeek.getCurrenproDay("")+"-"+CurrentWeek.getCurrenaftDay("")+"]");
+        String filename=list.size()!=0?(""+list.get(0).get("work_title").toString()+"周报["+list.get(0).get("begindate1").toString()+"-"+list.get(0).get("enddate1").toString()+"]"):("许春林"+CurrentWeek.getYear()+"年"+CurrentWeek.getMonth()+"月第"+CurrentWeek.getWeekOfMonth()+"周周报["+CurrentWeek.getCurrenproDay("")+"-"+CurrentWeek.getCurrenaftDay("")+"]");
         FileOutputStream fileOutputStream=new FileOutputStream(new File( com.getPath()+ File.separator+File.separator+filename+".doc"));
         ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
         document.write(byteArrayOutputStream);

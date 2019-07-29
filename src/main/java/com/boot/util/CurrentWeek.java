@@ -62,7 +62,7 @@ public class CurrentWeek {
         }
         return result;
     }
-    public  static  String getWeek(){
+    public  static  String getWeekOfMonth(){
         Date firstWeek = getFirstWeek();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(firstWeek);
@@ -84,6 +84,48 @@ public class CurrentWeek {
 
     public static void main(String[] args) {
         Calendar calendar = Calendar.getInstance();
-        System.out.println(CurrentWeek.getYear());
+        System.out.println(CurrentWeek.getWeekOfMonth());
+        System.out.println(CurrentWeek.getWeekOfMonth());
+        System.out.println(CurrentWeek.getWeekStartEndDay());
+        
+    }
+    
+	public static int  getWeekOfYear() {
+        long startTime1 = 1530613938532l;
+        Calendar calendar = Calendar.getInstance();
+        calendar.setFirstDayOfWeek(Calendar.MONDAY);//设置星期一为一周开始的第一天
+        calendar.setMinimalDaysInFirstWeek(4);//可以不用设置
+        calendar.setTimeInMillis(System.currentTimeMillis());//获得当前的时间戳
+        int weekYear = calendar.get(Calendar.YEAR);//获得当前的年
+        int weekOfYear = calendar.get(Calendar.WEEK_OF_YEAR);//获得当前日期属于今年的第几周
+        
+       return weekYear;
+	}  
+	
+	
+	public static String  getWeekStartEndDay() {
+        long startTime1 = 1530613938532l;
+        Calendar calendar = Calendar.getInstance();
+        calendar.setFirstDayOfWeek(Calendar.MONDAY);//设置星期一为一周开始的第一天
+        calendar.setMinimalDaysInFirstWeek(4);//可以不用设置
+        calendar.setTimeInMillis(System.currentTimeMillis());//获得当前的时间戳
+        int weekYear = calendar.get(Calendar.YEAR);//获得当前的年
+        int weekOfYear = calendar.get(Calendar.WEEK_OF_YEAR);//获得当前日期属于今年的第几周
+        calendar.setWeekDate(weekYear, weekOfYear, 2);//获得指定年的第几周的开始日期
+        long starttime = calendar.getTime().getTime();//创建日期的时间该周的第一天，
+        calendar.setWeekDate(weekYear, weekOfYear, 1);//获得指定年的第几周的结束日期
+        long endtime = calendar.getTime().getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String dateStart = simpleDateFormat.format(starttime);//将时间戳格式化为指定格式
+        String dateEnd = simpleDateFormat.format(endtime);
+        String rtn =dateStart+"至"+dateEnd;
+        return (rtn);
+	} 
+    public static String getDescWeekName() {
+    	String rtn = "";
+    	rtn = getWeekOfMonth();
+    	rtn =getYear()+"年第"+ getWeekOfMonth()+"周["+getWeekStartEndDay()+"]";
+    	return rtn;
+    	
     }
 }

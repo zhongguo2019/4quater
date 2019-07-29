@@ -86,6 +86,15 @@
         url: "/main/titleid",
         async: false
     }).responseText;
+    
+    
+    
+    function addRow() {
+        var newRow = { title_id: title_id,emergency:"1",importance:"1",doning:"1"};
+        grid.addRow(newRow, 0);
+        grid.beginEditCell(newRow, "");
+    }
+    
     function onrelevanceprinciple1(e) {
         var relevanceprinciple = mini.decode($.ajax({
             url: "/main/getPingYinFild?type=emergency",
@@ -143,11 +152,7 @@
         }
         return "";
     }
-    function addRow() {
-        var newRow = { title_id: title_id,emergency:"1",importance:"1",doning:"1"};
-        grid.addRow(newRow, 0);
-        grid.beginEditCell(newRow, "");
-    }
+
     function removeRow() {
         var rows = grid.getSelecteds();
         if (rows.length > 0) {

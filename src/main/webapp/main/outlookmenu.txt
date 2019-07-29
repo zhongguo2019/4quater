@@ -1,7 +1,7 @@
 ﻿[
-    { id: "informanage", text: "汇报录入"},
-  	{ id: "dailyreportinput",   pid: "informanage", text: "日报", iconCls: "dayedit", url: "/informanage/dailyreportinput.html", iconPosition: "top" },
-	{ id: "weeklyreportinput",   pid: "informanage", text: "周报", iconCls: "dayedit", url: "pages/html/datatable.html", iconPosition: "top" },
+    { id: "informanage", text: "报告编写"},
+  	{ id: "dailyreportinput",   pid: "informanage", text: "日报编写", iconCls: "dayedit", url: "/informanage/dailyreportinput.html", iconPosition: "top" },
+	{ id: "weeklyreportinput",   pid: "informanage", text: "周报编写", iconCls: "dayedit", url: "pages/html/datatable.html", iconPosition: "top" },
     { id: "projectmanage", pid: "informanage", text: "项目维护", iconCls: "rearch", url: "pages/html/systemMaintenance.html", iconPosition: "top" },
  
 	{ id: "planmanage", text: "计划制定"},

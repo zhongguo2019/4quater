@@ -29,11 +29,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/mybatis/4quater20190724/4quater/WEB-INF/lib/bonc-sso-client-2.2.1.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/mybatis/4quater20190724/4quater/WEB-INF/lib/cas-client-core-3.2.1.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/mybatis/4quater20190724/4quater/WEB-INF/lib/fastjson-1.2.4.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/mybatis/4quater20190724/4quater/WEB-INF/lib/guava-18.0.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/mybatis/4quater20190724/4quater/WEB-INF/lib/mapper-3.4.4.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/mybatis/4quater20190724/4quater/WEB-INF/lib/persistence-api-1.0.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/bonc-sso-client-2.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/cas-client-core-3.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/fastjson-1.2.4.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/mapper-3.4.4.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/persistence-api-1.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

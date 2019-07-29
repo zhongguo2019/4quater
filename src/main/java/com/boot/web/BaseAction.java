@@ -60,12 +60,17 @@ public class BaseAction {
 	@ResponseBody
 	String main(HttpServletRequest request) {
 
-		String sql = "SELECT id FROM " + ConfigUtil.getValue("db.schema")
-				+ "t_happy_work_title WHERE begindate=? AND enddate=? ";
-		List<Map<String, Object>> list = jdbcTemplate.queryForList(sql,
-				new Object[] { CurrentWeek.getCurrenproDay("yyyy-MM-dd"), CurrentWeek.getCurrenaftDay("yyyy-MM-dd") });
-		String title_id = list.get(0).get("id").toString();
+		/*
+		 * String sql = "SELECT id FROM " + ConfigUtil.getValue("db.schema") +
+		 * "t_happy_work_title WHERE begindate=? AND enddate=? "; List<Map<String,
+		 * Object>> list = jdbcTemplate.queryForList(sql, new Object[] {
+		 * CurrentWeek.getCurrenproDay("yyyy-MM-dd"),
+		 * CurrentWeek.getCurrenaftDay("yyyy-MM-dd") }); String title_id =
+		 * list.get(0).get("id").toString();
+		 */
 
+String title_id = CurrentWeek.getDescWeekName();
+logger.info(title_id);
 		return title_id;
 	}
 
@@ -344,7 +349,7 @@ public class BaseAction {
 	String export(HttpServletRequest request) {
 		String titleid = request.getParameter("titleid") == "" ? this.main(request)
 				: request.getParameter("titleid").toString();
-		String fname = "" + CurrentWeek.getMonth() + "月第" + CurrentWeek.getWeek() + "周周报["
+		String fname = "" + CurrentWeek.getMonth() + "月第" + CurrentWeek.getWeekOfMonth()+ "周周报["
 				+ CurrentWeek.getCurrenproDay("") + "-" + CurrentWeek.getCurrenaftDay("");
 		try {
 			docExpertUtil.Export(titleid);

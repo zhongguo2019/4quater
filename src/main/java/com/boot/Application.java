@@ -57,7 +57,7 @@ public class Application implements InitializingBean {
 			Date enddate = (Date) CurrentWeek.getCurrenaftDate();
 			Calendar calendar = Calendar.getInstance();
 			String work_title = calendar.get(Calendar.YEAR) + "年" + CurrentWeek.getMonth() + "月第"
-					+ CurrentWeek.getWeek() + "周";
+					+ CurrentWeek.getWeekOfMonth() + "周";
 
 			logger.info("CurrentWeek.getCurrenproDate()" + CurrentWeek.getCurrenproDate().toString());
 
