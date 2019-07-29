@@ -1,0 +1,34 @@
+一、单点登录集成步骤
+将两个jar包考到4quater/web-info/lib下面
+bonc-sso-client-2.2.1.jar
+cas-client-core-3.2.1.jar
+二、在工程中引入这两个包
+三、修改web.xml
+
+
+
+数据库建表
+CREATE TABLE `4q_today_work` (
+  `ID`               varchar(32) NOT NULL COMMENT '主键',
+  `INST_ID`          varchar(32) NOT NULL COMMENT '机构ID',
+  `LOGIN_IP`         varchar(20) NOT NULL COMMENT '登录IP',
+  `LOGIN_DATE`       datetime NOT NULL COMMENT '登录日期',
+  `CREATE_BY`        varchar(32) NOT NULL COMMENT '创建人',
+  `CREATE_DATE`      datetime NOT NULL COMMENT '创建时间',
+  `UPDATE_BY`        varchar(32) NOT NULL COMMENT '最近修改人',
+  `UPDATE_DATE`      datetime DEFAULT NULL COMMENT '最近修改时间',
+  `REMARKS`          varchar(100) DEFAULT NULL COMMENT '描述',
+  `DEL_FLAG`         varchar(1) DEFAULT NULL COMMENT '逻辑删除标记(0.正常，1.删除)',
+  `STATUS`           varchar(1) DEFAULT NULL COMMENT '状态',
+  `PROJECT_GROUP_ID` varchar(32) DEFAULT NULL COMMENT '所在项目组名称',
+  `PROJECT_ID`       varchar(32) DEFAULT NULL COMMENT '项目名称',
+  `PRODUCT_ID`       varchar(32) DEFAULT NULL COMMENT '对应产品',
+  `WORK_CONTENTS`    varchar(32) DEFAULT NULL COMMENT '工作内容简写',
+  `WORK_DETAIL`      varchar(1) DEFAULT NULL COMMENT '工作内容详细描述',   
+  `WORK_DETAIL`    
+  `FINISH_PERCENT`  
+  `DELAY_REASON`     
+  `ACCORD_YESTERDAY`
+  `IMPO_LEVEL`      		
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='建表记录';
