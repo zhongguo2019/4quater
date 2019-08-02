@@ -1,6 +1,8 @@
 package com.boot;
 
+
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
@@ -11,25 +13,38 @@ import java.util.Map;
 import java.util.UUID;
 
 import javax.persistence.Entity;
+import javax.sql.DataSource;
 
+import org.beetl.core.resource.ClasspathResourceLoader;
+import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
+import org.beetl.ext.spring.BeetlSpringViewResolver;
+import org.beetl.sql.core.ClasspathLoader;
+import org.beetl.sql.core.Interceptor;
+import org.beetl.sql.core.UnderlinedNameConversion;
+import org.beetl.sql.core.db.MySqlStyle;
+import org.beetl.sql.ext.DebugInterceptor;
+import org.beetl.sql.ext.spring4.BeetlSqlDataSource;
+import org.beetl.sql.ext.spring4.BeetlSqlScannerConfigurer;
+import org.beetl.sql.ext.spring4.SqlManagerFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Controller;
 
 import com.boot.util.ConfigUtil;
 import com.boot.util.CurrentWeek;
 
-// @Configuration
-// @ComponentScan
-@ServletComponentScan 
-@Entity
-@SpringBootApplication(scanBasePackages={"com.boot.*"})
-@MapperScan("com.boot.web.*")
+@SpringBootApplication(scanBasePackages ={"com.boot", "com.krm"})
+@MapperScan({"com.boot.web.*","com.boot.util.*"})
+@tk.mybatis.spring.annotation.MapperScan(basePackages = "com.boot.web.*")
 public class Application implements InitializingBean {
 
 	Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -66,7 +81,5 @@ public class Application implements InitializingBean {
 		}
 
 	}
-
-
 
 }

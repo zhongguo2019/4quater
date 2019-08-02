@@ -2,6 +2,9 @@ package com.boot.serviceTest;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -9,22 +12,34 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.boot.baseTest.SpringTestCase;
-
-
+import com.boot.util.CommonEntity;
 import com.boot.web.sysuser.service.SysUserService;
+import com.boot.web.todaywork.model.DoufuTodayWork;
+import com.boot.web.todaywork.service.DoufuTodayWorkService;
 import com.boot.web.sysuser.model.SysUser;
 
 public class UserServiceTest extends SpringTestCase{
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired  
     private SysUserService sysUserService; 
+	
+	@Autowired  
+    private DoufuTodayWorkService doufuTodayWorkService; 
 	@Test  
     public void selectUserByIdTest(){  
-		/*
-		 * SysUser user = sysUserService.selectUserByName("admin"); logger.info("查找结果" +
-		 * user);
-		 */
-		 getWeek();
+		
+		  SysUser user = sysUserService.selectUserByName("admin"); 
+		  logger.info("查找结果" +  user);
+		 
+	     Map<String, Object> mapparams = new HashMap<String,Object>();
+	
+		try{
+			  List<DoufuTodayWork> lstRtn = (List<DoufuTodayWork>) doufuTodayWorkService.queryOne(new DoufuTodayWork());
+			  logger.info("查找结果=====" +  lstRtn.size());
+		}catch(Exception e){
+	      logger.info(e.getMessage());
+	     
+		}
     }  
 
 	public void getWeek() {

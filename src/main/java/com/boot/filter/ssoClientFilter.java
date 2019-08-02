@@ -13,7 +13,7 @@ import javax.servlet.annotation.WebInitParam;
 import org.springframework.core.annotation.Order;
 
 import com.bonc.sso.client.SSOFilter;
-import org.apache.log4j.Logger;
+
 /*
 @WebFilter(filterName = "ssoFilter", urlPatterns = "/*", initParams = {
 		@WebInitParam(name = "serverName", value = "192.168.2.11:9080"),
@@ -28,5 +28,5 @@ import org.apache.log4j.Logger;
 // 下面的代码为将系统交给单点登录时使用。
 //public class ssoClientFilter extends SSOFilter  {
 public class ssoClientFilter {
-	private final static Logger logger= Logger.getLogger(ssoClientFilter.class);
+	 
 }

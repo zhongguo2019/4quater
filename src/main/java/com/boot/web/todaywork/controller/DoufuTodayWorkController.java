@@ -22,18 +22,16 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.github.pagehelper.PageInfo;
 import com.google.common.collect.Lists;
-import com.krm.common.base.BaseController;
-import com.krm.common.base.CommonEntity;
-import com.krm.common.base.Result;
+import com.boot.util.BaseController;
+import com.boot.util.CommonEntity;
+import com.boot.util.Result;
 import com.krm.common.constant.Constant;
-import com.krm.common.utils.DateUtils;
-import com.krm.common.utils.StringConvert;
-import com.krm.common.utils.StringUtil;
-import com.krm.common.utils.excel.ExportExcel;
-import com.krm.common.utils.excel.ImportExcel;
+import com.boot.util.DateUtils;
+import com.boot.util.StringConvert;
+import com.boot.util.StringUtil;
 import com.boot.web.todaywork.model.DoufuTodayWork;
 import com.boot.web.todaywork.service.DoufuTodayWorkService;
-import com.krm.web.util.SysUserUtils;
+import com.boot.util.SysUserUtils;
 
 /**
  * 
@@ -208,7 +206,7 @@ public class DoufuTodayWorkController extends BaseController {
 		String fileName = "当天工作记录信息表Excel导入模板.xlsx";
 		List<DoufuTodayWork> list = Lists.newArrayList();
 		list.add(new DoufuTodayWork());
-		new ExportExcel("当天工作记录信息表", DoufuTodayWork.class, 2).setDataList(list).write(response, fileName).dispose();
+		//new ExportExcel("当天工作记录信息表", DoufuTodayWork.class, 2).setDataList(list).write(response, fileName).dispose();
     }
     
     /**
@@ -217,35 +215,26 @@ public class DoufuTodayWorkController extends BaseController {
      * @param response
      * @return
      */
-    @RequestMapping(value = "import", method=RequestMethod.POST)
-    @ResponseBody
-    public Result importFile(@RequestParam("file") MultipartFile fileList[], HttpServletResponse response) throws Exception {
-    	logger.info("开始导入当天工作记录信息表数据");
-    	checkPermission("import");
-    	Long start = System.currentTimeMillis();
-    	int successNum = 0;
-    	int failureNum = 0;
-    	for (MultipartFile file : fileList) {
-    		ImportExcel ei;
-    		StringBuilder failureMsg = new StringBuilder();
-   			ei = new ImportExcel(file, 1, 0);
-   			List<DoufuTodayWork> list = ei.getDataList(DoufuTodayWork.class);
-   			for (DoufuTodayWork entry : list) {
-   				entry.setId(doufuTodayWorkService.generateId());
-   				entry.setCreateBy(SysUserUtils.getCacheLoginUser().getId());
-   				entry.setCreateDate(new Date());
-   				entry.setDelFlag(Constant.DEL_FLAG_NORMAL);
-			}
-   			successNum = doufuTodayWorkService.insertBatch(list);
-    		if (failureNum > 0){
-    			failureMsg.insert(0, "，失败导入 " + failureNum + " 条当天工作记录信息表数据，导入信息如下：");
-    		}
-    		Long end = System.currentTimeMillis();
-    		DecimalFormat df = new DecimalFormat("######0.00");
-    		logger.info("导入用时"+df.format((double)(end-start)/(double)1000)+"秒");
-		}
-    	return new Result(1, "操作成功！，成功导入"+successNum+"条，失败导入"+failureNum+"条");
-    }
+	/*
+	 * @RequestMapping(value = "import", method=RequestMethod.POST)
+	 * 
+	 * @ResponseBody public Result importFile(@RequestParam("file") MultipartFile
+	 * fileList[], HttpServletResponse response) throws Exception {
+	 * logger.info("开始导入当天工作记录信息表数据"); checkPermission("import"); Long start =
+	 * System.currentTimeMillis(); int successNum = 0; int failureNum = 0; for
+	 * (MultipartFile file : fileList) { ImportExcel ei; StringBuilder failureMsg =
+	 * new StringBuilder(); ei = new ImportExcel(file, 1, 0); List<DoufuTodayWork>
+	 * list = ei.getDataList(DoufuTodayWork.class); for (DoufuTodayWork entry :
+	 * list) { entry.setId(doufuTodayWorkService.generateId());
+	 * entry.setCreateBy(SysUserUtils.getCacheLoginUser().getId());
+	 * entry.setCreateDate(new Date()); entry.setDelFlag(Constant.DEL_FLAG_NORMAL);
+	 * } successNum = doufuTodayWorkService.insertBatch(list); if (failureNum > 0){
+	 * failureMsg.insert(0, "，失败导入 " + failureNum + " 条当天工作记录信息表数据，导入信息如下："); } Long
+	 * end = System.currentTimeMillis(); DecimalFormat df = new
+	 * DecimalFormat("######0.00");
+	 * logger.info("导入用时"+df.format((double)(end-start)/(double)1000)+"秒"); } return
+	 * new Result(1, "操作成功！，成功导入"+successNum+"条，失败导入"+failureNum+"条"); }
+	 */
     
     /**
 	 * 当天工作记录信息表导出excel
@@ -266,7 +255,9 @@ public class DoufuTodayWorkController extends BaseController {
 		} catch (Exception e) {
 		}
 		List<DoufuTodayWork> list = doufuTodayWorkService.entityList(params);
-		new ExportExcel("当天工作记录信息表", DoufuTodayWork.class).setDataList(list)
-			.write(response, fileName).dispose();
+		/*
+		 * new ExportExcel("当天工作记录信息表", DoufuTodayWork.class).setDataList(list)
+		 * .write(response, fileName).dispose();
+		 */
 	}
 }

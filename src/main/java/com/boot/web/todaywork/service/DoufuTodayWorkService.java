@@ -5,13 +5,13 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-
 import com.boot.util.CommonEntity;
+import com.boot.util.ServiceMybatis;
+import com.boot.util.beetl.sql.MySQLManager;
 import com.boot.web.todaywork.model.DoufuTodayWork;
 import com.boot.web.todaywork.mapper.DoufuTodayWorkMapper;
 
@@ -24,12 +24,12 @@ import com.boot.web.todaywork.mapper.DoufuTodayWorkMapper;
  * 2019-07-29
  */
 @Service("doufuTodayWorkService")
-public class DoufuTodayWorkService {
+public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 
 	@Resource
 	private DoufuTodayWorkMapper doufuTodayWorkMapper;
 
-	Logger logger = LoggerFactory.getLogger(this.getClass());
+	
 	/**
 	 * 分页展示(可带条件查询)
 	 * 返回的是通用实体，不受实体属性限制，相当于map

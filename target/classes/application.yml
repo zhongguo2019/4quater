@@ -3,21 +3,66 @@ spring:
       url: jdbc:mysql://192.168.2.198:3306/weeklyplan?useSSL=false&useOldAliasMetadataBehavior=true&autoReconnect=true&useUnicode=true&characterEncoding=UTF8
       username: root
       password: Report@123
-      driverClassName : com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20      
+          
       thymeleaf:
       prefix: classpath:/main/
       suffix: .html
       encoding: UTF-8     
+      
 mybatis:
    mapperLocations: classpath:com/boot/mapper/mysql/**/*.xml
-   typeAliasesPackage: cn.boot.domain
+   typeAliasesPackage: cn.boot.domain.mysql
 # spring-boot默认打印输出info级别以上的，可在此处修改输出级别
    configuration:
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+    
 logging:
    level:
       root: info
+      org:
+      springframework: INFO      
 server:
    port: 9080
 db:
    schema: weeklyplan.
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+    - tk.mybatis.mapper.common.Mapper2
+  notEmpty: true
+  
+info:
+  head: head
+  body: body
+management:
+  endpoints:
+    web:
+      exposure:
+        #加载所有的端点，默认只加载了info、health
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    #可以关闭指定的端点
+    shutdown:
+      enabled: false

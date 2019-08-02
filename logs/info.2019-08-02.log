@@ -1,0 +1,184 @@
+2019-08-02 00:01:11,594 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 22612 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 00:01:11,595 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-02 00:01:14,643 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c2e4a7bd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 00:01:15,810 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-02 00:01:15,839 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-02 00:01:15,852 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-02 00:01:15,852 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-02 00:01:16,158 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-02 00:01:16,167 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-02 00:01:16,167 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4500 ms
+2019-08-02 00:01:16,911 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$fc75b343 - weeklyplan.
+2019-08-02 00:01:16,924 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 00:01:17,115 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 00:01:17,532 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-02 00:01:17,553 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-02 00:01:17,558 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-08-02 00:01:17,582 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-02 00:03:23,660 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 18448 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 00:03:23,662 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-02 00:03:27,402 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$79505026] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 00:03:27,983 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$b2e15bac - weeklyplan.
+2019-08-02 00:03:28,002 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 00:03:28,232 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 00:03:28,809 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-02 00:03:28,824 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-02 00:03:28,845 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-02 00:06:16,272 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 9228 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 00:06:16,273 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-02 00:06:19,731 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7a1aa0cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 00:06:20,715 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-02 00:06:20,738 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-02 00:06:20,753 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-02 00:06:20,754 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-02 00:06:21,078 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-02 00:06:21,087 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-02 00:06:21,087 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4739 ms
+2019-08-02 00:06:21,815 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$b3abac53 - weeklyplan.
+2019-08-02 00:06:21,833 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 00:06:22,065 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 00:06:22,515 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-02 00:06:22,532 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-02 00:06:22,539 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-08-02 00:06:22,564 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-02 09:15:18,348 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 21212 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 09:15:18,351 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-02 09:15:22,213 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a11e5a60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 09:15:23,228 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-02 09:15:23,253 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-02 09:15:23,267 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-02 09:15:23,267 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-02 09:15:23,573 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-02 09:15:23,581 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-02 09:15:23,582 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5154 ms
+2019-08-02 09:15:24,327 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$daaf65e6 - weeklyplan.
+2019-08-02 09:15:24,342 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 09:15:24,541 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 09:15:25,079 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-02 09:15:25,093 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-02 09:15:25,098 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-08-02 09:15:25,116 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-02 09:20:25,075 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 21372 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 09:20:25,076 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-02 09:20:28,526 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ee40f961] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 09:20:29,059 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$27d204e7 - weeklyplan.
+2019-08-02 09:20:29,073 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 09:20:29,291 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 09:20:29,803 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-02 09:20:29,821 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-02 09:20:29,838 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-02 09:21:04,958 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 17576 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 09:21:04,960 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-02 09:21:08,140 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ee40f961] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 09:21:08,640 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$27d204e7 - weeklyplan.
+2019-08-02 09:21:08,654 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 09:21:08,840 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 09:21:09,355 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-02 09:21:09,370 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-02 09:21:09,389 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-02 09:23:19,862 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 13016 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 09:23:19,863 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-02 09:23:23,203 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c9ae6e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 09:23:24,157 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-02 09:23:24,182 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-02 09:23:24,201 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-02 09:23:24,202 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-02 09:23:24,521 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-02 09:23:24,528 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-02 09:23:24,528 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4609 ms
+2019-08-02 09:23:25,207 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$462bf266 - weeklyplan.
+2019-08-02 09:23:25,218 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 09:23:25,422 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 09:23:26,181 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:23:26,580 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-02 09:23:26,616 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:23:26,617 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-02 09:23:26,628 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-02 09:23:26,632 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-08-02 09:23:26,649 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-02 09:26:33,900 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 22784 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 09:26:33,902 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-02 09:26:36,592 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-02 09:26:37,007 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b2e73faf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 09:26:37,982 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-02 09:26:38,006 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-02 09:26:38,024 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-02 09:26:38,024 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-02 09:26:38,321 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-02 09:26:38,328 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-02 09:26:38,329 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4362 ms
+2019-08-02 09:26:39,063 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$ec784b35 - weeklyplan.
+2019-08-02 09:26:39,078 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 09:26:39,289 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 09:26:40,221 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:26:40,452 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-02 09:26:40,635 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-02 09:26:40,636 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-02 09:26:40,637 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-02 09:26:40,931 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-02 09:26:41,009 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-02 09:26:41,062 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-02 09:26:41,066 [main] INFO  com.boot.Application - Started Application in 7.757 seconds (JVM running for 8.196)
+2019-08-02 09:27:30,660 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 14188 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 09:27:30,662 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-02 09:27:34,231 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-02 09:27:34,863 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$74803c34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 09:27:35,385 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$ae1147ba - weeklyplan.
+2019-08-02 09:27:35,395 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 09:27:35,591 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 09:27:37,571 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:27:37,978 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-02 09:27:38,308 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-02 09:27:38,309 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-02 09:27:38,310 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-02 09:27:39,427 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-02 09:27:39,564 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 9.492 seconds (JVM running for 10.435)
+2019-08-02 09:27:40,209 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sysuser.model.SysUser@10bae3c0
+2019-08-02 09:27:40,273 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - 根据条件查询单条【当天工作记录信息表】数据(通用方法)
+2019-08-02 09:27:40,280 [main] INFO  com.boot.serviceTest.UserServiceTest - nested exception is org.apache.ibatis.builder.BuilderException: Error invoking SqlProvider method (tk.mybatis.mapper.provider.base.BaseSelectProvider.dynamicSQL).  Cause: java.lang.InstantiationException: tk.mybatis.mapper.provider.base.BaseSelectProvider
+2019-08-02 09:27:40,290 [Thread-3] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-02 09:27:40,293 [Thread-3] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:27:40,297 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-02 09:27:40,313 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-02 09:29:09,247 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 14092 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-02 09:29:09,248 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-02 09:29:12,374 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-02 09:29:12,793 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d1e5d94c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 09:29:13,930 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-02 09:29:13,961 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-02 09:29:13,982 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-02 09:29:13,983 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-02 09:29:14,354 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-02 09:29:14,360 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-02 09:29:14,361 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5048 ms
+2019-08-02 09:29:15,129 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$b76e4d2 - weeklyplan.
+2019-08-02 09:29:15,142 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-02 09:29:15,364 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-02 09:29:16,274 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:29:16,664 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-02 09:29:16,817 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-02 09:29:16,818 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-02 09:29:16,819 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-02 09:29:17,142 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-02 09:29:17,228 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-02 09:29:17,280 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-02 09:29:17,284 [main] INFO  com.boot.Application - Started Application in 8.695 seconds (JVM running for 9.119)
+2019-08-02 09:29:32,823 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-02 09:29:32,824 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-02 09:29:32,843 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 19 ms
+2019-08-02 09:29:34,702 [http-nio-9080-exec-10] INFO  com.boot.web.sysuser.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-02 09:29:34,724 [http-nio-9080-exec-9] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面

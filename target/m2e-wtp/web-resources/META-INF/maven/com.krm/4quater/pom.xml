@@ -3,13 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.7.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
-
 	<groupId>com.krm</groupId>
 	<artifactId>4quater</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -20,6 +13,17 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.6.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+
+
+
 
 	<dependencies>
 		<!--spring boot的核心模块 -->
@@ -36,6 +40,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>2.1.6.RELEASE</version>
+		</dependency>
 
 
 		<!-- 20190615 赵祖龙添加 https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot -->
@@ -45,6 +55,13 @@
 			<version>2.0.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.18</version>
+		</dependency>
+
 		<!-- mysql依赖 -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -52,9 +69,89 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>5.1.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.1</version>
+		</dependency>
+
+		<!-- Shiro核心包 -->
+		<!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>1.4.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/tk.mybatis/mapper -->
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper</artifactId>
+			<version>4.1.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/tk.mybatis/mapper-spring-boot-starter -->
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper-spring-boot-starter</artifactId>
+			<version>2.1.5</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-websocket -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-websocket</artifactId>
+			<version>5.1.8.RELEASE</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.19</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.9.4</version>
+		</dependency>
 
 
-		<!--配置springboot支持jsp 添加tomcat支持 -->
+		<!-- https://mvnrepository.com/artifact/com.ibeetl/beetl-framework-starter -->
+		<dependency>
+			<groupId>com.ibeetl</groupId>
+			<artifactId>beetl-framework-starter</artifactId>
+			<version>1.2.10.RELEASE</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.ibeetl</groupId>
+			<artifactId>beetlsql</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ibeetl</groupId>
+			<artifactId>beetl</artifactId>
+			<version>2.9.10</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.8</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
@@ -69,7 +166,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
-		
+
 		<!--在jsp页面使用jstl标签来处理界面逻辑，那么需要引入jstl maven -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -97,13 +194,17 @@
 			<version>2.6</version>
 		</dependency>
 
-<dependency>
-   <groupId>org.springframework.boot</groupId>
-   <artifactId>spring-boot-starter-thymeleaf</artifactId>
-</dependency>
+
+		<!-- 查看应用初始化的所有bean -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+
+
 
 	</dependencies>
-
 	<build>
 		<defaultGoal>compile</defaultGoal>
 

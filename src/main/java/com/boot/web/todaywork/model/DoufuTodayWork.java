@@ -10,7 +10,6 @@ import javax.persistence.Transient;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 /**
  * 
  * @author zhaozulong

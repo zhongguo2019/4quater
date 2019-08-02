@@ -1,0 +1,70 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE generatorConfiguration
+
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+ 
+
+<generatorConfiguration>
+
+    <properties resource="application.properties"/>
+
+ 
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+
+        <property name="beginningDelimiter" value="`"/>
+
+        <property name="endingDelimiter" value="`"/>
+
+        <property name="autoDelimitKeywords" value="true"/>
+
+ 
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+
+            <property name="mappers" value="com.iyungu.phantaci.util.MyMapper"/>
+
+        </plugin>
+
+ 
+
+        <jdbcConnection driverClass="${spring.datasource.driver-class-name}" connectionURL="${spring.datasource.url}" userId="${spring.datasource.username}" password="${spring.datasource.password}">
+
+        </jdbcConnection>
+
+ 
+
+        <!--PO类所在位置-->
+
+        <javaModelGenerator targetPackage="com.iyungu.phantaci.po" targetProject="src/main/java"/>
+
+        <!--xml文件所在位置-->
+
+        <sqlMapGenerator targetPackage="com.iyungu.phantaci.mapper" targetProject="src/main/java"/>
+
+        <!--Dao接口所在位置-->
+
+        <javaClientGenerator targetPackage="com.iyungu.phantaci.dao" targetProject="src/main/java" type="XMLMAPPER"/>
+
+ 
+
+        <table schema="DEMO-TWO-TEST" tableName="u_user">
+
+            <!--mysql 配置-->
+
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+
+            <!--oracle 配置-->
+
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+
+        </table>
+
+    </context>
+
+</generatorConfiguration>

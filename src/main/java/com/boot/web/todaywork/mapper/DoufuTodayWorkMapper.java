@@ -3,7 +3,7 @@ package com.boot.web.todaywork.mapper;
 import java.util.List;
 import java.util.Map;
 
-import com.krm.common.base.CommonEntity;
+import com.boot.util.CommonEntity;
 import com.boot.web.todaywork.model.DoufuTodayWork;
 
 import tk.mybatis.mapper.common.Mapper;

@@ -1,10 +1,6 @@
 Manifest-Version: 1.0
 Implementation-Title: weeklyplan
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: zhaozulong
-Implementation-Vendor-Id: com.krm
-Build-Jdk: 1.8.0_191
-Implementation-URL: http://projects.spring.io/spring-boot/4quater/
+Build-Jdk-Spec: 1.8
 Created-By: Maven Integration for Eclipse
-Implementation-Vendor: Pivotal Software, Inc.
 
