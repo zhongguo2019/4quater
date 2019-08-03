@@ -39,7 +39,7 @@ import org.springframework.core.env.Environment;
 
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
- 
+import ch.qos.logback.classic.Logger;
 
 import javax.sql.DataSource;
 
@@ -120,7 +120,7 @@ public class BeetlConf {
 
         //扫面dao所在的包位置
 
-        conf.setBasePackage("com.boot.web.*");
+        conf.setBasePackage("com.boot.web");
         
 
         //扫描的类是已Dao结尾
@@ -129,7 +129,7 @@ public class BeetlConf {
 
         conf.setSqlManagerFactoryBeanName("sqlManagerFactoryBean");
         
-       // conf.setSqlManagerFactoryBeanName("sqlManager");
+
         return conf;
 
     }
@@ -181,7 +181,7 @@ public class BeetlConf {
         String userName = env.getProperty("spring.datasource.username");
 
         String password = env.getProperty("spring.datasource.password");
-
+       
         return DataSourceBuilder.create().url(url).username(userName).password(password).build();
 
     }

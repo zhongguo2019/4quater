@@ -1,5 +1,5 @@
 package com.boot;
-
+      
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Configuration;
@@ -45,6 +45,8 @@ public class Ognl {
     }
 
     public static boolean isNotEmpty(Object o) {
+    	
+    	
         return !isEmpty(o);
     }
 
@@ -53,7 +55,12 @@ public class Ognl {
     }
 
     public static boolean isNotBlank(Object o) {
-        return StringUtils.isNotBlank(o.toString());
+    	if(null==o) {
+    		return false;
+    	}else {
+    		return StringUtils.isNotBlank(o.toString());
+    	}
+ 
     }
 
     public static boolean isNotBlank(String s) {

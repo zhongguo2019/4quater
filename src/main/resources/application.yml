@@ -39,8 +39,7 @@ pagehelper:
 logging:
    level:
       root: info
-      org:
-      springframework: INFO      
+      org.springframework: INFO          
 server:
    port: 9080
 db:

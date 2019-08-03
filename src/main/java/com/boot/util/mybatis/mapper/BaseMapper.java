@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.SelectProvider;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+
 
 import com.boot.util.CommonEntity;
 import com.boot.util.mybatis.provider.CommonSqlProvider;

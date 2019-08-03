@@ -32,10 +32,13 @@ public class UserServiceTest extends SpringTestCase{
 		  logger.info("查找结果" +  user);
 		 
 	     Map<String, Object> mapparams = new HashMap<String,Object>();
-	
+	     DoufuTodayWork doufuTodayWork =new DoufuTodayWork();
+	     mapparams.put("dynamicSQL", "");
 		try{
-			  List<DoufuTodayWork> lstRtn = (List<DoufuTodayWork>) doufuTodayWorkService.queryOne(new DoufuTodayWork());
-			  logger.info("查找结果=====" +  lstRtn.size());
+			  logger.info("查找结果==----------------------===" );
+			  mapparams.put("id", "1");
+			  List<DoufuTodayWork> lstRtn = (List<DoufuTodayWork>) doufuTodayWorkService.queryOne(mapparams);
+			  logger.info("----------------------------查找结果=====" );
 		}catch(Exception e){
 	      logger.info(e.getMessage());
 	     

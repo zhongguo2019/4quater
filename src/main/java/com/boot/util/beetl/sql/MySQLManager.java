@@ -7,44 +7,21 @@ import java.util.UUID;
 
 import javax.annotation.Resource;
 
-import org.beetl.sql.core.ConnectionSourceHelper;
 import org.beetl.sql.core.IDAutoGen;
 import org.beetl.sql.core.RowMapper;
 import org.beetl.sql.core.SQLManager;
 import org.beetl.sql.core.SQLScript;
 import org.beetl.sql.core.db.KeyHolder;
 import org.springframework.stereotype.Component;
-import org.beetl.sql.core.ClasspathLoader;
-import org.beetl.sql.core.ConnectionSource;
-import org.beetl.sql.core.ConnectionSourceHelper;
-import org.beetl.sql.core.Interceptor;
-import org.beetl.sql.core.SQLLoader;
-import org.beetl.sql.core.SQLManager;
-import org.beetl.sql.core.UnderlinedNameConversion;
-import org.beetl.sql.core.db.DBStyle;
-import org.beetl.sql.core.db.MySqlStyle;
-import org.beetl.sql.ext.DebugInterceptor;
 
 @Component
-public class MySQLManager {
+public class MySQLManager  {
 
+    @Resource
     private SQLManager sqlManager;
 
     public void setSqlManager(SQLManager sqlManager) {
-    	String driver = "com.mysql.jdbc.Driver";
-    	String url = "jdbc:mysql://127.0.0.1:3306/weekly.?useUnicode=true&characterEncoding=UTF-8";
-    	String userName="root";
-    	String password="Report@123";
-     	ConnectionSource source = ConnectionSourceHelper.getSimple(driver, url, userName, password);
-		DBStyle mysql = new MySqlStyle();
-		// sql语句放在classpagth的/sql 目录下
-		SQLLoader loader = new ClasspathLoader("/sql");
-		// 数据库命名跟java命名转化规则，UnderlinedNameConversion 指数据库表和列是下划线分割
-		UnderlinedNameConversion nc = new  UnderlinedNameConversion();
-		// 最后，创建一个SQLManager,DebugInterceptor 不是必须的，但可以通过它查看sql执行情况
-		SQLManager sqlManager1 = new SQLManager(mysql,loader,source,nc,new Interceptor[]{new DebugInterceptor()});
-    	
-        this.sqlManager = sqlManager1;
+        this.sqlManager = sqlManager;
     }
 
     public SQLManager getSqlManager() {
