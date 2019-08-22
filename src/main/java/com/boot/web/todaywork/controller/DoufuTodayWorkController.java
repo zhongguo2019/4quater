@@ -1,12 +1,18 @@
 package com.boot.web.todaywork.controller;
 
+import java.net.URLDecoder;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -22,33 +28,36 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.github.pagehelper.PageInfo;
 import com.google.common.collect.Lists;
+import com.krm.common.constant.Constant;
 import com.boot.util.BaseController;
+
 import com.boot.util.CommonEntity;
 import com.boot.util.Result;
-import com.krm.common.constant.Constant;
 import com.boot.util.DateUtils;
+import com.boot.util.JsonHelper;
 import com.boot.util.StringConvert;
 import com.boot.util.StringUtil;
+import com.boot.util.excel.ExportExcel;
+import com.boot.util.excel.ImportExcel;
 import com.boot.web.todaywork.model.DoufuTodayWork;
 import com.boot.web.todaywork.service.DoufuTodayWorkService;
 import com.boot.util.SysUserUtils;
 
+
 /**
  * 
- * @author zhaozulong
- * 当天工作记录信息表控制层
- * 2019-07-29
+ * @author 赵祖龙 当天工作记录信息表控制层 2019-08-03
  */
 @Controller
-@RequestMapping("todaywork/doufuTodayWork")
+@RequestMapping("/todaywork/doufuTodayWork")
 public class DoufuTodayWorkController extends BaseController {
-	
+
 	public static final String BASE_URL = "todaywork/doufuTodayWork";
 	private static final String BASE_PATH = "todaywork/doufuTodayWork/";
-	
+
 	@Resource
 	private DoufuTodayWorkService doufuTodayWorkService;
-	
+
 	@Override
 	protected String getBaseUrl() {
 		return BASE_URL;
@@ -63,191 +72,209 @@ public class DoufuTodayWorkController extends BaseController {
 	protected String getBasePermission() {
 		return "todaywork:doufuTodayWork";
 	}
-	
+
 	/**
 	 * 跳转到模块页面
+	 * 
 	 * @param model
 	 * @return 模块html
 	 */
 	@RequestMapping
-	public String toDoufuTodayWork(Model model){
+	public String toDoufuTodayWork(Model model) {
 		logger.info("跳转到当天工作记录信息表页面(" + getBasePath() + "doufuTodayWork-list)");
 		checkPermission("query");
 		return getBasePath() + "doufuTodayWork-list";
 	}
-	
+
 	/**
 	 * 分页显示
+	 * 
 	 * @param params
 	 * @return
 	 */
-	@RequestMapping(value="list", method = RequestMethod.POST)
+	@RequestMapping(value = "list", method = RequestMethod.POST)
 	@ResponseBody
-	public PageInfo<CommonEntity> list(@RequestParam Map<String, Object> params, Model model){
+	public PageInfo<CommonEntity> list(@RequestParam Map<String, Object> params, Model model) {
 		logger.info("分页显示当天工作记录信息表，参数：" + params.toString());
-        checkPermission("query");
-        //权限语句
+		//checkPermission("query");
+		// 权限语句
 		params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u", getBaseUrl(), "id"));
-		if (params.containsKey("sortC")){
-			//如果传过来的参数是驼峰式，这里需要将驼峰转成下划线式
+		if (params.containsKey("sortC")) {
+			// 如果传过来的参数是驼峰式，这里需要将驼峰转成下划线式
 			params.put("sortC", StringConvert.camelhumpToUnderline(params.get("sortC").toString()));
 		}
 		PageInfo<CommonEntity> page = doufuTodayWorkService.queryPageInfo(params);
 		return page;
 	}
-	
+
 	/**
 	 * 添加或更新
+	 * 
 	 * @param params
 	 * @return
 	 */
-	@RequestMapping(value="save", method = RequestMethod.POST)
+	@RequestMapping(value = "save", method = RequestMethod.POST)
 	@ResponseBody
-	public Result save(@ModelAttribute DoufuTodayWork entry, MultipartHttpServletRequest request){
+	public Result save(@ModelAttribute DoufuTodayWork entry, MultipartHttpServletRequest request) {
 		logger.info("开始保存当天工作记录信息表");
 		int count = 0;
-		if(StringUtil.isEmpty(entry.getId())){
+		if (StringUtil.isEmpty(entry.getId())) {
 			checkPermission("add");
-       		entry.setId(doufuTodayWorkService.generateId());
-       		count = doufuTodayWorkService.save(entry);
-		}else{
+			entry.setId(doufuTodayWorkService.generateId());
+			count = doufuTodayWorkService.save(entry);
+		} else {
 			checkPermission("update");
-       		count = doufuTodayWorkService.update(entry);
+			count = doufuTodayWorkService.update(entry);
 		}
-		if(count > 0){
+		if (count > 0) {
 			logger.info("保存当天工作记录信息表成功！");
 			return Result.successResult();
 		}
 		return Result.errorResult();
 	}
-	
+
 	/**
 	 * 删除
-	 * @param 
-	 * @return
-	 */
-	@RequestMapping(value="delete", method = RequestMethod.POST)
-	@ResponseBody
-	public Result del(String id, @RequestParam Map<String, Object> params){
-		logger.info("开始删除当天工作记录信息表，参数：" + id);
-		checkPermission("delete");
-		int count = doufuTodayWorkService.deleteDoufuTodayWork(id);
-		if(count > 0){
-			logger.info("删除当天工作记录信息表成功！");
-			return Result.successResult();
-		}
-		logger.info("删除当天工作记录信息表失败！");
-		return Result.errorResult();
-	}
-	
-	/**
-	 * 批量删除
+	 * 
 	 * @param
 	 * @return
 	 */
-	@RequestMapping(value="deletes", method = RequestMethod.POST)
+	@RequestMapping(value = "delete", method = RequestMethod.POST)
 	@ResponseBody
-	public Result dels(@RequestParam(value = "ids[]") String[] ids, @RequestParam Map<String, Object> params){
-		logger.info("开始批量删除当天工作记录信息表，参数：" + ids);
+	public Result del(String id, @RequestParam Map<String, Object> params) {
+		logger.info("开始删除当天工作记录信息表，参数：" + id);
 		checkPermission("delete");
-		int count = doufuTodayWorkService.deleteDoufuTodayWork(ids);
-		if(count > 0){
+		int count = doufuTodayWorkService.deleteDoufuTodayWork(id);
+		if (count > 0) {
 			logger.info("删除当天工作记录信息表成功！");
 			return Result.successResult();
 		}
 		logger.info("删除当天工作记录信息表失败！");
 		return Result.errorResult();
 	}
-	
+
+	/**
+	 * 批量删除
+	 * 
+	 * @param
+	 * @return
+	 */
+	@RequestMapping(value = "deletes", method = RequestMethod.POST)
+	@ResponseBody
+	public Result dels(@RequestParam(value = "ids[]") String[] ids, @RequestParam Map<String, Object> params) {
+		logger.info("开始批量删除当天工作记录信息表，参数：" + ids);
+		checkPermission("delete");
+		int count = doufuTodayWorkService.deleteDoufuTodayWork(ids);
+		if (count > 0) {
+			logger.info("删除当天工作记录信息表成功！");
+			return Result.successResult();
+		}
+		logger.info("删除当天工作记录信息表失败！");
+		return Result.errorResult();
+	}
+
 	/**
 	 * 弹窗显示
+	 * 
 	 * @param params {"mode":"1.add 2.edit 3.detail}
 	 * @return
 	 */
-	@RequestMapping(value="{mode}/showlayer", method=RequestMethod.POST)
-	public String layer(String id, @RequestParam Map<String, Object> params, @PathVariable String mode, Model model){
+	@RequestMapping(value = "{mode}/showlayer", method = RequestMethod.POST)
+	public String layer(String id, @RequestParam Map<String, Object> params, @PathVariable String mode, Model model) {
 		DoufuTodayWork entry = null;
-		if(StringUtils.equals("add", mode)){
+		if (StringUtils.equals("add", mode)) {
 			logger.info("弹窗显示【当天工作记录信息表】添加页面(" + getBasePath() + "doufuTodayWork-add)");
 			checkPermission("add");
 			return getBasePath() + "doufuTodayWork-add";
-		}else if(StringUtils.equals("edit", mode)){
+		} else if (StringUtils.equals("edit", mode)) {
 			logger.info("弹窗显示【当天工作记录信息表】编辑页面(" + getBasePath() + "doufuTodayWork-update)");
 			checkPermission("update");
 			params.put("id", id);
 			entry = doufuTodayWorkService.queryOne(params);
 			model.addAttribute("entry", entry);
 			return getBasePath() + "doufuTodayWork-update";
-		}else if(StringUtils.equals("detail", mode)){
+		} else if (StringUtils.equals("detail", mode)) {
 			logger.info("弹窗显示【当天工作记录信息表】详情页面(" + getBasePath() + "doufuTodayWork-detail)");
 			checkPermission("query");
 			params.put("id", id);
 			CommonEntity entity = doufuTodayWorkService.queryOneCommon(params);
 			model.addAttribute("entry", entity);
-		}else if(StringUtils.equals("import", mode)){
+		} else if (StringUtils.equals("import", mode)) {
 			logger.info("弹窗显示【当天工作记录信息表】Excel导入页面(" + getBasePath() + "doufuTodayWork-import)");
 			checkPermission("import");
 			return getBasePath() + "doufuTodayWork-import";
 		}
 		return getBasePath() + "doufuTodayWork-detail";
 	}
-	
+
 	/**
-     * 当天工作记录信息表Excel导入模板
-     * @param response
-     * @param redirectAttributes
-     * @return
-     * @throws Exception 
-     */
-    @RequestMapping("import/template/download")
-    public void importDoufuTodayWorkTemplate(HttpServletResponse response) throws Exception {
-    	logger.info("开始下载当天工作记录信息表Excel导入模板");
-    	checkPermission("import");
+	 * 当天工作记录信息表Excel导入模板
+	 * 
+	 * @param response
+	 * @param redirectAttributes
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping("import/template/download")
+	public void importDoufuTodayWorkTemplate(HttpServletResponse response) throws Exception {
+		logger.info("开始下载当天工作记录信息表Excel导入模板");
+		checkPermission("import");
 		String fileName = "当天工作记录信息表Excel导入模板.xlsx";
 		List<DoufuTodayWork> list = Lists.newArrayList();
 		list.add(new DoufuTodayWork());
-		//new ExportExcel("当天工作记录信息表", DoufuTodayWork.class, 2).setDataList(list).write(response, fileName).dispose();
-    }
-    
-    /**
-     * 当天工作记录信息表数据导入
-     * @param request
-     * @param response
-     * @return
-     */
-	/*
-	 * @RequestMapping(value = "import", method=RequestMethod.POST)
+		new ExportExcel("当天工作记录信息表", DoufuTodayWork.class, 2).setDataList(list).write(response, fileName).dispose();
+	}
+
+	/**
+	 * 当天工作记录信息表数据导入
 	 * 
-	 * @ResponseBody public Result importFile(@RequestParam("file") MultipartFile
-	 * fileList[], HttpServletResponse response) throws Exception {
-	 * logger.info("开始导入当天工作记录信息表数据"); checkPermission("import"); Long start =
-	 * System.currentTimeMillis(); int successNum = 0; int failureNum = 0; for
-	 * (MultipartFile file : fileList) { ImportExcel ei; StringBuilder failureMsg =
-	 * new StringBuilder(); ei = new ImportExcel(file, 1, 0); List<DoufuTodayWork>
-	 * list = ei.getDataList(DoufuTodayWork.class); for (DoufuTodayWork entry :
-	 * list) { entry.setId(doufuTodayWorkService.generateId());
-	 * entry.setCreateBy(SysUserUtils.getCacheLoginUser().getId());
-	 * entry.setCreateDate(new Date()); entry.setDelFlag(Constant.DEL_FLAG_NORMAL);
-	 * } successNum = doufuTodayWorkService.insertBatch(list); if (failureNum > 0){
-	 * failureMsg.insert(0, "，失败导入 " + failureNum + " 条当天工作记录信息表数据，导入信息如下："); } Long
-	 * end = System.currentTimeMillis(); DecimalFormat df = new
-	 * DecimalFormat("######0.00");
-	 * logger.info("导入用时"+df.format((double)(end-start)/(double)1000)+"秒"); } return
-	 * new Result(1, "操作成功！，成功导入"+successNum+"条，失败导入"+failureNum+"条"); }
+	 * @param request
+	 * @param response
+	 * @return
 	 */
-    
-    /**
+	@RequestMapping(value = "import", method = RequestMethod.POST)
+	@ResponseBody
+	public Result importFile(@RequestParam("file") MultipartFile fileList[], HttpServletResponse response)
+			throws Exception {
+		logger.info("开始导入当天工作记录信息表数据");
+		checkPermission("import");
+		Long start = System.currentTimeMillis();
+		int successNum = 0;
+		int failureNum = 0;
+		for (MultipartFile file : fileList) {
+			ImportExcel ei;
+			StringBuilder failureMsg = new StringBuilder();
+			ei = new ImportExcel(file, 1, 0);
+			List<DoufuTodayWork> list = ei.getDataList(DoufuTodayWork.class);
+			for (DoufuTodayWork entry : list) {
+				entry.setId(doufuTodayWorkService.generateId());
+				entry.setCreateBy(SysUserUtils.getCacheLoginUser().getId());
+				entry.setCreateDate(new Date());
+				entry.setDelFlag(Constant.DEL_FLAG_NORMAL);
+			}
+			successNum = doufuTodayWorkService.insertBatch(list);
+			if (failureNum > 0) {
+				failureMsg.insert(0, "，失败导入 " + failureNum + " 条当天工作记录信息表数据，导入信息如下：");
+			}
+			Long end = System.currentTimeMillis();
+			DecimalFormat df = new DecimalFormat("######0.00");
+			logger.info("导入用时" + df.format((double) (end - start) / (double) 1000) + "秒");
+		}
+		return new Result(1, "操作成功！，成功导入" + successNum + "条，失败导入" + failureNum + "条");
+	}
+
+	/**
 	 * 当天工作记录信息表导出excel
 	 */
-	@RequestMapping(value="export", method = RequestMethod.POST)
-	public void export(@RequestParam Map<String, Object> params, HttpServletResponse response) throws Exception{
+	@RequestMapping(value = "export", method = RequestMethod.POST)
+	public void export(@RequestParam Map<String, Object> params, HttpServletResponse response) throws Exception {
 		logger.info("开始导出当天工作记录信息表数据");
 		checkPermission("export");
 		String fileName = "当天工作记录信息表" + DateUtils.getDate("yyyyMMddHHmmss") + ".xlsx";
-		//权限语句
+		// 权限语句
 		params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u", getBaseUrl(), "id"));
 		try {
-			for (String key : params.keySet()){ // 处理中文乱码
+			for (String key : params.keySet()) { // 处理中文乱码
 				String paramsTrans = new String(((String) params.get(key)).getBytes("ISO-8859-1"), "UTF-8");
 				paramsTrans = java.net.URLDecoder.decode(paramsTrans, "UTF-8");
 				params.put(key, paramsTrans.trim());
@@ -255,9 +282,99 @@ public class DoufuTodayWorkController extends BaseController {
 		} catch (Exception e) {
 		}
 		List<DoufuTodayWork> list = doufuTodayWorkService.entityList(params);
-		/*
-		 * new ExportExcel("当天工作记录信息表", DoufuTodayWork.class).setDataList(list)
-		 * .write(response, fileName).dispose();
-		 */
+		new ExportExcel("当天工作记录信息表", DoufuTodayWork.class).setDataList(list).write(response, fileName).dispose();
 	}
+
+	/**
+	 * 当天工作记录信息表数据保存
+	 * 
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@RequestMapping(value = "savebatch", method = RequestMethod.POST)
+	@ResponseBody
+	@SuppressWarnings("unchecked")
+	public Result saveBatch(HttpServletRequest request) throws Exception {
+		String data = request.getParameter("data") == null ? "" : request.getParameter("data");
+		data = URLDecoder.decode(URLDecoder.decode(data, "utf-8"), "utf-8");
+
+		StringBuilder failureMsg = new StringBuilder();
+		logger.info("开始保存当天工作记录信息表数据");
+		// checkPermission("savebatch");
+		Long start = System.currentTimeMillis();
+		int successNum = 0;
+		int failureNum = 0;
+		if (!"".equals(data)) {
+			List<Map<String, Object>> list = (List<Map<String, Object>>) JsonHelper.decode(data);
+			List<DoufuTodayWork> listEnty = new ArrayList<DoufuTodayWork>();
+
+			for (int i = list.size() - 1; i >= 0; i--) {
+				Map<String, Object> row = list.get(i);
+				//String vid = row.get("id") != null ? row.get("id").toString() : "";
+				String state = row.get("_state") != null ? row.get("_state").toString() : "";
+				DoufuTodayWork doufuTodayWork = new DoufuTodayWork(row);
+
+				if (state.equals("added")) {
+					String uuid = UUID.randomUUID().toString();
+					doufuTodayWork.setId(uuid);
+					doufuTodayWork.setProjectGroupId("1");
+					doufuTodayWork.setProjectId("1");
+					doufuTodayWork.setCreateDate(new Date());
+					doufuTodayWork.setUpdateDate(new Date());
+					doufuTodayWork.setDelFlag(Constant.DEL_FLAG_NORMAL);
+					doufuTodayWork.setStatus(Constant.DEL_FLAG_NORMAL);
+					doufuTodayWork.setInstId("1");
+					doufuTodayWork.setLoginIp("");
+					doufuTodayWork.setLoginDate(new Date());
+					doufuTodayWork.setCreateBy("");
+					doufuTodayWork.setUpdateBy("");
+					doufuTodayWork.setRemarks("");
+					doufuTodayWork.setImpoLevel("0");
+					doufuTodayWork.setLoginDate(new Date());
+					listEnty.add(doufuTodayWork);
+
+				} else if (state.equals("removed") || state.equals("deleted")) {
+				} else if (state.equals("modified") || state.equals("")) {
+				}
+
+			}
+			if (listEnty != null) {
+				successNum = doufuTodayWorkService.insertBatch(listEnty);
+			}
+			if (failureNum > 0) {
+				failureMsg.insert(0, "，失败保存 " + failureNum + " 条当天工作记录信息表数据，导入信息如下：");
+			}
+			Long end = System.currentTimeMillis();
+			DecimalFormat df = new DecimalFormat("######0.00");
+			logger.info("批量插入，用时" + df.format((double) (end - start) / (double) 1000) + "秒");
+		}
+		return new Result(1, "操作成功！，成功保存" + successNum + "条，失败保存" + failureNum + "条");
+
+	}
+	
+	@RequestMapping(value = "queryList")
+	@ResponseBody
+	String queryList(HttpServletRequest request) {
+		int pageIndex = Integer.parseInt(request.getParameter("pageIndex"));
+		int pageSize = Integer.parseInt(request.getParameter("pageSize"));
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("pageNum", pageIndex);
+		params.put("pageSize", pageSize);	
+		logger.info("分页显示当天工作记录信息表，参数：" + params.toString());
+		//checkPermission("query");
+		// 权限语句
+		//params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u", getBaseUrl(), "id"));
+		if (params.containsKey("sortC")) {
+			// 如果传过来的参数是驼峰式，这里需要将驼峰转成下划线式
+			params.put("sortC", StringConvert.camelhumpToUnderline(params.get("sortC").toString()));
+		}
+		PageInfo<DoufuTodayWork> page = doufuTodayWorkService.queryPageInfo1(params);
+	
+		String json = JsonHelper.encode(page.getList());
+		
+		return json;
+	}
+	
+
 }

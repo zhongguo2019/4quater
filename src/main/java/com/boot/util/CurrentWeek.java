@@ -124,7 +124,15 @@ public class CurrentWeek {
     public static String getDescWeekName() {
     	String rtn = "";
     	rtn = getWeekOfMonth();
-    	rtn =getYear()+"年第"+ getWeekOfMonth()+"周["+getWeekStartEndDay()+"]";
+    	rtn =getYear()+"年"+getMonth()+"月  第"+ getWeekOfMonth()+"周["+getWeekStartEndDay()+"]";
+    	return rtn;
+    	
+    }
+    
+    public static String getDescToday() {
+    	String rtn = "";
+    	rtn = getWeekOfMonth();
+    	//rtn =getYear()+"年"+getMonth()+"月  "+ getDay()+"周["+getWeekStartEndDay()+"]";
     	return rtn;
     	
     }

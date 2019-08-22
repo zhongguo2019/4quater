@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponseWrapper;
 import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.boot.web.sysuser.model.SysUser;
+import com.boot.web.sys.model.SysUser;
 import com.krm.common.constant.Constant;
 
 @WebFilter(filterName = "addressFilter", urlPatterns = { "/main/*","/informanage/*"})

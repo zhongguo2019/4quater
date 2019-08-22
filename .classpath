@@ -36,5 +36,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/crypto.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/jave-1.0.2.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/ehcache-2.9.0.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/juh-3.0.1.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/ridl.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

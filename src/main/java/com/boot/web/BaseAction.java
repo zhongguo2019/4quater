@@ -1,8 +1,11 @@
 package com.boot.web;
 
-
-import com.boot.web.sysuser.service.SysUserService;
+import com.boot.web.sys.model.SysUser;
+import com.boot.web.sys.service.SysUserService;
+import com.boot.web.todaywork.service.DoufuTodayWorkService;
+import com.github.pagehelper.PageInfo;
 import com.boot.util.ChineseToEnglish;
+import com.boot.util.CommonEntity;
 import com.boot.util.ConfigUtil;
 import com.boot.util.CurrentWeek;
 import com.boot.util.DaoUtil;
@@ -24,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -55,24 +59,6 @@ public class BaseAction {
 	DaoUtil daoUtil;
 	@Autowired
 	DocExpertUtil docExpertUtil;
-
-	@RequestMapping(value = "/titleid")
-	@ResponseBody
-	String main(HttpServletRequest request) {
-
-		/*
-		 * String sql = "SELECT id FROM " + ConfigUtil.getValue("db.schema") +
-		 * "t_happy_work_title WHERE begindate=? AND enddate=? "; List<Map<String,
-		 * Object>> list = jdbcTemplate.queryForList(sql, new Object[] {
-		 * CurrentWeek.getCurrenproDay("yyyy-MM-dd"),
-		 * CurrentWeek.getCurrenaftDay("yyyy-MM-dd") }); String title_id =
-		 * list.get(0).get("id").toString();
-		 */
-
-String title_id = CurrentWeek.getDescWeekName();
-logger.info(title_id);
-		return title_id;
-	}
 
 	@RequestMapping(value = "/new")
 	@ResponseBody
@@ -347,9 +333,9 @@ logger.info(title_id);
 	@RequestMapping("/export")
 	@ResponseBody
 	String export(HttpServletRequest request) {
-		String titleid = request.getParameter("titleid") == "" ? this.main(request)
+		String titleid = request.getParameter("titleid") == "" ? this.getWeektitle(request)
 				: request.getParameter("titleid").toString();
-		String fname = "" + CurrentWeek.getMonth() + "月第" + CurrentWeek.getWeekOfMonth()+ "周周报["
+		String fname = "" + CurrentWeek.getMonth() + "月第" + CurrentWeek.getWeekOfMonth() + "周周报["
 				+ CurrentWeek.getCurrenproDay("") + "-" + CurrentWeek.getCurrenaftDay("");
 		try {
 			docExpertUtil.Export(titleid);
@@ -458,12 +444,47 @@ logger.info(title_id);
 
 	@RequestMapping("/firstpage")
 	@ResponseBody
-	String  login(HttpServletRequest request) {
-	 logger.info(" 登录验证成功，进入到系统管理的首页面");
-	 return "/main/outlookmenu.html";
+	String login(HttpServletRequest request) {
+		logger.info(" 登录验证成功，进入到系统管理的首页面");
+		return "/main/outlookmenu.html";
 	}
-	
 
+	@RequestMapping(value = "/titleid")
+	@ResponseBody
+	String getWeektitle(HttpServletRequest request) {
 
+		/*
+		 * String sql = "SELECT id FROM " + ConfigUtil.getValue("db.schema") +
+		 * "t_happy_work_title WHERE begindate=? AND enddate=? "; List<Map<String,
+		 * Object>> list = jdbcTemplate.queryForList(sql, new Object[] {
+		 * CurrentWeek.getCurrenproDay("yyyy-MM-dd"),
+		 * CurrentWeek.getCurrenaftDay("yyyy-MM-dd") }); String title_id =
+		 * list.get(0).get("id").toString();
+		 */
 
+		String title_id = CurrentWeek.getDescWeekName();
+		logger.info(title_id);
+		return title_id;
+	}
+
+	@RequestMapping("/productmodule")
+	@ResponseBody
+	String getModuleList(HttpServletRequest request) throws UnsupportedEncodingException {
+
+		SysUser sysuser = (SysUser) request.getSession().getAttribute(Constant.SESSION_LOGIN_USER);
+		List<CommonEntity> lst = new ArrayList();
+		String rtn = "";
+		if (null == sysuser) {
+
+		} else {
+			Map<String, Object> userMap = new HashMap();
+			userMap.put("username", sysuser.getUsername().toString());
+
+			lst = sysUserService.getUserModule(userMap);
+			rtn = JsonHelper.encode(lst);
+		}
+
+		return rtn;
+
+	}
 }

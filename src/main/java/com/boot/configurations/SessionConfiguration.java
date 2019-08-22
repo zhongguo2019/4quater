@@ -4,12 +4,12 @@ package com.boot.configurations;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
 
 import com.boot.filter.SysInterceptor;
 
 @Configuration          //使用注解 实现拦截
-public class SessionConfiguration extends WebMvcConfigurerAdapter    {
+public class SessionConfiguration extends WebMvcConfigurer      {
 
 	public void addInterceptors(InterceptorRegistry registry) {
 		//指定的拦截路径的范围  主要看一下controller中写的路径访问方式

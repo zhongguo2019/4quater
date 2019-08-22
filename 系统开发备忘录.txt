@@ -1,4 +1,4 @@
-一、单点登录集成步骤
+﻿一、单点登录集成步骤
 将两个jar包考到4quater/web-info/lib下面
 bonc-sso-client-2.2.1.jar
 cas-client-core-3.2.1.jar
@@ -32,3 +32,8 @@ CREATE TABLE `4q_today_work` (
 		
   PRIMARY KEY (`ID`) 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='当天工作记录信息表'
+
+
+后台数据库会自动转驼峰显示的拦截器类
+CameHumpInterceptor
+

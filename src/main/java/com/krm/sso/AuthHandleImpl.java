@@ -18,8 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.bonc.sso.client.IAuthHandle;
 
 
-import com.boot.web.sysuser.service.SysUserService;
-import com.boot.web.sysuser.model.SysUser;
+import com.boot.web.sys.service.SysUserService;
+import com.boot.web.sys.model.SysUser;
 import com.krm.common.constant.Constant;
 // 根据filter中注册的单点登录配置，完成单点登录成功的回调方法。
 public class AuthHandleImpl implements IAuthHandle {

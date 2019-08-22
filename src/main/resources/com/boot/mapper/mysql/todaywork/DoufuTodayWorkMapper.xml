@@ -23,35 +23,36 @@
 		from doufu_today_work  t
 		<where>
 			1=1
-			<if test="@com.boot.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workContents)">and t.WORK_CONTENTS = #{workContents} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workDetail)">and t.WORK_DETAIL = #{workDetail} </if>
-			<if test="@com.boot.Ognl@isNotBlank(finishPercent)">and t.FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delayReason)">and t.DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.Ognl@isNotBlank(accordYesterday)">and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isImportant)">and t.IS_IMPORTANT = #{isImportant} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isEmergency)">and t.IS_EMERGENCY = #{isEmergency} </if>
-			<if test="@com.boot.Ognl@isNotBlank(impoLevel)">and t.IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
-			<if test="@com.boot.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
-			<if test="@com.boot.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginIp)">and t.LOGIN_IP = #{loginIp} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginDate)">and t.LOGIN_DATE = #{loginDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createBy)">and t.CREATE_BY = #{createBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createDate)">and t.CREATE_DATE = #{createDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateBy)">and t.UPDATE_BY = #{updateBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
-			<if test="@com.boot.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workContents)">and t.WORK_CONTENTS = #{workContents} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)">and t.WORK_DETAIL = #{workDetail} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)">and t.FINISH_PERCENT = #{finishPercent} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)">and t.DELAY_REASON = #{delayReason} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)">and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)">and t.IS_IMPORTANT = #{isImportant} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)">and t.IS_EMERGENCY = #{isEmergency} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)">and t.IMPO_LEVEL = #{impoLevel} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)">and t.LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)">and t.LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)">and t.CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)">and t.CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)">and t.UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
 		</where>
-		<if test="@com.boot.Ognl@isNotBlank(sortC) and @com.boot.Ognl@isNotBlank(order)"> 
+		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)"> 
 			ORDER BY t.${sortC} ${order}
 		</if>
 	</select>
 	
+
 	
 	<!-- 列表查询,返回的是实体-->
 	<select id="entityList" resultType="com.boot.web.todaywork.model.DoufuTodayWork">
@@ -59,31 +60,31 @@
 		from doufu_today_work  t
 		<where>
 			1=1
-			<if test="@com.boot.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workContents)">and t.WORK_CONTENTS = #{workContents} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workDetail)">and t.WORK_DETAIL = #{workDetail} </if>
-			<if test="@com.boot.Ognl@isNotBlank(finishPercent)">and t.FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delayReason)">and t.DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.Ognl@isNotBlank(accordYesterday)">and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isImportant)">and t.IS_IMPORTANT = #{isImportant} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isEmergency)">and t.IS_EMERGENCY = #{isEmergency} </if>
-			<if test="@com.boot.Ognl@isNotBlank(impoLevel)">and t.IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
-			<if test="@com.boot.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
-			<if test="@com.boot.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginIp)">and t.LOGIN_IP = #{loginIp} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginDate)">and t.LOGIN_DATE = #{loginDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createBy)">and t.CREATE_BY = #{createBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createDate)">and t.CREATE_DATE = #{createDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateBy)">and t.UPDATE_BY = #{updateBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
-			<if test="@com.boot.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workContents)">and t.WORK_CONTENTS = #{workContents} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)">and t.WORK_DETAIL = #{workDetail} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)">and t.FINISH_PERCENT = #{finishPercent} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)">and t.DELAY_REASON = #{delayReason} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)">and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)">and t.IS_IMPORTANT = #{isImportant} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)">and t.IS_EMERGENCY = #{isEmergency} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)">and t.IMPO_LEVEL = #{impoLevel} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)">and t.LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)">and t.LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)">and t.CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)">and t.CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)">and t.UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
 		</where>
-		<if test="@com.boot.Ognl@isNotBlank(sortC) and @com.boot.Ognl@isNotBlank(order)"> 
+		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)"> 
 			ORDER BY t.${sortC} ${order}
 		</if>
 	</select>
@@ -94,28 +95,28 @@
 		from doufu_today_work  t 
 		<where>
 			1=1
-			<if test="@com.boot.Ognl@isNotBlank(projectGroupId)"> and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(projectId)"> and t.PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(productId)"> and t.PRODUCT_ID = #{productId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workContents)"> and t.WORK_CONTENTS = #{workContents} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workDetail)"> and t.WORK_DETAIL = #{workDetail} </if>
-			<if test="@com.boot.Ognl@isNotBlank(finishPercent)"> and t.FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delayReason)"> and t.DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.Ognl@isNotBlank(accordYesterday)"> and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isImportant)"> and t.IS_IMPORTANT = #{isImportant} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isEmergency)"> and t.IS_EMERGENCY = #{isEmergency} </if>
-			<if test="@com.boot.Ognl@isNotBlank(impoLevel)"> and t.IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.Ognl@isNotBlank(id)"> and t.ID = #{id} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delFlag)"> and t.DEL_FLAG = #{delFlag} </if>
-			<if test="@com.boot.Ognl@isNotBlank(status)"> and t.STATUS = #{status} </if>
-			<if test="@com.boot.Ognl@isNotBlank(instId)"> and t.INST_ID = #{instId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginIp)"> and t.LOGIN_IP = #{loginIp} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginDate)"> and t.LOGIN_DATE = #{loginDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createBy)"> and t.CREATE_BY = #{createBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createDate)"> and t.CREATE_DATE = #{createDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateBy)"> and t.UPDATE_BY = #{updateBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateDate)"> and t.UPDATE_DATE = #{updateDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(remarks)"> and t.REMARKS = #{remarks} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)"> and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)"> and t.PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)"> and t.PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workContents)"> and t.WORK_CONTENTS = #{workContents} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)"> and t.WORK_DETAIL = #{workDetail} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)"> and t.FINISH_PERCENT = #{finishPercent} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)"> and t.DELAY_REASON = #{delayReason} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)"> and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)"> and t.IS_IMPORTANT = #{isImportant} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)"> and t.IS_EMERGENCY = #{isEmergency} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)"> and t.IMPO_LEVEL = #{impoLevel} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)"> and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)"> and t.DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)"> and t.STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)"> and t.INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)"> and t.LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)"> and t.LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)"> and t.CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)"> and t.CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)"> and t.UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)"> and t.UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)"> and t.REMARKS = #{remarks} </if>
 		</where>
 	</select>
 	
@@ -125,29 +126,29 @@
 		from doufu_today_work  t
 		<where>
 			1=1
-			<if test="@com.boot.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workContents)">and t.WORK_CONTENTS = #{workContents} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workDetail)">and t.WORK_DETAIL = #{workDetail} </if>
-			<if test="@com.boot.Ognl@isNotBlank(finishPercent)">and t.FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delayReason)">and t.DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.Ognl@isNotBlank(accordYesterday)">and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isImportant)">and t.IS_IMPORTANT = #{isImportant} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isEmergency)">and t.IS_EMERGENCY = #{isEmergency} </if>
-			<if test="@com.boot.Ognl@isNotBlank(impoLevel)">and t.IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
-			<if test="@com.boot.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
-			<if test="@com.boot.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginIp)">and t.LOGIN_IP = #{loginIp} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginDate)">and t.LOGIN_DATE = #{loginDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createBy)">and t.CREATE_BY = #{createBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createDate)">and t.CREATE_DATE = #{createDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateBy)">and t.UPDATE_BY = #{updateBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
-			<if test="@com.boot.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workContents)">and t.WORK_CONTENTS = #{workContents} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)">and t.WORK_DETAIL = #{workDetail} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)">and t.FINISH_PERCENT = #{finishPercent} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)">and t.DELAY_REASON = #{delayReason} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)">and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)">and t.IS_IMPORTANT = #{isImportant} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)">and t.IS_EMERGENCY = #{isEmergency} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)">and t.IMPO_LEVEL = #{impoLevel} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)">and t.LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)">and t.LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)">and t.CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)">and t.CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)">and t.UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
 		</where>
 	</select>
 	
@@ -187,28 +188,28 @@
 		delete from doufu_today_work
 		<where>
 			1=1
-			<if test="@com.boot.Ognl@isNotBlank(projectGroupId)"> and PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(projectId)"> and PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(productId)"> and PRODUCT_ID = #{productId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workContents)"> and WORK_CONTENTS = #{workContents} </if>
-			<if test="@com.boot.Ognl@isNotBlank(workDetail)"> and WORK_DETAIL = #{workDetail} </if>
-			<if test="@com.boot.Ognl@isNotBlank(finishPercent)"> and FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delayReason)"> and DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.Ognl@isNotBlank(accordYesterday)"> and ACCORD_YESTERDAY = #{accordYesterday} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isImportant)"> and IS_IMPORTANT = #{isImportant} </if>
-			<if test="@com.boot.Ognl@isNotBlank(isEmergency)"> and IS_EMERGENCY = #{isEmergency} </if>
-			<if test="@com.boot.Ognl@isNotBlank(impoLevel)"> and IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.Ognl@isNotBlank(id)"> and ID = #{id} </if>
-			<if test="@com.boot.Ognl@isNotBlank(delFlag)"> and DEL_FLAG = #{delFlag} </if>
-			<if test="@com.boot.Ognl@isNotBlank(status)"> and STATUS = #{status} </if>
-			<if test="@com.boot.Ognl@isNotBlank(instId)"> and INST_ID = #{instId} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginIp)"> and LOGIN_IP = #{loginIp} </if>
-			<if test="@com.boot.Ognl@isNotBlank(loginDate)"> and LOGIN_DATE = #{loginDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createBy)"> and CREATE_BY = #{createBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(createDate)"> and CREATE_DATE = #{createDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateBy)"> and UPDATE_BY = #{updateBy} </if>
-			<if test="@com.boot.Ognl@isNotBlank(updateDate)"> and UPDATE_DATE = #{updateDate} </if>
-			<if test="@com.boot.Ognl@isNotBlank(remarks)"> and REMARKS = #{remarks} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)"> and PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)"> and PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)"> and PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workContents)"> and WORK_CONTENTS = #{workContents} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)"> and WORK_DETAIL = #{workDetail} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)"> and FINISH_PERCENT = #{finishPercent} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)"> and DELAY_REASON = #{delayReason} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)"> and ACCORD_YESTERDAY = #{accordYesterday} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)"> and IS_IMPORTANT = #{isImportant} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)"> and IS_EMERGENCY = #{isEmergency} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)"> and IMPO_LEVEL = #{impoLevel} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)"> and ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)"> and DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)"> and STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)"> and INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)"> and LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)"> and LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)"> and CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)"> and CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)"> and UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)"> and UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)"> and REMARKS = #{remarks} </if>
 		</where>
 	</delete>
 </mapper>

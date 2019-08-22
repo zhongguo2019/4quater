@@ -16,8 +16,8 @@ import org.springframework.web.context.ServletContextAware;
 import com.boot.util.beetl.utils.BeetlUtils;
 import com.krm.common.constant.Constant;
 import com.krm.common.constant.SysConstant;
-/*import com.krm.web.sys.model.SysMenu;
-import com.krm.web.sys.service.SysMenuService;*/
+import com.boot.web.sys.model.SysMenu;
+import com.boot.web.sys.service.SysMenuService;
 
 @Component
 /*
@@ -36,9 +36,9 @@ public class ApplicationContextInitListener implements
 
     private ServletContext servletContext;
 
-	/*
-	 * @Resource private SysMenuService sysMenuService;
-	 */
+    @Resource
+    private SysMenuService sysMenuService;
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
 
@@ -63,8 +63,8 @@ public class ApplicationContextInitListener implements
             String ctxPath = servletContext.getContextPath();
 
             //读取全部资源
-         //   LinkedHashMap<String, SysMenu> AllMenuMap = sysMenuService.getAllMenusMap();
-         //   BeetlUtils.addBeetlSharedVars(Constant.CACHE_ALL_MENU, AllMenuMap);
+            LinkedHashMap<String, SysMenu> AllMenuMap = sysMenuService.getAllMenusMap();
+            BeetlUtils.addBeetlSharedVars(Constant.CACHE_ALL_MENU, AllMenuMap);
 
 
             logger.info("根路径: " + ctxPath);

@@ -30,6 +30,7 @@ mybatis:
 # spring-boot默认打印输出info级别以上的，可在此处修改输出级别
    configuration:
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+      mapUnderscoreToCamelCase: true
 pagehelper:
     helperDialect: mysql
     reasonable: true

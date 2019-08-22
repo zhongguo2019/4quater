@@ -18,62 +18,73 @@ import org.springframework.stereotype.Component;
 
 import com.boot.util.spring.annotation.Log;
 import com.boot.util.IPUtils;
-/*import com.krm.web.sys.model.SysLog;
-import com.krm.web.sys.service.SysLogService;*/
+import com.boot.web.sys.model.SysLog;
+import com.boot.web.sys.service.SysLogService;
 import com.boot.util.SysUserUtils;
 
-@Aspect
+/*@Aspect
 @Component
-@Order(0)
+@Order(0)*/
 public class SystemLogAspect {
 
-	/*
-	 * @Resource
-	 * 
-	 * private SysLogService sysLogService;
-	 */
-	 
-	// 本地异常日志记录对象
-	private final static Logger LOGGER = LoggerFactory.getLogger(SystemLogAspect.class);
+    @Resource
+    private SysLogService sysLogService;
 
-	@Pointcut("@annotation(com.boot.util.spring.annotation.Log)")
-	public void accessAspect() {
-	}
+    // 本地异常日志记录对象
+    private final static Logger LOGGER = LoggerFactory
+            .getLogger(SystemLogAspect.class);
 
-	@Pointcut("execution(* com.boot.web..*Service.*(..))")
-	public void throwingAspect() {
-	}
+    @Pointcut("@annotation(com.boot.util.spring.annotation.Log)")
+    public void accessAspect() {
+    }
 
-	@AfterReturning(value = "accessAspect()", returning = "rtv")
-	public void doAfterReturning(JoinPoint joinPoint, Object rtv) {
-		// saveLog(joinPoint, null);
-	}
+    @Pointcut("execution(* com.boot.web..*Service.*(..))")
+    public void throwingAspect() {
+    }
 
-	@AfterThrowing(value = "throwingAspect()", throwing = "e")
-	public void doAfterThrowing(JoinPoint joinPoint, Throwable e) {
-		// saveLog(joinPoint, e);
-	}
+    @AfterReturning(value = "accessAspect()", returning = "rtv")
+    public void doAfterReturning(JoinPoint joinPoint, Object rtv) {
+        saveLog(joinPoint, null);
+    }
 
-	/*
-	 * protected void saveLog(JoinPoint joinPoint, Throwable e) { try {
-	 * HttpServletRequest request = SysUserUtils.getCurRequest(); SysLog log = new
-	 * SysLog(); // 判断参数 if (joinPoint.getArgs() != null) { StringBuffer rs = new
-	 * StringBuffer(); for (int i = 0, len = joinPoint.getArgs().length; i < len;
-	 * i++) { Object info = joinPoint.getArgs()[i]; if (info != null) { String
-	 * paramType = info.getClass().getSimpleName(); rs.append("[参数" + (i + 1) +
-	 * "，类型:" + paramType + "，值:" + info.toString() + "]"); } else { rs.append("[参数"
-	 * + (i + 1) + "，值:null]"); } } log.setParams(rs.toString()); }
-	 * log.setRemoteAddr(IPUtils.getClientAddress(request));
-	 * log.setRequestUri(request.getRequestURI());
-	 * log.setMethod(request.getMethod());
-	 * log.setUserAgent(request.getHeader("user-agent")); log.setException(e == null
-	 * ? null : e.toString()); log.setType(e == null ? SysLog.TYPE_ACCESS :
-	 * SysLog.TYPE_EXCEPTION); Method m = ((MethodSignature)
-	 * joinPoint.getSignature()).getMethod(); Log sclog =
-	 * m.getAnnotation(Log.class); if (sclog != null)
-	 * log.setDescription(sclog.description()); //log保存到数据库
-	 * sysLogService.saveSysLog(log); } catch (Exception ex) {
-	 * LOGGER.error(ex.getMessage()); } }
-	 */
+    @AfterThrowing(value = "throwingAspect()", throwing = "e")
+    public void doAfterThrowing(JoinPoint joinPoint, Throwable e) {
+        saveLog(joinPoint, e);
+    }
+
+    protected void saveLog(JoinPoint joinPoint, Throwable e) {
+        try {
+            HttpServletRequest request = SysUserUtils.getCurRequest();
+            SysLog log = new SysLog();
+            // 判断参数
+            if (joinPoint.getArgs() != null) {
+                StringBuffer rs = new StringBuffer();
+                for (int i = 0, len = joinPoint.getArgs().length; i < len; i++) {
+                    Object info = joinPoint.getArgs()[i];
+                    if (info != null) {
+                        String paramType = info.getClass().getSimpleName();
+                        rs.append("[参数" + (i + 1) + "，类型:" + paramType + "，值:"
+                                + info.toString() + "]");
+                    } else {
+                        rs.append("[参数" + (i + 1) + "，值:null]");
+                    }
+                }
+                log.setParams(rs.toString());
+            }
+            log.setRemoteAddr(IPUtils.getClientAddress(request));
+            log.setRequestUri(request.getRequestURI());
+            log.setMethod(request.getMethod());
+            log.setUserAgent(request.getHeader("user-agent"));
+            log.setException(e == null ? null : e.toString());
+            log.setType(e == null ? SysLog.TYPE_ACCESS : SysLog.TYPE_EXCEPTION);
+            Method m = ((MethodSignature) joinPoint.getSignature()).getMethod();
+            Log sclog = m.getAnnotation(Log.class);
+            if (sclog != null) log.setDescription(sclog.description());
+            //log保存到数据库
+            sysLogService.saveSysLog(log);
+        } catch (Exception ex) {
+            LOGGER.error(ex.getMessage());
+        }
+    }
 
 }

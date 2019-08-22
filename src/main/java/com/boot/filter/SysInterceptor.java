@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.boot.web.sysuser.model.SysUser;
+import com.boot.web.sys.model.SysUser;
 import com.krm.common.constant.Constant;
 
 public class SysInterceptor extends HandlerInterceptorAdapter {

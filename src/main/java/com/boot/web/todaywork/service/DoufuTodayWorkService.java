@@ -1,5 +1,6 @@
 package com.boot.web.todaywork.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -56,6 +57,32 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 		return new PageInfo<CommonEntity>(list);
 	}
 	
+
+	/**
+	 * 分页展示(可带条件查询)
+	 * 返回的是通用实体，不受实体属性限制，相当于map
+	 * @param params
+	 * @return
+	 */
+	public PageInfo<DoufuTodayWork> queryPageInfo1(Map<String, Object> params) {
+		List<DoufuTodayWork> list = new ArrayList();
+		try {
+			logger.info("#=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#");
+			PageHelper.startPage(params);
+			list = doufuTodayWorkMapper.entityList(params);
+			logger.info("#=================动态权限查询成功！=================================#");
+		} catch (Exception e) {
+			logger.info("#=================动态权限查询出错，原因如下：========================#");
+			logger.info("#                 1、此表没有和机构或者用户相关联的字段                               #");
+			logger.info("#                 2、角色配置不正确                                                                     #");
+			logger.info("#                 3、SQL本身语法错误                                                                   #");
+			logger.info("#=================系统默认处理机制：查询所有数据======================#");
+			params.remove("dynamicSQL");
+			PageHelper.startPage(params);
+			list = doufuTodayWorkMapper.entityList(params);
+		}
+		return new PageInfo<DoufuTodayWork>(list);
+	}
 	/**
 	 * 列表(可带条件查询)
 	 * 返回的是通用实体，不受实体属性限制，相当于map

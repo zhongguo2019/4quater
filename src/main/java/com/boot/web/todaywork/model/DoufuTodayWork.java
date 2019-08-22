@@ -9,12 +9,14 @@ import com.boot.util.BaseFile;
 import javax.persistence.Transient;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 
 /**
  * 
- * @author zhaozulong
+ * @author 赵祖龙
  * 当天工作记录信息表javaBean
- * 2019-07-29
+ * 2019-08-19
  */
 @Table(name="doufu_today_work")
 public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
@@ -26,7 +28,7 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
     private String  productId;      //对应产品
     private String  workContents;      //工作内容简写
     private String  workDetail;      //工作内容详细描述
-    private BigDecimal  finishPercent;      //完成比例
+    private String  finishPercent;      //完成比例
     private String  delayReason;      //延迟原因
     private String  accordYesterday;      //对应计划
     private String  isImportant;      //是否重要
@@ -104,10 +106,10 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 	 * 完成比例
 	 * @param finishPercent
 	 */
-	public void setFinishPercent(BigDecimal finishPercent) {
+	public void setFinishPercent(String finishPercent) {
 		this.finishPercent = finishPercent;
 	}
-	public BigDecimal getFinishPercent() {
+	public String getFinishPercent() {
 		return finishPercent;
 	}
 	/**
@@ -286,4 +288,99 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 	public String toString() {
 		return "当天工作记录信息表： {\"projectGroupId\": \""+projectGroupId+"\", \"projectId\": \""+projectId+"\", \"productId\": \""+productId+"\", \"workContents\": \""+workContents+"\", \"workDetail\": \""+workDetail+"\", \"finishPercent\": \""+finishPercent+"\", \"delayReason\": \""+delayReason+"\", \"accordYesterday\": \""+accordYesterday+"\", \"isImportant\": \""+isImportant+"\", \"isEmergency\": \""+isEmergency+"\", \"impoLevel\": \""+impoLevel+"\", \"id\": \""+id+"\", \"delFlag\": \""+delFlag+"\", \"status\": \""+status+"\", \"instId\": \""+instId+"\", \"loginIp\": \""+loginIp+"\", \"loginDate\": \""+loginDate+"\", \"createBy\": \""+createBy+"\", \"createDate\": \""+createDate+"\", \"updateBy\": \""+updateBy+"\", \"updateDate\": \""+updateDate+"\", \"remarks\": \""+remarks+"\"}";
 	}
+
+  public void  DoufuTodayWork666(Map<String, Object> row)throws ParseException{
+         if( row.get("projectGroupId") !=null  ){
+          String strValue=row.get("projectGroupId").toString();
+          this.setProjectGroupId(strValue);
+        }
+         if( row.get("projectId") !=null  ){
+          String strValue=row.get("projectId").toString();
+          this.setProjectId(strValue);
+        }
+         if( row.get("productId") !=null  ){
+          String strValue=row.get("productId").toString();
+          this.setProductId(strValue);
+        }
+         if( row.get("workContents") !=null  ){
+          String strValue=row.get("workContents").toString();
+          this.setWorkContents(strValue);
+        }
+         if( row.get("workDetail") !=null  ){
+          String strValue=row.get("workDetail").toString();
+          this.setWorkDetail(strValue);
+        }
+         if( row.get("finishPercent") !=null  ){
+          String strValue=row.get("finishPercent").toString();
+          this.setFinishPercent(strValue);
+        }
+         if( row.get("delayReason") !=null  ){
+          String strValue=row.get("delayReason").toString();
+          this.setDelayReason(strValue);
+        }
+         if( row.get("accordYesterday") !=null  ){
+          String strValue=row.get("accordYesterday").toString();
+          this.setAccordYesterday(strValue);
+        }
+         if( row.get("isImportant") !=null  ){
+          String strValue=row.get("isImportant").toString();
+          this.setIsImportant(strValue);
+        }
+         if( row.get("isEmergency") !=null  ){
+          String strValue=row.get("isEmergency").toString();
+          this.setIsEmergency(strValue);
+        }
+         if( row.get("impoLevel") !=null  ){
+          String strValue=row.get("impoLevel").toString();
+          this.setImpoLevel(strValue);
+        }
+         if( row.get("id") !=null  ){
+          String strValue=row.get("id").toString();
+          this.setId(strValue);
+        }
+         if( row.get("delFlag") !=null  ){
+          String strValue=row.get("delFlag").toString();
+          this.setDelFlag(strValue);
+        }
+         if( row.get("status") !=null  ){
+          String strValue=row.get("status").toString();
+          this.setStatus(strValue);
+        }
+         if( row.get("instId") !=null  ){
+          String strValue=row.get("instId").toString();
+          this.setInstId(strValue);
+        }
+         if( row.get("loginIp") !=null  ){
+          String strValue=row.get("loginIp").toString();
+          this.setLoginIp(strValue);
+        }
+         if( row.get("loginDate") !=null  ){
+         SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+         String strValue=row.get("loginDate").toString();
+         this.setLoginDate(sdf.parse(strValue));
+        }
+         if( row.get("createBy") !=null  ){
+          String strValue=row.get("createBy").toString();
+          this.setCreateBy(strValue);
+        }
+         if( row.get("createDate") !=null  ){
+         SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+         String strValue=row.get("createDate").toString();
+         this.setCreateDate(sdf.parse(strValue));
+        }
+         if( row.get("updateBy") !=null  ){
+          String strValue=row.get("updateBy").toString();
+          this.setUpdateBy(strValue);
+        }
+         if( row.get("updateDate") !=null  ){
+         SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+         String strValue=row.get("updateDate").toString();
+         this.setUpdateDate(sdf.parse(strValue));
+        }
+         if( row.get("remarks") !=null  ){
+          String strValue=row.get("remarks").toString();
+          this.setRemarks(strValue);
+        }
+  }
+
 }

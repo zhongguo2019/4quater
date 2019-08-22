@@ -20,6 +20,8 @@ public interface DoufuTodayWorkMapper extends Mapper<DoufuTodayWork>{
 	 * 列表查询,返回的是通用实体，不受实体属性限制，相当于map
 	 */
 	List<CommonEntity> queryPageInfo(Map<String, Object> params);
+	
+	
 	/**
 	 * 列表查询,返回的是实体
 	 */
