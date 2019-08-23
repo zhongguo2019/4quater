@@ -6,12 +6,11 @@ import java.util.Map;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.springframework.stereotype.Repository;
 
-
 import com.boot.util.CommonEntity;
 import com.boot.util.mybatis.provider.CommonSqlProvider;
 
 @Repository("baseMapper")
-public interface BaseMapper {
+public interface BaseMapper   {
 
     @SelectProvider(type = CommonSqlProvider.class, method = "beforeDeleteTreeStructureSql")
     int beforeDeleteTreeStructure(Map<String, Object> params);

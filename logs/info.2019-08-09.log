@@ -1,0 +1,827 @@
+2019-08-09 14:13:03,721 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 11320 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:13:03,723 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:13:09,422 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:13:10,478 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c40ecaae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:13:11,029 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$fd9fd634 - weeklyplan.
+2019-08-09 14:13:11,048 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:13:11,392 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:13:12,541 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:13:12,557 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:13:12,575 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-09 14:14:52,602 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 14896 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:14:52,603 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:14:57,500 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:14:58,522 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6cca878a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:14:59,090 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$a65b9310 - weeklyplan.
+2019-08-09 14:14:59,114 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:14:59,375 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:15:00,352 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:15:00,370 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:15:00,387 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-09 14:19:46,725 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 7624 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:19:46,725 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:19:50,588 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:19:51,153 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:19:51,580 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:19:51,595 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:19:51,782 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:19:52,514 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:19:52,527 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:19:52,539 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-09 14:22:33,062 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 18072 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:22:33,064 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:22:37,191 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:22:37,839 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:22:38,354 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:22:38,369 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:22:38,587 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:22:40,276 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:22:42,222 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:22:42,756 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:22:43,013 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:22:43,014 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:22:43,016 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:22:44,329 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:22:44,481 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 12.086 seconds (JVM running for 13.093)
+2019-08-09 14:22:45,016 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:22:45,022 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:22:45,025 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:22:45,035 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:22:45,052 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:24:14,366 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 14568 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:24:14,367 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:24:18,192 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:24:18,861 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:24:19,386 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:24:19,404 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:24:19,642 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:24:20,396 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:24:20,410 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:24:20,424 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-09 14:25:55,639 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 13144 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:25:55,643 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:26:01,600 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:26:02,431 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:26:03,104 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:26:03,128 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:26:03,494 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:26:05,765 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:26:07,670 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:26:08,248 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:26:08,516 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:26:08,518 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:26:08,520 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:26:09,980 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:26:10,113 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 15.316 seconds (JVM running for 16.506)
+2019-08-09 14:26:10,486 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:26:10,492 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:26:10,496 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:26:10,504 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:26:10,518 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:26:53,760 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 12864 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:26:53,762 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:26:58,494 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:26:59,490 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3faa9c0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:26:59,957 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$793ba792 - weeklyplan.
+2019-08-09 14:26:59,977 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:27:00,228 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:27:02,338 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:27:04,252 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:27:04,856 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:27:05,159 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:27:05,159 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:27:05,161 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:27:06,624 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:27:06,797 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 13.888 seconds (JVM running for 15.527)
+2019-08-09 14:27:07,204 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:27:07,209 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:27:07,212 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:27:07,221 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:27:07,237 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:27:48,612 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 8484 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:27:48,614 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:27:52,792 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:27:53,742 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$74172d15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:27:54,199 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$ada8389b - weeklyplan.
+2019-08-09 14:27:54,221 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:27:54,500 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:27:56,555 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:27:58,372 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:27:58,939 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:27:59,212 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:27:59,213 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:27:59,215 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:28:00,378 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:28:00,534 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 12.78 seconds (JVM running for 14.395)
+2019-08-09 14:28:35,983 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:28:35,988 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:28:35,992 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:28:36,000 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:28:36,011 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:34:57,893 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 15700 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:34:57,894 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:35:01,706 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:35:02,372 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:35:02,804 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:35:02,819 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:35:02,997 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:35:04,663 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:35:06,368 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:35:07,096 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:35:07,528 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:35:07,530 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:35:07,532 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:35:09,361 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:35:09,571 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 12.23 seconds (JVM running for 13.17)
+2019-08-09 14:35:10,055 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:35:10,060 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:35:10,066 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:35:10,078 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:35:10,098 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:36:02,496 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 7372 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:36:02,498 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:36:08,907 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:36:09,938 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:36:10,610 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:36:10,633 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:36:11,042 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:36:13,695 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:36:16,341 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:36:17,131 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:36:17,505 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:36:17,507 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:36:17,509 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:36:19,488 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:36:19,689 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 18.042 seconds (JVM running for 19.296)
+2019-08-09 14:36:20,181 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:36:20,188 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:36:20,193 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:36:20,202 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:36:20,217 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:38:54,272 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 16944 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:38:54,273 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:38:58,235 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:38:58,896 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:38:59,414 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:38:59,431 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:38:59,661 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:39:01,296 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:39:02,860 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:39:03,341 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:39:03,591 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:39:03,592 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:39:03,594 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:39:04,801 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:39:04,954 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 11.244 seconds (JVM running for 12.248)
+2019-08-09 14:39:05,321 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:39:05,327 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:39:05,330 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:39:05,341 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:39:05,357 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:41:33,669 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 12528 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:41:33,671 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:41:39,745 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:41:40,775 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:41:41,491 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:41:41,512 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:41:41,857 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:41:44,350 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:41:46,339 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:41:47,043 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:41:47,327 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:41:47,330 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:41:47,331 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:41:48,775 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:41:48,909 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 15.813 seconds (JVM running for 16.75)
+2019-08-09 14:41:49,335 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@60af38ec
+2019-08-09 14:41:49,335 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 14:41:49,409 [main] INFO  com.boot.serviceTest.UserServiceTest - 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  zt_usergroup.account = 'zhaozulong'' at line 8
+### The error may exist in file [G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes\com\boot\mapper\mysql\sys\SysUserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select   zt_usergroup.group as group_id,   zt_group.name as group_name   from   zt_usergroup,zt_group   where zt_usergroup.`group` = zt_group.id   and zt_group.`role` =''    WHERE  zt_usergroup.account = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  zt_usergroup.account = 'zhaozulong'' at line 8
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  zt_usergroup.account = 'zhaozulong'' at line 8
+2019-08-09 14:41:49,443 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:41:49,448 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:41:49,452 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:41:49,460 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:41:49,475 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:45:43,475 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 16476 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:45:43,476 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:45:47,365 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:45:48,022 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:45:48,514 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:45:48,531 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:45:48,744 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:45:50,403 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:45:51,998 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:45:52,482 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:45:52,730 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:45:52,732 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:45:52,733 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:45:53,925 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:45:54,078 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 11.138 seconds (JVM running for 12.118)
+2019-08-09 14:45:54,471 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@60af38ec
+2019-08-09 14:45:54,471 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 14:45:54,483 [main] INFO  com.boot.serviceTest.UserServiceTest - ----------------------------查找结果=====
+2019-08-09 14:45:54,491 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:45:54,496 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:45:54,497 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:45:54,507 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:45:54,524 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:46:33,627 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 16592 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:46:33,629 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:46:39,467 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:46:40,967 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f2027235] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:46:41,685 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$2b937dbb - weeklyplan.
+2019-08-09 14:46:41,710 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:46:42,184 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:46:45,437 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:46:48,906 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:46:49,916 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:46:50,476 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:46:50,479 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:46:50,482 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:46:53,010 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:46:53,326 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 20.537 seconds (JVM running for 22.253)
+2019-08-09 14:47:32,640 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@50caf658
+2019-08-09 14:47:32,640 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 14:48:02,522 [main] INFO  com.boot.serviceTest.UserServiceTest - ----------------------------查找结果=====
+2019-08-09 14:48:02,534 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:48:02,543 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:48:02,548 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:48:02,561 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:48:02,577 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:54:44,520 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 14660 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:54:44,523 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:54:50,876 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:54:51,896 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:54:52,621 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 14:54:52,650 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:54:53,017 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:54:55,632 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:54:58,373 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:54:59,313 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:54:59,754 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:54:59,757 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:54:59,759 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:55:01,731 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:55:01,986 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 18.083 seconds (JVM running for 19.112)
+2019-08-09 14:55:02,582 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@44d39d83
+2019-08-09 14:55:02,583 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 14:55:02,602 [main] INFO  com.boot.serviceTest.UserServiceTest - Index: 1, Size: 1
+2019-08-09 14:55:02,613 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 14:55:02,620 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:55:02,625 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 14:55:02,638 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 14:55:02,662 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 14:55:36,746 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 3792 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:55:36,748 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:55:41,593 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:55:42,563 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$720bfe5c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:55:43,020 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$ab9d09e2 - weeklyplan.
+2019-08-09 14:55:43,037 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:55:43,324 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:55:45,487 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:55:47,440 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:55:48,059 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:55:48,382 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:55:48,383 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:55:48,385 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:55:49,887 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:55:50,096 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 14.209 seconds (JVM running for 15.815)
+2019-08-09 14:55:50,541 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@457af059
+2019-08-09 14:55:50,541 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 14:55:59,990 [main] INFO  com.boot.serviceTest.UserServiceTest - Index: 1, Size: 1
+2019-08-09 14:57:36,621 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 13068 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 14:57:36,623 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 14:57:44,362 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 14:57:45,842 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2dc92d74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 14:57:46,631 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$675a38fa - weeklyplan.
+2019-08-09 14:57:46,658 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 14:57:47,131 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 14:57:50,419 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 14:57:52,484 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:57:53,094 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 14:57:53,392 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 14:57:53,393 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 14:57:53,395 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 14:57:55,146 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 14:57:55,451 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 20.114 seconds (JVM running for 22.152)
+2019-08-09 14:57:56,187 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@65876774
+2019-08-09 14:57:56,188 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 15:31:31,780 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 11304 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 15:31:31,781 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 15:31:37,382 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 15:31:38,988 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b07e9774] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 15:31:39,746 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$ea0fa2fa - weeklyplan.
+2019-08-09 15:31:39,786 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 15:31:40,323 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 15:31:43,870 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 15:31:47,146 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:31:48,129 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 15:31:48,626 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 15:31:48,628 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 15:31:48,630 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 15:31:51,142 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 15:31:51,450 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 20.557 seconds (JVM running for 22.155)
+2019-08-09 15:31:52,142 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@70d595e8
+2019-08-09 15:31:52,143 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 15:32:03,806 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName南京银行驻场项目组
+2019-08-09 15:34:13,733 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 13856 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 15:34:13,734 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 15:34:17,437 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 15:34:18,026 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 15:34:18,486 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 15:34:18,502 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 15:34:18,706 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 15:34:20,457 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 15:34:22,058 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:34:22,613 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 15:34:22,864 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 15:34:22,865 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 15:34:22,868 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 15:34:24,076 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 15:34:24,214 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 11.039 seconds (JVM running for 11.959)
+2019-08-09 15:34:24,624 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@60af38ec
+2019-08-09 15:34:24,624 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 15:34:24,633 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName南京银行驻场项目组
+2019-08-09 15:34:24,707 [main] INFO  com.boot.serviceTest.UserServiceTest - 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and zt_project.team= = '南京银行驻场项目组'' at line 12
+### The error may exist in file [G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes\com\boot\mapper\mysql\sys\SysUserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select   zt_product.id as product_id,   zt_product.name as product_name,   zt_product.code as product_code,   zt_project.name as project_name,   zt_project.id as project_id   from   zt_product,   zt_projectproduct,   zt_project    WHERE zt_product.id = zt_projectproduct.product     and and zt_project.team= = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and zt_project.team= = '南京银行驻场项目组'' at line 12
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and zt_project.team= = '南京银行驻场项目组'' at line 12
+2019-08-09 15:34:24,716 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 15:34:24,722 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:34:24,725 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 15:34:24,734 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 15:34:24,752 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 15:36:57,453 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 17780 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 15:36:57,455 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 15:37:01,184 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 15:37:01,828 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 15:37:02,521 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 15:37:02,547 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 15:37:02,907 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 15:37:05,365 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 15:37:08,009 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:37:08,697 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 15:37:09,099 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 15:37:09,100 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 15:37:09,102 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 15:37:11,029 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 15:37:11,269 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 14.366 seconds (JVM running for 15.252)
+2019-08-09 15:37:11,832 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@44d39d83
+2019-08-09 15:37:11,832 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 15:37:11,846 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName南京银行驻场项目组
+2019-08-09 15:37:11,944 [main] INFO  com.boot.serviceTest.UserServiceTest - 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '南京银行驻场项目组'' at line 12
+### The error may exist in file [G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes\com\boot\mapper\mysql\sys\SysUserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select   zt_product.id as product_id,   zt_product.name as product_name,   zt_product.code as product_code,   zt_project.name as project_name,   zt_project.id as project_id   from   zt_product,   zt_projectproduct,   zt_project    WHERE zt_product.id = zt_projectproduct.product      and zt_project.team= = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '南京银行驻场项目组'' at line 12
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '南京银行驻场项目组'' at line 12
+2019-08-09 15:37:11,958 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 15:37:11,965 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:37:11,970 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 15:37:11,982 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 15:37:12,001 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 15:38:18,719 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 9212 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 15:38:18,721 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 15:38:24,757 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 15:38:25,773 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 15:38:26,473 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 15:38:26,501 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 15:38:26,847 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 15:38:29,572 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 15:38:32,382 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:38:33,197 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 15:38:33,607 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 15:38:33,609 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 15:38:33,611 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 15:38:35,639 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 15:38:35,876 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 17.722 seconds (JVM running for 18.631)
+2019-08-09 15:38:36,455 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@60af38ec
+2019-08-09 15:38:36,455 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 15:38:36,470 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName南京银行驻场项目组
+2019-08-09 15:38:36,588 [main] INFO  com.boot.serviceTest.UserServiceTest - 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'weeklyplan.zt_project' doesn't exist
+### The error may exist in file [G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes\com\boot\mapper\mysql\sys\SysUserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select   zt_product.id as product_id,   zt_product.name as product_name,   zt_product.code as product_code,   zt_project.name as project_name,   zt_project.id as project_id   from   zt_product,   zt_projectproduct,   zt_project    WHERE zt_product.id = zt_projectproduct.product      and zt_project.team= ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'weeklyplan.zt_project' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'weeklyplan.zt_project' doesn't exist
+2019-08-09 15:38:36,601 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 15:38:36,608 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:38:36,614 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 15:38:36,625 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 15:38:36,648 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 15:51:39,734 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 14532 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 15:51:39,736 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 15:51:43,604 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 15:51:44,251 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 15:51:44,728 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 15:51:44,744 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 15:51:44,955 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 15:51:46,801 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 15:51:48,834 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:51:49,572 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 15:51:49,936 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 15:51:49,937 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 15:51:49,939 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 15:51:51,684 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 15:51:51,886 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 12.679 seconds (JVM running for 13.605)
+2019-08-09 15:51:52,421 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@44d39d83
+2019-08-09 15:51:52,423 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 15:51:52,436 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName南京银行驻场项目组
+2019-08-09 15:51:52,445 [main] INFO  com.boot.serviceTest.UserServiceTest - ----------------------------查找结果=====
+2019-08-09 15:51:52,454 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 15:51:52,459 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:51:52,462 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 15:51:52,473 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 15:51:52,490 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 16:00:50,251 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 524 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 16:00:50,253 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 16:00:54,003 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 16:00:54,587 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 16:00:55,044 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 16:00:55,058 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 16:00:55,267 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 16:00:56,939 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 16:00:58,605 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:00:59,130 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 16:00:59,411 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 16:00:59,412 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 16:00:59,413 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 16:01:00,608 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 16:01:00,762 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 11.189 seconds (JVM running for 12.152)
+2019-08-09 16:01:01,187 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@44d39d83
+2019-08-09 16:01:01,187 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 16:01:01,198 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName南京银行驻场项目组
+2019-08-09 16:01:01,207 [main] INFO  com.boot.serviceTest.UserServiceTest - ----------------------------查找结果=====
+2019-08-09 16:01:01,216 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 16:01:01,221 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:01:01,224 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 16:01:01,234 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 16:01:01,249 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 16:05:01,991 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 5180 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 16:05:01,993 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 16:05:07,635 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 16:05:08,459 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 16:05:09,168 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 16:05:09,195 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 16:05:09,545 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 16:05:11,467 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 16:05:13,293 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:05:13,883 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 16:05:14,184 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 16:05:14,186 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 16:05:14,188 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 16:05:15,558 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 16:05:15,698 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 14.258 seconds (JVM running for 15.256)
+2019-08-09 16:05:16,118 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@60af38ec
+2019-08-09 16:05:16,118 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 16:05:16,129 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName南京银行驻场项目组
+2019-08-09 16:05:16,134 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 16:05:16,136 [main] INFO  com.boot.serviceTest.UserServiceTest - nested exception is org.apache.ibatis.binding.BindingException: Parameter 'productid' not found. Available parameters are [productname, param1]
+2019-08-09 16:05:16,144 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 16:05:16,149 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:05:16,152 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 16:05:16,161 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 16:05:16,177 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 16:06:11,314 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 4200 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 16:06:11,316 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 16:06:16,029 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 16:06:16,688 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a859a06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 16:06:17,160 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$e1eaabf5 - weeklyplan.
+2019-08-09 16:06:17,175 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 16:06:17,376 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 16:06:19,245 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 16:06:20,939 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:06:21,381 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 16:06:21,639 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 16:06:21,640 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 16:06:21,641 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 16:06:22,901 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 16:06:23,072 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 12.324 seconds (JVM running for 13.221)
+2019-08-09 16:06:23,484 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@46d7c4d0
+2019-08-09 16:06:23,484 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 16:06:23,494 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName南京银行驻场项目组
+2019-08-09 16:06:23,501 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 16:06:23,584 [main] INFO  com.boot.serviceTest.UserServiceTest - 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  zt_product.id='4'' at line 6
+### The error may exist in file [G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes\com\boot\mapper\mysql\sys\SysUserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select   zt_module.id as module_id,   zt_module.name as module_name   from   zt_module,zt_product where zt_module.root = zt_product.id    WHERE  zt_product.id=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  zt_product.id='4'' at line 6
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  zt_product.id='4'' at line 6
+2019-08-09 16:06:23,620 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 16:06:23,626 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:06:23,629 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 16:06:23,637 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 16:06:23,652 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 16:07:13,281 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 11320 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 16:07:13,282 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-09 16:07:17,053 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 16:07:17,621 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cb843236] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 16:07:18,096 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$5153dbc - weeklyplan.
+2019-08-09 16:07:18,113 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 16:07:18,327 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 16:07:19,959 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 16:07:21,739 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:07:22,239 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 16:07:22,488 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 16:07:22,489 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 16:07:22,490 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 16:07:23,669 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 16:07:23,815 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 11.124 seconds (JVM running for 12.111)
+2019-08-09 16:07:24,211 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@32b1d581
+2019-08-09 16:07:24,212 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-09 16:07:24,224 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName南京银行驻场项目组
+2019-08-09 16:07:24,230 [main] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 16:07:24,252 [main] INFO  com.boot.serviceTest.UserServiceTest - ----------------------------查找结果=====
+2019-08-09 16:07:24,261 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-09 16:07:24,267 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:07:24,270 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-09 16:07:24,278 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-09 16:07:24,295 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-09 16:32:42,134 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 11624 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 16:32:42,137 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-09 16:32:45,913 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 16:32:46,562 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$65cb3de9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 16:32:47,463 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-09 16:32:47,484 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-09 16:32:47,502 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-09 16:32:47,502 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 16:32:47,853 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-09 16:32:47,860 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-09 16:32:47,860 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5656 ms
+2019-08-09 16:32:48,074 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 16:32:48,706 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$9f5c496f - weeklyplan.
+2019-08-09 16:32:48,722 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 16:32:48,938 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 16:32:50,525 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:32:50,792 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 16:32:50,860 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 16:32:50,861 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 16:32:50,862 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 16:32:51,182 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 16:32:51,261 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-09 16:32:51,304 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-09 16:32:51,308 [main] INFO  com.boot.Application - Started Application in 9.764 seconds (JVM running for 10.208)
+2019-08-09 16:32:59,408 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-09 16:32:59,408 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-09 16:32:59,422 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-08-09 16:33:02,423 [http-nio-9080-exec-3] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-09 16:33:02,438 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-09 16:33:02,438 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-09 16:38:47,943 [http-nio-9080-exec-2] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-09 16:38:47,958 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:38:47,960 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-09 16:38:47,979 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:38:48,178 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:38:48,292 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:38:51,584 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:38:55,788 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:55:10,160 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 8388 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 16:55:10,164 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-09 16:55:14,523 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 16:55:15,203 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$567b2d58] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 16:55:16,095 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-09 16:55:16,128 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-09 16:55:16,146 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-09 16:55:16,149 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 16:55:16,624 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-09 16:55:16,631 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-09 16:55:16,632 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6394 ms
+2019-08-09 16:55:16,864 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 16:55:17,627 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$900c38de - weeklyplan.
+2019-08-09 16:55:17,642 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 16:55:17,866 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 16:55:19,713 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:55:20,027 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 16:55:20,089 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 16:55:20,090 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 16:55:20,092 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 16:55:20,432 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 16:55:20,517 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-09 16:55:20,569 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-09 16:55:20,574 [main] INFO  com.boot.Application - Started Application in 11.11 seconds (JVM running for 11.582)
+2019-08-09 16:55:50,814 [http-nio-9080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-09 16:55:50,815 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-09 16:55:50,831 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2019-08-09 16:55:52,698 [http-nio-9080-exec-3] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-09 16:55:52,716 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:55:52,719 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-09 16:55:52,983 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:55:53,100 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:55:54,218 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:55:57,599 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:55:57,624 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 16:55:57,638 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 16:55:58,763 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:55:58,775 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 16:55:58,777 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 16:57:24,270 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 2440 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 16:57:24,278 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-09 16:57:28,813 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 16:57:29,547 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$79455f43] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 16:57:30,601 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-09 16:57:30,634 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-09 16:57:30,656 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-09 16:57:30,656 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 16:57:31,037 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-09 16:57:31,044 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-09 16:57:31,045 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6608 ms
+2019-08-09 16:57:31,326 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 16:57:32,164 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$b2d66ac9 - weeklyplan.
+2019-08-09 16:57:32,183 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 16:57:32,496 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 16:57:34,552 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 16:57:34,928 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 16:57:35,021 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 16:57:35,023 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 16:57:35,025 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 16:57:35,429 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 16:57:35,525 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-09 16:57:35,587 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-09 16:57:35,593 [main] INFO  com.boot.Application - Started Application in 12.381 seconds (JVM running for 13.269)
+2019-08-09 16:57:46,772 [http-nio-9080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-09 16:57:46,772 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-09 16:57:46,784 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-08-09 16:57:46,816 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-09 16:57:46,817 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-09 16:57:54,397 [http-nio-9080-exec-2] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-09 16:57:54,409 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:57:54,411 [http-nio-9080-exec-1] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-09 16:57:54,435 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:57:54,688 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:57:54,777 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:58:08,256 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:58:13,699 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:58:22,243 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 16:58:22,783 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 16:59:49,066 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:59:49,355 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 16:59:49,485 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:00:10,334 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:00:13,413 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:00:13,438 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 17:00:13,443 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 17:00:14,370 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:00:14,374 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 17:00:14,376 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 17:00:19,670 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:00:19,686 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 17:00:19,688 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 17:02:51,030 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:02:51,267 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:02:51,387 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:02:52,353 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:02:55,252 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:02:55,256 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 17:02:55,258 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 17:02:56,087 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:02:56,090 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 17:02:56,092 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 17:02:58,117 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:02:58,120 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 17:02:58,121 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 17:03:14,371 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 17:03:14,374 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 17:03:14,377 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:27:14,160 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 17508 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 20:27:14,165 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-09 20:27:17,840 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 20:27:18,424 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e84ba367] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 20:27:19,335 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-09 20:27:19,357 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-09 20:27:19,374 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-09 20:27:19,375 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 20:27:19,868 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-09 20:27:19,878 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-09 20:27:19,878 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5626 ms
+2019-08-09 20:27:20,225 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 20:27:21,189 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$21dcaeed - weeklyplan.
+2019-08-09 20:27:21,210 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 20:27:21,459 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 20:27:23,118 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 20:27:23,397 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 20:27:23,471 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 20:27:23,472 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 20:27:23,474 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 20:27:23,828 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 20:27:23,923 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-09 20:27:23,973 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-09 20:27:23,977 [main] INFO  com.boot.Application - Started Application in 10.5 seconds (JVM running for 10.959)
+2019-08-09 20:27:38,221 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-09 20:27:38,221 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-09 20:27:38,239 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2019-08-09 20:27:40,331 [http-nio-9080-exec-5] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-09 20:27:40,352 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:27:40,355 [http-nio-9080-exec-6] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-09 20:27:40,615 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:27:40,754 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:27:42,063 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:27:43,668 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:27:43,688 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:27:43,695 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:27:46,977 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:27:46,984 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:27:46,989 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:27:50,209 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:27:50,214 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:27:50,219 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:28:00,141 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:28:00,148 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:28:00,151 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:28:01,466 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:28:01,471 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:28:01,474 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:28:01,917 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:28:01,922 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:28:01,924 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:33:47,780 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:33:48,099 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:33:48,254 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:33:49,110 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:33:50,884 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:33:50,890 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:33:50,892 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:35:40,816 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-09 20:35:40,816 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-09 20:35:42,628 [http-nio-9080-exec-1] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-09 20:35:42,635 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:35:42,635 [http-nio-9080-exec-9] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-09 20:35:42,649 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:35:42,851 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:35:42,969 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:35:44,123 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:35:45,509 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:35:45,512 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:35:45,515 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:39:24,844 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 14352 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-09 20:39:24,848 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-09 20:39:28,909 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-09 20:39:29,464 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6a702f67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-09 20:39:30,321 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-09 20:39:30,345 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-09 20:39:30,359 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-09 20:39:30,360 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 20:39:30,709 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-09 20:39:30,717 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-09 20:39:30,717 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5779 ms
+2019-08-09 20:39:30,944 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-09 20:39:31,706 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$a4013aed - weeklyplan.
+2019-08-09 20:39:31,727 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-09 20:39:31,998 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-09 20:39:34,158 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 20:39:34,574 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-09 20:39:34,653 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-09 20:39:34,655 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-09 20:39:34,657 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-09 20:39:35,132 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-09 20:39:35,261 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-09 20:39:35,326 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-09 20:39:35,332 [main] INFO  com.boot.Application - Started Application in 11.19 seconds (JVM running for 11.687)
+2019-08-09 20:39:36,501 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-09 20:39:36,501 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-09 20:39:36,518 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2019-08-09 20:39:36,558 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-09 20:39:36,558 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-09 20:39:43,918 [http-nio-9080-exec-1] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-09 20:39:43,937 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:39:43,940 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-09 20:39:44,006 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:39:44,298 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:39:44,470 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:39:45,769 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:39:48,097 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:39:48,115 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:39:48,123 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:43:23,116 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:43:23,126 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:43:23,130 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-09 20:43:24,530 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:43:24,831 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:43:25,074 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:43:26,181 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:43:27,623 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-09 20:43:27,628 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-09 20:43:27,632 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull

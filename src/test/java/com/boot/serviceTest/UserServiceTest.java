@@ -37,7 +37,11 @@ public class UserServiceTest extends SpringTestCase {
 
 	@Test
 	public void selectUserByIdTest() {
+		
+		DoufuTodayWork  doufuTodayWork = new DoufuTodayWork();
 
+		doufuTodayWorkService.selectOne(doufuTodayWork);
+		
 		/*
 		 * SysUser user = sysUserService.selectUserByName("admin"); logger.info("查找结果" +
 		 * user);

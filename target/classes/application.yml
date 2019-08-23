@@ -46,10 +46,9 @@ server:
 db:
    schema: weeklyplan.
 mapper:
-  mappers:
-    - tk.mybatis.mapper.common.Mapper
-    - tk.mybatis.mapper.common.Mapper2
+  mappers: tk.mybatis.mapper.common.Mapper
   notEmpty: true
+  identity: MYSQL
   
 info:
   head: head

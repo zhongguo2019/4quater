@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>日报录入</title>
+<script src="../../../miniui/boot.js" type="text/javascript"></script>
+<script src="../test_data.js" type="text/javascript"></script>
+<script src="../scripts/jsUtil.js" type="text/javascript"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.add_new {
+	background: url(../image/新增.png) no-repeat
+}
+
+.del_new {
+	background: url(../image/删除.png) no-repeat
+}
+
+.save_new {
+	background: url(../image/保存.png) no-repeat
+}
+</style>
+</head>
+<body>
+	<div style="width: 100%;">
+		<div class="mini-toolbar" style="border-bottom: 0; padding: 0px;">
+			<table style="width: 100%;">
+				<tr>
+					<td style="width: 30%;">
+					    <a class="mini-button"	iconCls="icon-add" onclick="addRow()" tooltip="增加..." plain="true">增加</a>
+						 <span class="separator"></span>
+						 <a class="mini-button"	iconCls="icon-remove" onclick="removeRow()" tooltip="删除..." plain="true">删除</a> 
+						 <span class="separator"></span>
+						 <a	class="mini-button" iconCls="icon-save"  onclick="saveData()"tooltip="保存..."      plain="true">保存</a>
+						 <a class="mini-button" iconCls="icon-query" onclick="queryData()" tooltip="查询..."	plain="true">查询</a></td>
+					<td align="left" width=200><label id="lbl_datedsc"></label></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="mini-fit">
+		<div id="grid_today_work" class="mini-datagrid"
+			style="width: 100%; height: 400px;" 	url="/todaywork/doufuTodayWork/queryList" idField="id"
+			allowCellEdit="true" allowCellSelect="true" multiSelect="true"			allowAlternating="true" allowCellWrap="true"
+			editNextOnEnterKey="true" editNextRowCell="true"	oncellvalidation="onCellValidation"  showPager="false" showHeader="true" title="今天工作">
+			<div property="columns">
+				<div type="indexcolumn">序号</div>
+				<div type="checkcolumn">选择</div>
+				<div type="comboboxcolumn" autoShowPopup="true" name="productId"
+					field="productId" width="100" allowSort="true" align="center"
+					headerAlign="center" renderer="onrelevanceprincipleProduct">
+					产品名称 <input property="editor" class="mini-combobox"
+						style="width: 100%;" nullItemText="请选择..." showNullItem="true"
+						emptyText="请选择..." allowInput="true" url="/main/productmodule"
+						textField="module_name" valueField="module_id" />
+				</div>
+
+				<div field="workContents" id="workContents" allowSort="true"
+					width="200" headerAlign="center" vtype="required">
+					工作内容简述 <input property="editor" class="mini-textarea"
+						style="width: 200px;" minWidth="200" minHeight="100" />
+				</div>
+				<div field="workDetail" allowSort="true" width="400"
+					headerAlign="center" vtype="required">
+					工作内容详细说明 <input property="editor" class="mini-textarea"
+						style="width: 100%;" minWidth="200" minHeight="100" />
+				</div>
+
+				<div field="finishPercent" allowSort="true" width="50"
+					headerAlign="center" vtype="required">
+					完成比例 <input property="editor" class="mini-spinner" increment="0.1"
+						minValue="0" maxValue="1" format="p2" />
+				</div>
+
+				<div field="delayReason" allowSort="true" width="40"
+					headerAlign="center" vtype="required">
+					延迟原因 <input property="editor" class="mini-textarea"
+						style="width: 100%;" minWidth="200" minHeight="100" />
+
+				</div>
+				<div type="checkboxcolumn" vtype="required" field="isImportant"
+					trueValue="1" falseValue="0" width="40" headerAlign="center">重要</div>
+				<div type="checkboxcolumn" vtype="required" field="isEmergency"
+					trueValue="1" falseValue="0" width="40" headerAlign="center">紧急</div>
+
+			</div>
+		</div>
+
+		<div style="width: 100%;">
+			<div class="mini-toolbar" style="border-bottom: 0; padding: 0px;">
+				<table style="width: 100%;">
+					<tr>
+						<td style="width: 30%;"><a class="mini-button"
+							iconCls="icon-add" id="add_01" onclick="addRow_01()" plain="true"
+							tooltip="增加...">增加</a> <span class="separator"></span> <a
+							class="mini-button" iconCls="icon-remove" id="del_01"
+							onclick="removeRow_01()" tooltip="删除..." plain="true">删除</a> <span
+							class="separator"></span> <a class="mini-button"
+							iconCls="icon-save" id="save_01" onclick="saveData_01()"
+							tooltip="保存..." plain="true">保存</a></td>
+						<td align="left" width=200><label id="lbl_datedsc_01"></label></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!---------------------------------------------------------- 明天的工作 ------------------------------------------------------------------------------------------------>
+
+		<div id="grid_tomorrow_work" class="mini-datagrid"
+			style="width: 100%; height: 300px;" sizeList="[5,10,15,20]"
+			url="/main/new" idField="id" showPager="false" allowCellEdit="true"
+			allowCellSelect="true" multiSelect="true" allowAlternating="true"
+			allowCellWrap="true" editNextOnEnterKey="true" editNextRowCell="true"
+			showHeader="true" title="明天计划">
+			<div property="columns">
+				<div type="indexcolumn">序号</div>
+				<div type="checkcolumn">选择</div>
+
+				<div field="product_id_01" type="comboboxcolumn"
+					autoShowPopup="true" name="product_id_01" width="100"
+					allowSort="true" align="center" headerAlign="center">
+					产品名称 <input property="editor" class="mini-combobox"
+						style="width: 100%;" data="product_ids" />
+				</div>
+
+				<div field="work_contents_01" allowSort="true" width="200"
+					headerAlign="center" vtype="required">
+					工作内容简述 <input property="editor" class="mini-textarea"
+						style="width: 100%;" minWidth="200" minHeight="50" />
+				</div>
+
+				<div field="work_detail_01" allowSort="true" width="400"
+					headerAlign="center" vtype="required">
+					工作详细说明 <input property="editor" class="mini-textarea"
+						style="width: 100%;" minWidth="200" minHeight="50" />
+				</div>
+
+				<div field="is_important_01" type="checkboxcolumn" vtype="required"
+					trueValue="1" falseValue="0" width="40" headerAlign="center">重要</div>
+				<div field="is_emergency_01" type="checkboxcolumn" vtype="required"
+					trueValue="1" falseValue="0" width="40" headerAlign="center">紧急</div>
+			</div>
+
+		</div>
+</body>
+<script type="text/javascript">
+	$(function() {
+
+		var lbl_datedsc = $("#lbl_datedsc");
+		var lbl_datedsc_01 = $("#lbl_datedsc_01");
+		lbl_datedsc.text(today);
+		lbl_datedsc_01.text(tomorrow);
+		
+	});
+	
+	mini.parse();
+    
+    var grid_today_work    = mini.get("grid_today_work");
+    var grid_tomorrow_work = mini.get("grid_tomorrow_work");
+     var i=0;
+	function addRow() {
+		    i++;
+			var newRow = {
+			productId : "1",
+			workContents : "与客户沟通，1104统计报送的需求"+i,
+			workDetail : "与客户沟通，1104统计报送的需求"+i,
+			finishPercent : "100%",
+			delayReason : "无延迟",
+			isImportant : "1",
+			isEmergency:"1"
+			
+		};
+			grid_today_work.addRow(newRow, grid_today_work.getData().length);
+			grid_today_work.beginEditCell(newRow, "workContents");
+	}
+	
+    
+    function saveData() {
+    	grid_today_work.validate();
+        if (grid_today_work.isValid() == false) {
+            alert("请校验输入单元格内容");
+            var error = grid.getCellErrors()[0];
+            grid_today_work.beginEditCell(error.record, error.column);
+            return;
+        }
+        var dataToday = grid_today_work.getChanges();
+       
+        if(dataToday == ""){
+        	mini.alert("没有需要保存的数据");
+        	return;
+        }
+        var json = encodeURIComponent(encodeURIComponent(mini.encode(dataToday))) ;
+        
+       //grid_today_work.loading("保存中，请稍后......");
+        $.ajax({
+            url: "/todaywork/doufuTodayWork/savebatch",
+            data: { data: json },
+            type: "post",
+            success: function (result) {
+                if (result.code == 1) {
+                	  mini.alert(result.msg);
+                	  grid_today_work.reload()
+                } else {
+                	 mini.alert(result.msg);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(jqXHR.responseText);
+            }
+        });
+        grid_today_work.load();
+    }
+    
+    function queryData() { 
+    	grid_today_work.load();
+  
+    }
+/*     grid_today_work.on("beforeload", function (e) {
+        if (grid_today_work.getChanges().length > 0) {
+            if (confirm("有增删改的数据未保存，是否取消本次操作？")) {
+                e.cancel = true;
+            }
+        }
+    }); */
+
+
+	  function removeRow() {
+	        var rows = grid_today_work.getSelecteds();
+	        if (rows.length > 0) {
+	        	
+	        	mini.confirm("确定删除记录？", "确定？",
+	                    function (action) {
+	                        if (action == "ok") {
+	                            var ids = [];
+	        	                for (var i = 0, l = rows.length; i < l; i++) {
+	        	                    var r = rows[i];
+	        	                    ids.push(r.id);
+	        	                }
+	        	               // var json = encodeURIComponent(encodeURIComponent(mini.encode(ids))) ;
+	        	                
+	         	                 $.ajax({
+	         	                    url: "/todaywork/doufuTodayWork/deletes",
+	         	                   type: "post",
+	         	                  data: {
+	         	                     'ids': ids
+	         	                 },
+	         		                success:  function (result) {
+	         	                       if (result.code == 1) {
+	         	                    	  mini.alert(result.msg);
+	         	                    	  grid_today_work.reload()
+	         	                    } else {
+	         	                    	 mini.alert(result.msg);
+	         	                    }
+	         	                },
+	         	                    error: function () {
+	         	                    }
+	         	                }); 
+	                        } else {
+	                            
+	                        }
+	                    }
+	                );
+	        	
+	        } else {
+	            alert("请选中一条记录");
+	        }
+	    }
+	
+
+
+	    
+    var grid_tomorrow_work = mini.get("grid_tomorrow_work");
+	function addRow_01() {
+			var newRow = {
+			product_id_01 : "1",
+			//work_contents_01 : "与客户沟通，1104统计报送的需求",
+			//work_detail_01 : "与客户沟通，1104统计报送的需求",
+			//accord_yesterday_01 : "与客户沟通，1104统计报送的需求",
+			is_important_01 : "1",
+			is_emergency_01:"1"
+			
+		};
+			grid_tomorrow_work.addRow(newRow, 0);
+			grid_tomorrow_work.beginEditCell(newRow, "");
+	}
+	
+
+
+
+	  function removeRow_01() {
+	        var rows = grid_tomorrow_work.getSelecteds();
+	        if (rows.length > 0) {
+	            if (confirm("确定删除选中记录？")) {
+	                var ids = [];
+	                for (var i = 0, l = rows.length; i < l; i++) {
+	                    var r = rows[i];
+	                    ids.push(r.id);
+	                }
+	                var id = ids.join(',');
+	                grid_tomorrow_work.loading("操作中，请稍后......");
+	                $.ajax({
+	                    url: "../data/AjaxService.jsp?method=RemoveEmployees&id=" + id,
+	                    success: function (text) {
+	                    	grid_tomorrow_work.reload();
+	                    },
+	                    error: function () {
+	                    }
+	                });
+	            }
+	        } else {
+	            alert("请选中一条记录");
+	        }
+	    }
+	
+    
+	    function onrelevanceprincipleProduct(e) {
+	        var relevanceprinciple = mini.decode($.ajax({
+	            url: "/main/productmodule",
+	            async: false
+	        }).responseText);
+	        
+	        for (var i = 0, l = relevanceprinciple.length; l > i; i++) {
+	            var g = relevanceprinciple[i];
+	            if (g.module_id== e.value) return g.module_name;
+	        }
+	        return "";
+	    }
+	    
+	    function onCellValidation(e) 
+	    {
+	        if (e.field == "部门编号")//我要判断的字段
+	        {
+	            if (!e.value && !e.row.外协厂商代号) //判断条件
+	            {
+	            　　e.isValid = false;
+	            　　e.errorText = "无外协厂商时,部门不能为空！";
+	            }
+	        }
+	    }
+	  
+	    </script>
+</script>
+</html>

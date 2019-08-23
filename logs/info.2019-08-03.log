@@ -1,0 +1,22 @@
+2019-08-03 11:06:40,620 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 18616 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-03 11:06:40,625 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-03 11:06:43,718 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-03 11:06:44,370 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$34f273ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-03 11:06:45,026 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$6e837f70 - weeklyplan.
+2019-08-03 11:06:45,040 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-03 11:06:45,263 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-03 11:06:47,571 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-03 11:06:48,006 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-03 11:06:48,205 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-03 11:06:48,207 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-03 11:06:48,209 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-03 11:06:49,332 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-03 11:06:49,469 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 9.464 seconds (JVM running for 10.559)
+2019-08-03 11:06:49,934 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sysuser.model.SysUser@6a4c4261
+2019-08-03 11:06:49,934 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-03 11:06:49,947 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始根据不同条件查询一条【当天工作记录信息表】数据，返回实体对象========================#
+2019-08-03 11:06:49,958 [main] INFO  com.boot.serviceTest.UserServiceTest - com.boot.web.todaywork.model.DoufuTodayWork cannot be cast to java.util.List
+2019-08-03 11:06:49,967 [Thread-3] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-03 11:06:49,973 [Thread-3] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-03 11:06:49,978 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-03 11:06:49,998 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

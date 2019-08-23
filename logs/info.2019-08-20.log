@@ -1,0 +1,1125 @@
+2019-08-20 12:06:02,878 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 15940 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 12:06:02,885 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 12:06:07,697 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 12:06:08,261 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c948e78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 12:06:09,185 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 12:06:09,210 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 12:06:09,225 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 12:06:09,226 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 12:06:09,623 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 12:06:09,632 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 12:06:09,632 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6647 ms
+2019-08-20 12:06:09,873 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 12:06:10,620 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$662599fe - weeklyplan.
+2019-08-20 12:06:10,637 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 12:06:10,862 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 12:06:12,746 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 12:06:13,075 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 12:06:13,152 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 12:06:13,153 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 12:06:13,155 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 12:06:13,488 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 12:06:13,568 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 12:06:13,633 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 12:06:13,636 [main] INFO  com.boot.Application - Started Application in 11.735 seconds (JVM running for 12.284)
+2019-08-20 12:06:39,892 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 12:06:39,892 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 12:06:39,907 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2019-08-20 12:06:41,552 [http-nio-9080-exec-4] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 12:06:41,575 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 12:06:41,578 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 12:06:41,820 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 12:06:41,951 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 12:06:45,681 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 12:06:45,691 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 12:06:45,715 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 12:06:45,933 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 12:06:45,937 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 12:06:45,940 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 12:06:47,213 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 12:06:47,217 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 12:06:47,219 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 12:06:49,328 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 12:06:49,332 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 12:06:49,334 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 12:06:49,450 [http-nio-9080-exec-5] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 12:06:49,475 [http-nio-9080-exec-5] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.02秒
+2019-08-20 12:08:06,057 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 12:08:06,083 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.03秒
+2019-08-20 16:21:51,749 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 16128 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 16:21:51,755 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 16:21:57,672 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 16:21:58,584 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7629fe31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 16:22:00,199 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 16:22:00,249 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 16:22:00,279 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 16:22:00,279 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 16:22:00,936 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 16:22:00,950 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 16:22:00,951 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 9113 ms
+2019-08-20 16:22:01,303 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 16:22:02,431 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$afbb09b7 - weeklyplan.
+2019-08-20 16:22:02,457 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 16:22:02,815 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 16:22:05,251 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 16:22:05,724 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 16:22:05,819 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 16:22:05,822 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 16:22:05,824 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 16:22:06,287 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 16:22:06,403 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 16:22:06,501 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 16:22:06,507 [main] INFO  com.boot.Application - Started Application in 15.768 seconds (JVM running for 16.322)
+2019-08-20 16:23:47,712 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 16:23:47,712 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 16:23:47,724 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-08-20 16:23:47,772 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 16:23:47,772 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 16:24:00,396 [http-nio-9080-exec-6] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 16:24:00,419 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:24:00,422 [http-nio-9080-exec-8] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 16:24:00,472 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:24:00,797 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:24:01,050 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:24:07,112 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:24:07,139 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:24:07,143 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:24:08,262 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:24:08,284 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:24:08,289 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:24:09,904 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:24:09,914 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:24:09,920 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:24:12,699 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:24:12,709 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:24:12,715 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:24:16,374 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:24:16,381 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:24:16,387 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:24:16,571 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 16:24:16,603 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.03秒
+2019-08-20 16:24:21,129 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 16:24:21,145 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.01秒
+2019-08-20 16:24:40,559 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 16:24:40,593 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.03秒
+2019-08-20 16:25:03,484 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:25:03,746 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:25:03,970 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:35:36,255 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:35:36,521 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:35:36,737 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:35:39,358 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:35:39,365 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:35:39,367 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:35:39,571 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:35:39,576 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:35:39,579 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:35:40,416 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:35:40,420 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:35:40,423 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:35:42,799 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:35:42,819 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:35:42,826 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:35:42,871 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 16:35:42,887 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.01秒
+2019-08-20 16:47:49,208 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 2184 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 16:47:49,213 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 16:47:54,094 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 16:47:54,918 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bd12bfc6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 16:47:56,291 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 16:47:56,329 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 16:47:56,365 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 16:47:56,366 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 16:47:56,892 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 16:47:56,903 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 16:47:56,904 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7624 ms
+2019-08-20 16:47:57,237 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 16:47:58,309 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$f6a3cb4c - weeklyplan.
+2019-08-20 16:47:58,327 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 16:47:58,684 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 16:48:01,092 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 16:48:01,516 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 16:48:01,608 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 16:48:01,610 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 16:48:01,612 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 16:48:02,085 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 16:48:02,241 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 16:48:02,307 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 16:48:02,313 [main] INFO  com.boot.Application - Started Application in 13.766 seconds (JVM running for 14.212)
+2019-08-20 16:48:53,660 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 16:48:53,660 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 16:48:53,676 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2019-08-20 16:48:53,715 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 16:48:53,716 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 16:48:55,466 [http-nio-9080-exec-1] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 16:48:55,489 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:48:55,493 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 16:48:55,547 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:48:55,868 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:48:56,077 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:48:58,773 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:48:58,790 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:48:58,798 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:49:00,618 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:49:00,624 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:49:00,628 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:49:01,539 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:49:01,544 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:49:01,548 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:49:03,873 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 16:49:03,882 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 16:49:03,884 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 16:49:03,938 [http-nio-9080-exec-1] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 16:49:03,967 [http-nio-9080-exec-1] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.03秒
+2019-08-20 17:36:24,821 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 19648 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 17:36:24,824 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 17:36:29,216 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 17:36:29,760 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2daeb2b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:36:30,691 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 17:36:30,719 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 17:36:30,740 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 17:36:30,740 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 17:36:31,094 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 17:36:31,101 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 17:36:31,101 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6189 ms
+2019-08-20 17:36:31,324 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 17:36:32,053 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$673fbe3a - weeklyplan.
+2019-08-20 17:36:32,071 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 17:36:32,308 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 17:36:34,200 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:36:34,540 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 17:36:34,610 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 17:36:34,612 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 17:36:34,614 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 17:36:34,946 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 17:36:35,039 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 17:36:35,105 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 17:36:35,109 [main] INFO  com.boot.Application - Started Application in 11.191 seconds (JVM running for 11.721)
+2019-08-20 17:36:51,844 [http-nio-9080-exec-3] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 17:36:51,844 [http-nio-9080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 17:36:51,858 [http-nio-9080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-08-20 17:36:55,542 [http-nio-9080-exec-7] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 17:36:55,566 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 17:36:55,569 [http-nio-9080-exec-8] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 17:36:55,814 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 17:36:55,955 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 17:37:02,279 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 17:37:02,288 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 17:37:02,290 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 17:37:03,342 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 17:37:03,345 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 17:37:03,348 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 17:37:04,917 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 17:37:04,920 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 17:37:04,922 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 17:37:10,606 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 17:37:10,615 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 17:37:10,618 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 17:37:10,813 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 17:37:10,850 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.04秒
+2019-08-20 18:30:43,295 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 18:30:43,312 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 18:30:46,234 [http-nio-9080-exec-4] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 18:30:46,239 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:30:46,239 [http-nio-9080-exec-1] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 18:30:46,249 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:30:46,439 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:30:46,516 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:30:54,058 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:30:54,072 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:30:54,079 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:30:54,744 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:30:54,753 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:30:54,761 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:30:55,127 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:30:55,135 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:30:55,141 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:30:56,573 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:30:56,578 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:30:56,581 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:30:59,196 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:30:59,203 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:30:59,208 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:31:02,139 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:31:02,144 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:31:02,147 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:31:05,298 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:31:05,305 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:31:05,309 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:31:05,501 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 18:31:05,524 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.02秒
+2019-08-20 18:41:13,177 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 5028 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 18:41:13,181 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 18:41:17,636 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 18:41:18,182 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6a702f67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 18:41:19,157 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 18:41:19,186 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 18:41:19,204 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 18:41:19,204 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 18:41:19,551 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 18:41:19,557 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 18:41:19,558 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6282 ms
+2019-08-20 18:41:19,794 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 18:41:20,563 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$a4013aed - weeklyplan.
+2019-08-20 18:41:20,579 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 18:41:20,824 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 18:41:22,689 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 18:41:23,025 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 18:41:23,089 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 18:41:23,090 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 18:41:23,092 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 18:41:23,430 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 18:41:23,526 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 18:41:23,574 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9080"]
+2019-08-20 18:41:23,575 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-08-20 18:41:23,585 [main] INFO  org.apache.catalina.util.LifecycleBase - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2019-08-20 18:41:23,586 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9080"]
+2019-08-20 18:41:23,586 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9080"]
+2019-08-20 18:41:23,590 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-20 18:41:23,595 [main] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 18:41:23,599 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 18:41:23,604 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 18:41:23,618 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 18:41:23,618 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 18:43:48,271 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 5520 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 18:43:48,274 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 18:43:51,830 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 18:43:52,351 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9339b57d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 18:43:53,107 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 18:43:53,124 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 18:43:53,138 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 18:43:53,139 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 18:43:53,436 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 18:43:53,443 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 18:43:53,443 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5096 ms
+2019-08-20 18:43:53,669 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 18:43:54,320 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$cccac103 - weeklyplan.
+2019-08-20 18:43:54,336 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 18:43:54,567 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 18:43:56,196 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 18:43:56,461 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 18:43:56,520 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 18:43:56,522 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 18:43:56,523 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 18:43:56,812 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 18:43:56,895 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 18:43:56,964 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 18:43:56,967 [main] INFO  com.boot.Application - Started Application in 9.362 seconds (JVM running for 9.935)
+2019-08-20 18:44:18,092 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 18:44:18,093 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 18:44:18,115 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 22 ms
+2019-08-20 18:44:18,172 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 18:44:18,172 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 18:44:21,548 [http-nio-9080-exec-1] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 18:44:21,567 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:44:21,571 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 18:44:21,622 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:44:21,862 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:44:21,965 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:44:25,743 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:44:25,771 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:44:25,792 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:44:26,853 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:44:26,866 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:44:26,871 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:44:28,875 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:44:28,886 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:44:28,890 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:44:32,039 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:44:32,047 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:44:32,052 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:44:32,251 [http-nio-9080-exec-1] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 18:44:32,295 [http-nio-9080-exec-1] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.04秒
+2019-08-20 18:45:38,568 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:45:38,817 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:45:38,949 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:46:10,324 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:46:10,337 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:46:10,347 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:46:14,469 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 18:46:14,500 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.03秒
+2019-08-20 18:46:14,559 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:46:14,563 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:46:14,565 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:48:15,662 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:48:16,276 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:48:16,498 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:49:29,768 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:49:29,777 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:49:29,782 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:49:30,205 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:49:30,208 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:49:30,211 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:49:31,883 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:49:31,890 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:49:31,892 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:49:34,745 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:49:34,752 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:49:34,756 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:49:34,978 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 18:49:34,993 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.01秒
+2019-08-20 18:49:35,084 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:49:35,086 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:49:35,088 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:49:35,097 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:49:35,100 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:49:35,101 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:49:53,550 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 18:51:42,384 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 18:52:25,463 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:52:25,881 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:52:26,144 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:52:29,714 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:52:29,719 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:52:29,722 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:52:30,098 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:52:30,105 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:52:30,111 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:52:31,445 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:52:31,450 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:52:31,453 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:52:34,186 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:52:34,191 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:52:34,194 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:52:34,388 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 18:52:34,411 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.02秒
+2019-08-20 18:52:34,436 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:52:34,438 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:52:34,441 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:52:34,457 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:52:34,459 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:52:34,461 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:54:14,352 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:54:14,628 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:54:14,805 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:54:19,233 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 18:54:19,237 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 18:54:19,244 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 18:54:24,455 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 18:54:24,478 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.02秒
+2019-08-20 19:14:31,929 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 2156 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 19:14:31,931 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 19:14:35,655 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 19:14:36,230 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$624bb833] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 19:14:36,687 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$9bdcc3b9 - weeklyplan.
+2019-08-20 19:14:36,705 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 19:14:36,898 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 19:14:38,692 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 19:14:40,411 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 19:14:40,890 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 19:14:41,131 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 19:14:41,132 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 19:14:41,133 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 19:14:42,427 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 19:14:42,560 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 11.248 seconds (JVM running for 12.313)
+2019-08-20 19:14:43,091 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@325410ce
+2019-08-20 19:14:43,091 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 19:14:43,097 [main] INFO  com.boot.serviceTest.UserServiceTest - No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+2019-08-20 19:14:43,106 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 19:14:43,110 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 19:14:43,114 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 19:14:43,125 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 19:14:43,143 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 19:16:28,242 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 20788 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 19:16:28,243 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 19:16:32,442 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 19:16:33,522 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c9ed9c68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 19:16:33,944 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$37ea7ee - weeklyplan.
+2019-08-20 19:16:33,960 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 19:16:34,264 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 19:16:36,484 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 19:16:38,440 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 19:16:39,080 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 19:16:39,391 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 19:16:39,392 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 19:16:39,394 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 19:16:40,986 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 19:16:41,161 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 13.865 seconds (JVM running for 15.802)
+2019-08-20 19:16:41,669 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@51867eab
+2019-08-20 19:16:41,669 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 19:16:49,631 [main] INFO  com.boot.serviceTest.UserServiceTest - No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+2019-08-20 19:16:55,389 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 19:16:55,403 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 19:16:55,409 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 19:16:55,422 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 19:16:55,444 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 19:19:03,038 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 21220 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 19:19:03,039 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 19:19:07,798 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 19:19:08,886 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1de5b7c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 19:19:09,316 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$5776c347 - weeklyplan.
+2019-08-20 19:19:09,336 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 19:19:09,612 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 19:19:11,869 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 19:19:14,116 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 19:19:14,797 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 19:19:15,137 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 19:19:15,139 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 19:19:15,140 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 19:19:16,745 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 19:19:16,907 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 14.784 seconds (JVM running for 16.453)
+2019-08-20 19:19:17,373 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@545cfddb
+2019-08-20 19:19:17,373 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 19:20:21,839 [main] INFO  com.boot.serviceTest.UserServiceTest - No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+2019-08-20 19:20:21,865 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 19:20:21,876 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 19:20:21,881 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 19:20:21,888 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 19:20:21,898 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 19:20:48,374 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 21780 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 19:20:48,376 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 19:20:53,092 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 19:20:54,097 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2d952dc7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 19:20:54,540 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$6726394d - weeklyplan.
+2019-08-20 19:20:54,560 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 19:20:54,854 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 19:20:56,998 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 19:20:58,997 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 19:20:59,649 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 19:20:59,976 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 19:20:59,978 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 19:20:59,980 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 19:21:01,455 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 19:21:01,650 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 14.225 seconds (JVM running for 15.941)
+2019-08-20 19:21:02,122 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@447dd61f
+2019-08-20 19:21:02,123 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 19:21:19,663 [main] INFO  com.boot.serviceTest.UserServiceTest - No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+2019-08-20 19:22:53,655 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 18396 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 19:22:53,656 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 19:22:57,996 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 19:22:59,024 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$84727122] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 19:22:59,469 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$be037ca8 - weeklyplan.
+2019-08-20 19:22:59,488 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 19:22:59,769 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 19:23:01,954 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 19:23:03,932 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 19:23:04,517 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 19:23:04,810 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 19:23:04,811 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 19:23:04,813 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 19:23:06,371 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 19:23:06,556 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 13.792 seconds (JVM running for 15.626)
+2019-08-20 19:23:07,055 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@5d61ba76
+2019-08-20 19:23:07,055 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 19:23:26,463 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2019-08-20 19:23:26,696 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询出错，原因如下：========================#
+2019-08-20 19:23:26,699 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #                 1、此表没有和机构或者用户相关联的字段                               #
+2019-08-20 19:23:26,701 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #                 2、角色配置不正确                                                                     #
+2019-08-20 19:23:26,704 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #                 3、SQL本身语法错误                                                                   #
+2019-08-20 19:23:26,706 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================系统默认处理机制：查询所有数据======================#
+2019-08-20 19:24:13,855 [main] INFO  com.boot.serviceTest.UserServiceTest - 分页查询缺少必要的参数:pageNum
+2019-08-20 19:24:13,884 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 19:24:13,896 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 19:24:13,901 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 19:24:13,912 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 19:24:13,927 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 22:50:09,333 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 22448 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 22:50:09,338 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 22:50:15,404 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 22:50:16,184 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f0bd9ce6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 22:50:17,312 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 22:50:17,339 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 22:50:17,353 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 22:50:17,354 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 22:50:17,705 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 22:50:17,714 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 22:50:17,715 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8252 ms
+2019-08-20 22:50:17,949 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 22:50:18,760 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$2a4ea86c - weeklyplan.
+2019-08-20 22:50:18,778 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 22:50:19,025 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 22:50:20,992 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 22:50:21,407 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 22:50:21,484 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 22:50:21,485 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 22:50:21,487 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 22:50:21,832 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 22:50:21,919 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 22:50:21,988 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 22:50:21,992 [main] INFO  com.boot.Application - Started Application in 13.683 seconds (JVM running for 14.286)
+2019-08-20 22:50:43,091 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 22:50:43,091 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 22:50:43,105 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2019-08-20 22:50:43,150 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 22:50:43,150 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 22:50:45,644 [http-nio-9080-exec-1] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 22:50:45,668 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 22:50:45,670 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 22:50:45,718 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 22:50:46,006 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 22:50:46,189 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 22:50:48,924 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 22:50:48,938 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 22:50:48,956 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 22:51:09,169 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 22:51:09,194 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.02秒
+2019-08-20 23:01:15,198 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 22504 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:01:15,202 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 23:01:18,886 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:01:19,417 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3c3bfd7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:01:20,207 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 23:01:20,225 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:01:20,241 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 23:01:20,241 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 23:01:20,566 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 23:01:20,572 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 23:01:20,573 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5306 ms
+2019-08-20 23:01:20,777 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:01:21,405 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$75cd0903 - weeklyplan.
+2019-08-20 23:01:21,421 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:01:21,667 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:01:23,272 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:01:23,557 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:01:23,626 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:01:23,627 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:01:23,629 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:01:23,965 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:01:24,050 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:01:24,103 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 23:01:24,105 [main] INFO  com.boot.Application - Started Application in 9.57 seconds (JVM running for 10.061)
+2019-08-20 23:01:28,997 [http-nio-9080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 23:01:28,997 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 23:01:29,016 [http-nio-9080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 19 ms
+2019-08-20 23:01:29,053 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 23:01:29,053 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 23:01:33,343 [http-nio-9080-exec-2] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 23:01:33,362 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:01:33,364 [http-nio-9080-exec-1] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 23:01:33,431 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:01:33,692 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:01:33,845 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:01:48,183 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:01:48,200 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:01:48,208 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:02:02,139 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 23:02:02,170 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.03秒
+2019-08-20 23:03:44,385 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:03:44,790 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:03:45,078 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:03:48,291 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:03:48,297 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:03:48,302 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:03:52,034 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 23:03:52,052 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.02秒
+2019-08-20 23:06:43,892 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:06:44,202 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:06:44,418 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:10:24,353 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:10:24,684 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:10:24,900 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:10:27,622 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:10:27,627 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:10:27,629 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:10:34,835 [http-nio-9080-exec-1] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 23:10:34,851 [http-nio-9080-exec-1] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.01秒
+2019-08-20 23:14:38,971 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:14:39,404 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:14:39,644 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:14:47,123 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:14:47,127 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:14:47,130 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:14:47,459 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:14:47,463 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:14:47,466 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:14:48,880 [http-nio-9080-exec-5] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 23:14:48,895 [http-nio-9080-exec-5] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.01秒
+2019-08-20 23:14:48,986 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:14:48,990 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:14:48,993 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:14:49,022 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:14:49,026 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:14:49,029 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:16:27,912 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 15092 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:16:27,913 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 23:16:33,847 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:16:35,059 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d18f152f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:16:35,576 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$b2020b5 - weeklyplan.
+2019-08-20 23:16:35,601 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:16:36,021 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:16:38,709 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:16:41,334 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:16:42,181 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:16:42,557 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:16:42,560 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:16:42,562 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:16:44,556 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:16:44,760 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 17.808 seconds (JVM running for 19.555)
+2019-08-20 23:16:45,346 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@3ea5f324
+2019-08-20 23:16:45,347 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 23:17:07,220 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2019-08-20 23:18:10,796 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询出错，原因如下：========================#
+2019-08-20 23:18:10,796 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #                 1、此表没有和机构或者用户相关联的字段                               #
+2019-08-20 23:18:10,796 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #                 2、角色配置不正确                                                                     #
+2019-08-20 23:18:10,796 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #                 3、SQL本身语法错误                                                                   #
+2019-08-20 23:18:10,796 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================系统默认处理机制：查询所有数据======================#
+2019-08-20 23:18:10,797 [main] INFO  com.boot.serviceTest.UserServiceTest - 分页查询缺少必要的参数:pageNum
+2019-08-20 23:18:10,810 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 23:18:10,817 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:18:10,822 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 23:18:10,832 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 23:18:10,850 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 23:23:05,263 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 14212 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:23:05,265 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 23:23:10,662 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:23:11,640 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$23ad8ff5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:23:12,095 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$5d3e9b7b - weeklyplan.
+2019-08-20 23:23:12,117 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:23:12,422 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:23:14,742 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:23:16,767 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:23:17,429 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:23:17,767 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:23:17,769 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:23:17,770 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:23:19,290 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:23:19,458 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 15.301 seconds (JVM running for 17.117)
+2019-08-20 23:23:19,987 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@14062855
+2019-08-20 23:23:19,987 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 23:23:29,796 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2019-08-20 23:23:40,335 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询出错，原因如下：========================#
+2019-08-20 23:23:40,902 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #                 1、此表没有和机构或者用户相关联的字段                               #
+2019-08-20 23:23:41,414 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #                 2、角色配置不正确                                                                     #
+2019-08-20 23:23:41,934 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #                 3、SQL本身语法错误                                                                   #
+2019-08-20 23:23:42,925 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================系统默认处理机制：查询所有数据======================#
+2019-08-20 23:24:40,921 [main] INFO  com.boot.serviceTest.UserServiceTest - 分页查询缺少必要的参数:pageNum
+2019-08-20 23:24:40,933 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 23:24:40,940 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:24:40,944 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 23:24:40,956 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 23:24:40,979 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 23:24:59,707 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 20100 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:24:59,709 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 23:25:04,649 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:25:05,709 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$53cb0f4c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:25:06,194 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$8d5c1ad2 - weeklyplan.
+2019-08-20 23:25:06,213 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:25:06,493 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:25:08,781 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:25:10,891 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:25:11,507 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:25:11,875 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:25:11,877 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:25:11,879 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:25:13,413 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:25:13,586 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 14.741 seconds (JVM running for 16.382)
+2019-08-20 23:25:14,125 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@7522ea53
+2019-08-20 23:25:14,126 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 23:25:43,411 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2019-08-20 23:26:10,537 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2019-08-20 23:26:30,690 [main] INFO  com.boot.serviceTest.UserServiceTest - ----------------------------查找结果=====
+2019-08-20 23:26:30,701 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 23:26:30,706 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:26:30,709 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 23:26:30,721 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 23:26:30,739 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 23:30:45,916 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 12088 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:30:45,919 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 23:30:49,697 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:30:50,210 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$44d19c0d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:30:51,023 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 23:30:51,042 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:30:51,058 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 23:30:51,058 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 23:30:51,399 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 23:30:51,407 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 23:30:51,407 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5421 ms
+2019-08-20 23:30:51,638 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:30:52,266 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$7e62a793 - weeklyplan.
+2019-08-20 23:30:52,283 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:30:52,503 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:30:54,116 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:30:54,359 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:30:54,415 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:30:54,416 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:30:54,418 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:30:54,724 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:30:54,800 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:30:54,850 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 23:30:54,854 [main] INFO  com.boot.Application - Started Application in 9.566 seconds (JVM running for 10.016)
+2019-08-20 23:31:01,783 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 23:31:01,783 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 23:31:01,798 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2019-08-20 23:31:01,835 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 23:31:01,836 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 23:31:03,983 [http-nio-9080-exec-2] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 23:31:03,994 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:31:03,996 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 23:31:04,053 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:31:04,424 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:31:04,653 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:31:15,123 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:31:15,133 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:31:15,137 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:31:16,890 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 23:31:16,922 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.03秒
+2019-08-20 23:31:16,999 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:31:17,004 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:31:17,009 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:33:43,174 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 4960 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:33:43,175 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 23:33:46,856 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:33:47,485 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$624bb833] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:33:47,891 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$9bdcc3b9 - weeklyplan.
+2019-08-20 23:33:47,907 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:33:48,080 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:33:49,728 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:33:51,423 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:33:51,867 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:33:52,173 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:33:52,174 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:33:52,176 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:33:53,380 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:33:53,517 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 10.856 seconds (JVM running for 11.781)
+2019-08-20 23:33:53,941 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@50e3019b
+2019-08-20 23:33:53,941 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 23:33:53,941 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2019-08-20 23:33:53,982 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2019-08-20 23:33:53,982 [main] INFO  com.boot.serviceTest.UserServiceTest - ----------------------------查找结果=====
+2019-08-20 23:33:53,990 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 23:33:53,995 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:33:53,997 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 23:33:54,007 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 23:33:54,024 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 23:38:09,216 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 11172 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:38:09,262 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 23:38:13,775 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:38:14,434 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d3c5bd6a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:38:15,485 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 23:38:15,516 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:38:15,532 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 23:38:15,533 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 23:38:15,920 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 23:38:15,926 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 23:38:15,927 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6581 ms
+2019-08-20 23:38:16,190 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:38:17,034 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$d56c8f0 - weeklyplan.
+2019-08-20 23:38:17,051 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:38:17,330 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:38:19,325 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:38:19,742 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:38:19,833 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:38:19,834 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:38:19,836 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:38:20,240 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:38:20,351 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:38:20,419 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 23:38:20,423 [main] INFO  com.boot.Application - Started Application in 12.24 seconds (JVM running for 13.183)
+2019-08-20 23:38:25,807 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 23:38:25,807 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 23:38:25,819 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-08-20 23:38:25,858 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 23:38:25,858 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 23:38:27,835 [http-nio-9080-exec-1] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 23:38:27,848 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:27,851 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 23:38:27,942 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:28,190 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:28,339 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:30,770 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:30,782 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:38:30,787 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:38:32,203 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:32,208 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:38:32,212 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:38:32,924 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:32,928 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:38:32,931 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:38:34,573 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:34,578 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:38:34,581 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:38:34,676 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 23:38:34,713 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.04秒
+2019-08-20 23:38:34,789 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:34,795 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:38:34,798 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:38:34,848 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:38:34,851 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:38:34,853 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:38:51,011 [http-nio-9080-exec-9] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 分页显示当天工作记录信息表，参数：{pageSize=20, pageNum=0}
+2019-08-20 23:40:38,404 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 1560 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:40:38,406 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2019-08-20 23:40:43,053 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:40:44,076 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e91dd42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:40:44,598 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$4822e8c8 - weeklyplan.
+2019-08-20 23:40:44,619 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:40:44,965 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:40:47,261 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:40:49,292 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:40:49,933 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:40:50,237 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:40:50,239 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:40:50,241 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:40:51,739 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:40:51,916 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 14.369 seconds (JVM running for 15.922)
+2019-08-20 23:40:52,391 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果com.boot.web.sys.model.SysUser@8cfc918
+2019-08-20 23:40:52,391 [main] INFO  com.boot.serviceTest.UserServiceTest - 查找结果==----------------------===
+2019-08-20 23:40:52,391 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2019-08-20 23:40:52,447 [main] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2019-08-20 23:40:52,448 [main] INFO  com.boot.serviceTest.UserServiceTest - ----------------------------查找结果=====
+2019-08-20 23:40:52,623 [Thread-5] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2019-08-20 23:40:52,627 [Thread-5] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:40:52,631 [Thread-5] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2019-08-20 23:40:52,641 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-08-20 23:40:52,660 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-08-20 23:41:11,028 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 19324 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:41:11,030 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 23:41:15,751 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:41:16,526 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1124319] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:41:17,671 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 23:41:17,706 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:41:17,730 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 23:41:17,730 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 23:41:18,162 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 23:41:18,172 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 23:41:18,172 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7005 ms
+2019-08-20 23:41:18,450 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:41:19,635 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$3aa34e9f - weeklyplan.
+2019-08-20 23:41:19,657 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:41:20,002 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:41:21,923 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:41:22,331 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:41:22,412 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:41:22,414 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:41:22,415 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:41:22,878 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:41:22,997 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:41:23,105 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 23:41:23,109 [main] INFO  com.boot.Application - Started Application in 13.072 seconds (JVM running for 13.98)
+2019-08-20 23:41:39,579 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 23:41:39,579 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 23:41:39,594 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2019-08-20 23:41:39,643 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 23:41:39,643 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 23:41:41,822 [http-nio-9080-exec-1] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 23:41:41,842 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:41:41,846 [http-nio-9080-exec-3] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 23:41:41,941 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:41:42,324 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:41:42,611 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:41:48,702 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:41:48,714 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:41:48,719 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:41:50,654 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 23:41:50,687 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.03秒
+2019-08-20 23:41:50,767 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:41:50,773 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:41:50,779 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:41:59,379 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 分页显示当天工作记录信息表，参数：{pageSize=20, pageNum=0}
+2019-08-20 23:42:01,782 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2019-08-20 23:42:03,491 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2019-08-20 23:44:22,148 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 11536 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2019-08-20 23:44:22,152 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-20 23:44:26,672 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-08-20 23:44:27,258 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c2a83f95] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 23:44:28,133 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2019-08-20 23:44:28,152 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:44:28,169 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-20 23:44:28,169 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-20 23:44:28,577 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-20 23:44:28,586 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-20 23:44:28,586 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6348 ms
+2019-08-20 23:44:28,839 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2019-08-20 23:44:29,533 [main] INFO  com.boot.Application$$EnhancerBySpringCGLIB$$fc394b1b - weeklyplan.
+2019-08-20 23:44:29,546 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-08-20 23:44:29,758 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-08-20 23:44:31,349 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 23:44:31,630 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2019-08-20 23:44:31,694 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 23:44:31,696 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 23:44:31,696 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-08-20 23:44:32,021 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-08-20 23:44:32,102 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2019-08-20 23:44:32,148 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2019-08-20 23:44:32,151 [main] INFO  com.boot.Application - Started Application in 10.836 seconds (JVM running for 11.337)
+2019-08-20 23:44:44,449 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-20 23:44:44,449 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-08-20 23:44:44,461 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-08-20 23:44:44,496 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter sysuser 用户对象在 session中没有找到，统一返回到登录界面!-------------------
+2019-08-20 23:44:44,497 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------Filter 登录中没有相关的关键字，返回到登录道页!-------------------
+2019-08-20 23:44:46,771 [http-nio-9080-exec-1] INFO  com.boot.web.sys.controller.SysUserController - loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面
+2019-08-20 23:44:46,783 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:46,786 [http-nio-9080-exec-2] INFO  com.boot.web.BaseAction -  登录验证成功，进入到系统管理的首页面
+2019-08-20 23:44:46,856 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:47,171 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:47,366 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:52,098 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:52,110 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:52,115 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:52,383 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:52,388 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:52,390 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,467 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表数据
+2019-08-20 23:44:53,499 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 批量插入，用时0.03秒
+2019-08-20 23:44:53,535 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 分页显示当天工作记录信息表，参数：{pageSize=20, pageNum=0}
+2019-08-20 23:44:53,535 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2019-08-20 23:44:53,573 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2019-08-20 23:44:53,644 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,649 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,650 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,653 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,654 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,657 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,674 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,680 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,683 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,738 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,741 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,743 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,756 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,760 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,762 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,806 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,809 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,810 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,819 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,822 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,824 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,836 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,840 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,842 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,891 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,894 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,897 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,952 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,954 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,957 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:53,971 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:53,975 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:53,977 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,022 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,024 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,026 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,037 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,040 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,041 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,050 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,052 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,054 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,092 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,095 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,097 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,107 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,109 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,110 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,137 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,139 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,141 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,155 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,158 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,160 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,169 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,172 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,174 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,196 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,199 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,201 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,217 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,219 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,221 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,230 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,232 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,234 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,241 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,252 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,254 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,283 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,286 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,288 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,303 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,306 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,308 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,342 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,345 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,347 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,356 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,358 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,360 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,371 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,373 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,376 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,442 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 分页显示当天工作记录信息表，参数：{pageSize=20, pageNum=0}
+2019-08-20 23:44:54,442 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2019-08-20 23:44:54,472 [http-nio-9080-exec-7] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2019-08-20 23:44:54,496 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,500 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,502 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,509 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,511 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,514 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,522 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,524 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,526 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,556 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,558 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,560 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,570 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,573 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,575 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,587 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,590 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,592 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,628 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,631 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,632 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,640 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,642 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,644 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,651 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,654 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,655 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,679 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,682 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,684 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,702 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,704 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,706 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,713 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,716 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,718 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,724 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,726 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,728 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,755 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,757 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,758 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,767 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,770 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,771 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,778 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,780 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,781 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,788 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,791 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,792 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,830 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,833 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,834 [http-nio-9080-exec-8] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,842 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,844 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,847 [http-nio-9080-exec-6] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,856 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,859 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,860 [http-nio-9080-exec-7] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,905 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,908 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,909 [http-nio-9080-exec-10] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,918 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,921 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,922 [http-nio-9080-exec-1] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,929 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,931 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,933 [http-nio-9080-exec-2] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,959 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,961 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,963 [http-nio-9080-exec-3] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,970 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,972 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,981 [http-nio-9080-exec-4] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,986 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:54,988 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:54,990 [http-nio-9080-exec-5] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull
+2019-08-20 23:44:54,998 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter -  ----------------------------用户对象已经在session中，可以进行继续访问!-------------------
+2019-08-20 23:44:55,000 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpGroupName江西农信驻场项目组
+2019-08-20 23:44:55,002 [http-nio-9080-exec-9] INFO  com.boot.web.sys.service.SysUserService - Map<String, Object> mpPronull

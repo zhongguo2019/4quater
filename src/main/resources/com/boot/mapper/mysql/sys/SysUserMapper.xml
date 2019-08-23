@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boot.web.sys.mapper.SysUserMapper">
+
+	<sql id="sysUserColumns">
+		id,dept_id,create_by,create_date,del_flag,email,login_date,login_ip,mobile,
+		name,no,organ_id,password,phone,remarks,update_by,update_date,username,user_type
+	</sql>
+
+	<sql id="commonUserColumn">
+		id,dept_id,create_by,create_date,del_flag,email,login_date,login_ip,mobile,
+		name,no,organ_id,password,phone,remarks,update_by,update_date,username,user_type
+	</sql>
+	<!-- 用户列表 -->
+	<select id="findPageInfo"
+		resultType="com.boot.util.CommonEntity">
+		SELECT
+		su.id,su.name,su.mobile,su.email,su.no,su.login_ip,su.login_date,
+		su.dept_id,su.organ_id,so.name organ_name, group_concat(sr.name) roles
+		FROM sys_user su
+		LEFT JOIN sys_user_role sur ON su.id = sur.user_id
+		LEFT JOIN sys_role sr ON sur.role_id = sr.id
+		LEFT JOIN sys_organ so ON
+		so.code = su.organ_id
+		<where>
+			<if test="organId!=0 and organType==1 ">
+				and su.organ_id = #{organId}
+			</if>
+			<if test="organId!=0 and organType==2 ">
+				su.dept_id = #{organId}
+			</if>
+			<if test="@com.boot.util.Ognl@isNotBlank(name)">
+				and su.name like CONCAT('%', #{name}, '%')
+			</if>
+			<if test="@com.boot.util.Ognl@isNotBlank(no)">
+				and su.no like CONCAT('%', #{no}, '%')
+			</if>
+			<if test="@com.boot.util.Ognl@isNotBlank(roles)">
+				and sr.id in (${roles})
+			</if>
+			<if test="@com.boot.util.Ognl@isNotBlank(userDataScope)">
+				and ${userDataScope}
+			</if>
+			<if
+				test="@com.boot.util.Ognl@isNotBlank(userType) and userType!=1">
+				and user_type != 1
+			</if>
+			and su.del_flag = 0
+		</where>
+		GROUP BY
+		su.id,su.name,su.mobile,su.email,su.no,su.login_ip,su.login_date,
+		su.dept_id,su.organ_id,so.name,su.update_date ORDER BY su.update_date
+		desc
+	</select>
+
+
+	<insert id="saveUser" useGeneratedKeys="false">
+		insert into sys_user(
+		<include refid="sysUserColumns" />
+		)
+		values(
+		#{id,jdbcType=VARCHAR},
+		#{companyId,jdbcType=VARCHAR},
+		#{createBy,jdbcType=VARCHAR},
+		#{createDate,jdbcType=DATE},
+		#{delFlag,jdbcType=VARCHAR},
+		#{email,jdbcType=VARCHAR},
+		#{loginDate,jdbcType=DATE},
+		#{loginIp,jdbcType=VARCHAR},
+		#{mobile,jdbcType=VARCHAR},
+		#{name,jdbcType=VARCHAR},
+		#{no,jdbcType=VARCHAR},
+		#{organId,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{phone,jdbcType=VARCHAR},
+		#{remarks,jdbcType=VARCHAR},
+		#{updateBy,jdbcType=VARCHAR},
+		#{updateDate,jdbcType=DATE},
+		#{username,jdbcType=VARCHAR},
+		#{userType,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<!-- 查询单条记录 -->
+	<select id="selectUserByName"
+		resultType="com.boot.web.sys.model.SysUser">
+		select
+		<include refid="sysUserColumns" />
+		from sys_user
+		<where>
+			<if test="@com.boot.util.Ognl@isNotBlank(username)"> and username = #{username} </if>
+		</where>
+		<!-- where username = #{userName} -->
+	</select>
+
+	<!-- 查询用户所属的组信息，一个用户可以属于多个小组，要求同一时间，这个人必须在指定的一个组里 -->
+	<select id="getUserGroup"
+		resultType="com.boot.util.CommonEntity">
+		select
+		zt_usergroup.group as group_id,
+		zt_group.name as group_name
+		from
+		zt_usergroup,zt_group
+		<where>
+			zt_usergroup.`group` = zt_group.id
+			and zt_group.`role` =''
+			<if test="@com.boot.util.Ognl@isNotBlank(username)"> and zt_usergroup.account = #{username} </if>
+		</where>
+	</select>
+
+
+	<!-- 根据项目名称查询项目组包括的产品 -->
+	<select id="getProdOfProj"
+		resultType="com.boot.util.CommonEntity">
+		select
+		zt_product.id as product_id,
+		zt_product.name as product_name,
+		zt_product.code as product_code,
+		zt_project.name as project_name,
+		zt_project.id as project_id
+		from
+		zt_product,
+		zt_projectproduct,
+		zt_project
+		<where>
+			zt_product.id = zt_projectproduct.product
+			and zt_projectproduct.project = zt_project.id
+			<if test="@com.boot.util.Ognl@isNotBlank(projectname)">  and zt_project.team= #{projectname} </if>
+		</where>
+	</select>
+
+	<!-- 根据产品ID查询产品包括的模块 -->
+	<select id="getModuOfProd"
+		resultType="com.boot.util.CommonEntity">
+		select
+		zt_module.id as module_id,
+		zt_module.name as module_name
+		from
+		zt_module,zt_product 
+		<where>
+		     zt_module.root = zt_product.id
+			<if test="@com.boot.util.Ognl@isNotBlank(productid)"> and zt_product.id=#{productid} </if>
+		</where>
+	</select>
+</mapper>

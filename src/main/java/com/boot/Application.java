@@ -23,18 +23,13 @@ import tk.mybatis.spring.annotation.MapperScan;
 import com.boot.util.ConfigUtil;
 import com.boot.util.CurrentWeek;
 import org.springframework.core.env.Environment;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.net.InetAddress;
-import java.net.UnknownHostException;
+ 
 
 @ServletComponentScan
 @SpringBootApplication(scanBasePackages ={"com.boot", "com.krm"})
 @MapperScan({"com.boot.web","com.boot.util"})
-
 //@tk.mybatis.spring.annotation.MapperScan(basePackages = { "com.boot.web","com.boot.util"})
 public class Application implements InitializingBean {
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);

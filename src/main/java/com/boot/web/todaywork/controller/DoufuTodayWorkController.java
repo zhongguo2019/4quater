@@ -13,7 +13,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,7 +42,6 @@ import com.boot.web.sys.model.SysUser;
 import com.boot.web.todaywork.model.DoufuTodayWork;
 import com.boot.web.todaywork.service.DoufuTodayWorkService;
 import com.boot.util.SysUserUtils;
-
 
 /**
  * 
@@ -97,7 +95,7 @@ public class DoufuTodayWorkController extends BaseController {
 	@ResponseBody
 	public PageInfo<CommonEntity> list(@RequestParam Map<String, Object> params, Model model) {
 		logger.info("分页显示当天工作记录信息表，参数：" + params.toString());
-		//checkPermission("query");
+		// checkPermission("query");
 		// 权限语句
 		params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u", getBaseUrl(), "id"));
 		if (params.containsKey("sortC")) {
@@ -146,26 +144,6 @@ public class DoufuTodayWorkController extends BaseController {
 		logger.info("开始删除当天工作记录信息表，参数：" + id);
 		checkPermission("delete");
 		int count = doufuTodayWorkService.deleteDoufuTodayWork(id);
-		if (count > 0) {
-			logger.info("删除当天工作记录信息表成功！");
-			return Result.successResult();
-		}
-		logger.info("删除当天工作记录信息表失败！");
-		return Result.errorResult();
-	}
-
-	/**
-	 * 批量删除
-	 * 
-	 * @param
-	 * @return
-	 */
-	@RequestMapping(value = "deletes", method = RequestMethod.POST)
-	@ResponseBody
-	public Result dels(@RequestParam(value = "ids[]") String[] ids, @RequestParam Map<String, Object> params) {
-		logger.info("开始批量删除当天工作记录信息表，参数：" + ids);
-		checkPermission("delete");
-		int count = doufuTodayWorkService.deleteDoufuTodayWork(ids);
 		if (count > 0) {
 			logger.info("删除当天工作记录信息表成功！");
 			return Result.successResult();
@@ -298,7 +276,7 @@ public class DoufuTodayWorkController extends BaseController {
 	@SuppressWarnings("unchecked")
 	public Result saveBatch(HttpServletRequest request) throws Exception {
 		String data = request.getParameter("data") == null ? "" : request.getParameter("data");
-		if (data=="[]") {
+		if (data == "[]") {
 			return new Result(0, "操作失败，前台没有数据更改需要保存！");
 		}
 		data = URLDecoder.decode(URLDecoder.decode(data, "utf-8"), "utf-8");
@@ -321,8 +299,8 @@ public class DoufuTodayWorkController extends BaseController {
 				String vid = row.get("id") != null ? row.get("id").toString() : "";
 				String state = row.get("_state") != null ? row.get("_state").toString() : "";
 				DoufuTodayWork doufuTodayWork = new DoufuTodayWork(row);
-			if (vid =="" || vid ==null) {
-                    //前台记录没有主键值 ，为新增add
+				if (vid == "" || vid == null) {
+					// 前台记录没有主键值 ，为新增add
 					String uuid = UUID.randomUUID().toString();
 					doufuTodayWork.setId(uuid);
 					doufuTodayWork.setProjectGroupId(sysuser.getProjectGroupId());
@@ -341,24 +319,24 @@ public class DoufuTodayWorkController extends BaseController {
 					doufuTodayWork.setLoginDate(new Date());
 					listEntyInsert.add(doufuTodayWork);
 
-				} else  {
-				    //前台记录存在主键值 ，为更新update
-	
+				} else {
+					// 前台记录存在主键值 ，为更新update
+
 					doufuTodayWork.setUpdateDate(new Date());
 					doufuTodayWork.setUpdateBy(sysuser.getId());
 					doufuTodayWork.setLoginIp(sysuser.getLoginIp());
-					
+
 					listEntyUpdate.add(doufuTodayWork);
 				}
 
 			}
-			if (listEntyInsert != null && listEntyInsert.size()>0) {
+			if (listEntyInsert != null && listEntyInsert.size() > 0) {
 				successNumInsert = doufuTodayWorkService.insertBatch(listEntyInsert);
 			}
-			if (listEntyUpdate != null && listEntyUpdate.size()>0) {
+			if (listEntyUpdate != null && listEntyUpdate.size() > 0) {
 				successNumUpdate = doufuTodayWorkService.updateBatch(listEntyUpdate);
 			}
-			
+
 			if (failureNumInsert > 0) {
 				failureMsg.insert(0, "，失败保存,增加数据时 " + failureNumInsert + " 条当天工作记录信息表数据，导入信息如下：");
 			}
@@ -369,43 +347,84 @@ public class DoufuTodayWorkController extends BaseController {
 			DecimalFormat df = new DecimalFormat("######0.00");
 			logger.info("批量插入，用时" + df.format((double) (end - start) / (double) 1000) + "秒");
 		}
-		
+
 		int failureNum = 0;
 		int successNum = 0;
-		failureNum = failureNumInsert+failureNumUpdate;
-		successNum = successNumInsert+successNumUpdate;
-		return new Result(1, "操作成功！，成功保存" + successNum+ "条，失败保存" + failureNum + "条");
+		failureNum = failureNumInsert + failureNumUpdate;
+		successNum = successNumInsert + successNumUpdate;
+		return new Result(1, "操作成功！，成功保存" + successNum + "条，失败保存" + failureNum + "条");
 
 	}
-	
-	@RequestMapping(value = "queryList")
+
+	@RequestMapping(value = "queryPageList")
 	@ResponseBody
-	PageInfo<DoufuTodayWork >queryList(HttpServletRequest request) {
-		int pageIndex = Integer.parseInt(request.getParameter("pageIndex"))+1;
+	PageInfo<DoufuTodayWork> queryPageList(HttpServletRequest request) {
+		int pageIndex = Integer.parseInt(request.getParameter("pageIndex")) + 1;
 		int pageSize = Integer.parseInt(request.getParameter("pageSize"));
 		String sortField = request.getParameter("sortField").toString();
 		String sortOrder = request.getParameter("sortOrder").toString();
-		
+
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("pageNum", pageIndex);
-		params.put("pageSize", pageSize);	
-		params.put("sortC", StringConvert.camelhumpToUnderline(sortField));	
-		params.put("order", sortOrder);	
+		params.put("pageSize", pageSize);
+		params.put("sortC", StringConvert.camelhumpToUnderline(sortField));
+		params.put("order", sortOrder);
 		logger.info("分页显示当天工作记录信息表，参数：" + params.toString());
-		//checkPermission("query");
+		// checkPermission("query");
 		// 权限语句
-		//params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u", getBaseUrl(), "id"));
-	
+		// params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u",
+		// getBaseUrl(), "id"));
+
 		/*
 		 * if (params.containsKey("sortC")) { // 如果传过来的参数是驼峰式，这里需要将驼峰转成下划线式
 		 * params.put("sortC",
 		 * StringConvert.camelhumpToUnderline(params.get("sortC").toString())); }
 		 */
-		
+
 		PageInfo<DoufuTodayWork> page = doufuTodayWorkService.queryPageInfoEntity(params);
-	
-	    return page;
+
+		return page;
 	}
-	
+
+	@RequestMapping(value = "queryList")
+	@ResponseBody
+	List<DoufuTodayWork> queryList(HttpServletRequest request) {
+		Map<String, Object> params = new HashMap<String, Object>();
+		String sortField = request.getParameter("sortField").toString();
+		String sortOrder = request.getParameter("sortOrder").toString();
+		params.put("sortC", StringConvert.camelhumpToUnderline(sortField));
+		params.put("order", sortOrder);
+
+
+		List<DoufuTodayWork> lstRtn = doufuTodayWorkService.entityList(params);
+
+		return lstRtn;
+	}
+
+	/**
+	 * 批量删除
+	 * 
+	 * @param
+	 * @return
+	 */
+	@RequestMapping(value = "deletes", method = RequestMethod.POST)
+	@ResponseBody
+	public Result dels(@RequestParam(value = "ids[]") String[] ids) {
+
+		if (ids.length==0) {
+			return new Result(0, "操作失败，没有要删除的行被选中！");
+		}
+
+
+		logger.info("开始批量删除当天工作记录信息表，参数：" + ids);
+		// checkPermission("delete");
+		int count = doufuTodayWorkService.deleteDoufuTodayWork(ids);
+		if (count > 0) {
+			logger.info("删除当天工作记录信息表成功！");
+			return Result.successResult();
+		}
+		logger.info("删除当天工作记录信息表失败！");
+		return Result.errorResult();
+	}
 
 }

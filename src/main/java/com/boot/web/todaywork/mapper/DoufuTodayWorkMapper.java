@@ -43,6 +43,8 @@ public interface DoufuTodayWorkMapper extends Mapper<DoufuTodayWork>{
 	 */
 	int deleteByParams(Map<String, Object> params);
 	
+	
+	
 
 /**
 

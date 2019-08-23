@@ -23,13 +23,16 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.krm.common.constant.Constant;
 import com.boot.util.mybatis.EntityHelper;
-import com.boot.util.mybatis.SqlMapper;
-import com.boot.util.mybatis.mapper.BaseMapper;
+
 import com.boot.util.spring.utils.SpringContextHolder;
 import com.boot.util.BeanUtils;
 import com.boot.util.StringConvert;
 import com.boot.util.StringUtil;
 import com.boot.util.SysUserUtils;
+
+
+import com.boot.util.mybatis.SqlMapper;
+import com.boot.util.mybatis.mapper.BaseMapper;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;
@@ -44,10 +47,11 @@ public abstract class ServiceMybatis<T> implements BaseService<T> {
 
     @Autowired
     protected Mapper<T> mapper;
-    @Autowired
+    
+    @Resource
     protected BaseMapper baseMapper;
 	
-    @Autowired
+    @Resource
 	protected SqlMapper sqlMapper;
 	
 
