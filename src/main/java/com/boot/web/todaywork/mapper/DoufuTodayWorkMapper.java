@@ -42,4 +42,18 @@ public interface DoufuTodayWorkMapper extends Mapper<DoufuTodayWork>{
 	 * 根据不同条件删除数据，条件可组合
 	 */
 	int deleteByParams(Map<String, Object> params);
+	
+
+/**
+
+     * 批量更新新库存
+
+     * @param list
+
+     * @return
+
+     */
+
+    int updateBatchEntity( List<DoufuTodayWork> list);
+
 }

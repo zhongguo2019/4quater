@@ -18,7 +18,9 @@ public class BaseEntity<T> implements Serializable{
 	@Transient
 	private String rowId;
 	
-	public BaseEntity() {
+	
+    
+   	public BaseEntity() {
 		super();
 	}
 

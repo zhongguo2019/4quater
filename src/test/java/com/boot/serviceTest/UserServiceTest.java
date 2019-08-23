@@ -1,6 +1,8 @@
 package com.boot.serviceTest;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -29,44 +31,53 @@ public class UserServiceTest extends SpringTestCase {
 
 	@Autowired
 	private DoufuTodayWorkService doufuTodayWorkService;
-     
+
 	@Autowired
 	private DoufuTodayWorkController doufuTodayWorkController;
+
 	@Test
 	public void selectUserByIdTest() {
 
-		SysUser user = sysUserService.selectUserByName("admin");
-		logger.info("查找结果" + user);
-
-		Map<String, Object> params = new HashMap<String, Object>();
-		DoufuTodayWork doufuTodayWork = new DoufuTodayWork();
-
-		try {
-
-			logger.info("查找结果==----------------------===");
-			params.put("pageNum", "1");
-			params.put("pageSize", "5");			
-//			params.put("pageList", "[10, 25, 50, 100]");				
-
-			//List<DoufuTodayWork> lstRtn = (List<DoufuTodayWork>) doufuTodayWorkService.queryOne(mapparams);
-			
-		//	List<CommonEntity>  lst = sysUserService.getUserModule(mapparams);
-			
-//			params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u", " todaywork/doufuTodayWork", "id"));
-			if (params.containsKey("sortC")) {
-				// 如果传过来的参数是驼峰式，这里需要将驼峰转成下划线式
-				params.put("sortC", StringConvert.camelhumpToUnderline(params.get("sortC").toString()));
-			}
-			PageInfo<DoufuTodayWork> page = doufuTodayWorkService.queryPageInfo1(params);
-			PageInfo<CommonEntity> page2 =doufuTodayWorkService.queryPageInfo(params);
-			// doufuTodayWorkService.queryOne(params);
-			CameHumpInterceptor.
-			
-			logger.info("----------------------------查找结果=====");
-		} catch (Exception e) {
-			logger.info(e.getMessage());
-
-		}
+		/*
+		 * SysUser user = sysUserService.selectUserByName("admin"); logger.info("查找结果" +
+		 * user);
+		 * 
+		 * Map<String, Object> params = new HashMap<String, Object>(); DoufuTodayWork
+		 * doufuTodayWork = new DoufuTodayWork();
+		 * 
+		 * try {
+		 * 
+		 * logger.info("查找结果==----------------------==="); params.put("pageNum", "8");
+		 * params.put("pageSize", "5"); // params.put("pageList", "[10, 25, 50, 100]");
+		 * 
+		 * //List<DoufuTodayWork> lstRtn = (List<DoufuTodayWork>)
+		 * doufuTodayWorkService.queryOne(mapparams);
+		 * 
+		 * // List<CommonEntity> lst = sysUserService.getUserModule(mapparams);
+		 * 
+		 * // params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u",
+		 * " todaywork/doufuTodayWork", "id"));
+		 * 
+		 * if (params.containsKey("sortC")) { // 如果传过来的参数是驼峰式，这里需要将驼峰转成下划线式
+		 * params.put("sortC",
+		 * StringConvert.camelhumpToUnderline(params.get("sortC").toString())); }
+		 * PageInfo<DoufuTodayWork> page =
+		 * doufuTodayWorkService.queryPageInfoEntity(params); PageInfo<CommonEntity>
+		 * page2 =doufuTodayWorkService.queryPageInfo(params);
+		 * 
+		 * // doufuTodayWorkService.queryOne(params); //CameHumpInterceptor.
+		 * 
+		 * logger.info("----------------------------查找结果====="); } catch (Exception e) {
+		 * logger.info(e.getMessage());
+		 * 
+		 * }
+		 */
+		String strValue="2019-08-20T15:14:49.000+0000";
+		
+   	 LocalDateTime date = LocalDateTime.parse(strValue,DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+   	 String dateString = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+     SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+     logger.info(dateString);  
 
 	}
 

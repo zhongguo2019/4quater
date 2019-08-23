@@ -64,7 +64,7 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @param params
 	 * @return
 	 */
-	public PageInfo<DoufuTodayWork> queryPageInfo1(Map<String, Object> params) {
+	public PageInfo<DoufuTodayWork> queryPageInfoEntity(Map<String, Object> params) {
 		List<DoufuTodayWork> list = new ArrayList();
 		try {
 			logger.info("#=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#");
@@ -164,14 +164,21 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	}
 	
 	/**
+	 * 批量更新操作
+	 * @param list
+	 * @return
+	 */
+	public int updateBatch(List<DoufuTodayWork> list){
+		return doufuTodayWorkMapper.updateBatchEntity(list);
+	}
+	/**
 	 * 批量保存操作
 	 * @param list
 	 * @return
 	 */
 	public int insertBatch(List<DoufuTodayWork> list){
 		return doufuTodayWorkMapper.insertBatch(list);
-	}
-	
+	}	
 	/**
 	 * 更新操作
 	 * @param doufuTodayWork

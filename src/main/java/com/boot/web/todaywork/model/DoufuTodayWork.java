@@ -5,11 +5,15 @@ import java.util.*;
 
 import com.boot.util.BaseEntity;
 import com.boot.util.BaseFile;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.Transient;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.text.DateFormat;
 import java.text.ParseException;
 
 /**
@@ -40,10 +44,13 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
     private String  status;      //状态
     private String  instId;      //机构ID
     private String  loginIp;      //登录IP
+
     private Date  loginDate;      //登录日期
     private String  createBy;      //创建人
+
     private Date  createDate;      //创建时间
     private String  updateBy;      //最近修改人
+
     private Date  updateDate;      //最近修改时间
     private String  remarks;      //描述
 	@Transient
@@ -216,6 +223,7 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 	 * 登录日期
 	 * @param loginDate
 	 */
+	
 	public void setLoginDate(Date loginDate) {
 		this.loginDate = loginDate;
 	}
@@ -289,7 +297,7 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 		return "当天工作记录信息表： {\"projectGroupId\": \""+projectGroupId+"\", \"projectId\": \""+projectId+"\", \"productId\": \""+productId+"\", \"workContents\": \""+workContents+"\", \"workDetail\": \""+workDetail+"\", \"finishPercent\": \""+finishPercent+"\", \"delayReason\": \""+delayReason+"\", \"accordYesterday\": \""+accordYesterday+"\", \"isImportant\": \""+isImportant+"\", \"isEmergency\": \""+isEmergency+"\", \"impoLevel\": \""+impoLevel+"\", \"id\": \""+id+"\", \"delFlag\": \""+delFlag+"\", \"status\": \""+status+"\", \"instId\": \""+instId+"\", \"loginIp\": \""+loginIp+"\", \"loginDate\": \""+loginDate+"\", \"createBy\": \""+createBy+"\", \"createDate\": \""+createDate+"\", \"updateBy\": \""+updateBy+"\", \"updateDate\": \""+updateDate+"\", \"remarks\": \""+remarks+"\"}";
 	}
 
-  public void  DoufuTodayWork666(Map<String, Object> row)throws ParseException{
+  public DoufuTodayWork(Map<String, Object> row)throws ParseException{
          if( row.get("projectGroupId") !=null  ){
           String strValue=row.get("projectGroupId").toString();
           this.setProjectGroupId(strValue);
@@ -354,29 +362,45 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
           String strValue=row.get("loginIp").toString();
           this.setLoginIp(strValue);
         }
-         if( row.get("loginDate") !=null  ){
-         SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-         String strValue=row.get("loginDate").toString();
-         this.setLoginDate(sdf.parse(strValue));
-        }
+		/*
+		 * if( row.get("loginDate") !=null ){ String
+		 * strValue=row.get("loginDate").toString(); LocalDateTime date =
+		 * LocalDateTime.parse(strValue,DateTimeFormatter.ISO_OFFSET_DATE_TIME); String
+		 * dateString = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		 * SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 * this.setLoginDate(sdf.parse(dateString));
+		 * 
+		 * }
+		 */
          if( row.get("createBy") !=null  ){
           String strValue=row.get("createBy").toString();
           this.setCreateBy(strValue);
         }
-         if( row.get("createDate") !=null  ){
-         SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-         String strValue=row.get("createDate").toString();
-         this.setCreateDate(sdf.parse(strValue));
-        }
+		/*
+		 * if( row.get("createDate") !=null ){ String
+		 * strValue=row.get("createDate").toString(); LocalDateTime date =
+		 * LocalDateTime.parse(strValue,DateTimeFormatter.ISO_OFFSET_DATE_TIME); String
+		 * dateString = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		 * SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 * this.setCreateDate(sdf.parse(dateString));
+		 * 
+		 * }
+		 */
          if( row.get("updateBy") !=null  ){
           String strValue=row.get("updateBy").toString();
           this.setUpdateBy(strValue);
         }
-         if( row.get("updateDate") !=null  ){
-         SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-         String strValue=row.get("updateDate").toString();
-         this.setUpdateDate(sdf.parse(strValue));
-        }
+		/*
+		 * if( row.get("updateDate") !=null ){
+		 * 
+		 * String strValue=row.get("updateDate").toString(); LocalDateTime date =
+		 * LocalDateTime.parse(strValue,DateTimeFormatter.ISO_OFFSET_DATE_TIME); String
+		 * dateString = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		 * SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 * this.setUpdateDate(sdf.parse(dateString));
+		 * 
+		 * }
+		 */
          if( row.get("remarks") !=null  ){
           String strValue=row.get("remarks").toString();
           this.setRemarks(strValue);

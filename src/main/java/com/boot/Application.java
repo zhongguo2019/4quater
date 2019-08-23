@@ -22,27 +22,49 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import tk.mybatis.spring.annotation.MapperScan;
 import com.boot.util.ConfigUtil;
 import com.boot.util.CurrentWeek;
+import org.springframework.core.env.Environment;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 @ServletComponentScan
 @SpringBootApplication(scanBasePackages ={"com.boot", "com.krm"})
 @MapperScan({"com.boot.web","com.boot.util"})
 
 //@tk.mybatis.spring.annotation.MapperScan(basePackages = { "com.boot.web","com.boot.util"})
 public class Application implements InitializingBean {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
-	Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
+		SpringApplication app = new SpringApplication(Application.class);
+        System.setProperty("user.timezone","Asia/Shanghai");
+        Environment env = app.run(args).getEnvironment();
+        LOGGER.info("\n----------------------------------------------------------\n\t" +
+                        "Application '{}' is running! Access URLs:\n\t" +
+                        "Local: \t\thttp://localhost:{}\n\t" +
+                        "External: \thttp://{}:{}\n\t" +
+                        "Profile(s): \t{}\n----------------------------------------------------------",
+                env.getProperty("spring.application.name"),
+                env.getProperty("server.port"),
+                InetAddress.getLocalHost().getHostAddress(),
+                env.getProperty("server.port"),
+                env.getActiveProfiles());
+		//SpringApplication.run(Application.class, args);
 	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
 
 		// TODO Auto-generated method stub
-		logger.info(ConfigUtil.getValue("db.schema"));
+		LOGGER.info(ConfigUtil.getValue("db.schema"));
 		String sql = "SELECT id FROM " + ConfigUtil.getValue("db.schema")
 				+ "t_happy_work_title WHERE begindate=? AND enddate=? ";
 		List<Map<String, Object>> list = jdbcTemplate.queryForList(sql,
@@ -56,7 +78,7 @@ public class Application implements InitializingBean {
 			String work_title = calendar.get(Calendar.YEAR) + "年" + CurrentWeek.getMonth() + "月第"
 					+ CurrentWeek.getWeekOfMonth() + "周";
 
-			logger.info("CurrentWeek.getCurrenproDate()" + CurrentWeek.getCurrenproDate().toString());
+			LOGGER.info("CurrentWeek.getCurrenproDate()" + CurrentWeek.getCurrenproDate().toString());
 
 			jdbcTemplate.update(sql, new Object[] { id, work_title, begindate, enddate });
 

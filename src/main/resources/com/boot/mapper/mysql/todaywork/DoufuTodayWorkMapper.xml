@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.boot.web.todaywork.mapper.DoufuTodayWorkMapper">
+<mapper
+	namespace="com.boot.web.todaywork.mapper.DoufuTodayWorkMapper">
 
 	<!-- 表字段 -->
 	<sql id="doufuTodayWorkColumns">
-		 PROJECT_GROUP_ID, PROJECT_ID, PRODUCT_ID, WORK_CONTENTS, WORK_DETAIL, FINISH_PERCENT, DELAY_REASON, ACCORD_YESTERDAY, IS_IMPORTANT, IS_EMERGENCY,
-		 IMPO_LEVEL, ID, DEL_FLAG, STATUS, INST_ID, LOGIN_IP, LOGIN_DATE, CREATE_BY, CREATE_DATE, UPDATE_BY,
-		 UPDATE_DATE, REMARKS
+		PROJECT_GROUP_ID, PROJECT_ID, PRODUCT_ID, WORK_CONTENTS, WORK_DETAIL, FINISH_PERCENT,
+		DELAY_REASON, ACCORD_YESTERDAY, IS_IMPORTANT, IS_EMERGENCY,
+		IMPO_LEVEL, ID, DEL_FLAG, STATUS, INST_ID, LOGIN_IP, LOGIN_DATE,
+		CREATE_BY, CREATE_DATE, UPDATE_BY,
+		UPDATE_DATE, REMARKS
 	</sql>
 
 	<!-- 表字段（带别名） -->
 	<sql id="doufuTodayWorkAliasColumns">
-         t.PROJECT_GROUP_ID, t.PROJECT_ID, t.PRODUCT_ID, t.WORK_CONTENTS, t.WORK_DETAIL, t.FINISH_PERCENT, t.DELAY_REASON, t.ACCORD_YESTERDAY, t.IS_IMPORTANT, t.IS_EMERGENCY,
-         t.IMPO_LEVEL, t.ID, t.DEL_FLAG, t.STATUS, t.INST_ID, t.LOGIN_IP, t.LOGIN_DATE, t.CREATE_BY, t.CREATE_DATE, t.UPDATE_BY,
-		 t.UPDATE_DATE, t.REMARKS
+		t.PROJECT_GROUP_ID, t.PROJECT_ID, t.PRODUCT_ID, t.WORK_CONTENTS, t.WORK_DETAIL,
+		t.FINISH_PERCENT, t.DELAY_REASON, t.ACCORD_YESTERDAY, t.IS_IMPORTANT,
+		t.IS_EMERGENCY,
+		t.IMPO_LEVEL, t.ID, t.DEL_FLAG, t.STATUS, t.INST_ID, t.LOGIN_IP, t.LOGIN_DATE,
+		t.CREATE_BY, t.CREATE_DATE, t.UPDATE_BY,
+		t.UPDATE_DATE, t.REMARKS
 	</sql>
 
 
-	<!-- 列表查询,返回的是通用实体，不受实体属性限制，相当于map-->
-	<select id="queryPageInfo" resultType="com.boot.util.CommonEntity">
-		select  <include refid="doufuTodayWorkAliasColumns" /> 
-		from doufu_today_work  t
+	<!-- 列表查询,返回的是通用实体，不受实体属性限制，相当于map -->
+	<select id="queryPageInfo"
+		resultType="com.boot.util.CommonEntity">
+		select
+		<include refid="doufuTodayWorkAliasColumns" />
+		from doufu_today_work t
 		<where>
 			1=1
 			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
@@ -47,17 +55,20 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
 		</where>
-		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)"> 
+		<if
+			test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)">
 			ORDER BY t.${sortC} ${order}
 		</if>
 	</select>
-	
 
-	
-	<!-- 列表查询,返回的是实体-->
-	<select id="entityList" resultType="com.boot.web.todaywork.model.DoufuTodayWork">
-        select  <include refid="doufuTodayWorkAliasColumns" />
-		from doufu_today_work  t
+
+
+	<!-- 列表查询,返回的是实体 -->
+	<select id="entityList"
+		resultType="com.boot.web.todaywork.model.DoufuTodayWork">
+		select
+		<include refid="doufuTodayWorkAliasColumns" />
+		from doufu_today_work t
 		<where>
 			1=1
 			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
@@ -84,15 +95,18 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
 		</where>
-		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)"> 
+		<if
+			test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)">
 			ORDER BY t.${sortC} ${order}
 		</if>
 	</select>
 
 	<!-- 查询单条数据,返回的是实体 -->
-	<select id="queryOne" resultType="com.boot.web.todaywork.model.DoufuTodayWork">
-		select  <include refid="doufuTodayWorkAliasColumns" />
-		from doufu_today_work  t 
+	<select id="queryOne"
+		resultType="com.boot.web.todaywork.model.DoufuTodayWork">
+		select
+		<include refid="doufuTodayWorkAliasColumns" />
+		from doufu_today_work t
 		<where>
 			1=1
 			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)"> and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
@@ -119,11 +133,13 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(remarks)"> and t.REMARKS = #{remarks} </if>
 		</where>
 	</select>
-	
+
 	<!-- 查询单条数据,返回的是通用实体，不受实体属性限制，相当于map -->
-	<select id="queryOneCommon" resultType="com.boot.util.CommonEntity">
-		select  <include refid="doufuTodayWorkAliasColumns" /> 
-		from doufu_today_work  t
+	<select id="queryOneCommon"
+		resultType="com.boot.util.CommonEntity">
+		select
+		<include refid="doufuTodayWorkAliasColumns" />
+		from doufu_today_work t
 		<where>
 			1=1
 			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
@@ -151,38 +167,40 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
 		</where>
 	</select>
-	
+
 	<!-- 批量插入数据 -->
 	<insert id="insertBatch">
-		insert into doufu_today_work(<include refid="doufuTodayWorkColumns" />) values 
-		<foreach collection="list" item="item" separator="," >
-		(
-	    	#{item.projectGroupId},
-	    	#{item.projectId},
-	    	#{item.productId},
-	    	#{item.workContents},
-	    	#{item.workDetail},
-	    	#{item.finishPercent},
-	    	#{item.delayReason},
-	    	#{item.accordYesterday},
-	    	#{item.isImportant},
-	    	#{item.isEmergency},
-	    	#{item.impoLevel},
-	    	#{item.id},
-	    	#{item.delFlag},
-	    	#{item.status},
-	    	#{item.instId},
-	    	#{item.loginIp},
-	    	#{item.loginDate},
-	    	#{item.createBy},
-	    	#{item.createDate},
-	    	#{item.updateBy},
-	    	#{item.updateDate},
+		insert into doufu_today_work(
+		<include refid="doufuTodayWorkColumns" />
+		) values
+		<foreach collection="list" item="item" separator=",">
+			(
+			#{item.projectGroupId},
+			#{item.projectId},
+			#{item.productId},
+			#{item.workContents},
+			#{item.workDetail},
+			#{item.finishPercent},
+			#{item.delayReason},
+			#{item.accordYesterday},
+			#{item.isImportant},
+			#{item.isEmergency},
+			#{item.impoLevel},
+			#{item.id},
+			#{item.delFlag},
+			#{item.status},
+			#{item.instId},
+			#{item.loginIp},
+			#{item.loginDate},
+			#{item.createBy},
+			#{item.createDate},
+			#{item.updateBy},
+			#{item.updateDate},
 			#{item.remarks}
-		)
+			)
 		</foreach>
 	</insert>
-	
+
 	<!-- 根据不同条件删除数据，条件可组合 -->
 	<delete id="deleteByParams" parameterType="java.util.Map">
 		delete from doufu_today_work
@@ -212,4 +230,53 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(remarks)"> and REMARKS = #{remarks} </if>
 		</where>
 	</delete>
+	<!-- 修改父节点字符串 oracle下弃用 -->
+	<update id="updateEntity">
+		update doufu_today_work
+		set product_Id = #{productId},
+		work_Contents=#{workContents},
+		work_Detail=#{workDetail},
+		finish_Percent=#{finishPercent},
+		delay_Reason=#{delayReason},
+		is_Important=#{isImportant},
+		is_Emergency=#{isEmergency},
+		update_By=#{updateBy},
+		update_Date=#{updateDate}
+		where id #{id}
+	</update>
+	<!-- 修改父节点字符串 oracle下弃用 -->
+	<update id="updateOneEntity">
+		update doufu_today_work
+		set product_Id = #{productId},
+		work_Contents=#{workContents},
+		work_Detail=#{workDetail},
+		finish_Percent=#{finishPercent},
+		delay_Reason=#{delayReason},
+		is_Important=#{isImportant},
+		is_Emergency=#{isEmergency},
+		update_By=#{updateBy},
+		update_Date=#{updateDate}
+		where id = #{id}
+	</update>
+
+	<update id="updateBatchEntity">
+		<foreach collection="list" item="item" separator=",">
+			update doufu_today_work
+			<set>
+				product_Id = #{item.productId},
+				work_Contents=#{item.workContents},
+				work_Detail=#{item.workDetail},
+				finish_Percent=#{item.finishPercent},
+				delay_Reason=#{item.delayReason},
+				is_Important=#{item.isImportant},
+				is_Emergency=#{item.isEmergency},
+				update_By=#{item.updateBy},
+				update_Date=#{item.updateDate}
+			</set>
+			<where>
+				id = #{item.id}
+			</where>
+		</foreach>
+	</update>
+
 </mapper>

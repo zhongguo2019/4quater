@@ -39,6 +39,7 @@ import com.boot.util.StringConvert;
 import com.boot.util.StringUtil;
 import com.boot.util.excel.ExportExcel;
 import com.boot.util.excel.ImportExcel;
+import com.boot.web.sys.model.SysUser;
 import com.boot.web.todaywork.model.DoufuTodayWork;
 import com.boot.web.todaywork.service.DoufuTodayWorkService;
 import com.boot.util.SysUserUtils;
@@ -297,83 +298,113 @@ public class DoufuTodayWorkController extends BaseController {
 	@SuppressWarnings("unchecked")
 	public Result saveBatch(HttpServletRequest request) throws Exception {
 		String data = request.getParameter("data") == null ? "" : request.getParameter("data");
+		if (data=="[]") {
+			return new Result(0, "操作失败，前台没有数据更改需要保存！");
+		}
 		data = URLDecoder.decode(URLDecoder.decode(data, "utf-8"), "utf-8");
 
 		StringBuilder failureMsg = new StringBuilder();
 		logger.info("开始保存当天工作记录信息表数据");
 		// checkPermission("savebatch");
 		Long start = System.currentTimeMillis();
-		int successNum = 0;
-		int failureNum = 0;
+		int successNumInsert = 0;
+		int failureNumInsert = 0;
+		int successNumUpdate = 0;
+		int failureNumUpdate = 0;
+		SysUser sysuser = (SysUser) request.getSession().getAttribute(Constant.SESSION_LOGIN_USER);
 		if (!"".equals(data)) {
 			List<Map<String, Object>> list = (List<Map<String, Object>>) JsonHelper.decode(data);
-			List<DoufuTodayWork> listEnty = new ArrayList<DoufuTodayWork>();
-
+			List<DoufuTodayWork> listEntyInsert = new ArrayList<DoufuTodayWork>();
+			List<DoufuTodayWork> listEntyUpdate = new ArrayList<DoufuTodayWork>();
 			for (int i = list.size() - 1; i >= 0; i--) {
 				Map<String, Object> row = list.get(i);
-				//String vid = row.get("id") != null ? row.get("id").toString() : "";
+				String vid = row.get("id") != null ? row.get("id").toString() : "";
 				String state = row.get("_state") != null ? row.get("_state").toString() : "";
 				DoufuTodayWork doufuTodayWork = new DoufuTodayWork(row);
-
-				if (state.equals("added")) {
+			if (vid =="" || vid ==null) {
+                    //前台记录没有主键值 ，为新增add
 					String uuid = UUID.randomUUID().toString();
 					doufuTodayWork.setId(uuid);
-					doufuTodayWork.setProjectGroupId("1");
-					doufuTodayWork.setProjectId("1");
+					doufuTodayWork.setProjectGroupId(sysuser.getProjectGroupId());
+					doufuTodayWork.setProjectId(sysuser.getProjectGroupId());
 					doufuTodayWork.setCreateDate(new Date());
 					doufuTodayWork.setUpdateDate(new Date());
 					doufuTodayWork.setDelFlag(Constant.DEL_FLAG_NORMAL);
 					doufuTodayWork.setStatus(Constant.DEL_FLAG_NORMAL);
-					doufuTodayWork.setInstId("1");
-					doufuTodayWork.setLoginIp("");
+					doufuTodayWork.setInstId(sysuser.getOrganId());
+					doufuTodayWork.setLoginIp(sysuser.getLoginIp());
 					doufuTodayWork.setLoginDate(new Date());
-					doufuTodayWork.setCreateBy("");
-					doufuTodayWork.setUpdateBy("");
+					doufuTodayWork.setCreateBy(sysuser.getId());
+					doufuTodayWork.setUpdateBy(sysuser.getId());
 					doufuTodayWork.setRemarks("");
 					doufuTodayWork.setImpoLevel("0");
 					doufuTodayWork.setLoginDate(new Date());
-					listEnty.add(doufuTodayWork);
+					listEntyInsert.add(doufuTodayWork);
 
-				} else if (state.equals("removed") || state.equals("deleted")) {
-				} else if (state.equals("modified") || state.equals("")) {
+				} else  {
+				    //前台记录存在主键值 ，为更新update
+	
+					doufuTodayWork.setUpdateDate(new Date());
+					doufuTodayWork.setUpdateBy(sysuser.getId());
+					doufuTodayWork.setLoginIp(sysuser.getLoginIp());
+					
+					listEntyUpdate.add(doufuTodayWork);
 				}
 
 			}
-			if (listEnty != null) {
-				successNum = doufuTodayWorkService.insertBatch(listEnty);
+			if (listEntyInsert != null && listEntyInsert.size()>0) {
+				successNumInsert = doufuTodayWorkService.insertBatch(listEntyInsert);
 			}
-			if (failureNum > 0) {
-				failureMsg.insert(0, "，失败保存 " + failureNum + " 条当天工作记录信息表数据，导入信息如下：");
+			if (listEntyUpdate != null && listEntyUpdate.size()>0) {
+				successNumUpdate = doufuTodayWorkService.updateBatch(listEntyUpdate);
+			}
+			
+			if (failureNumInsert > 0) {
+				failureMsg.insert(0, "，失败保存,增加数据时 " + failureNumInsert + " 条当天工作记录信息表数据，导入信息如下：");
+			}
+			if (failureNumUpdate > 0) {
+				failureMsg.insert(0, "，失败保存,更新数据时 " + failureNumUpdate + " 条当天工作记录信息表数据，导入信息如下：");
 			}
 			Long end = System.currentTimeMillis();
 			DecimalFormat df = new DecimalFormat("######0.00");
 			logger.info("批量插入，用时" + df.format((double) (end - start) / (double) 1000) + "秒");
 		}
-		return new Result(1, "操作成功！，成功保存" + successNum + "条，失败保存" + failureNum + "条");
+		
+		int failureNum = 0;
+		int successNum = 0;
+		failureNum = failureNumInsert+failureNumUpdate;
+		successNum = successNumInsert+successNumUpdate;
+		return new Result(1, "操作成功！，成功保存" + successNum+ "条，失败保存" + failureNum + "条");
 
 	}
 	
 	@RequestMapping(value = "queryList")
 	@ResponseBody
-	String queryList(HttpServletRequest request) {
-		int pageIndex = Integer.parseInt(request.getParameter("pageIndex"));
+	PageInfo<DoufuTodayWork >queryList(HttpServletRequest request) {
+		int pageIndex = Integer.parseInt(request.getParameter("pageIndex"))+1;
 		int pageSize = Integer.parseInt(request.getParameter("pageSize"));
+		String sortField = request.getParameter("sortField").toString();
+		String sortOrder = request.getParameter("sortOrder").toString();
+		
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("pageNum", pageIndex);
 		params.put("pageSize", pageSize);	
+		params.put("sortC", StringConvert.camelhumpToUnderline(sortField));	
+		params.put("order", sortOrder);	
 		logger.info("分页显示当天工作记录信息表，参数：" + params.toString());
 		//checkPermission("query");
 		// 权限语句
 		//params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u", getBaseUrl(), "id"));
-		if (params.containsKey("sortC")) {
-			// 如果传过来的参数是驼峰式，这里需要将驼峰转成下划线式
-			params.put("sortC", StringConvert.camelhumpToUnderline(params.get("sortC").toString()));
-		}
-		PageInfo<DoufuTodayWork> page = doufuTodayWorkService.queryPageInfo1(params);
 	
-		String json = JsonHelper.encode(page.getList());
+		/*
+		 * if (params.containsKey("sortC")) { // 如果传过来的参数是驼峰式，这里需要将驼峰转成下划线式
+		 * params.put("sortC",
+		 * StringConvert.camelhumpToUnderline(params.get("sortC").toString())); }
+		 */
 		
-		return json;
+		PageInfo<DoufuTodayWork> page = doufuTodayWorkService.queryPageInfoEntity(params);
+	
+	    return page;
 	}
 	
 
