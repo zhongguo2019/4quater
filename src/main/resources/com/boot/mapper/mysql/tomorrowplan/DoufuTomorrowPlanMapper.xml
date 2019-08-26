@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.boot.web.todaywork.mapper.DoufuTodayWorkMapper">
+<mapper namespace="com.boot.web.tomorrowplan.mapper.DoufuTomorrowPlanMapper">
 
 	<!-- 表字段 -->
-	<sql id="doufuTodayWorkColumns">
-		 PROJECT_GROUP_ID, PROJECT_ID, PRODUCT_ID, WORK_CONTENTS, WORK_DETAIL, FINISH_PERCENT, DELAY_REASON, ACCORD_YESTERDAY, IS_IMPORTANT, IS_EMERGENCY,
-		 IMPO_LEVEL, ID, DEL_FLAG, STATUS, INST_ID, LOGIN_IP, LOGIN_DATE, CREATE_BY, CREATE_DATE, UPDATE_BY,
-		 UPDATE_DATE, REMARKS, REPORT_DATE
+	<sql id="doufuTomorrowPlanColumns">
+		 ID, WORK_CONTENTS, WORK_DETAIL, FINISH_PERCENT, IS_IMPORTANT, IS_EMERGENCY, IMPO_LEVEL, PROJECT_GROUP_ID, PROJECT_ID, PRODUCT_ID,
+		 DEL_FLAG, STATUS, INST_ID, LOGIN_IP, LOGIN_DATE, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, REMARKS,
+		 REPORT_DATE
 	</sql>
 
 	<!-- 表字段（带别名） -->
-	<sql id="doufuTodayWorkAliasColumns">
-         t.PROJECT_GROUP_ID, t.PROJECT_ID, t.PRODUCT_ID, t.WORK_CONTENTS, t.WORK_DETAIL, t.FINISH_PERCENT, t.DELAY_REASON, t.ACCORD_YESTERDAY, t.IS_IMPORTANT, t.IS_EMERGENCY,
-         t.IMPO_LEVEL, t.ID, t.DEL_FLAG, t.STATUS, t.INST_ID, t.LOGIN_IP, t.LOGIN_DATE, t.CREATE_BY, t.CREATE_DATE, t.UPDATE_BY,
-		 t.UPDATE_DATE, t.REMARKS, t.REPORT_DATE
+	<sql id="doufuTomorrowPlanAliasColumns">
+         t.ID, t.WORK_CONTENTS, t.WORK_DETAIL, t.FINISH_PERCENT, t.IS_IMPORTANT, t.IS_EMERGENCY, t.IMPO_LEVEL, t.PROJECT_GROUP_ID, t.PROJECT_ID, t.PRODUCT_ID,
+         t.DEL_FLAG, t.STATUS, t.INST_ID, t.LOGIN_IP, t.LOGIN_DATE, t.CREATE_BY, t.CREATE_DATE, t.UPDATE_BY, t.UPDATE_DATE, t.REMARKS,
+		 t.REPORT_DATE
 	</sql>
 
 
 	<!-- 列表查询,返回的是通用实体，不受实体属性限制，相当于map-->
 	<select id="queryPageInfo" resultType="com.boot.util.CommonEntity">
-		select  <include refid="doufuTodayWorkAliasColumns" /> 
-		from doufu_today_work  t
+		select  <include refid="doufuTomorrowPlanAliasColumns" /> 
+		from doufu_tomorrow_plan  t
 		<where>
 			1=1
-			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workContents)">and t.WORK_CONTENTS = #{workContents} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)">and t.WORK_DETAIL = #{workDetail} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)">and t.FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)">and t.DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)">and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)">and t.IS_IMPORTANT = #{isImportant} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)">and t.IS_EMERGENCY = #{isEmergency} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)">and t.IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
@@ -55,23 +53,21 @@
 	
 	
 	<!-- 列表查询,返回的是实体-->
-	<select id="entityList" resultType="com.boot.web.todaywork.model.DoufuTodayWork">
-        select  <include refid="doufuTodayWorkAliasColumns" />
-		from doufu_today_work  t
+	<select id="entityList" resultType="com.boot.web.tomorrowplan.model.DoufuTomorrowPlan">
+        select  <include refid="doufuTomorrowPlanAliasColumns" />
+		from doufu_tomorrow_plan  t
 		<where>
 			1=1
-			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workContents)">and t.WORK_CONTENTS = #{workContents} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)">and t.WORK_DETAIL = #{workDetail} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)">and t.FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)">and t.DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)">and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)">and t.IS_IMPORTANT = #{isImportant} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)">and t.IS_EMERGENCY = #{isEmergency} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)">and t.IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
@@ -91,23 +87,21 @@
 	</select>
 
 	<!-- 查询单条数据,返回的是实体 -->
-	<select id="queryOne" resultType="com.boot.web.todaywork.model.DoufuTodayWork">
-		select  <include refid="doufuTodayWorkAliasColumns" />
-		from doufu_today_work  t 
+	<select id="queryOne" resultType="com.boot.web.tomorrowplan.model.DoufuTomorrowPlan">
+		select  <include refid="doufuTomorrowPlanAliasColumns" />
+		from doufu_tomorrow_plan  t 
 		<where>
 			1=1
-			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)"> and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(projectId)"> and t.PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(productId)"> and t.PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)"> and t.ID = #{id} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workContents)"> and t.WORK_CONTENTS = #{workContents} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)"> and t.WORK_DETAIL = #{workDetail} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)"> and t.FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)"> and t.DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)"> and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)"> and t.IS_IMPORTANT = #{isImportant} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)"> and t.IS_EMERGENCY = #{isEmergency} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)"> and t.IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(id)"> and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)"> and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)"> and t.PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)"> and t.PRODUCT_ID = #{productId} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)"> and t.DEL_FLAG = #{delFlag} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(status)"> and t.STATUS = #{status} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(instId)"> and t.INST_ID = #{instId} </if>
@@ -124,22 +118,20 @@
 	
 	<!-- 查询单条数据,返回的是通用实体，不受实体属性限制，相当于map -->
 	<select id="queryOneCommon" resultType="com.boot.util.CommonEntity">
-		select  <include refid="doufuTodayWorkAliasColumns" /> 
-		from doufu_today_work  t
+		select  <include refid="doufuTomorrowPlanAliasColumns" /> 
+		from doufu_tomorrow_plan  t
 		<where>
 			1=1
-			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workContents)">and t.WORK_CONTENTS = #{workContents} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)">and t.WORK_DETAIL = #{workDetail} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)">and t.FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)">and t.DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)">and t.ACCORD_YESTERDAY = #{accordYesterday} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)">and t.IS_IMPORTANT = #{isImportant} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)">and t.IS_EMERGENCY = #{isEmergency} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)">and t.IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)">and t.PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)">and t.PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)">and t.PRODUCT_ID = #{productId} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
@@ -157,21 +149,19 @@
 	
 	<!-- 批量插入数据 -->
 	<insert id="insertBatch">
-		insert into doufu_today_work(<include refid="doufuTodayWorkColumns" />) values 
+		insert into doufu_tomorrow_plan(<include refid="doufuTomorrowPlanColumns" />) values 
 		<foreach collection="list" item="item" separator="," >
 		(
-	    	#{item.projectGroupId},
-	    	#{item.projectId},
-	    	#{item.productId},
+	    	#{item.id},
 	    	#{item.workContents},
 	    	#{item.workDetail},
 	    	#{item.finishPercent},
-	    	#{item.delayReason},
-	    	#{item.accordYesterday},
 	    	#{item.isImportant},
 	    	#{item.isEmergency},
 	    	#{item.impoLevel},
-	    	#{item.id},
+	    	#{item.projectGroupId},
+	    	#{item.projectId},
+	    	#{item.productId},
 	    	#{item.delFlag},
 	    	#{item.status},
 	    	#{item.instId},
@@ -189,21 +179,19 @@
 	
 	<!-- 根据不同条件删除数据，条件可组合 -->
 	<delete id="deleteByParams" parameterType="java.util.Map">
-		delete from doufu_today_work
+		delete from doufu_tomorrow_plan
 		<where>
 			1=1
-			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)"> and PROJECT_GROUP_ID = #{projectGroupId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(projectId)"> and PROJECT_ID = #{projectId} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(productId)"> and PRODUCT_ID = #{productId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)"> and ID = #{id} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workContents)"> and WORK_CONTENTS = #{workContents} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(workDetail)"> and WORK_DETAIL = #{workDetail} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(finishPercent)"> and FINISH_PERCENT = #{finishPercent} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(delayReason)"> and DELAY_REASON = #{delayReason} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(accordYesterday)"> and ACCORD_YESTERDAY = #{accordYesterday} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isImportant)"> and IS_IMPORTANT = #{isImportant} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(isEmergency)"> and IS_EMERGENCY = #{isEmergency} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(impoLevel)"> and IMPO_LEVEL = #{impoLevel} </if>
-			<if test="@com.boot.util.Ognl@isNotBlank(id)"> and ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectGroupId)"> and PROJECT_GROUP_ID = #{projectGroupId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(projectId)"> and PROJECT_ID = #{projectId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productId)"> and PRODUCT_ID = #{productId} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)"> and DEL_FLAG = #{delFlag} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(status)"> and STATUS = #{status} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(instId)"> and INST_ID = #{instId} </if>
@@ -219,20 +207,18 @@
 	</delete>
 	<!-- 根据不同条件删除数据，条件可组合 -->
 	<update id="updateOneEntity" >
-		update doufu_today_work 
+		update doufu_tomorrow_plan 
                 set 
-	    	          PROJECT_GROUP_ID = #{projectGroupId},
-	    	          PROJECT_ID = #{projectId},
-	    	          PRODUCT_ID = #{productId},
+	    	          ID = #{id},
 	    	          WORK_CONTENTS = #{workContents},
 	    	          WORK_DETAIL = #{workDetail},
 	    	          FINISH_PERCENT = #{finishPercent},
-	    	          DELAY_REASON = #{delayReason},
-	    	          ACCORD_YESTERDAY = #{accordYesterday},
 	    	          IS_IMPORTANT = #{isImportant},
 	    	          IS_EMERGENCY = #{isEmergency},
 	    	          IMPO_LEVEL = #{impoLevel},
-	    	          ID = #{id},
+	    	          PROJECT_GROUP_ID = #{projectGroupId},
+	    	          PROJECT_ID = #{projectId},
+	    	          PRODUCT_ID = #{productId},
 	    	          DEL_FLAG = #{delFlag},
 	    	          STATUS = #{status},
 	    	          INST_ID = #{instId},
@@ -248,20 +234,18 @@
 	<!-- 根据不同条件删除数据，条件可组合 -->
 	<update id="updateBatchEntity" >
 		<foreach collection="list" item="item" separator=",">
-		update doufu_today_work 
+		update doufu_tomorrow_plan 
                 set 
-	    	          PROJECT_GROUP_ID = #{projectGroupId},
-	    	          PROJECT_ID = #{projectId},
-	    	          PRODUCT_ID = #{productId},
+	    	          ID = #{id},
 	    	          WORK_CONTENTS = #{workContents},
 	    	          WORK_DETAIL = #{workDetail},
 	    	          FINISH_PERCENT = #{finishPercent},
-	    	          DELAY_REASON = #{delayReason},
-	    	          ACCORD_YESTERDAY = #{accordYesterday},
 	    	          IS_IMPORTANT = #{isImportant},
 	    	          IS_EMERGENCY = #{isEmergency},
 	    	          IMPO_LEVEL = #{impoLevel},
-	    	          ID = #{id},
+	    	          PROJECT_GROUP_ID = #{projectGroupId},
+	    	          PROJECT_ID = #{projectId},
+	    	          PRODUCT_ID = #{productId},
 	    	          DEL_FLAG = #{delFlag},
 	    	          STATUS = #{status},
 	    	          INST_ID = #{instId},

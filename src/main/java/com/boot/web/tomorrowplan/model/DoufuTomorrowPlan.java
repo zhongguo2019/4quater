@@ -1,4 +1,4 @@
-package com.boot.web.todaywork.model;
+package com.boot.web.tomorrowplan.model;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -15,27 +15,25 @@ import java.text.ParseException;
 /**
  * 
  * @author 赵祖龙
- * 当天工作记录信息表javaBean
+ * 明天工作计划表javaBean
  * 2019-08-26
  */
-@Table(name="doufu_today_work")
-public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
+@Table(name="doufu_tomorrow_plan")
+public class DoufuTomorrowPlan extends BaseEntity<DoufuTomorrowPlan>{
 	
 	private static final long serialVersionUID = 1L;
 	
-    private String  projectGroupId;      //所在项目组名称
-    private String  projectId;      //项目名称
-    private String  productId;      //对应产品
+	@Id
+    private String  id;      //主键
     private String  workContents;      //工作内容简写
     private String  workDetail;      //工作内容详细描述
     private String  finishPercent;      //完成比例
-    private String  delayReason;      //延迟原因
-    private String  accordYesterday;      //对应计划
     private String  isImportant;      //是否重要
     private String  isEmergency;      //是否紧急
     private String  impoLevel;      //重要级别
-	@Id
-    private String  id;      //主键
+    private String  projectGroupId;      //所在项目组名称
+    private String  projectId;      //项目名称
+    private String  productId;      //对应产品
     private String  delFlag;      //逻辑删除标记(0.正常，1.删除)
     private String  status;      //状态
     private String  instId;      //机构ID
@@ -50,38 +48,18 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 	@Transient
 	private List<BaseFile>	upfileList;			//批量上传文件list
 	
-	public DoufuTodayWork() {
-    	super.setModuleName("当天工作记录信息表");
+	public DoufuTomorrowPlan() {
+    	super.setModuleName("明天工作计划表");
 	}
 	/**
-	 * 所在项目组名称
-	 * @param projectGroupId
+	 * 主键
+	 * @param id
 	 */
-	public void setProjectGroupId(String projectGroupId) {
-		this.projectGroupId = projectGroupId;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getProjectGroupId() {
-		return projectGroupId;
-	}
-	/**
-	 * 项目名称
-	 * @param projectId
-	 */
-	public void setProjectId(String projectId) {
-		this.projectId = projectId;
-	}
-	public String getProjectId() {
-		return projectId;
-	}
-	/**
-	 * 对应产品
-	 * @param productId
-	 */
-	public void setProductId(String productId) {
-		this.productId = productId;
-	}
-	public String getProductId() {
-		return productId;
+	public String getId() {
+		return id;
 	}
 	/**
 	 * 工作内容简写
@@ -114,26 +92,6 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 		return finishPercent;
 	}
 	/**
-	 * 延迟原因
-	 * @param delayReason
-	 */
-	public void setDelayReason(String delayReason) {
-		this.delayReason = delayReason;
-	}
-	public String getDelayReason() {
-		return delayReason;
-	}
-	/**
-	 * 对应计划
-	 * @param accordYesterday
-	 */
-	public void setAccordYesterday(String accordYesterday) {
-		this.accordYesterday = accordYesterday;
-	}
-	public String getAccordYesterday() {
-		return accordYesterday;
-	}
-	/**
 	 * 是否重要
 	 * @param isImportant
 	 */
@@ -164,14 +122,34 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 		return impoLevel;
 	}
 	/**
-	 * 主键
-	 * @param id
+	 * 所在项目组名称
+	 * @param projectGroupId
 	 */
-	public void setId(String id) {
-		this.id = id;
+	public void setProjectGroupId(String projectGroupId) {
+		this.projectGroupId = projectGroupId;
 	}
-	public String getId() {
-		return id;
+	public String getProjectGroupId() {
+		return projectGroupId;
+	}
+	/**
+	 * 项目名称
+	 * @param projectId
+	 */
+	public void setProjectId(String projectId) {
+		this.projectId = projectId;
+	}
+	public String getProjectId() {
+		return projectId;
+	}
+	/**
+	 * 对应产品
+	 * @param productId
+	 */
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+	public String getProductId() {
+		return productId;
 	}
 	/**
 	 * 逻辑删除标记(0.正常，1.删除)
@@ -297,21 +275,13 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 
 	@Override
 	public String toString() {
-		return "当天工作记录信息表： {\"projectGroupId\": \""+projectGroupId+"\", \"projectId\": \""+projectId+"\", \"productId\": \""+productId+"\", \"workContents\": \""+workContents+"\", \"workDetail\": \""+workDetail+"\", \"finishPercent\": \""+finishPercent+"\", \"delayReason\": \""+delayReason+"\", \"accordYesterday\": \""+accordYesterday+"\", \"isImportant\": \""+isImportant+"\", \"isEmergency\": \""+isEmergency+"\", \"impoLevel\": \""+impoLevel+"\", \"id\": \""+id+"\", \"delFlag\": \""+delFlag+"\", \"status\": \""+status+"\", \"instId\": \""+instId+"\", \"loginIp\": \""+loginIp+"\", \"loginDate\": \""+loginDate+"\", \"createBy\": \""+createBy+"\", \"createDate\": \""+createDate+"\", \"updateBy\": \""+updateBy+"\", \"updateDate\": \""+updateDate+"\", \"remarks\": \""+remarks+"\", \"reportDate\": \""+reportDate+"\"}";
+		return "明天工作计划表： {\"id\": \""+id+"\", \"workContents\": \""+workContents+"\", \"workDetail\": \""+workDetail+"\", \"finishPercent\": \""+finishPercent+"\", \"isImportant\": \""+isImportant+"\", \"isEmergency\": \""+isEmergency+"\", \"impoLevel\": \""+impoLevel+"\", \"projectGroupId\": \""+projectGroupId+"\", \"projectId\": \""+projectId+"\", \"productId\": \""+productId+"\", \"delFlag\": \""+delFlag+"\", \"status\": \""+status+"\", \"instId\": \""+instId+"\", \"loginIp\": \""+loginIp+"\", \"loginDate\": \""+loginDate+"\", \"createBy\": \""+createBy+"\", \"createDate\": \""+createDate+"\", \"updateBy\": \""+updateBy+"\", \"updateDate\": \""+updateDate+"\", \"remarks\": \""+remarks+"\", \"reportDate\": \""+reportDate+"\"}";
 	}
 
-  public  DoufuTodayWork(Map<String, Object> row)throws ParseException{
-         if( row.get("projectGroupId") !=null  ){
-          String strValue=row.get("projectGroupId").toString();
-          this.setProjectGroupId(strValue);
-        }
-         if( row.get("projectId") !=null  ){
-          String strValue=row.get("projectId").toString();
-          this.setProjectId(strValue);
-        }
-         if( row.get("productId") !=null  ){
-          String strValue=row.get("productId").toString();
-          this.setProductId(strValue);
+  public  DoufuTomorrowPlan(Map<String, Object> row)throws ParseException{
+         if( row.get("id") !=null  ){
+          String strValue=row.get("id").toString();
+          this.setId(strValue);
         }
          if( row.get("workContents") !=null  ){
           String strValue=row.get("workContents").toString();
@@ -325,14 +295,6 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
           String strValue=row.get("finishPercent").toString();
           this.setFinishPercent(strValue);
         }
-         if( row.get("delayReason") !=null  ){
-          String strValue=row.get("delayReason").toString();
-          this.setDelayReason(strValue);
-        }
-         if( row.get("accordYesterday") !=null  ){
-          String strValue=row.get("accordYesterday").toString();
-          this.setAccordYesterday(strValue);
-        }
          if( row.get("isImportant") !=null  ){
           String strValue=row.get("isImportant").toString();
           this.setIsImportant(strValue);
@@ -345,9 +307,17 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
           String strValue=row.get("impoLevel").toString();
           this.setImpoLevel(strValue);
         }
-         if( row.get("id") !=null  ){
-          String strValue=row.get("id").toString();
-          this.setId(strValue);
+         if( row.get("projectGroupId") !=null  ){
+          String strValue=row.get("projectGroupId").toString();
+          this.setProjectGroupId(strValue);
+        }
+         if( row.get("projectId") !=null  ){
+          String strValue=row.get("projectId").toString();
+          this.setProjectId(strValue);
+        }
+         if( row.get("productId") !=null  ){
+          String strValue=row.get("productId").toString();
+          this.setProductId(strValue);
         }
          if( row.get("delFlag") !=null  ){
           String strValue=row.get("delFlag").toString();

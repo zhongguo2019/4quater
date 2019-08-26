@@ -1,4 +1,4 @@
-package com.boot.web.todaywork.service;
+package com.boot.web.tomorrowplan.service;
 
 import java.util.List;
 import java.util.Map;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.boot.web.todaywork.model.DoufuTodayWork;
-import com.boot.web.todaywork.mapper.DoufuTodayWorkMapper;
+import com.boot.web.tomorrowplan.model.DoufuTomorrowPlan;
+import com.boot.web.tomorrowplan.mapper.DoufuTomorrowPlanMapper;
 import com.boot.util.CommonEntity;
 import com.boot.util.ServiceMybatis;
 
@@ -18,14 +18,14 @@ import com.boot.util.ServiceMybatis;
 /**
  * 
  * @author 赵祖龙
- * 当天工作记录信息表业务层
+ * 明天工作计划表业务层
  * 2019-08-26
  */
-@Service("doufuTodayWorkService")
-public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
+@Service("doufuTomorrowPlanService")
+public class DoufuTomorrowPlanService extends ServiceMybatis<DoufuTomorrowPlan>{
 
 	@Resource
-	private DoufuTodayWorkMapper doufuTodayWorkMapper;
+	private DoufuTomorrowPlanMapper doufuTomorrowPlanMapper;
 	
 	/**
 	 * 分页展示(可带条件查询)
@@ -36,9 +36,9 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	public PageInfo<CommonEntity> queryPageInfo(Map<String, Object> params) {
 		List<CommonEntity> list = null;
 		try {
-			logger.info("#=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#");
+			logger.info("#=================开始分页查询【明天工作计划表】数据，带动态权限========================#");
 			PageHelper.startPage(params);
-			list = doufuTodayWorkMapper.queryPageInfo(params);
+			list = doufuTomorrowPlanMapper.queryPageInfo(params);
 			logger.info("#=================动态权限查询成功！=================================#");
 		} catch (Exception e) {
 			logger.info("#=================动态权限查询出错，原因如下：========================#");
@@ -48,7 +48,7 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 			logger.info("#=================系统默认处理机制：查询所有数据======================#");
 			params.remove("dynamicSQL");
 			PageHelper.startPage(params);
-			list = doufuTodayWorkMapper.queryPageInfo(params);
+			list = doufuTomorrowPlanMapper.queryPageInfo(params);
 		}
 		return new PageInfo<CommonEntity>(list);
 	}
@@ -59,12 +59,12 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @param params
 	 * @return
 	 */
-	public PageInfo<DoufuTodayWork> queryPageInfoEntity(Map<String, Object> params) {
-		List<DoufuTodayWork> list = null;
+	public PageInfo<DoufuTomorrowPlan> queryPageInfoEntity(Map<String, Object> params) {
+		List<DoufuTomorrowPlan> list = null;
 		try {
-			logger.info("#=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#");
+			logger.info("#=================开始分页查询【明天工作计划表】数据，带动态权限========================#");
 			PageHelper.startPage(params);
-			list = doufuTodayWorkMapper.entityList(params);
+			list = doufuTomorrowPlanMapper.entityList(params);
 			logger.info("#=================动态权限查询成功！=================================#");
 		} catch (Exception e) {
 			logger.info("#=================动态权限查询出错，原因如下：========================#");
@@ -74,9 +74,9 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 			logger.info("#=================系统默认处理机制：查询所有数据======================#");
 			params.remove("dynamicSQL");
 			PageHelper.startPage(params);
-			list = doufuTodayWorkMapper.entityList(params);
+			list = doufuTomorrowPlanMapper.entityList(params);
 		}
-		return new PageInfo<DoufuTodayWork>(list);
+		return new PageInfo<DoufuTomorrowPlan>(list);
 	}	
 	/**
 	 * 列表(可带条件查询)
@@ -85,8 +85,8 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @return List<CommonEntity>
 	 */
 	public List<CommonEntity> commonList(Map<String, Object> params) {
-		logger.info("#=================开始根据不同条件查询【当天工作记录信息表】列表数据，返回通用对象========================#");
-		List<CommonEntity> list = doufuTodayWorkMapper.queryPageInfo(params);
+		logger.info("#=================开始根据不同条件查询【明天工作计划表】列表数据，返回通用对象========================#");
+		List<CommonEntity> list = doufuTomorrowPlanMapper.queryPageInfo(params);
 		return list;
 	}
 	
@@ -94,11 +94,11 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * 列表(可带条件查询)
 	 * 返回的是实体list
 	 * @param params
-	 * @return List<DoufuTodayWork>
+	 * @return List<DoufuTomorrowPlan>
 	 */
-	public List<DoufuTodayWork> entityList(Map<String, Object> params) {
-		logger.info("#=================开始根据不同条件查询【当天工作记录信息表】列表数据，返回实体对象========================#");
-		List<DoufuTodayWork> list = doufuTodayWorkMapper.entityList(params);
+	public List<DoufuTomorrowPlan> entityList(Map<String, Object> params) {
+		logger.info("#=================开始根据不同条件查询【明天工作计划表】列表数据，返回实体对象========================#");
+		List<DoufuTomorrowPlan> list = doufuTomorrowPlanMapper.entityList(params);
 		return list;
 	}
 	
@@ -106,8 +106,8 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * 列表(查询所有，不带条件)
 	 * @return
 	 */
-	public List<DoufuTodayWork> list() {
-		List<DoufuTodayWork> list = this.selectAll();
+	public List<DoufuTomorrowPlan> list() {
+		List<DoufuTomorrowPlan> list = this.selectAll();
 		return list;
 	}
 	
@@ -116,7 +116,7 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @param id
 	 * @return
 	 */
-	public DoufuTodayWork queryById(String id){
+	public DoufuTomorrowPlan queryById(String id){
 		return this.selectByPrimaryKey(id);
 	}
 	
@@ -125,9 +125,9 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @param params
 	 * @return
 	 */
-	public DoufuTodayWork queryOne(Map<String, Object> params){
-		logger.info("#=================开始根据不同条件查询一条【当天工作记录信息表】数据，返回实体对象========================#");
-		return doufuTodayWorkMapper.queryOne(params);
+	public DoufuTomorrowPlan queryOne(Map<String, Object> params){
+		logger.info("#=================开始根据不同条件查询一条【明天工作计划表】数据，返回实体对象========================#");
+		return doufuTomorrowPlanMapper.queryOne(params);
 	}
 	
 	/**
@@ -135,7 +135,7 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @param record
 	 * @return
 	 */
-	public DoufuTodayWork queryOne(DoufuTodayWork record){
+	public DoufuTomorrowPlan queryOne(DoufuTomorrowPlan record){
 		return this.selectOne(record);
 	}
 	
@@ -145,17 +145,17 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @return
 	 */
 	public CommonEntity queryOneCommon(Map<String, Object> params){
-	logger.info("#=================开始根据不同条件查询一条【当天工作记录信息表】数据，返回通用对象========================#");
-		return doufuTodayWorkMapper.queryOneCommon(params);
+	logger.info("#=================开始根据不同条件查询一条【明天工作计划表】数据，返回通用对象========================#");
+		return doufuTomorrowPlanMapper.queryOneCommon(params);
 	}
 	
 	/**
 	 * 保存操作
-	 * @param doufuTodayWork
+	 * @param doufuTomorrowPlan
 	 * @return
 	 */
-	public int save(DoufuTodayWork doufuTodayWork){
-		return this.insertSelective(doufuTodayWork);
+	public int save(DoufuTomorrowPlan doufuTomorrowPlan){
+		return this.insertSelective(doufuTomorrowPlan);
 	}
 	
 	/**
@@ -163,25 +163,25 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @param list
 	 * @return
 	 */
-	public int insertBatch(List<DoufuTodayWork> list){
-		return doufuTodayWorkMapper.insertBatch(list);
+	public int insertBatch(List<DoufuTomorrowPlan> list){
+		return doufuTomorrowPlanMapper.insertBatch(list);
 	}
 	
 	/**
 	 * 更新操作
-	 * @param doufuTodayWork
+	 * @param doufuTomorrowPlan
 	 * @return
 	 */
-	public int update(DoufuTodayWork doufuTodayWork){
-		return this.updateByPrimaryKeySelective(doufuTodayWork);
+	public int update(DoufuTomorrowPlan doufuTomorrowPlan){
+		return this.updateByPrimaryKeySelective(doufuTomorrowPlan);
 	}
 	/**
 	 * 更新操作
-	 * @param doufuTodayWork
+	 * @param doufuTomorrowPlan
 	 * @return
 	 */
-	public int updateBatch(List<DoufuTodayWork> list){
-		return doufuTodayWorkMapper.updateBatchEntity(list);
+	public int updateBatch(List<DoufuTomorrowPlan> list){
+		return doufuTomorrowPlanMapper.updateBatchEntity(list);
 	}	
 	
 	/**
@@ -189,7 +189,7 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @param id
 	 * @return
 	 */
-	public int deleteDoufuTodayWork(String id){
+	public int deleteDoufuTomorrowPlan(String id){
 		return this.deleteByPrimaryKey(id);
 	}
 	
@@ -198,10 +198,10 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @param ids
 	 * @return
 	 */
-	public Integer deleteDoufuTodayWork(String[] ids) {
+	public Integer deleteDoufuTomorrowPlan(String[] ids) {
 		int count = 0;
 		for (String id : ids) {
-			count += deleteDoufuTodayWork(id);
+			count += deleteDoufuTomorrowPlan(id);
 		}
 		return count;
 	}
@@ -212,8 +212,8 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 	 * @return
 	 */
 	public int deleteByParams(Map<String, Object> params){
-		logger.info("#=================开始根据不同条件删除【当天工作记录信息表】数据========================#");
-		return doufuTodayWorkMapper.deleteByParams(params);
+		logger.info("#=================开始根据不同条件删除【明天工作计划表】数据========================#");
+		return doufuTomorrowPlanMapper.deleteByParams(params);
 	}
 	
 	

@@ -1,13 +1,14 @@
 ﻿[
     { id: "informanage", text: "报告编写"},
   	{ id: "dailyreportinput",   pid: "informanage", text: "日报编写", iconCls: "dayedit", url: "/todaywork/todaywork-add.html", iconPosition: "top" },
-	{ id: "weeklyreportinput",   pid: "informanage", text: "周报编写", iconCls: "dayedit", url: "pages/html/datatable.html", iconPosition: "top" },
-    { id: "projectmanage", pid: "informanage", text: "项目维护", iconCls: "rearch", url: "pages/html/systemMaintenance.html", iconPosition: "top" },
+	{ id: "weeklyreportinput",   pid: "informanage", text: "周报编写", iconCls: "weekedit", url: "pages/html/datatable.html", iconPosition: "top" },
+    { id: "halfmonthinput", pid: "informanage", text: "半月报编写", iconCls: "halfmonthedit", url: "pages/html/systemMaintenance.html", iconPosition: "top" },
+    { id: "monthinput", pid: "informanage", text: "月报编写", iconCls: "monthedit", url: "pages/html/systemMaintenance.html", iconPosition: "top" },
  
 	{ id: "planmanage", text: "计划制定"},
-	{ id: "dayedit",   pid: "planmanage", text: "每天计划", iconCls: "dayedit", url: "pages/html/datatable.html", iconPosition: "top" },
-	{ id: "weekedit",  pid: "planmanage", text: "每周计划", iconCls: "weekedit", url: "pages/html/datatable.html", iconPosition: "top" },
-    { id: "monthedit", pid: "planmanage", text: "每月计划", iconCls: "monthedit", url: "pages/html/datatable.html", iconPosition: "top" },   
+	{ id: "dayedit",   pid: "planmanage", text: "每天计划", iconCls: "dayplan", url: "pages/html/datatable.html", iconPosition: "top" },
+	{ id: "weekedit",  pid: "planmanage", text: "每周计划", iconCls: "weekplan", url: "pages/html/datatable.html", iconPosition: "top" },
+    { id: "monthedit", pid: "planmanage", text: "每月计划", iconCls: "monthplan", url: "pages/html/datatable.html", iconPosition: "top" },   
    
    
     { id: "collectquery", text: "统计查询"},

@@ -1,4 +1,4 @@
-package com.boot.web.todaywork.controller;
+package com.boot.web.tomorrowplan.controller;
 
 import java.text.DecimalFormat;
 import java.util.Date;
@@ -31,8 +31,8 @@ import com.boot.util.StringConvert;
 import com.boot.util.StringUtil;
 import com.boot.util.excel.ExportExcel;
 import com.boot.util.excel.ImportExcel;
-import com.boot.web.todaywork.model.DoufuTodayWork;
-import com.boot.web.todaywork.service.DoufuTodayWorkService;
+import com.boot.web.tomorrowplan.model.DoufuTomorrowPlan;
+import com.boot.web.tomorrowplan.service.DoufuTomorrowPlanService;
 import com.boot.util.SysUserUtils;
 import com.krm.common.constant.Constant;
 import com.boot.web.sys.model.SysUser;
@@ -44,18 +44,18 @@ import java.util.UUID;
 /**
  * 
  * @author 赵祖龙
- * 当天工作记录信息表控制层
+ * 明天工作计划表控制层
  * 2019-08-26
  */
 @Controller
-@RequestMapping("todaywork/doufuTodayWork")
-public class DoufuTodayWorkController extends BaseController {
+@RequestMapping("tomorrowplan/doufuTomorrowPlan")
+public class DoufuTomorrowPlanController extends BaseController {
 	
-	public static final String BASE_URL = "todaywork/doufuTodayWork";
-	private static final String BASE_PATH = "todaywork/doufuTodayWork/";
+	public static final String BASE_URL = "tomorrowplan/doufuTomorrowPlan";
+	private static final String BASE_PATH = "tomorrowplan/doufuTomorrowPlan/";
 	
 	@Resource
-	private DoufuTodayWorkService doufuTodayWorkService;
+	private DoufuTomorrowPlanService doufuTomorrowPlanService;
 	
 	@Override
 	protected String getBaseUrl() {
@@ -69,7 +69,7 @@ public class DoufuTodayWorkController extends BaseController {
 
 	@Override
 	protected String getBasePermission() {
-		return "todaywork:doufuTodayWork";
+		return "tomorrowplan:doufuTomorrowPlan";
 	}
 	
 	/**
@@ -78,10 +78,10 @@ public class DoufuTodayWorkController extends BaseController {
 	 * @return 模块html
 	 */
 	@RequestMapping
-	public String toDoufuTodayWork(Model model){
-		logger.info("跳转到当天工作记录信息表页面(" + getBasePath() + "doufuTodayWork-list)");
+	public String toDoufuTomorrowPlan(Model model){
+		logger.info("跳转到明天工作计划表页面(" + getBasePath() + "doufuTomorrowPlan-list)");
 		//checkPermission("query");
-		return getBasePath() + "doufuTodayWork-list";
+		return getBasePath() + "doufuTomorrowPlan-list";
 	}
 	
 	/**
@@ -92,7 +92,7 @@ public class DoufuTodayWorkController extends BaseController {
 	@RequestMapping(value="list", method = RequestMethod.POST)
 	@ResponseBody
 	public PageInfo<CommonEntity> list(@RequestParam Map<String, Object> params, Model model){
-		logger.info("分页显示当天工作记录信息表，参数：" + params.toString());
+		logger.info("分页显示明天工作计划表，参数：" + params.toString());
         //checkPermission("query");
         //权限语句
 		params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u", getBaseUrl(), "id"));
@@ -100,7 +100,7 @@ public class DoufuTodayWorkController extends BaseController {
 			//如果传过来的参数是驼峰式，这里需要将驼峰转成下划线式
 			params.put("sortC", StringConvert.camelhumpToUnderline(params.get("sortC").toString()));
 		}
-		PageInfo<CommonEntity> page = doufuTodayWorkService.queryPageInfo(params);
+		PageInfo<CommonEntity> page = doufuTomorrowPlanService.queryPageInfo(params);
 		return page;
 	}
 	
@@ -111,19 +111,19 @@ public class DoufuTodayWorkController extends BaseController {
 	 */
 	@RequestMapping(value="save", method = RequestMethod.POST)
 	@ResponseBody
-	public Result save(@ModelAttribute DoufuTodayWork entry, MultipartHttpServletRequest request){
-		logger.info("开始保存当天工作记录信息表");
+	public Result save(@ModelAttribute DoufuTomorrowPlan entry, MultipartHttpServletRequest request){
+		logger.info("开始保存明天工作计划表");
 		int count = 0;
 		if(StringUtil.isEmpty(entry.getId())){
 			checkPermission("add");
-       		entry.setId(doufuTodayWorkService.generateId());
-       		count = doufuTodayWorkService.save(entry);
+       		entry.setId(doufuTomorrowPlanService.generateId());
+       		count = doufuTomorrowPlanService.save(entry);
 		}else{
 			checkPermission("update");
-       		count = doufuTodayWorkService.update(entry);
+       		count = doufuTomorrowPlanService.update(entry);
 		}
 		if(count > 0){
-			logger.info("保存当天工作记录信息表成功！");
+			logger.info("保存明天工作计划表成功！");
 			return Result.successResult();
 		}
 		return Result.errorResult();
@@ -137,14 +137,14 @@ public class DoufuTodayWorkController extends BaseController {
 	@RequestMapping(value="delete", method = RequestMethod.POST)
 	@ResponseBody
 	public Result del(String id, @RequestParam Map<String, Object> params){
-		logger.info("开始删除当天工作记录信息表，参数：" + id);
+		logger.info("开始删除明天工作计划表，参数：" + id);
 		checkPermission("delete");
-		int count = doufuTodayWorkService.deleteDoufuTodayWork(id);
+		int count = doufuTomorrowPlanService.deleteDoufuTomorrowPlan(id);
 		if(count > 0){
-			logger.info("删除当天工作记录信息表成功！");
+			logger.info("删除明天工作计划表成功！");
 			return Result.successResult();
 		}
-		logger.info("删除当天工作记录信息表失败！");
+		logger.info("删除明天工作计划表失败！");
 		return Result.errorResult();
 	}
 	
@@ -156,18 +156,18 @@ public class DoufuTodayWorkController extends BaseController {
 	@RequestMapping(value="deletes", method = RequestMethod.POST)
 	@ResponseBody
 	public Result dels(@RequestParam(value = "ids[]") String[] ids){
-		logger.info("开始批量删除当天工作记录信息表，参数：" + ids);
+		logger.info("开始批量删除明天工作计划表，参数：" + ids);
 		//checkPermission("delete");
 		if (ids.length==0) {
 			return new Result(0, "操作失败，没有要删除的行被选中！");
 		}
 
-		int count = doufuTodayWorkService.deleteDoufuTodayWork(ids);
+		int count = doufuTomorrowPlanService.deleteDoufuTomorrowPlan(ids);
 		if(count > 0){
-			logger.info("删除当天工作记录信息表成功！");
+			logger.info("删除明天工作计划表成功！");
 			return Result.successResult();
 		}
-		logger.info("删除当天工作记录信息表失败！");
+		logger.info("删除明天工作计划表失败！");
 		return Result.errorResult();
 	}
 	
@@ -178,51 +178,51 @@ public class DoufuTodayWorkController extends BaseController {
 	 */
 	@RequestMapping(value="{mode}/showlayer", method=RequestMethod.POST)
 	public String layer(String id, @RequestParam Map<String, Object> params, @PathVariable String mode, Model model){
-		DoufuTodayWork entry = null;
+		DoufuTomorrowPlan entry = null;
 		if(StringUtils.equals("add", mode)){
-			logger.info("弹窗显示【当天工作记录信息表】添加页面(" + getBasePath() + "doufuTodayWork-add)");
+			logger.info("弹窗显示【明天工作计划表】添加页面(" + getBasePath() + "doufuTomorrowPlan-add)");
 			checkPermission("add");
-			return getBasePath() + "doufuTodayWork-add";
+			return getBasePath() + "doufuTomorrowPlan-add";
 		}else if(StringUtils.equals("edit", mode)){
-			logger.info("弹窗显示【当天工作记录信息表】编辑页面(" + getBasePath() + "doufuTodayWork-update)");
+			logger.info("弹窗显示【明天工作计划表】编辑页面(" + getBasePath() + "doufuTomorrowPlan-update)");
 			checkPermission("update");
 			params.put("id", id);
-			entry = doufuTodayWorkService.queryOne(params);
+			entry = doufuTomorrowPlanService.queryOne(params);
 			model.addAttribute("entry", entry);
-			return getBasePath() + "doufuTodayWork-update";
+			return getBasePath() + "doufuTomorrowPlan-update";
 		}else if(StringUtils.equals("detail", mode)){
-			logger.info("弹窗显示【当天工作记录信息表】详情页面(" + getBasePath() + "doufuTodayWork-detail)");
+			logger.info("弹窗显示【明天工作计划表】详情页面(" + getBasePath() + "doufuTomorrowPlan-detail)");
 			checkPermission("query");
 			params.put("id", id);
-			CommonEntity entity = doufuTodayWorkService.queryOneCommon(params);
+			CommonEntity entity = doufuTomorrowPlanService.queryOneCommon(params);
 			model.addAttribute("entry", entity);
 		}else if(StringUtils.equals("import", mode)){
-			logger.info("弹窗显示【当天工作记录信息表】Excel导入页面(" + getBasePath() + "doufuTodayWork-import)");
+			logger.info("弹窗显示【明天工作计划表】Excel导入页面(" + getBasePath() + "doufuTomorrowPlan-import)");
 			checkPermission("import");
-			return getBasePath() + "doufuTodayWork-import";
+			return getBasePath() + "doufuTomorrowPlan-import";
 		}
-		return getBasePath() + "doufuTodayWork-detail";
+		return getBasePath() + "doufuTomorrowPlan-detail";
 	}
 	
 	/**
-     * 当天工作记录信息表Excel导入模板
+     * 明天工作计划表Excel导入模板
      * @param response
      * @param redirectAttributes
      * @return
      * @throws Exception 
      */
     @RequestMapping("import/template/download")
-    public void importDoufuTodayWorkTemplate(HttpServletResponse response) throws Exception {
-    	logger.info("开始下载当天工作记录信息表Excel导入模板");
+    public void importDoufuTomorrowPlanTemplate(HttpServletResponse response) throws Exception {
+    	logger.info("开始下载明天工作计划表Excel导入模板");
     	checkPermission("import");
-		String fileName = "当天工作记录信息表Excel导入模板.xlsx";
-		List<DoufuTodayWork> list = Lists.newArrayList();
-		list.add(new DoufuTodayWork());
-		new ExportExcel("当天工作记录信息表", DoufuTodayWork.class, 2).setDataList(list).write(response, fileName).dispose();
+		String fileName = "明天工作计划表Excel导入模板.xlsx";
+		List<DoufuTomorrowPlan> list = Lists.newArrayList();
+		list.add(new DoufuTomorrowPlan());
+		new ExportExcel("明天工作计划表", DoufuTomorrowPlan.class, 2).setDataList(list).write(response, fileName).dispose();
     }
     
     /**
-     * 当天工作记录信息表数据导入
+     * 明天工作计划表数据导入
      * @param request
      * @param response
      * @return
@@ -230,7 +230,7 @@ public class DoufuTodayWorkController extends BaseController {
     @RequestMapping(value = "import", method=RequestMethod.POST)
     @ResponseBody
     public Result importFile(@RequestParam("file") MultipartFile fileList[], HttpServletResponse response) throws Exception {
-    	logger.info("开始导入当天工作记录信息表数据");
+    	logger.info("开始导入明天工作计划表数据");
     	checkPermission("import");
     	Long start = System.currentTimeMillis();
     	int successNum = 0;
@@ -239,16 +239,16 @@ public class DoufuTodayWorkController extends BaseController {
     		ImportExcel ei;
     		StringBuilder failureMsg = new StringBuilder();
    			ei = new ImportExcel(file, 1, 0);
-   			List<DoufuTodayWork> list = ei.getDataList(DoufuTodayWork.class);
-   			for (DoufuTodayWork entry : list) {
-   				entry.setId(doufuTodayWorkService.generateId());
+   			List<DoufuTomorrowPlan> list = ei.getDataList(DoufuTomorrowPlan.class);
+   			for (DoufuTomorrowPlan entry : list) {
+   				entry.setId(doufuTomorrowPlanService.generateId());
    				entry.setCreateBy(SysUserUtils.getCacheLoginUser().getId());
    				entry.setCreateDate(new Date());
    				entry.setDelFlag(Constant.DEL_FLAG_NORMAL);
 			}
-   			successNum = doufuTodayWorkService.insertBatch(list);
+   			successNum = doufuTomorrowPlanService.insertBatch(list);
     		if (failureNum > 0){
-    			failureMsg.insert(0, "，失败导入 " + failureNum + " 条当天工作记录信息表数据，导入信息如下：");
+    			failureMsg.insert(0, "，失败导入 " + failureNum + " 条明天工作计划表数据，导入信息如下：");
     		}
     		Long end = System.currentTimeMillis();
     		DecimalFormat df = new DecimalFormat("######0.00");
@@ -258,13 +258,13 @@ public class DoufuTodayWorkController extends BaseController {
     }
     
     /**
-	 * 当天工作记录信息表导出excel
+	 * 明天工作计划表导出excel
 	 */
 	@RequestMapping(value="export", method = RequestMethod.POST)
 	public void export(@RequestParam Map<String, Object> params, HttpServletResponse response) throws Exception{
-		logger.info("开始导出当天工作记录信息表数据");
+		logger.info("开始导出明天工作计划表数据");
 		checkPermission("export");
-		String fileName = "当天工作记录信息表" + DateUtils.getDate("yyyyMMddHHmmss") + ".xlsx";
+		String fileName = "明天工作计划表" + DateUtils.getDate("yyyyMMddHHmmss") + ".xlsx";
 		//权限语句
 		params.put("dynamicSQL", SysUserUtils.dataScopeFilterString1("o", "u", getBaseUrl(), "id"));
 		try {
@@ -275,8 +275,8 @@ public class DoufuTodayWorkController extends BaseController {
 			}
 		} catch (Exception e) {
 		}
-		List<DoufuTodayWork> list = doufuTodayWorkService.entityList(params);
-		new ExportExcel("当天工作记录信息表", DoufuTodayWork.class).setDataList(list)
+		List<DoufuTomorrowPlan> list = doufuTomorrowPlanService.entityList(params);
+		new ExportExcel("明天工作计划表", DoufuTomorrowPlan.class).setDataList(list)
 			.write(response, fileName).dispose();
 	}
 
@@ -287,7 +287,7 @@ public class DoufuTodayWorkController extends BaseController {
 	 */
 	@RequestMapping(value="queryPageList", method = RequestMethod.POST)
 	@ResponseBody
-	PageInfo<DoufuTodayWork>  queryPageList(HttpServletRequest request){
+	PageInfo<DoufuTomorrowPlan>  queryPageList(HttpServletRequest request){
 		int pageIndex = Integer.parseInt(request.getParameter("pageIndex")) + 1;
 		int pageSize = Integer.parseInt(request.getParameter("pageSize"));
 		String sortField = request.getParameter("sortField").toString();
@@ -301,7 +301,7 @@ public class DoufuTodayWorkController extends BaseController {
 		params.put("order", sortOrder);
 		params.put("reportDate", reportDate );
 		logger.info("分页显示当天工作记录信息表，参数：" + params.toString());
-		PageInfo<DoufuTodayWork> page = doufuTodayWorkService.queryPageInfoEntity(params);
+		PageInfo<DoufuTomorrowPlan> page = doufuTomorrowPlanService.queryPageInfoEntity(params);
 		return page;
 
 	}
@@ -313,7 +313,7 @@ public class DoufuTodayWorkController extends BaseController {
 	 */
 	@RequestMapping(value="queryList", method = RequestMethod.POST)
 	@ResponseBody
-	List<DoufuTodayWork>  queryList(HttpServletRequest request){
+	List<DoufuTomorrowPlan>  queryList(HttpServletRequest request){
 		Map<String, Object> params = new HashMap<String, Object>();
 		String reportDate =  request.getParameter("reportDate").toString();
 		String sortField = request.getParameter("sortField").toString();
@@ -321,7 +321,7 @@ public class DoufuTodayWorkController extends BaseController {
 		params.put("sortC", StringConvert.camelhumpToUnderline(sortField));
 		params.put("order", sortOrder);
 		params.put("reportDate", reportDate );
-		List<DoufuTodayWork> lstRtn = doufuTodayWorkService.entityList(params);
+		List<DoufuTomorrowPlan> lstRtn = doufuTomorrowPlanService.entityList(params);
 		return lstRtn;
 
 	}
@@ -354,48 +354,48 @@ public class DoufuTodayWorkController extends BaseController {
 		SysUser sysuser = (SysUser) request.getSession().getAttribute(Constant.SESSION_LOGIN_USER);
 		if (!"".equals(data)) {
 			List<Map<String, Object>> list = (List<Map<String, Object>>) JsonHelper.decode(data);
-			List<DoufuTodayWork> listEntyInsert = new ArrayList<DoufuTodayWork>();
-			List<DoufuTodayWork> listEntyUpdate = new ArrayList<DoufuTodayWork>();
+			List<DoufuTomorrowPlan> listEntyInsert = new ArrayList<DoufuTomorrowPlan>();
+			List<DoufuTomorrowPlan> listEntyUpdate = new ArrayList<DoufuTomorrowPlan>();
 			for (int i = list.size() - 1; i >= 0; i--) {
 				Map<String, Object> row = list.get(i);
 				String vid = row.get("id") != null ? row.get("id").toString() : "";
 				String state = row.get("_state") != null ? row.get("_state").toString() : "";
-				DoufuTodayWork entryDoufuTodayWork= new DoufuTodayWork(row);
+				DoufuTomorrowPlan entryDoufuTomorrowPlan= new DoufuTomorrowPlan(row);
 				if (vid == "" || vid == null) {
 					String uuid = UUID.randomUUID().toString();
-					entryDoufuTodayWork.setId(uuid);
-					entryDoufuTodayWork.setProjectGroupId(sysuser.getProjectGroupId());
-					entryDoufuTodayWork.setProjectId(sysuser.getProjectGroupId());
-					entryDoufuTodayWork.setCreateDate(new Date());
-					entryDoufuTodayWork.setUpdateDate(new Date());
-					entryDoufuTodayWork.setDelFlag(Constant.DEL_FLAG_NORMAL);
-					entryDoufuTodayWork.setStatus(Constant.DEL_FLAG_NORMAL);
-					entryDoufuTodayWork.setInstId(sysuser.getOrganId());
-					entryDoufuTodayWork.setLoginIp(sysuser.getLoginIp());
-					entryDoufuTodayWork.setLoginDate(new Date());
-					entryDoufuTodayWork.setCreateBy(sysuser.getId());
-					entryDoufuTodayWork.setUpdateBy(sysuser.getId());
-					entryDoufuTodayWork.setReportDate(report_date);
-					listEntyInsert.add(entryDoufuTodayWork);
+					entryDoufuTomorrowPlan.setId(uuid);
+					entryDoufuTomorrowPlan.setProjectGroupId(sysuser.getProjectGroupId());
+					entryDoufuTomorrowPlan.setProjectId(sysuser.getProjectGroupId());
+					entryDoufuTomorrowPlan.setCreateDate(new Date());
+					entryDoufuTomorrowPlan.setUpdateDate(new Date());
+					entryDoufuTomorrowPlan.setDelFlag(Constant.DEL_FLAG_NORMAL);
+					entryDoufuTomorrowPlan.setStatus(Constant.DEL_FLAG_NORMAL);
+					entryDoufuTomorrowPlan.setInstId(sysuser.getOrganId());
+					entryDoufuTomorrowPlan.setLoginIp(sysuser.getLoginIp());
+					entryDoufuTomorrowPlan.setLoginDate(new Date());
+					entryDoufuTomorrowPlan.setCreateBy(sysuser.getId());
+					entryDoufuTomorrowPlan.setUpdateBy(sysuser.getId());
+					entryDoufuTomorrowPlan.setReportDate(report_date);
+					listEntyInsert.add(entryDoufuTomorrowPlan);
 				} else {
-					entryDoufuTodayWork.setUpdateDate(new Date());
-					entryDoufuTodayWork.setUpdateBy(sysuser.getId());
-					entryDoufuTodayWork.setLoginIp(sysuser.getLoginIp());
-					listEntyUpdate.add(entryDoufuTodayWork);
+					entryDoufuTomorrowPlan.setUpdateDate(new Date());
+					entryDoufuTomorrowPlan.setUpdateBy(sysuser.getId());
+					entryDoufuTomorrowPlan.setLoginIp(sysuser.getLoginIp());
+					listEntyUpdate.add(entryDoufuTomorrowPlan);
 				}
                               }
 			if (listEntyInsert != null && listEntyInsert.size() > 0) {
-				successNumInsert =  doufuTodayWorkService.insertBatch(listEntyInsert);
+				successNumInsert =  doufuTomorrowPlanService.insertBatch(listEntyInsert);
 			}
 			if (listEntyUpdate != null && listEntyUpdate.size() > 0) {
-				successNumUpdate = doufuTodayWorkService.updateBatch(listEntyUpdate);
+				successNumUpdate = doufuTomorrowPlanService.updateBatch(listEntyUpdate);
 			}
 
 			if (failureNumInsert > 0) {
-				failureMsg.insert(0, "，失败保存,增加数据时 " + failureNumInsert + " 条当天工作记录信息表数据，");
+				failureMsg.insert(0, "，失败保存,增加数据时 " + failureNumInsert + " 条明天工作计划表数据，");
 			}
 			if (failureNumUpdate > 0) {
-				failureMsg.insert(0, "，失败保存,更新数据时 " + failureNumUpdate + " 条当天工作记录信息表数据，");
+				failureMsg.insert(0, "，失败保存,更新数据时 " + failureNumUpdate + " 条明天工作计划表数据，");
 			}
 		        Long end = System.currentTimeMillis();
 			DecimalFormat df = new DecimalFormat("######0.00");
