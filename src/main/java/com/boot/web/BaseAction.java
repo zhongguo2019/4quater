@@ -4,14 +4,24 @@ import com.boot.web.sys.model.SysUser;
 import com.boot.web.sys.service.SysUserService;
 import com.boot.web.todaywork.service.DoufuTodayWorkService;
 import com.github.pagehelper.PageInfo;
+
 import com.boot.util.ChineseToEnglish;
 import com.boot.util.CommonEntity;
 import com.boot.util.ConfigUtil;
 import com.boot.util.CurrentWeek;
 import com.boot.util.DaoUtil;
 import com.boot.util.DocExpertUtil;
+import com.boot.util.HttpUtil;
 import com.boot.util.JsonHelper;
+import com.boot.util.qq.weixin.mp.aes.AesException;
+import com.boot.util.qq.weixin.mp.aes.WXBizMsgCrypt;
+import com.boot.util.qq.weixin.mp.aes.WeiXinParamesUtil;
+import com.boot.util.qq.weixin.mp.aes.WeiXinUtil;
+import com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil;
+import com.boot.util.qq.weixin.mp.aes.wxappJSAPIConstants;
 import com.krm.common.constant.Constant;
+
+import net.sf.json.JSONObject;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -26,12 +36,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import java.io.IOException;
+import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.sql.ResultSet;
@@ -443,24 +460,28 @@ public class BaseAction {
 	}
 
 	@RequestMapping("/firstpage")
-	@ResponseBody
 	String login(HttpServletRequest request) {
 		logger.info(" 登录验证成功，进入到系统管理的首页面");
-		return "/main/outlookmenu.html";
+		return "main/outlookmenu";
+	}
+
+	@RequestMapping("/loginlayout")
+	String loginlayout(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		SysUser sysuser = null;
+		if (null != session.getAttribute(Constant.SESSION_LOGIN_USER)) {
+			sysuser = (SysUser) session.getAttribute(Constant.SESSION_LOGIN_USER);
+		}
+		if (null == sysuser) {
+			return "login/loginLayout";
+		} else {
+			return "main/outlookmenu";
+		}
 	}
 
 	@RequestMapping(value = "/titleid")
 	@ResponseBody
 	String getWeektitle(HttpServletRequest request) {
-
-		/*
-		 * String sql = "SELECT id FROM " + ConfigUtil.getValue("db.schema") +
-		 * "t_happy_work_title WHERE begindate=? AND enddate=? "; List<Map<String,
-		 * Object>> list = jdbcTemplate.queryForList(sql, new Object[] {
-		 * CurrentWeek.getCurrenproDay("yyyy-MM-dd"),
-		 * CurrentWeek.getCurrenaftDay("yyyy-MM-dd") }); String title_id =
-		 * list.get(0).get("id").toString();
-		 */
 
 		String title_id = CurrentWeek.getDescWeekName();
 		logger.info(title_id);
@@ -486,5 +507,129 @@ public class BaseAction {
 
 		return rtn;
 
+	}
+
+	@RequestMapping("/wxconnect")
+	@ResponseBody
+	String getWXConnect(HttpServletRequest request) throws Exception {
+
+		logger.info("------------------------------企业微信发来调用消息,处理开始------------------------------！");
+		WXBizMsgCrypt wxcpt = new WXBizMsgCrypt(WeiXinParamesUtil.token, WeiXinParamesUtil.encodingAESKey,
+				WeiXinParamesUtil.corpId);
+		Map<String, Object> paramter = HttpUtil.getParameterMap(request);
+		String strMsgSig = HttpUtil.getDefaultKeyString(paramter, "msg_signature");
+		String strTimeStamp = HttpUtil.getDefaultKeyString(paramter, "timestamp");
+		String strReqNonce = HttpUtil.getDefaultKeyString(paramter, "nonce");
+		String strEchostr = HttpUtil.getDefaultKeyString(paramter, "echostr");
+		logger.info("服务器验证时传过来的加密字符[" + strEchostr + "]");
+		
+		String strRtnEchoStr = ""; // 需要返回的明文
+		request.getSession().setAttribute(Constant.SESSION_LOGIN_WXFLAG, "Y");
+		//后台通过微信登录，得到sys_user表中的用户信息，放到session中。
+
+		if (null != paramter.get("echostr")) {
+			logger.info("------------------------------验证连接服务器地址,处理开始------------------------------！");
+			try {
+				strRtnEchoStr = wxcpt.VerifyURL(strMsgSig, strTimeStamp, strReqNonce, strEchostr);
+				// System.out.println("服务器验证成功，返回的明文: " + strRtnEchoStr);
+				// 验证URL成功，将sEchoStr返回
+				// HttpUtils.SetResponse(sEchoStr);
+			} catch (Exception e) {
+				// 验证URL失败，错误原因请查看异常
+				e.printStackTrace();
+				strRtnEchoStr = "------------------------------签名验证错误！------------------------------";
+			}
+			logger.info("------------------------------验证连接服务器地址,处理结束------------------------------！");
+			return strRtnEchoStr;
+		}
+
+		String strReqData = HttpUtil.getPostStringData(request);
+		
+		if ("".equals(strReqData) || null != strReqData) {
+			logger.info("------------------------------企业微信发来调用消息, 开处理-------------------");
+			WeiXinUtil weiXinUtil = new WeiXinUtil();
+			strRtnEchoStr = weiXinUtil.msgDeal(wxcpt, strMsgSig, strTimeStamp, strReqNonce, strReqData, request);
+			logger.info(
+					"------------------------------企业微信发来调用消息, 处理结束 -----------------\n 返回值 \n" + strRtnEchoStr + "");
+		}
+		return strRtnEchoStr;
+
+	}
+
+	@RequestMapping("/wxfirstpage")
+	String WXLogin(HttpServletRequest request) throws Exception {
+		logger.info("------------------------------企业微信发来调用消息,处理开始------------------------------！");
+		WXBizMsgCrypt wxcpt = new WXBizMsgCrypt(WeiXinParamesUtil.token, WeiXinParamesUtil.encodingAESKey,
+				WeiXinParamesUtil.corpId);
+		Map<String, Object> paramter = HttpUtil.getParameterMap(request);
+		String strMsgSig = HttpUtil.getDefaultKeyString(paramter, "msg_signature");
+		String strTimeStamp = HttpUtil.getDefaultKeyString(paramter, "timestamp");
+		String strReqNonce = HttpUtil.getDefaultKeyString(paramter, "nonce");
+		String strEchostr = HttpUtil.getDefaultKeyString(paramter, "echostr");
+		logger.info("服务器验证时传过来的加密字符[" + strEchostr + "]");
+		String strRtnEchoStr = ""; // 需要返回的明文
+		request.getSession().setAttribute(Constant.SESSION_LOGIN_WXFLAG, "Y");
+		String strReqData = HttpUtil.getPostStringData(request);
+		if ("".equals(strReqData) || null != strReqData) {
+			logger.info("------------------------------企业微信发来调用消息, 开处理-------------------");
+			try {
+				String sDecMsg = wxcpt.DecryptMsg(strMsgSig, strTimeStamp, strReqNonce, strReqData);
+			} catch (Exception e) {
+				// TODO
+				// 解密失败，失败原因请查看异常
+				e.printStackTrace();
+			}
+		}
+		return "main/outlookmenu";
+	}
+
+	@RequestMapping("/fourQuadrant")
+	String fourQuadrant(HttpServletRequest request) throws UnsupportedEncodingException {
+		// logger.info("企业微信发来调用消息！");
+		return "main/fourQuadrant";
+	}
+
+	@RequestMapping("/wxgetJSSConfig")
+	@ResponseBody
+	String wxAppJSAPIgetAppid(HttpServletRequest request) throws UnsupportedEncodingException {
+        JSONObject wxConfig = new JSONObject();
+		 wxConfig = WeiXinUtil.getWxConfigJSON(request);
+
+		return  wxConfig.toString();
+	}
+	
+	@RequestMapping("/wxgetJSSUser")
+	@ResponseBody
+	String wxgetJSSUser(HttpServletRequest request) throws UnsupportedEncodingException {
+		String data = request.getParameter("data") == null ? "" : request.getParameter("data");
+	    String usercode = null;
+		String strRtn=null;
+		if (!"".equals(data)) {
+
+			data= URLDecoder.decode(URLDecoder.decode(data, "utf-8"), "utf-8");
+			logger.info("前台传入的data【"+data+"】");		
+			//List<Map<String, Object>> list = (List<Map<String, Object>>) JsonHelper.decode(data);
+			
+			strRtn = 	WeiXinUtil.getTencentUserInfo(data);
+		}else {
+			logger.info("前台传入的code为空！");
+		}
+		return strRtn;
+		
+	}
+
+	@RequestMapping("/wxCommitForm")
+	@ResponseBody
+	String wxCommitForm(HttpServletRequest request) throws UnsupportedEncodingException {
+		String data = request.getParameter("data") == null ? "" : request.getParameter("data");
+		data = URLDecoder.decode(URLDecoder.decode(data, "utf-8"), "utf-8");
+
+		if (!"".equals(data)) {
+		
+		
+			}
+	
+
+		return null;
 	}
 }

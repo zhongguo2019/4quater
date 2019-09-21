@@ -10,7 +10,7 @@ import org.springframework.cache.Cache;
 import org.springframework.cache.Cache.ValueWrapper;
 import org.springframework.cache.ehcache.EhCacheCacheManager;
 
-import com.boot.util.spring.utils.SpringContextHolder;
+import com.boot.util.SpringContextHolder;
 
 public class CacheUtils {
 

@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,7 +25,7 @@ import com.boot.util.CommonEntity;
 import com.boot.util.Result;
 import com.boot.util.beetl.function.DictFunction;
 import com.krm.common.constant.Constant;
-import com.boot.util.spring.utils.SpringContextHolder;
+import com.boot.util.SpringContextHolder;
 import com.boot.util.StringConvert;
 import com.boot.util.StringUtil;
 import com.boot.web.codegen.model.TableConfig;
@@ -41,6 +42,7 @@ import com.boot.util.SysUserUtils;
 
 @Controller
 @RequestMapping("form/config")
+@DependsOn("springContextHolder")
 public class FormConfigController extends BaseController {
 
     @Override

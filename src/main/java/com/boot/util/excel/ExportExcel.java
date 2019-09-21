@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.boot.util.spring.utils.SpringContextHolder;
+import com.boot.util.SpringContextHolder;
 import com.boot.util.Reflections;
 import com.boot.util.SerializeUtils;
 import com.boot.util.encrypt.Encodes;

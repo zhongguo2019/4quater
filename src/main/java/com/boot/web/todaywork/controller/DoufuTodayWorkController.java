@@ -40,19 +40,20 @@ import java.net.URLDecoder;
 import com.boot.util.JsonHelper;
 import java.util.ArrayList;
 import java.util.UUID;
-
+import com.boot.util.HttpUtil;
+import java.io.UnsupportedEncodingException;
 /**
  * 
  * @author 赵祖龙
  * 当天工作记录信息表控制层
- * 2019-08-26
+ * 2019-09-07
  */
 @Controller
 @RequestMapping("todaywork/doufuTodayWork")
 public class DoufuTodayWorkController extends BaseController {
 	
 	public static final String BASE_URL = "todaywork/doufuTodayWork";
-	private static final String BASE_PATH = "todaywork/doufuTodayWork/";
+	private static final String BASE_PATH = "todaywork/";
 	
 	@Resource
 	private DoufuTodayWorkService doufuTodayWorkService;
@@ -77,7 +78,7 @@ public class DoufuTodayWorkController extends BaseController {
 	 * @param model
 	 * @return 模块html
 	 */
-	@RequestMapping
+	@RequestMapping("mainpage")
 	public String toDoufuTodayWork(Model model){
 		logger.info("跳转到当天工作记录信息表页面(" + getBasePath() + "doufuTodayWork-list)");
 		//checkPermission("query");
@@ -229,12 +230,13 @@ public class DoufuTodayWorkController extends BaseController {
      */
     @RequestMapping(value = "import", method=RequestMethod.POST)
     @ResponseBody
-    public Result importFile(@RequestParam("file") MultipartFile fileList[], HttpServletResponse response) throws Exception {
+    public Result importFile(@RequestParam("file") MultipartFile fileList[], HttpServletResponse response,HttpServletRequest request) throws Exception {
     	logger.info("开始导入当天工作记录信息表数据");
     	checkPermission("import");
     	Long start = System.currentTimeMillis();
     	int successNum = 0;
     	int failureNum = 0;
+    	SysUser sysuser = (SysUser) request.getSession().getAttribute(Constant.SESSION_LOGIN_USER);
     	for (MultipartFile file : fileList) {
     		ImportExcel ei;
     		StringBuilder failureMsg = new StringBuilder();
@@ -242,7 +244,8 @@ public class DoufuTodayWorkController extends BaseController {
    			List<DoufuTodayWork> list = ei.getDataList(DoufuTodayWork.class);
    			for (DoufuTodayWork entry : list) {
    				entry.setId(doufuTodayWorkService.generateId());
-   				entry.setCreateBy(SysUserUtils.getCacheLoginUser().getId());
+   				//entry.setCreateBy(SysUserUtils.getCacheLoginUser().getId());
+   				entry.setCreateBy(sysuser.getId());
    				entry.setCreateDate(new Date());
    				entry.setDelFlag(Constant.DEL_FLAG_NORMAL);
 			}
@@ -287,19 +290,22 @@ public class DoufuTodayWorkController extends BaseController {
 	 */
 	@RequestMapping(value="queryPageList", method = RequestMethod.POST)
 	@ResponseBody
-	PageInfo<DoufuTodayWork>  queryPageList(HttpServletRequest request){
+	PageInfo<DoufuTodayWork>  queryPageList(HttpServletRequest request) throws Exception{
+
+		HttpUtil httpUtil = new HttpUtil();
 		int pageIndex = Integer.parseInt(request.getParameter("pageIndex")) + 1;
 		int pageSize = Integer.parseInt(request.getParameter("pageSize"));
 		String sortField = request.getParameter("sortField").toString();
 		String sortOrder = request.getParameter("sortOrder").toString();
 		String reportDate =  request.getParameter("reportDate").toString();
-
-		Map<String, Object> params = new HashMap<String, Object>();
+		Map<String, Object> params = httpUtil.getParameterMap(request) ;
+		SysUser sysuser = (SysUser) request.getSession().getAttribute(Constant.SESSION_LOGIN_USER);
 		params.put("pageNum", pageIndex);
 		params.put("pageSize", pageSize);
 		params.put("sortC", StringConvert.camelhumpToUnderline(sortField));
 		params.put("order", sortOrder);
 		params.put("reportDate", reportDate );
+		params.put("reporterName", sysuser.getUsername() );
 		logger.info("分页显示当天工作记录信息表，参数：" + params.toString());
 		PageInfo<DoufuTodayWork> page = doufuTodayWorkService.queryPageInfoEntity(params);
 		return page;
@@ -313,14 +319,17 @@ public class DoufuTodayWorkController extends BaseController {
 	 */
 	@RequestMapping(value="queryList", method = RequestMethod.POST)
 	@ResponseBody
-	List<DoufuTodayWork>  queryList(HttpServletRequest request){
-		Map<String, Object> params = new HashMap<String, Object>();
+	List<DoufuTodayWork>  queryList(HttpServletRequest request) throws Exception{
+		SysUser sysuser = (SysUser) request.getSession().getAttribute(Constant.SESSION_LOGIN_USER);
+		HttpUtil httpUtil = new HttpUtil();
+		Map<String, Object> params =  httpUtil.getParameterMap(request) ;;
 		String reportDate =  request.getParameter("reportDate").toString();
 		String sortField = request.getParameter("sortField").toString();
 		String sortOrder = request.getParameter("sortOrder").toString();
 		params.put("sortC", StringConvert.camelhumpToUnderline(sortField));
 		params.put("order", sortOrder);
 		params.put("reportDate", reportDate );
+		params.put("reporterName", sysuser.getUsername() );
 		List<DoufuTodayWork> lstRtn = doufuTodayWorkService.entityList(params);
 		return lstRtn;
 
@@ -376,6 +385,9 @@ public class DoufuTodayWorkController extends BaseController {
 					entryDoufuTodayWork.setCreateBy(sysuser.getId());
 					entryDoufuTodayWork.setUpdateBy(sysuser.getId());
 					entryDoufuTodayWork.setReportDate(report_date);
+					entryDoufuTodayWork.setReporterName(sysuser.getUsername());
+					entryDoufuTodayWork.setIsAfter("0");
+					entryDoufuTodayWork.setReporterId(sysuser.getId());
 					listEntyInsert.add(entryDoufuTodayWork);
 				} else {
 					entryDoufuTodayWork.setUpdateDate(new Date());

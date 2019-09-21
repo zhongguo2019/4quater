@@ -24,7 +24,7 @@ import com.github.pagehelper.PageInfo;
 import com.krm.common.constant.Constant;
 import com.boot.util.mybatis.EntityHelper;
 
-import com.boot.util.spring.utils.SpringContextHolder;
+import com.boot.util.SpringContextHolder;
 import com.boot.util.BeanUtils;
 import com.boot.util.StringConvert;
 import com.boot.util.StringUtil;

@@ -2,6 +2,7 @@ package com.krm.common.constant;
 
 import java.util.List;
 
+import com.boot.web.sys.model.SysUser;
 import com.google.common.collect.Lists;
 
 
@@ -19,9 +20,11 @@ public class Constant {// 删除标记（0：正常；1：删除；2：审核；
 	public static final String MENU_COMMON = "1"; // 公共资源
 
 	// 用户
-	public static final String SESSION_LOGIN_USER = "loginUser"; // session中的用户key
+	public static final String SESSION_LOGIN_USERNAME = "username"; // session中的用户key
+	public static final String SESSION_LOGIN_USER = "loginUser"; // session中的用户对象
 	public static final String SUPER_ADMIN = "1"; // 超级管理员
 
+	public static final String SESSION_LOGIN_WXFLAG = "N"; // session中的微信访问的用户key
 	// 缓存key
 	public static final String CACHE_SYS_MENU = "sysMenu_cache"; // 资源的缓存名称
 	public static final String CACHE_SYS_ORGAN = "sysOrgan_cache"; //机构的缓存名称

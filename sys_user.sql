@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : VM198
-Source Server Version : 50722
-Source Host           : 192.168.2.198:3306
+Source Server         : 117.50.96.111
+Source Server Version : 50727
+Source Host           : 117.50.96.111:3306
 Source Database       : weeklyplan
 
 Target Server Type    : MYSQL
-Target Server Version : 50722
+Target Server Version : 50727
 File Encoding         : 65001
 
-Date: 2019-07-24 11:04:54
+Date: 2019-09-03 11:53:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -47,4 +47,7 @@ CREATE TABLE `sys_user` (
 -- Records of sys_user
 -- ----------------------------
 INSERT INTO `sys_user` VALUES ('1', '55555', '', 'admin', '1f82c942befda29b6ed487a51da199f78fce7f05', '0001', '超级管理员', '', '', '18612790818', '1', '0:0:0:0:0:0:0:1', '2019-06-18 17:30:34', '1', '2017-12-02 21:49:36', '1', '2019-07-04 13:56:47', '管理员', '0', '0');
+INSERT INTO `sys_user` VALUES ('1B1DB04265CD4C789E9F106384688830', '9999', '9996', 'zhaoerxi', 'db1d6625e9e7f943bf6e638f7a756815', '080049', '赵二喜', '', '', '', '2', null, null, '1', '2019-08-09 16:38:18', null, '2019-08-09 16:38:18', '', '0', '1');
+INSERT INTO `sys_user` VALUES ('C27C16864D174B489E0397E25F85F418', '9999', '9995', 'wangwei', 'd07a72003b8be269fd2aa238025490b0', '080050', '汪伟', '', '', '', '2', null, null, '1', '2019-08-09 16:38:41', null, '2019-08-09 16:38:41', '', '0', '1');
+INSERT INTO `sys_user` VALUES ('C860D1BA157E4F6DB1AB261A8E97D94D', '9999', 'JXNX0013255', 'xuchunlin', '41ecca77eee6253a83f1372a35449b96', '080038', '许春林', '', '', '', '2', null, null, '1', '2019-08-09 16:37:19', null, '2019-08-09 16:37:19', '', '0', '1');
 INSERT INTO `sys_user` VALUES ('FB0E8776BFF44749B309EAEEA827CA4F', 'XMGC_001', '', 'zhaozulong', '4ab39c8eef360fcc9d46802ba19a129f', '080015', '赵祖龙', '', '', '', '2', null, null, '1', '2019-07-04 17:01:58', null, '2019-07-04 17:01:58', '', '0', '1');

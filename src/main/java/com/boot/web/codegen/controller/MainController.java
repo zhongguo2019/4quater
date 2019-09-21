@@ -13,6 +13,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
 import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -28,9 +29,8 @@ import com.google.common.collect.Maps;
 import com.boot.util.BaseController;
 import com.boot.util.CommonEntity;
 import com.boot.util.Result;
-import com.boot.util.beetl.function.DictFunction;
 import com.krm.common.constant.Constant;
-import com.boot.util.spring.utils.SpringContextHolder;
+
 import com.boot.util.FileUtils;
 import com.boot.util.SerializeUtils;
 import com.boot.util.StringUtil;
@@ -55,6 +55,7 @@ import com.boot.util.SysUserUtils;
 
 @Controller
 @RequestMapping("create")
+@DependsOn("springContextHolder")
 public class MainController extends BaseController {
 
     @Override
@@ -67,7 +68,6 @@ public class MainController extends BaseController {
         return null;
     }
 
-    static DictFunction dictFunction = SpringContextHolder.getBean("dictFunction");
     @Resource
     private TableConfigService tableConfigService;
     @Resource
@@ -83,6 +83,7 @@ public class MainController extends BaseController {
     @Resource
     private ProjectsService projectsService;
 
+    //static DictFunction dictFunction = SpringContextHolder.getBean("DictFunction");
     /**
      * 进入表单配置首页
      *

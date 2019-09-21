@@ -6,14 +6,14 @@
 	<sql id="doufuTodayWorkColumns">
 		 PROJECT_GROUP_ID, PROJECT_ID, PRODUCT_ID, WORK_CONTENTS, WORK_DETAIL, FINISH_PERCENT, DELAY_REASON, ACCORD_YESTERDAY, IS_IMPORTANT, IS_EMERGENCY,
 		 IMPO_LEVEL, ID, DEL_FLAG, STATUS, INST_ID, LOGIN_IP, LOGIN_DATE, CREATE_BY, CREATE_DATE, UPDATE_BY,
-		 UPDATE_DATE, REMARKS, REPORT_DATE
+		 UPDATE_DATE, REMARKS, REPORT_DATE, PRODUCT_NAME, REPORTER_ID, REPORTER_NAME, INPUT_ORDER, IS_AFTER
 	</sql>
 
 	<!-- 表字段（带别名） -->
 	<sql id="doufuTodayWorkAliasColumns">
          t.PROJECT_GROUP_ID, t.PROJECT_ID, t.PRODUCT_ID, t.WORK_CONTENTS, t.WORK_DETAIL, t.FINISH_PERCENT, t.DELAY_REASON, t.ACCORD_YESTERDAY, t.IS_IMPORTANT, t.IS_EMERGENCY,
          t.IMPO_LEVEL, t.ID, t.DEL_FLAG, t.STATUS, t.INST_ID, t.LOGIN_IP, t.LOGIN_DATE, t.CREATE_BY, t.CREATE_DATE, t.UPDATE_BY,
-		 t.UPDATE_DATE, t.REMARKS, t.REPORT_DATE
+		 t.UPDATE_DATE, t.REMARKS, t.REPORT_DATE, t.PRODUCT_NAME, t.REPORTER_ID, t.REPORTER_NAME, t.INPUT_ORDER, t.IS_AFTER
 	</sql>
 
 
@@ -46,9 +46,14 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(reportDate)">and t.REPORT_DATE = #{reportDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productName)">and t.PRODUCT_NAME = #{productName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterId)">and t.REPORTER_ID = #{reporterId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterName)">and t.REPORTER_NAME = #{reporterName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(inputOrder)">and t.INPUT_ORDER = #{inputOrder} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isAfter)">and t.IS_AFTER = #{isAfter} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
 		</where>
-		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @Ognl@isNotBlank(order)"> 
+		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)"> 
 			ORDER BY t.${sortC} ${order}
 		</if>
 	</select>
@@ -83,9 +88,14 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(reportDate)">and t.REPORT_DATE = #{reportDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productName)">and t.PRODUCT_NAME = #{productName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterId)">and t.REPORTER_ID = #{reporterId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterName)">and t.REPORTER_NAME = #{reporterName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(inputOrder)">and t.INPUT_ORDER = #{inputOrder} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isAfter)">and t.IS_AFTER = #{isAfter} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
 		</where>
-		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @Ognl@isNotBlank(order)"> 
+		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)"> 
 			ORDER BY t.${sortC} ${order}
 		</if>
 	</select>
@@ -119,6 +129,11 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)"> and t.UPDATE_DATE = #{updateDate} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(remarks)"> and t.REMARKS = #{remarks} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(reportDate)"> and t.REPORT_DATE = #{reportDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productName)"> and t.PRODUCT_NAME = #{productName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterId)"> and t.REPORTER_ID = #{reporterId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterName)"> and t.REPORTER_NAME = #{reporterName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(inputOrder)"> and t.INPUT_ORDER = #{inputOrder} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isAfter)"> and t.IS_AFTER = #{isAfter} </if>
 		</where>
 	</select>
 	
@@ -151,6 +166,11 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(reportDate)">and t.REPORT_DATE = #{reportDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productName)">and t.PRODUCT_NAME = #{productName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterId)">and t.REPORTER_ID = #{reporterId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterName)">and t.REPORTER_NAME = #{reporterName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(inputOrder)">and t.INPUT_ORDER = #{inputOrder} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isAfter)">and t.IS_AFTER = #{isAfter} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
 		</where>
 	</select>
@@ -182,7 +202,12 @@
 	    	#{item.updateBy},
 	    	#{item.updateDate},
 	    	#{item.remarks},
-			#{item.reportDate}
+	    	#{item.reportDate},
+	    	#{item.productName},
+	    	#{item.reporterId},
+	    	#{item.reporterName},
+	    	#{item.inputOrder},
+			#{item.isAfter}
 		)
 		</foreach>
 	</insert>
@@ -215,6 +240,11 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)"> and UPDATE_DATE = #{updateDate} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(remarks)"> and REMARKS = #{remarks} </if>
 			<if test="@com.boot.util.Ognl@isNotBlank(reportDate)"> and REPORT_DATE = #{reportDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(productName)"> and PRODUCT_NAME = #{productName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterId)"> and REPORTER_ID = #{reporterId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(reporterName)"> and REPORTER_NAME = #{reporterName} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(inputOrder)"> and INPUT_ORDER = #{inputOrder} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isAfter)"> and IS_AFTER = #{isAfter} </if>
 		</where>
 	</delete>
 	<!-- 根据不同条件删除数据，条件可组合 -->
@@ -240,7 +270,11 @@
 	    	          CREATE_BY = #{createBy},
 	    	          UPDATE_BY = #{updateBy},
 	    	          REMARKS = #{remarks},
-	    	          REPORT_DATE = #{reportDate}
+	    	          REPORT_DATE = #{reportDate},
+	    	          PRODUCT_NAME = #{productName},
+	    	          REPORTER_ID = #{reporterId},
+	    	          REPORTER_NAME = #{reporterName},
+	    	          IS_AFTER = #{isAfter}
 		<where>
                    id=#{id}
 		</where>
@@ -269,10 +303,33 @@
 	    	          CREATE_BY = #{createBy},
 	    	          UPDATE_BY = #{updateBy},
 	    	          REMARKS = #{remarks},
-	    	          REPORT_DATE = #{reportDate}
+	    	          REPORT_DATE = #{reportDate},
+	    	          PRODUCT_NAME = #{productName},
+	    	          REPORTER_ID = #{reporterId},
+	    	          REPORTER_NAME = #{reporterName},
+	    	          IS_AFTER = #{isAfter}
 		<where>
                    id=#{id}
 		</where>
 		</foreach>
 	</update>
+	
+		<!-- 查询提交的日报情况  查询未提交人员姓名 -->
+
+	<select id="queryNotCommitUser"
+		resultType="com.boot.util.CommonEntity">
+         select
+         wx_user.account as account ,
+          wx_user.name   as name
+         from wx_user 
+		<where>
+		1=1
+		<if test="@com.boot.util.Ognl@isNotBlank(groupname)"> and wx_user.dept like "%"#{groupname}"%"   </if>
+		 
+         and  wx_user.account  not in (
+         select doufu_today_work.REPORTER_NAME  from doufu_today_work
+         <if test="@com.boot.util.Ognl@isNotBlank(reportdate)"> where doufu_today_work.REPORT_DATE = #{reportdate}  </if>
+		 )
+		</where>
+	</select>
 </mapper>

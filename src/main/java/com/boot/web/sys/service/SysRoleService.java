@@ -119,7 +119,7 @@ public class SysRoleService extends ServiceMybatis<SysRole> {
         //当前的要绑定的人员id
         List<String> curUserIds = Lists.newArrayList(sysRole.getUserIds());
         userIds.addAll(curUserIds);
-        ImmutableList<String> mergeList = ImmutableSet.copyOf(userIds).asList();
+      //  ImmutableList<String> mergeList =  ImmutableSet.copyOf(userIds)).asList();
         logger.info("根据角色删除角色-用户配置信息");
         sysRoleMapper.deleteUserRoleByRoleId(sysRole.getId());
         if (sysRole.getUserIds().length > 0) {
@@ -128,7 +128,7 @@ public class SysRoleService extends ServiceMybatis<SysRole> {
         }
         //清除缓存
         logger.info("清除缓存");
-        SysUserUtils.clearAllCachedAuthorizationInfo(mergeList);
+     //   SysUserUtils.clearAllCachedAuthorizationInfo(mergeList);
         return 1;
     }
 

@@ -183,6 +183,9 @@ public class SysUserService extends ServiceMybatis<SysUser> {
 
 	public List<CommonEntity>getUserModule(Map<String, Object> userInfo) {
 		 List<CommonEntity> list =  sysUserMapper.getUserGroup(userInfo.get("username").toString());
+		 if(list.isEmpty()) {
+			 return null;
+		 }
 			Map<String, Object> mpGroupName = (Map<String, Object>) list.get(0);
 			logger.info("Map<String, Object> mpGroupName"+mpGroupName.get("group_name"));
 			
@@ -200,8 +203,12 @@ public class SysUserService extends ServiceMybatis<SysUser> {
 	public String getProjectGroupId(Map<String, Object> userInfo) {
 	String userProjectGroupId="";	
 	 List<CommonEntity> list =  sysUserMapper.getUserGroup(userInfo.get("username").toString());
+	 if(list.size() !=0) {
 		Map<String, Object> mpGroupName = (Map<String, Object>) list.get(0);
 		userProjectGroupId = mpGroupName.get("group_id").toString();
+	 }else {
+		 userProjectGroupId="zt_usergroup";
+	 }
      return userProjectGroupId;
 	}
 	

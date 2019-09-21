@@ -9,11 +9,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Test;
+import org.quartz.SchedulerException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.boot.baseTest.SpringTestCase;
+import com.boot.configurations.QuatzConfig;
 import com.boot.util.CommonEntity;
 import com.boot.util.StringConvert;
 import com.boot.util.SysUserUtils;
@@ -36,12 +38,12 @@ public class UserServiceTest extends SpringTestCase {
 	private DoufuTodayWorkController doufuTodayWorkController;
 
 	@Test
-	public void selectUserByIdTest() {
-		
-		DoufuTodayWork  doufuTodayWork = new DoufuTodayWork();
+	public void selectUserByIdTest() throws SchedulerException {
 
-		doufuTodayWorkService.selectOne(doufuTodayWork);
-		
+		DoufuTodayWork doufuTodayWork = new DoufuTodayWork();
+		QuatzConfig quatzConfig = new QuatzConfig();
+		// doufuTodayWorkService.selectOne(doufuTodayWork);
+
 		/*
 		 * SysUser user = sysUserService.selectUserByName("admin"); logger.info("查找结果" +
 		 * user);
@@ -76,13 +78,27 @@ public class UserServiceTest extends SpringTestCase {
 		 * 
 		 * }
 		 */
-		String strValue="2019-08-20T15:14:49.000+0000";
+		/*
+		 * String strValue="2019-08-20T15:14:49.000+0000";
+		 * 
+		 * LocalDateTime date =
+		 * LocalDateTime.parse(strValue,DateTimeFormatter.ISO_OFFSET_DATE_TIME); String
+		 * dateString = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		 * SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 * logger.info(dateString);
+		 * 
+		 */
+		/*
+		 * Map<String, Object> params = new HashMap<String, Object>();
+		 * params.put("groupname", "江西"); params.put("reportdate", "2019-09-16");
+		 * List<CommonEntity> lst = doufuTodayWorkService.queryNotCommitUser(params);
+		 * String userName, userAccount; if (lst.size() != 0) { for (int i = 0; i <
+		 * lst.size(); i++) { Map<String, Object> mpGroupName = (Map<String, Object>)
+		 * lst.get(i); userName = mpGroupName.get("name").toString();
+		 * logger.info(userName); } }
+		 */
 		
-   	 LocalDateTime date = LocalDateTime.parse(strValue,DateTimeFormatter.ISO_OFFSET_DATE_TIME);
-   	 String dateString = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-     SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-     logger.info(dateString);  
-
+		quatzConfig.CronTriggerTest();
 	}
 
 	public void getWeek() {

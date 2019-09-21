@@ -1,5 +1,6 @@
 spring:
    datasource:
+#      url: jdbc:mysql://117.50.96.111:3306/weeklyplan?useSSL=false&useOldAliasMetadataBehavior=true&autoReconnect=true&useUnicode=true&characterEncoding=UTF8
       url: jdbc:mysql://192.168.2.198:3306/weeklyplan?useSSL=false&useOldAliasMetadataBehavior=true&autoReconnect=true&useUnicode=true&characterEncoding=UTF8
       username: root
       password: Report@123
@@ -19,10 +20,10 @@ spring:
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20      
           
-      thymeleaf:
-      prefix: classpath:/main/
-      suffix: .html
-      encoding: UTF-8     
+#      thymeleaf:
+#      prefix: classpath:/main/
+#      suffix: .html
+#      encoding: UTF-8     
       
 mybatis:
    mapperLocations: classpath:com/boot/mapper/mysql/**/*.xml
@@ -43,25 +44,29 @@ logging:
       org.springframework: INFO          
 server:
    port: 9080
+# 是否在端口上启用项目名称来访问
+#   servlet:
+#        context-path: /4quater
 db:
    schema: weeklyplan.
 mapper:
   mappers: tk.mybatis.mapper.common.Mapper
   notEmpty: true
   identity: MYSQL
-  
 info:
   head: head
   body: body
-management:
-  endpoints:
-    web:
-      exposure:
+#------以下为了监控bean初始化的属性20190905 发布应用时关闭  
+#management: 
+#  endpoints:
+#    web:
+#      exposure:
         #加载所有的端点，默认只加载了info、health
-        include: '*'
-  endpoint:
-    health:
-      show-details: always
+#        include: '*'
+#  endpoint:
+#    health:
+#      show-details: always
     #可以关闭指定的端点
-    shutdown:
-      enabled: false
+#    shutdown:
+#      enabled: false
+#------以上为了监控bean初始化的属性20190905 发布应用时关闭  

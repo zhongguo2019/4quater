@@ -6,7 +6,7 @@ import java.util.Map;
 import org.beetl.core.GroupTemplate;
 import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
 
-import com.boot.util.spring.utils.SpringContextHolder;
+import com.boot.util.SpringContextHolder;
 
 
 public class BeetlUtils {

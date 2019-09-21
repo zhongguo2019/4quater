@@ -24,21 +24,23 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/bonc-sso-client-2.2.1.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/cas-client-core-3.2.1.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/fastjson-1.2.4.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/guava-18.0.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/persistence-api-1.0.jar"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/crypto.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/jave-1.0.2.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/ehcache-2.9.0.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/juh-3.0.1.jar"/>
-	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/WEB-INF/lib/ridl.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/bonc-sso-client-2.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/cas-client-core-3.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/crypto.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/jave-1.0.2.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/json-lib-2.4.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/juh-3.0.1.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/jurt.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/persistence-api-1.0.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/ridl.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/unoloader.jar"/>
+	<classpathentry kind="lib" path="G:/GITBRANCH_LOCAL/sharewithothers/4quater/src/main/webapp/WEB-INF/lib/ehcache-2.9.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

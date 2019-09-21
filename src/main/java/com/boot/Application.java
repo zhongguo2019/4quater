@@ -5,6 +5,7 @@ package com.boot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -22,9 +23,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import tk.mybatis.spring.annotation.MapperScan;
 import com.boot.util.ConfigUtil;
 import com.boot.util.CurrentWeek;
-import org.springframework.core.env.Environment;
-
-import java.net.InetAddress;
  
 
 @ServletComponentScan
@@ -39,20 +37,15 @@ public class Application implements InitializingBean {
 	private JdbcTemplate jdbcTemplate;
 
 	public static void main(String[] args) throws Exception {
+
 		SpringApplication app = new SpringApplication(Application.class);
         System.setProperty("user.timezone","Asia/Shanghai");
-        Environment env = app.run(args).getEnvironment();
-        LOGGER.info("\n----------------------------------------------------------\n\t" +
-                        "Application '{}' is running! Access URLs:\n\t" +
-                        "Local: \t\thttp://localhost:{}\n\t" +
-                        "External: \thttp://{}:{}\n\t" +
-                        "Profile(s): \t{}\n----------------------------------------------------------",
-                env.getProperty("spring.application.name"),
-                env.getProperty("server.port"),
-                InetAddress.getLocalHost().getHostAddress(),
-                env.getProperty("server.port"),
-                env.getActiveProfiles());
-		//SpringApplication.run(Application.class, args);
+        
+        ;
+        System.out.print("系统根路径文件位置【"+System.getProperty("user.dir")+"】");
+
+        ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+
 	}
 
 	@Override

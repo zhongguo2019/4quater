@@ -40,12 +40,13 @@ import java.net.URLDecoder;
 import com.boot.util.JsonHelper;
 import java.util.ArrayList;
 import java.util.UUID;
+import com.boot.util.HttpUtil;
 
 /**
  * 
  * @author 赵祖龙
  * 明天工作计划表控制层
- * 2019-08-26
+ * 2019-08-27
  */
 @Controller
 @RequestMapping("tomorrowplan/doufuTomorrowPlan")
@@ -287,14 +288,15 @@ public class DoufuTomorrowPlanController extends BaseController {
 	 */
 	@RequestMapping(value="queryPageList", method = RequestMethod.POST)
 	@ResponseBody
-	PageInfo<DoufuTomorrowPlan>  queryPageList(HttpServletRequest request){
+	PageInfo<DoufuTomorrowPlan>  queryPageList(HttpServletRequest request) throws Exception{
+		HttpUtil httpUtil = new HttpUtil();
 		int pageIndex = Integer.parseInt(request.getParameter("pageIndex")) + 1;
 		int pageSize = Integer.parseInt(request.getParameter("pageSize"));
 		String sortField = request.getParameter("sortField").toString();
 		String sortOrder = request.getParameter("sortOrder").toString();
 		String reportDate =  request.getParameter("reportDate").toString();
+		Map<String, Object> params = httpUtil.getParameterMap(request) ;
 
-		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("pageNum", pageIndex);
 		params.put("pageSize", pageSize);
 		params.put("sortC", StringConvert.camelhumpToUnderline(sortField));
@@ -313,8 +315,9 @@ public class DoufuTomorrowPlanController extends BaseController {
 	 */
 	@RequestMapping(value="queryList", method = RequestMethod.POST)
 	@ResponseBody
-	List<DoufuTomorrowPlan>  queryList(HttpServletRequest request){
-		Map<String, Object> params = new HashMap<String, Object>();
+	List<DoufuTomorrowPlan>  queryList(HttpServletRequest request) throws Exception{
+		HttpUtil httpUtil = new HttpUtil();
+		Map<String, Object> params =  httpUtil.getParameterMap(request) ;;
 		String reportDate =  request.getParameter("reportDate").toString();
 		String sortField = request.getParameter("sortField").toString();
 		String sortOrder = request.getParameter("sortOrder").toString();

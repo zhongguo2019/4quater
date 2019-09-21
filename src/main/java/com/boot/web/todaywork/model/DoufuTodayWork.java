@@ -16,7 +16,7 @@ import java.text.ParseException;
  * 
  * @author 赵祖龙
  * 当天工作记录信息表javaBean
- * 2019-08-26
+ * 2019-09-07
  */
 @Table(name="doufu_today_work")
 public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
@@ -47,6 +47,11 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
     private Date  updateDate;      //最近修改时间
     private String  remarks;      //描述
     private String  reportDate;      //报告日期
+    private String  productName;      //产品名称
+    private String  reporterId;      //报告人ID
+    private String  reporterName;      //报告人名称
+    private Integer  inputOrder;      //录入内容序号
+    private String  isAfter;      //是否为补报的日报
 	@Transient
 	private List<BaseFile>	upfileList;			//批量上传文件list
 	
@@ -283,6 +288,56 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 	public String getReportDate() {
 		return reportDate;
 	}
+	/**
+	 * 产品名称
+	 * @param productName
+	 */
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public String getProductName() {
+		return productName;
+	}
+	/**
+	 * 报告人ID
+	 * @param reporterId
+	 */
+	public void setReporterId(String reporterId) {
+		this.reporterId = reporterId;
+	}
+	public String getReporterId() {
+		return reporterId;
+	}
+	/**
+	 * 报告人名称
+	 * @param reporterName
+	 */
+	public void setReporterName(String reporterName) {
+		this.reporterName = reporterName;
+	}
+	public String getReporterName() {
+		return reporterName;
+	}
+	/**
+	 * 录入内容序号
+	 * @param inputOrder
+	 */
+	public void setInputOrder(Integer inputOrder) {
+		this.inputOrder = inputOrder;
+	}
+	public Integer getInputOrder() {
+		return inputOrder;
+	}
+	/**
+	 * 是否为补报的日报
+	 * @param isAfter
+	 */
+	public void setIsAfter(String isAfter) {
+		this.isAfter = isAfter;
+	}
+	public String getIsAfter() {
+		return isAfter;
+	}
 
 	/**
 	 * 批量上传文件list
@@ -297,7 +352,7 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
 
 	@Override
 	public String toString() {
-		return "当天工作记录信息表： {\"projectGroupId\": \""+projectGroupId+"\", \"projectId\": \""+projectId+"\", \"productId\": \""+productId+"\", \"workContents\": \""+workContents+"\", \"workDetail\": \""+workDetail+"\", \"finishPercent\": \""+finishPercent+"\", \"delayReason\": \""+delayReason+"\", \"accordYesterday\": \""+accordYesterday+"\", \"isImportant\": \""+isImportant+"\", \"isEmergency\": \""+isEmergency+"\", \"impoLevel\": \""+impoLevel+"\", \"id\": \""+id+"\", \"delFlag\": \""+delFlag+"\", \"status\": \""+status+"\", \"instId\": \""+instId+"\", \"loginIp\": \""+loginIp+"\", \"loginDate\": \""+loginDate+"\", \"createBy\": \""+createBy+"\", \"createDate\": \""+createDate+"\", \"updateBy\": \""+updateBy+"\", \"updateDate\": \""+updateDate+"\", \"remarks\": \""+remarks+"\", \"reportDate\": \""+reportDate+"\"}";
+		return "当天工作记录信息表： {\"projectGroupId\": \""+projectGroupId+"\", \"projectId\": \""+projectId+"\", \"productId\": \""+productId+"\", \"workContents\": \""+workContents+"\", \"workDetail\": \""+workDetail+"\", \"finishPercent\": \""+finishPercent+"\", \"delayReason\": \""+delayReason+"\", \"accordYesterday\": \""+accordYesterday+"\", \"isImportant\": \""+isImportant+"\", \"isEmergency\": \""+isEmergency+"\", \"impoLevel\": \""+impoLevel+"\", \"id\": \""+id+"\", \"delFlag\": \""+delFlag+"\", \"status\": \""+status+"\", \"instId\": \""+instId+"\", \"loginIp\": \""+loginIp+"\", \"loginDate\": \""+loginDate+"\", \"createBy\": \""+createBy+"\", \"createDate\": \""+createDate+"\", \"updateBy\": \""+updateBy+"\", \"updateDate\": \""+updateDate+"\", \"remarks\": \""+remarks+"\", \"reportDate\": \""+reportDate+"\", \"productName\": \""+productName+"\", \"reporterId\": \""+reporterId+"\", \"reporterName\": \""+reporterName+"\", \"inputOrder\": \""+inputOrder+"\", \"isAfter\": \""+isAfter+"\"}";
 	}
 
   public  DoufuTodayWork(Map<String, Object> row)throws ParseException{
@@ -401,6 +456,22 @@ public class DoufuTodayWork extends BaseEntity<DoufuTodayWork>{
          if( row.get("reportDate") !=null  ){
           String strValue=row.get("reportDate").toString();
           this.setReportDate(strValue);
+        }
+         if( row.get("productName") !=null  ){
+          String strValue=row.get("productName").toString();
+          this.setProductName(strValue);
+        }
+         if( row.get("reporterId") !=null  ){
+          String strValue=row.get("reporterId").toString();
+          this.setReporterId(strValue);
+        }
+         if( row.get("reporterName") !=null  ){
+          String strValue=row.get("reporterName").toString();
+          this.setReporterName(strValue);
+        }
+         if( row.get("isAfter") !=null  ){
+          String strValue=row.get("isAfter").toString();
+          this.setIsAfter(strValue);
         }
   }
 

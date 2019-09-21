@@ -27,7 +27,7 @@ import com.google.common.primitives.Ints;
 import com.boot.util.CommonEntity;
 import com.boot.util.beetl.utils.BeetlUtils;
 import com.krm.common.constant.Constant;
-import com.boot.util.spring.utils.SpringContextHolder;
+import com.boot.util.SpringContextHolder;
 import com.boot.util.CacheUtils;
 import com.boot.util.TreeUtils;
 import com.boot.web.sys.model.SysDict;

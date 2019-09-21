@@ -225,6 +225,7 @@ public class SysUserController extends BaseController {
 	}
 
 	@RequestMapping("/loginCheck")
+	@ResponseBody
 	String loginCheck(HttpServletRequest request) throws UnsupportedEncodingException {
 
 		SysUser sysuser = (SysUser) request.getSession().getAttribute(Constant.SESSION_LOGIN_USER);
@@ -246,17 +247,21 @@ public class SysUserController extends BaseController {
 					sysuserQuery.setLoginIp(remoteIP);
 					request.getSession().setAttribute(Constant.SESSION_LOGIN_USER, sysuserQuery);
 					logger.info("loginCheck 得到了后台的用户信息，置到全局的session中，  进入到系统管理的首页面");
+					return "/main/firstpage";
 				} else {
 					logger.info("loginCheck 根据传入的用户名，没有找到对应的用户，重新登录！");
-					return "redirect:/main/firstpage";
+					return "/main/loginlayout";
 				}
 
 			} else {
-				return "redirect:/sysuser/loginpage";
+				return "/main/loginlayout";
 			}
-
+		}else {
+			
+			return "/main/loginlayout";
 		}
-		return "redirect:/main/firstpage";
+		
+	
 
 	}
 
@@ -264,7 +269,7 @@ public class SysUserController extends BaseController {
 	@ResponseBody
 	ModelAndView loginpage(HttpServletRequest request) {
 
-		return new ModelAndView("redirect:/login/loginLayout.html");
+		return new ModelAndView("redirect:/main/loginlayout");
 
 	}
 

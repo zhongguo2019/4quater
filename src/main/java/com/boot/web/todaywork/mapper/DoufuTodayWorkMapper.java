@@ -11,7 +11,7 @@ import tk.mybatis.mapper.common.Mapper;
 /**
  * @author 赵祖龙
  * 当天工作记录信息表DAO层
- * 2019-08-26
+ * 2019-09-07
  */
 public interface DoufuTodayWorkMapper extends Mapper<DoufuTodayWork>{
 
@@ -43,4 +43,9 @@ public interface DoufuTodayWorkMapper extends Mapper<DoufuTodayWork>{
 	 * 批量更新
 	 */
 	int updateBatchEntity( List<DoufuTodayWork> list);
+	
+	/**
+	 * 查询未提交的用户名称
+	 */
+	List<CommonEntity>  queryNotCommitUser(Map<String, Object> params);
 }
