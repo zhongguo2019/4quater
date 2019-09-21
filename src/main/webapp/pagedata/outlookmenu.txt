@@ -1,0 +1,19 @@
+﻿[
+    { id: "informanage", text: "报告编写"},
+  	{ id: "dailyreportinput",   pid: "informanage", text: "日报编写", iconCls: "dayedit", url: "/todaywork/doufuTodayWork/mainpage", iconPosition: "top" },
+	{ id: "weeklyreportinput",   pid: "informanage", text: "周报编写", iconCls: "weekedit", url: "", iconPosition: "top" },
+    { id: "halfmonthinput", pid: "informanage", text: "半月报编写", iconCls: "halfmonthedit", url: "", iconPosition: "top" },
+    { id: "monthinput", pid: "informanage", text: "月报编写", iconCls: "monthedit", url: "", iconPosition: "top" },
+ 
+	{ id: "planmanage", text: "计划制定"},
+	{ id: "dayedit",   pid: "planmanage", text: "每天计划", iconCls: "dayplan", url: "", iconPosition: "top" },
+	{ id: "weekedit",  pid: "planmanage", text: "每周计划", iconCls: "weekplan", url: "", iconPosition: "top" },
+    { id: "monthedit", pid: "planmanage", text: "每月计划", iconCls: "monthplan", url: "", iconPosition: "top" },   
+   
+   
+    { id: "collectquery", text: "统计查询"},
+	{ id: "nodoing", pid: "collectquery", text: "未完成工作", iconCls: "nodoing", url: "", iconPosition: "top" },
+	{ id: "historyweek", pid: "collectquery", text: "历史计划", iconCls: "rearch", url: "", iconPosition: "top" },
+   	{ id: "dailyworkquery", pid: "collectquery", text: "日报统计", iconCls: "rearch", url: "", iconPosition: "top" },
+ 
+]
