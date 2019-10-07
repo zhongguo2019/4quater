@@ -40,6 +40,7 @@ public class Application implements InitializingBean {
 
 		SpringApplication app = new SpringApplication(Application.class);
         System.setProperty("user.timezone","Asia/Shanghai");
+        System.setProperty("sun.jnu.encoding","utf-8");
         
         ;
         System.out.print("系统根路径文件位置【"+System.getProperty("user.dir")+"】");

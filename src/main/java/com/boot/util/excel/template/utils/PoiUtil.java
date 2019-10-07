@@ -75,8 +75,10 @@ public class PoiUtil {
                     int columnCount = row.getPhysicalNumberOfCells();
                     for (int j = 0; j < columnCount; j++) {
                         Cell cell = row.getCell(j);
+                        if(null != cell) {
                         Object value = getValue(cell, null);
                         rowValue.add(value);
+                        }
                     }
                 }
                 res.add(rowValue);
@@ -698,6 +700,19 @@ public class PoiUtil {
 
     public static void main(String[] args) {
         new PoiUtil().writeExcel();
+        
+        String fileName = "G:\\GITBRANCH_LOCAL\\sharewithothers\\4quater\\reporttemplate\\本半月工作计划及执行情况表_模版.xlsx";
+        InputStream is = null;
+        Workbook wb = null;
+        try {
+			is = new FileInputStream(fileName);
+			//List readExcel(InputStream is, String fileName) 
+			
+			List lst = readExcel(is,fileName);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     /**
@@ -720,4 +735,7 @@ public class PoiUtil {
         return str;
     }
 
+    
+    
+    
 }

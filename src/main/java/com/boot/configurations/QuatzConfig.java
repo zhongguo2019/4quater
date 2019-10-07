@@ -77,7 +77,7 @@ public class QuatzConfig {
         Trigger trigger = newTrigger()
         		.startAt(DateBuilder.tomorrowAt(6, 0, 0))
         		.withIdentity("trigger2", "group1")
-        		.withSchedule(cronSchedule("0 0 8 ? * MON-SAT"))
+        		.withSchedule(cronSchedule("0 0 8 ? * TUE-SAT"))
                 .build();
         Date ft = sched.scheduleJob(job, trigger);
         sched.start();

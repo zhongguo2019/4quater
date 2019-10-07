@@ -1,13 +1,26 @@
 package com.boot.serviceTest;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
 import org.quartz.SchedulerException;
 import org.slf4j.Logger;
@@ -17,14 +30,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.boot.baseTest.SpringTestCase;
 import com.boot.configurations.QuatzConfig;
 import com.boot.util.CommonEntity;
+import com.boot.util.FileUtils;
 import com.boot.util.StringConvert;
 import com.boot.util.SysUserUtils;
+import com.boot.util.excel.template.utils.PoiUtil;
+import com.boot.util.qq.weixin.mp.aes.DayReportUtil;
 import com.boot.web.sys.service.SysUserService;
 import com.boot.web.todaywork.model.DoufuTodayWork;
 import com.boot.web.todaywork.service.DoufuTodayWorkService;
+import com.boot.web.wxgroup.model.WxUserGroup;
+import com.boot.web.wxgroup.service.WxUserGroupService;
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.github.pagehelper.PageInfo;
+
+import aj.org.objectweb.asm.Label;
+
 import com.boot.web.sys.model.SysUser;
 import com.boot.web.todaywork.controller.DoufuTodayWorkController;
+
+import net.sf.jxls.exception.ParsePropertyException;
+import net.sf.jxls.transformer.XLSTransformer;
 
 public class UserServiceTest extends SpringTestCase {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -37,7 +62,9 @@ public class UserServiceTest extends SpringTestCase {
 	@Autowired
 	private DoufuTodayWorkController doufuTodayWorkController;
 
-	@Test
+	@Autowired
+	private WxUserGroupService wxUserGroupService;
+
 	public void selectUserByIdTest() throws SchedulerException {
 
 		DoufuTodayWork doufuTodayWork = new DoufuTodayWork();
@@ -88,17 +115,55 @@ public class UserServiceTest extends SpringTestCase {
 		 * logger.info(dateString);
 		 * 
 		 */
-		/*
-		 * Map<String, Object> params = new HashMap<String, Object>();
-		 * params.put("groupname", "江西"); params.put("reportdate", "2019-09-16");
-		 * List<CommonEntity> lst = doufuTodayWorkService.queryNotCommitUser(params);
-		 * String userName, userAccount; if (lst.size() != 0) { for (int i = 0; i <
-		 * lst.size(); i++) { Map<String, Object> mpGroupName = (Map<String, Object>)
-		 * lst.get(i); userName = mpGroupName.get("name").toString();
-		 * logger.info(userName); } }
-		 */
-		
+
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("groupname", "江西");
+		params.put("reportdate", "2019-09-16");
+		List<CommonEntity> lst = doufuTodayWorkService.queryNotCommitUser(params);
+		String userName, userAccount;
+		if (lst.size() != 0) {
+			for (int i = 0; i < lst.size(); i++) {
+				Map<String, Object> mpGroupName = (Map<String, Object>) lst.get(i);
+				userName = mpGroupName.get("name").toString();
+				logger.info(userName);
+			}
+		}
+
 		quatzConfig.CronTriggerTest();
+	}
+
+	public void wxUserGroup() {
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("isMsg", "1");
+
+		List<WxUserGroup> lst = wxUserGroupService.entityList(params);
+		for (int i = 0; i < lst.size(); i++) {
+			WxUserGroup wxUserGroup = lst.get(i);
+			logger.info("负责人代码【" + wxUserGroup.getUserCode() + "】" + "负责人姓名【" + wxUserGroup.getUsername() + "】"
+					+ "负责小组名称【" + wxUserGroup.getGroupCname() + "】");
+			String wxGroupName = wxUserGroup.getGroupCname();
+			if ("".equals(wxGroupName) || null == wxGroupName) {
+
+			} else {
+				List<String> lstGroupName = splitGroupName(wxGroupName);
+				if (null != lstGroupName) {
+					for (String gname : lstGroupName) {
+						logger.info("拆分后的分组名称【" + gname + "】");
+					}
+				}
+			}
+
+		}
+
+	}
+
+	public List<String> splitGroupName(String groupName) {
+		String[] strSplit = groupName.split("\\|");
+
+		List<String> lst = Arrays.asList(strSplit);
+
+		return lst;
+
 	}
 
 	public void getWeek() {
@@ -121,4 +186,62 @@ public class UserServiceTest extends SpringTestCase {
 		System.out.println(dateStart);
 		System.out.println(dateEnd);
 	}
+
+	@Test
+	public void testQurMsg() throws FileNotFoundException {
+		Map<String, Object> queryMap = new HashMap<String, Object>();
+	
+		queryMap.put("reporterName", "bechalin");
+		queryMap.put("dynamicSQL", "t.REPORT_DATE >='2019-09-20' and t.REPORT_DATE <='2019-09-25' ");
+		queryMap.put("sortC", "report_date,input_order");
+		queryMap.put("order", "asc");
+		List<DoufuTodayWork> lstQuery = doufuTodayWorkService.entityList(queryMap);
+
+		DayReportUtil dayReportUtil = new DayReportUtil();
+		dayReportUtil.formatRtnQueryMsg(lstQuery);
+	}
+
+	// TODO Auto-generated method stub
+	
+	@Test
+	public void testJXLWrite() throws ParsePropertyException, org.apache.poi.openxml4j.exceptions.InvalidFormatException, IOException {	
+	//List<TempCell> lst = new ArrayList();
+	String templatePath = "G:\\GITBRANCH_LOCAL\\sharewithothers\\4quater\\reporttemplate\\本半月工作计划及执行情况表_模版.xlsx";
+	String targetPath = "G:\\GITBRANCH_LOCAL\\sharewithothers\\4quater\\reporttemplate\\本半月工作计划及执行情况表_赵祖龙.xlsx";
+    InputStream is = null;
+    Workbook wb = null;
+    
+    
+	// 模板路径和输出流
+
+    OutputStream os = new FileOutputStream("D:\\workspace\\krm_java\\demo\\out.xls");
+    
+    Map<String, Object> model = new HashMap<String, Object>();
+    model.put("name", "张三");
+    model.put("date", "2017/12/12");
+    
+    XLSTransformer former = new XLSTransformer();
+    former.transformXLS(templatePath, model, targetPath);
+    
+    System.out.println("the end !!!");
+    
+		/*
+		 * try { is = new FileInputStream(fileName);
+		 * 
+		 * FileInputStream tps = new FileInputStream(new File(fileName)); final
+		 * XSSFWorkbook tpWorkbook = new XSSFWorkbook(tps); XSSFWorkbook workbook = new
+		 * XSSFWorkbook(); workbook = tpWorkbook; FileUtils.createFile(outfileName);
+		 * Sheet sheet = workbook.createSheet("赵祖龙半月报"); FileOutputStream os = new
+		 * FileOutputStream(outfileName); workbook.write(os); //List
+		 * readExcel(InputStream is, String fileName) os.close(); tps.close();
+		 * 
+		 * //List lst = PoiUtil.readExcel(is,fileName); } catch (FileNotFoundException
+		 * e) { // TODO Auto-generated catch block e.printStackTrace(); }
+		 */
+	}
+
+
+
+	
+	
 }

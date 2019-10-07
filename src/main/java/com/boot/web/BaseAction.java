@@ -18,7 +18,7 @@ import com.boot.util.qq.weixin.mp.aes.WXBizMsgCrypt;
 import com.boot.util.qq.weixin.mp.aes.WeiXinParamesUtil;
 import com.boot.util.qq.weixin.mp.aes.WeiXinUtil;
 import com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil;
-import com.boot.util.qq.weixin.mp.aes.wxappJSAPIConstants;
+
 import com.krm.common.constant.Constant;
 
 import net.sf.json.JSONObject;
@@ -521,12 +521,11 @@ public class BaseAction {
 		String strTimeStamp = HttpUtil.getDefaultKeyString(paramter, "timestamp");
 		String strReqNonce = HttpUtil.getDefaultKeyString(paramter, "nonce");
 		String strEchostr = HttpUtil.getDefaultKeyString(paramter, "echostr");
-		logger.info("服务器验证时传过来的加密字符[" + strEchostr + "]");
-		
+
 		String strRtnEchoStr = ""; // 需要返回的明文
 		request.getSession().setAttribute(Constant.SESSION_LOGIN_WXFLAG, "Y");
+	
 		//后台通过微信登录，得到sys_user表中的用户信息，放到session中。
-
 		if (null != paramter.get("echostr")) {
 			logger.info("------------------------------验证连接服务器地址,处理开始------------------------------！");
 			try {
@@ -544,7 +543,7 @@ public class BaseAction {
 		}
 
 		String strReqData = HttpUtil.getPostStringData(request);
-		
+		//String strReqData =HttpHelper.getBodyString(request);
 		if ("".equals(strReqData) || null != strReqData) {
 			logger.info("------------------------------企业微信发来调用消息, 开处理-------------------");
 			WeiXinUtil weiXinUtil = new WeiXinUtil();

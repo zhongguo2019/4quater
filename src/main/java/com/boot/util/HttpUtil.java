@@ -80,20 +80,48 @@ public class HttpUtil {
 	public static String getPostStringData(HttpServletRequest request) throws IOException {
 		String result = null;
 		StringBuilder sb = new StringBuilder();
-
-		try (BufferedReader reader = request.getReader();) {
-			char[] buff = new char[1024];
-			int len;
+		BufferedReader reader=null;   
+        char[] buff = new char[1024];
+	    int len;
+        try
+        {
+            reader = request.getReader();
 			if (null != reader) {
 				while ((len = reader.read(buff)) != -1) {
 					sb.append(buff, 0, len);
 				}
 				result = sb.toString();
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+        } catch (Exception e) {
 
+            e.printStackTrace( );
+
+            // TODO: handle exception
+
+        }finally {
+
+            try {
+
+                //这里关闭流要从大到小关闭
+
+                //fw.close();   
+
+                //bw.close();
+
+                //这样的顺序就是不行，fw流自己关闭了。然后bw流又把
+
+                //fw流关闭一次就会说java.io.IOException: Stream closed
+
+            	reader.close();
+
+            } catch (IOException e)  {
+
+                // TODO Auto-generated catch block
+
+                e.printStackTrace();
+
+            }
+      }
 		String strRtn = result; // 拿到微信端传过来的参数
 		return strRtn;
 	}

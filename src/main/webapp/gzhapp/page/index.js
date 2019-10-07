@@ -1,13 +1,13 @@
 $(function () {
     var value = $("#top").text();
-    console.log(value);
+/*    console.log(value);*/
 
 
     layui.use(['layer', 'form'], function () {
         var layer = layui.layer
             , form = layui.form;
 
-        layer.msg('你好');
+/*        layer.msg('你好');*/
 
         var form = layui.form;
 
@@ -103,15 +103,15 @@ $(function () {
         //请求的媒体类型
         contentType: "application/json;charset=UTF-8",
         //请求地址
-        url: "http://6vts3j.natappfree.cc/main/wxgetJSSConfig",
+        url: "http://krmsoft.natapp1.cc/main/wxgetJSSConfig",
         dataType: 'text',
         //数据，json字符串
         data: {},
         //请求成功
         success: function (result) {
-            console.log(result);
+          /*  console.log(result);*/
             var data = eval("(" + result + ")");
-            console.log(data);
+           /* console.log(data);*/
 
             wx.config({
                 beta: true,// 必须这么写，否则wx.invoke调用形式的jsapi会有问题
@@ -139,7 +139,7 @@ $(function () {
 
 
                 $.ajax({
-                    url: "http://6vts3j.natappfree.cc/main/wxgetJSSUser",
+                    url: "http://krmsoft.natapp1.cc/main/wxgetJSSUser",
                     data: {
                         data: eval('(' + urlCode + ')')
                     },

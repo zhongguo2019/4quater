@@ -51,8 +51,6 @@ import com.boot.util.SysUserUtils;
 public class ExportExcel {
 
     private static Logger log = LoggerFactory.getLogger(ExportExcel.class);
-    private static SysDictService sysDictService = SpringContextHolder.getBean("sysDictService");
-    private static SysDynamicDictsService sysDynamicDictsService = SpringContextHolder.getBean("sysDynamicDictsService");
 
     /**
      * 工作薄对象
@@ -189,6 +187,65 @@ public class ExportExcel {
      */
     public ExportExcel(String title, List<String> headerList) {
         initialize(title, headerList);
+    }
+    
+    /**
+     * 构造函数
+     *
+     * @param title   表格标题，传“空值”，表示无标题
+     * @param headers 表头数组
+     */
+
+    public ExportExcel(String title, List<String> lstHeader, String strFromUser) {
+      	initializeDayReport(title, Lists.newArrayList(lstHeader),strFromUser);
+	}
+
+	/**
+     * 初始化函数
+     *
+     * @param title      表格标题，传“空值”，表示无标题
+     * @param headerList 表头列表
+     */
+    private void initializeDayReport(String title, List<String> headerList,String username) {
+        this.wb = new SXSSFWorkbook(500);
+        this.sheet = wb.createSheet(username+"个人日报");
+        this.styles = createStyles(wb);
+        // Create title
+        if (StringUtils.isNotBlank(title)) {
+            Row titleRow = sheet.createRow(rownum++);
+            titleRow.setHeightInPoints(30);
+            Cell titleCell = titleRow.createCell(0);
+            titleCell.setCellStyle(styles.get("title"));
+            titleCell.setCellValue(title);
+            sheet.addMergedRegion(new CellRangeAddress(titleRow.getRowNum(),
+                    titleRow.getRowNum(), titleRow.getRowNum(), headerList.size() - 1));
+        }
+        // Create header
+        if (headerList == null) {
+            throw new RuntimeException("headerList not null!");
+        }
+        Row headerRow = sheet.createRow(rownum++);
+        headerRow.setHeightInPoints(16);
+        for (int i = 0; i < headerList.size(); i++) {
+            Cell cell = headerRow.createCell(i);
+            cell.setCellStyle(styles.get("header"));
+            String[] ss = StringUtils.split(headerList.get(i), "**", 2);
+            if (ss.length == 2) {
+                cell.setCellValue(ss[0]);
+                Comment comment = this.sheet.createDrawingPatriarch().createCellComment(
+                        new XSSFClientAnchor(0, 0, 0, 0, (short) 3, 3, (short) 5, 6));
+                comment.setString(new XSSFRichTextString(ss[1]));
+                cell.setCellComment(comment);
+            } else {
+                cell.setCellValue(headerList.get(i));
+            }
+//			sheet.autoSizeColumn(i, true);
+        }
+        for (int i = 0; i < headerList.size(); i++) {
+            int colWidth = sheet.getColumnWidth(i) * 2;
+            sheet.setColumnWidth(i, colWidth < 3000 ? 3000 : colWidth);
+        }
+        log.debug("导出文件成功！");
     }
 
     /**
@@ -345,6 +402,7 @@ public class ExportExcel {
                 cell.setCellValue("");
             } else if (val instanceof String) {
                 cell.setCellValue((String) val);
+                style.setWrapText(true);
             } else if (val instanceof Integer) {
                 cell.setCellValue((Integer) val);
             } else if (val instanceof Long) {
@@ -406,16 +464,7 @@ public class ExportExcel {
                                 .getMethod("setValue", Object.class).invoke(null, val.toString());
                     }
 
-                    // 转换字典
-                    if (StringUtils.isNotBlank(ef.dictionType())) {
-                        List<SysDict> dicts = this.getDictListByType(ef.dictionType());
-                        for (SysDict sysDict : dicts) {
-                            if (sysDict.getValue().equals(val == null ? "" : val.toString().trim())) {
-                                val = sysDict.getLabel();
-                                break;
-                            }
-                        }
-                    }
+
                 } catch (Exception ex) {
                     // Failure to ignore
                     log.info(ex.toString());
@@ -472,60 +521,43 @@ public class ExportExcel {
     }
 
 
-    public List<SysDict> getDictListByType(String type) {
-        if (type.indexOf("_dynamic") == -1) {
-            return (List<SysDict>) sysDictService.findAllMultimap().get(type);
-        }
-        Map<String, Object> params = Maps.newHashMap();
-        params.put("type", type.substring(0, type.indexOf("_dynamic")));
-        SysDynamicDicts sysDynamicDicts = sysDynamicDictsService.queryOne(params);
-        String sql = SerializeUtils.converString2Object(sysDynamicDicts.getSqlContent()).toString();
-        if (!SysUserUtils.getSessionLoginUser().isAdmin()) {
-            if (sysDynamicDicts.getDataScope().equals("8")) {
-                sql += " inner join SYS_USER u on t.CREATE_BY = u.ID where t.CREATE_BY = " + SysUserUtils.getSessionLoginUser().getId();
-            }
-        }
-        params.put("sql", sql);
-        params.put("key", sysDynamicDicts.getKeyName());
-        params.put("value", sysDynamicDicts.getValueName());
-        return sysDynamicDictsService.exeuteSql(params);
-    }
+
 
 //	/**
 //	 * 导出测试
 //	 */
-//	public static void main(String[] args) throws Throwable {
-//		
-//		List<String> headerList = Lists.newArrayList();
-//		for (int i = 1; i <= 10; i++) {
-//			headerList.add("表头"+i);
-//		}
-//		
-//		List<String> dataRowList = Lists.newArrayList();
-//		for (int i = 1; i <= headerList.size(); i++) {
-//			dataRowList.add("数据"+i);
-//		}
-//		
-//		List<List<String>> dataList = Lists.newArrayList();
-//		for (int i = 1; i <=1000000; i++) {
-//			dataList.add(dataRowList);
-//		}
-//
-//		ExportExcel ee = new ExportExcel("表格标题", headerList);
-//		
-//		for (int i = 0; i < dataList.size(); i++) {
-//			Row row = ee.addRow();
-//			for (int j = 0; j < dataList.get(i).size(); j++) {
-//				ee.addCell(row, j, dataList.get(i).get(j));
-//			}
-//		}
-//		
-//		ee.writeFile("d:/export.xlsx");
-//
-//		ee.dispose();
-//		
-//		log.debug("Export success.");
-//		
-//	}
+	public static void main(String[] args) throws Throwable {
+		
+		List<String> headerList = Lists.newArrayList();
+		for (int i = 1; i <= 10; i++) {
+		headerList.add("表头"+i);
+	}
+	
+	List<String> dataRowList = Lists.newArrayList();
+	for (int i = 1; i <= headerList.size(); i++) {
+			dataRowList.add("数据"+i);
+		}
+	
+		List<List<String>> dataList = Lists.newArrayList();
+		for (int i = 1; i <=1000; i++) {
+			dataList.add(dataRowList);
+		}
+
+		ExportExcel ee = new ExportExcel("个人日报", headerList);
+		
+		for (int i = 0; i < dataList.size(); i++) {
+			Row row = ee.addRow();
+			for (int j = 0; j < dataList.get(i).size(); j++) {
+			ee.addCell(row, j, dataList.get(i).get(j));
+			}
+		}
+		
+		ee.writeFile("d:/export.xlsx");
+
+		ee.dispose();
+		
+		log.debug("Export success.");
+		
+	}
 
 }

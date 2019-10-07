@@ -20,14 +20,14 @@ public class WeiXinParamesUtil {
       //通讯录秘钥
     public final static String contactsSecret = "AwUEF1uWDE6-8OJdcmDMC9Pgx9QrdOifVzNCqe8isaw";
 
-    //应用的凭证密钥
-//    public final static String agentSecret = "tAgAYMMHqEtNs1OX5GC4Z2MK7-hrFXuPr6zkjbkBsoA"; 
+// 生产中配置-----应用的凭证密钥
+//   public final static String agentSecret = "tAgAYMMHqEtNs1OX5GC4Z2MK7-hrFXuPr6zkjbkBsoA"; 
     //企业应用的id，整型。可在应用的设置页面查看
-//    public final static int agentId = 1000002;
+//   public final static int agentId = 1000002;
     
-    //测试使用开始
-   public final static String agentSecret = "7ISBD7JF8AnVtRZtTYdxkbWP1vZNv7XuHWLFxdW2y9Y";
-   public final static int agentId = 1000003;
+// 测试中配置-----使用开始
+    public final static String agentSecret = "7ISBD7JF8AnVtRZtTYdxkbWP1vZNv7XuHWLFxdW2y9Y";
+    public final static int agentId = 1000003;
 
 	/**
 	 * 获取企业微信token地址及对应参数
@@ -101,40 +101,9 @@ public class WeiXinParamesUtil {
 	public static final String QYWX_AND = "&";
 	public static final String QYWX_EQUAL = "=";
 	public static final String QYWX_QUERY = "?";   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+ 
     public final static String msgHelp="亲，提交的命令格式不对，请看帮助后进行操作!";
-    public final static String helpInfor="--------------------日报格式--------------------\r\n" + 
+    public final static String helpInfor="-------------日报格式-------------\r\n" + 
     		"[日报] \r\n" + 
     		"今天\r\n" + 
     		"[XXXX报送系统]\r\n" + 
@@ -153,7 +122,7 @@ public class WeiXinParamesUtil {
     		"总结\r\n" + 
     		"XXXXXXX 内容不超200字。\r\n" + 
     		"\r\n" + 
-    		"--------------------补报格式--------------------\r\n" + 
+    		"-------------补报格式-------------\r\n" + 
     		"[补报]\r\n" + 
     		"YYYY-MM-DD ----如：2019-09-10\r\n" + 
     		"[XXXX]\r\n" + 
@@ -162,12 +131,18 @@ public class WeiXinParamesUtil {
     		"[[XXXX]\r\n" + 
     		"1、XXXX。[XX%]\r\n" + 
     		"2、XXXX。[XX%]\r\n" + 
-    		"--------------------查询格式--------------------\r\n" + 
+    		"-------------查询格式-------------\r\n" + 
     		"查询\r\n" + 
     		"YYYY-MM-DD至YYYY-MM-DD\r\n" + 
-    		"--------------------查询格式--------------------\r\n" + 
+    		"或\r\n" + 
     		"查询\r\n" + 
-    		"YYYY-MM-DD";    
+    		"YYYY-MM-DD\r\n" + 
+    		"-------------下载格式-------------\r\n" + 
+    		"[报告下载]\r\n" + 
+    		"YYYY-MM-DD至YYYY-MM-DD\r\n" + 
+    		"或\r\n" + 
+    		"[报告下载]\r\n" + 
+    		"YYYY-MM-DD";
     //测试使用结束
     public final static String dayReportFormat = "亲，格式不对，模版如下：\r\n" + 
 			"[日报]\r\n" + 
@@ -212,5 +187,17 @@ public class WeiXinParamesUtil {
     		"2019-09-18\r\n" + 
     		"或\r\n" + 
     		"查询\r\n" + 
+    		"2019-09-18至2019-09-20"; 
+    public final static String dayReportFormatDownload = "亲，命令格式不对，报告下载操作的命令格式：\r\n" + 
+    		"报告下载 ---关键字及格式\r\n" + 
+    		"日期 ---关键字及格式\r\n" + 
+    		"或是以下格式：\r\n" + 
+    		"报告下载 ----关键字及格式\r\n" + 
+    		"日期至日期----关键字及格式\r\n" + 
+    		"如下：\r\n" + 
+    		"报告下载\r\n" + 
+    		"2019-09-18\r\n" + 
+    		"或\r\n" + 
+    		"报告下载\r\n" + 
     		"2019-09-18至2019-09-20"; 
 }

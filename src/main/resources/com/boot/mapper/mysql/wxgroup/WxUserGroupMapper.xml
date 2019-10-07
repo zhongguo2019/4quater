@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boot.web.wxgroup.mapper.WxUserGroupMapper">
+
+	<!-- 表字段 -->
+	<sql id="wxUserGroupColumns">
+		 USER_ID, USER_CODE, USERNAME, GROUP_CODE, GROUP_CNAME, is_msg, ID, DEL_FLAG, STATUS, INST_ID,
+		 LOGIN_IP, LOGIN_DATE, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, REMARKS
+	</sql>
+
+	<!-- 表字段（带别名） -->
+	<sql id="wxUserGroupAliasColumns">
+         t.USER_ID, t.USER_CODE, t.USERNAME, t.GROUP_CODE, t.GROUP_CNAME, t.is_msg, t.ID, t.DEL_FLAG, t.STATUS, t.INST_ID,
+		 t.LOGIN_IP, t.LOGIN_DATE, t.CREATE_BY, t.CREATE_DATE, t.UPDATE_BY, t.UPDATE_DATE, t.REMARKS
+	</sql>
+
+
+	<!-- 列表查询,返回的是通用实体，不受实体属性限制，相当于map-->
+	<select id="queryPageInfo" resultType="com.boot.util.CommonEntity">
+		select  <include refid="wxUserGroupAliasColumns" /> 
+		from wx_user_group  t
+		<where>
+			1=1
+			<if test="@com.boot.util.Ognl@isNotBlank(userId)">and t.USER_ID = #{userId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(userCode)">and t.USER_CODE = #{userCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(username)">and t.USERNAME = #{username} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCode)">and t.GROUP_CODE = #{groupCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCname)">and t.GROUP_CNAME = #{groupCname} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isMsg)">and t.is_msg = #{isMsg} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)">and t.LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)">and t.LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)">and t.CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)">and t.CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)">and t.UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
+		</where>
+		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)"> 
+			ORDER BY t.${sortC} ${order}
+		</if>
+	</select>
+	
+	
+	<!-- 列表查询,返回的是实体-->
+	<select id="entityList" resultType="com.boot.web.wxgroup.model.WxUserGroup">
+        select  <include refid="wxUserGroupAliasColumns" />
+		from wx_user_group  t
+		<where>
+			1=1
+			<if test="@com.boot.util.Ognl@isNotBlank(userId)">and t.USER_ID = #{userId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(userCode)">and t.USER_CODE = #{userCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(username)">and t.USERNAME = #{username} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCode)">and t.GROUP_CODE = #{groupCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCname)">and t.GROUP_CNAME = #{groupCname} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isMsg)">and t.is_msg = #{isMsg} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)">and t.LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)">and t.LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)">and t.CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)">and t.CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)">and t.UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
+		</where>
+		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)"> 
+			ORDER BY t.${sortC} ${order}
+		</if>
+	</select>
+
+	<!-- 查询单条数据,返回的是实体 -->
+	<select id="queryOne" resultType="com.boot.web.wxgroup.model.WxUserGroup">
+		select  <include refid="wxUserGroupAliasColumns" />
+		from wx_user_group  t 
+		<where>
+			1=1
+			<if test="@com.boot.util.Ognl@isNotBlank(userId)"> and t.USER_ID = #{userId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(userCode)"> and t.USER_CODE = #{userCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(username)"> and t.USERNAME = #{username} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCode)"> and t.GROUP_CODE = #{groupCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCname)"> and t.GROUP_CNAME = #{groupCname} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isMsg)"> and t.is_msg = #{isMsg} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)"> and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)"> and t.DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)"> and t.STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)"> and t.INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)"> and t.LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)"> and t.LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)"> and t.CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)"> and t.CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)"> and t.UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)"> and t.UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)"> and t.REMARKS = #{remarks} </if>
+		</where>
+	</select>
+	
+	<!-- 查询单条数据,返回的是通用实体，不受实体属性限制，相当于map -->
+	<select id="queryOneCommon" resultType="com.boot.util.CommonEntity">
+		select  <include refid="wxUserGroupAliasColumns" /> 
+		from wx_user_group  t
+		<where>
+			1=1
+			<if test="@com.boot.util.Ognl@isNotBlank(userId)">and t.USER_ID = #{userId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(userCode)">and t.USER_CODE = #{userCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(username)">and t.USERNAME = #{username} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCode)">and t.GROUP_CODE = #{groupCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCname)">and t.GROUP_CNAME = #{groupCname} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isMsg)">and t.is_msg = #{isMsg} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)">and t.ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)">and t.DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)">and t.STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)">and t.INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)">and t.LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)">and t.LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)">and t.CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)">and t.CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)">and t.UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)">and t.UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)">and t.REMARKS = #{remarks} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
+		</where>
+	</select>
+	
+	<!-- 批量插入数据 -->
+	<insert id="insertBatch">
+		insert into wx_user_group(<include refid="wxUserGroupColumns" />) values 
+		<foreach collection="list" item="item" separator="," >
+		(
+	    	#{item.userId},
+	    	#{item.userCode},
+	    	#{item.username},
+	    	#{item.groupCode},
+	    	#{item.groupCname},
+	    	#{item.isMsg},
+	    	#{item.id},
+	    	#{item.delFlag},
+	    	#{item.status},
+	    	#{item.instId},
+	    	#{item.loginIp},
+	    	#{item.loginDate},
+	    	#{item.createBy},
+	    	#{item.createDate},
+	    	#{item.updateBy},
+	    	#{item.updateDate},
+			#{item.remarks}
+		)
+		</foreach>
+	</insert>
+	
+	<!-- 根据不同条件删除数据，条件可组合 -->
+	<delete id="deleteByParams" parameterType="java.util.Map">
+		delete from wx_user_group
+		<where>
+			1=1
+			<if test="@com.boot.util.Ognl@isNotBlank(userId)"> and USER_ID = #{userId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(userCode)"> and USER_CODE = #{userCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(username)"> and USERNAME = #{username} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCode)"> and GROUP_CODE = #{groupCode} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(groupCname)"> and GROUP_CNAME = #{groupCname} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(isMsg)"> and is_msg = #{isMsg} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(id)"> and ID = #{id} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(delFlag)"> and DEL_FLAG = #{delFlag} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(status)"> and STATUS = #{status} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(instId)"> and INST_ID = #{instId} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginIp)"> and LOGIN_IP = #{loginIp} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(loginDate)"> and LOGIN_DATE = #{loginDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createBy)"> and CREATE_BY = #{createBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(createDate)"> and CREATE_DATE = #{createDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateBy)"> and UPDATE_BY = #{updateBy} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(updateDate)"> and UPDATE_DATE = #{updateDate} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(remarks)"> and REMARKS = #{remarks} </if>
+		</where>
+	</delete>
+	<!-- 根据不同条件删除数据，条件可组合 -->
+	<update id="updateOneEntity" >
+		update wx_user_group 
+                set 
+	    	          USER_ID = #{userId},
+	    	          USER_CODE = #{userCode},
+	    	          USERNAME = #{username},
+	    	          GROUP_CODE = #{groupCode},
+	    	          GROUP_CNAME = #{groupCname},
+	    	          is_msg = #{isMsg},
+	    	          ID = #{id},
+	    	          DEL_FLAG = #{delFlag},
+	    	          STATUS = #{status},
+	    	          INST_ID = #{instId},
+	    	          LOGIN_IP = #{loginIp},
+	    	          CREATE_BY = #{createBy},
+	    	          UPDATE_BY = #{updateBy},
+	    	          REMARKS = #{remarks}
+		<where>
+                   id=#{id}
+		</where>
+	</update>
+	<!-- 根据不同条件删除数据，条件可组合 -->
+	<update id="updateBatchEntity" >
+		<foreach collection="list" item="item" separator=",">
+		update wx_user_group 
+                set 
+	    	          USER_ID = #{userId},
+	    	          USER_CODE = #{userCode},
+	    	          USERNAME = #{username},
+	    	          GROUP_CODE = #{groupCode},
+	    	          GROUP_CNAME = #{groupCname},
+	    	          is_msg = #{isMsg},
+	    	          ID = #{id},
+	    	          DEL_FLAG = #{delFlag},
+	    	          STATUS = #{status},
+	    	          INST_ID = #{instId},
+	    	          LOGIN_IP = #{loginIp},
+	    	          CREATE_BY = #{createBy},
+	    	          UPDATE_BY = #{updateBy},
+	    	          REMARKS = #{remarks}
+		<where>
+                   id=#{id}
+		</where>
+		</foreach>
+	</update>
+</mapper>

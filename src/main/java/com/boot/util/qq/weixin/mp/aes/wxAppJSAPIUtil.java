@@ -28,19 +28,19 @@ public class wxAppJSAPIUtil {
 		String noncestr = getRandomString(16);
 		String timestamp = (int)(System.currentTimeMillis()/1000)+"";
 		String sign = "";
-		sign += wxappJSAPIConstants.QYWX_GET_JSAPITICKET_URL_PARAM_TICKET
-				+ wxappJSAPIConstants.QYWX_EQUAL
+		sign += WeiXinParamesUtil.QYWX_GET_JSAPITICKET_URL_PARAM_TICKET
+				+ WeiXinParamesUtil.QYWX_EQUAL
 				+ ticket
-				+ wxappJSAPIConstants.QYWX_AND
-				+ wxappJSAPIConstants.QYWX_GET_JSAPITICKET_URL_PARAM_NONCESTR
-				+ wxappJSAPIConstants.QYWX_EQUAL
+				+ WeiXinParamesUtil.QYWX_AND
+				+ WeiXinParamesUtil.QYWX_GET_JSAPITICKET_URL_PARAM_NONCESTR
+				+ WeiXinParamesUtil.QYWX_EQUAL
 				+ noncestr
-				+ wxappJSAPIConstants.QYWX_AND
-				+ wxappJSAPIConstants.QYWX_GET_JSAPITICKET_URL_PARAM_TIMESTAMP
-				+ wxappJSAPIConstants.QYWX_EQUAL + timestamp
-				+ wxappJSAPIConstants.QYWX_AND
-				+ wxappJSAPIConstants.QYWX_GET_JSAPITICKET_URL_PARAM_URL
-				+ wxappJSAPIConstants.QYWX_EQUAL + url;
+				+ WeiXinParamesUtil.QYWX_AND
+				+ WeiXinParamesUtil.QYWX_GET_JSAPITICKET_URL_PARAM_TIMESTAMP
+				+ WeiXinParamesUtil.QYWX_EQUAL + timestamp
+				+ WeiXinParamesUtil.QYWX_AND
+				+ WeiXinParamesUtil.QYWX_GET_JSAPITICKET_URL_PARAM_URL
+				+ WeiXinParamesUtil.QYWX_EQUAL + url;
 		String signature = "";
 		try {
 			// 指定sha1算法
@@ -63,11 +63,11 @@ public class wxAppJSAPIUtil {
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
-		rul.put(wxappJSAPIConstants.QYWX_GET_JSAPITICKET_RETURN_SIGNATURE,
+		rul.put(WeiXinParamesUtil.QYWX_GET_JSAPITICKET_RETURN_SIGNATURE,
 				signature);
-		rul.put(wxappJSAPIConstants.QYWX_GET_JSAPITICKET_URL_PARAM_NONCESTR,
+		rul.put(WeiXinParamesUtil.QYWX_GET_JSAPITICKET_URL_PARAM_NONCESTR,
 				noncestr);
-		rul.put(wxappJSAPIConstants.QYWX_GET_JSAPITICKET_URL_PARAM_TIMESTAMP,
+		rul.put(WeiXinParamesUtil.QYWX_GET_JSAPITICKET_URL_PARAM_TIMESTAMP,
 				timestamp);
 		return rul;
 	}
@@ -85,24 +85,24 @@ public class wxAppJSAPIUtil {
 	 */
 	public static String getTencentUserInfo(String code, String accessToken) {
 		String url = "";
-		url += wxappJSAPIConstants.QYWX_GET_USERINFO_URL
-				+ wxappJSAPIConstants.QYWX_QUERY;
-		url += wxappJSAPIConstants.QYWX_GET_USERINFO_URL_PARAM_TOKEN
-				+ wxappJSAPIConstants.QYWX_EQUAL + accessToken;
-		url += wxappJSAPIConstants.QYWX_AND;
-		url += wxappJSAPIConstants.QYWX_GET_USERINFO_URL_PARAM_CODE
-				+ wxappJSAPIConstants.QYWX_EQUAL + code;
+		url += WeiXinParamesUtil.QYWX_GET_USERINFO_URL
+				+ WeiXinParamesUtil.QYWX_QUERY;
+		url += WeiXinParamesUtil.QYWX_GET_USERINFO_URL_PARAM_TOKEN
+				+ WeiXinParamesUtil.QYWX_EQUAL + accessToken;
+		url += WeiXinParamesUtil.QYWX_AND;
+		url += WeiXinParamesUtil.QYWX_GET_USERINFO_URL_PARAM_CODE
+				+ WeiXinParamesUtil.QYWX_EQUAL + code;
 		
 		
 		System.out.println(url);
 		
 		JSONObject userInfoJson = sendPostRequest(url);
 		String errcode = userInfoJson
-				.getString(wxappJSAPIConstants.QYWX_GET_USERINFO_RETURN_ERRCODE);
-		if (wxappJSAPIConstants.QYWX_GET_USERINFO_RETURN_SUCCESS_CODE
+				.getString(WeiXinParamesUtil.QYWX_GET_USERINFO_RETURN_ERRCODE);
+		if (WeiXinParamesUtil.QYWX_GET_USERINFO_RETURN_SUCCESS_CODE
 				.equals(errcode)) {
 			return userInfoJson
-					.getString(wxappJSAPIConstants.QYWX_GET_USERINFO_RETURN_USERID);
+					.getString(WeiXinParamesUtil.QYWX_GET_USERINFO_RETURN_USERID);
 		} else {
 		}
 		return null;
@@ -121,23 +121,23 @@ public class wxAppJSAPIUtil {
 	 */
 	public static String getTencentToken() {
 		String url = "";
-		url += wxappJSAPIConstants.QYWX_GET_TOKEN_URL
-				+ wxappJSAPIConstants.QYWX_QUERY;
-		url += wxappJSAPIConstants.QYWX_GET_TOKEN_URL_PARAM_CORPID
-				+ wxappJSAPIConstants.QYWX_EQUAL
-				+ wxappJSAPIConstants.QYWX_CORPID;
-		url += wxappJSAPIConstants.QYWX_AND
-				+ wxappJSAPIConstants.QYWX_GET_TOKEN_URL_PARAM_CORPSECRET
-				+ wxappJSAPIConstants.QYWX_EQUAL;
-		url += wxappJSAPIConstants.QYWX_CORPSECRET;
+		url += WeiXinParamesUtil.QYWX_GET_TOKEN_URL
+				+ WeiXinParamesUtil.QYWX_QUERY;
+		url += WeiXinParamesUtil.QYWX_GET_TOKEN_URL_PARAM_CORPID
+				+ WeiXinParamesUtil.QYWX_EQUAL
+				+ WeiXinParamesUtil.QYWX_CORPID;
+		url += WeiXinParamesUtil.QYWX_AND
+				+ WeiXinParamesUtil.QYWX_GET_TOKEN_URL_PARAM_CORPSECRET
+				+ WeiXinParamesUtil.QYWX_EQUAL;
+		url += WeiXinParamesUtil.QYWX_CORPSECRET;
 		JSONObject tokenJson = sendPostRequest(url);
 		System.out.println("getTencentToken url is 【"+url+"】");
 		String errcode = tokenJson
-				.getString(wxappJSAPIConstants.QYWX_GET_TOKEN_RETURN_ERRCODE);
-		if (wxappJSAPIConstants.QYWX_GET_TOKEN_RETURN_SUCCESS_CODE
+				.getString(WeiXinParamesUtil.QYWX_GET_TOKEN_RETURN_ERRCODE);
+		if (WeiXinParamesUtil.QYWX_GET_TOKEN_RETURN_SUCCESS_CODE
 				.equals(errcode)) {
 			return tokenJson
-					.getString(wxappJSAPIConstants.QYWX_GET_TOKEN_RETURN_TOKEN);
+					.getString(WeiXinParamesUtil.QYWX_GET_TOKEN_RETURN_TOKEN);
 		} else {
 		}
 		return null;
@@ -155,17 +155,17 @@ public class wxAppJSAPIUtil {
 	 */
 	public static String getTencentJSSDKTicket(String token) {
 		String url = "";
-		url += wxappJSAPIConstants.QYWX_GET_JSAPITICKET_URL
-				+ wxappJSAPIConstants.QYWX_QUERY;
-		url += wxappJSAPIConstants.QYWX_GET_JSAPITICKET_URL_PARAM_TOKEN
-				+ wxappJSAPIConstants.QYWX_EQUAL + token;
+		url += WeiXinParamesUtil.QYWX_GET_JSAPITICKET_URL
+				+ WeiXinParamesUtil.QYWX_QUERY;
+		url += WeiXinParamesUtil.QYWX_GET_JSAPITICKET_URL_PARAM_TOKEN
+				+ WeiXinParamesUtil.QYWX_EQUAL + token;
 		JSONObject ticketJson = sendPostRequest(url);
 		String errcode = ticketJson
-				.getString(wxappJSAPIConstants.QYWX_GET_JSAPITICKET_RETURN_ERRCODE);
-		if (wxappJSAPIConstants.QYWX_GET_JSAPITICKET_RETURN_SUCCESS_CODE
+				.getString(WeiXinParamesUtil.QYWX_GET_JSAPITICKET_RETURN_ERRCODE);
+		if (WeiXinParamesUtil.QYWX_GET_JSAPITICKET_RETURN_SUCCESS_CODE
 				.equals(errcode)) {
 			return ticketJson
-					.getString(wxappJSAPIConstants.QYWX_GET_JSAPITICKET_RETURN_TICKET);
+					.getString(WeiXinParamesUtil.QYWX_GET_JSAPITICKET_RETURN_TICKET);
 		} else {
 		}
 		return null;

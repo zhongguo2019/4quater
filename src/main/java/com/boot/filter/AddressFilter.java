@@ -50,6 +50,9 @@ public class AddressFilter implements Filter {
 		String userName = null;
 		String isFromWeixin = "N";
 		String uri = httpRequest.getRequestURI();// 取到你访问的资源
+
+		logger.info("addressFilter 拦截到访问的地址及资源【" + uri + "】");
+
 		if (null != session.getAttribute(Constant.SESSION_LOGIN_USERNAME)) {
 			userName = session.getAttribute(Constant.SESSION_LOGIN_USERNAME).toString();
 			userInit(hrequest, userName);
@@ -60,34 +63,28 @@ public class AddressFilter implements Filter {
 			logger.info("得到的用户名称为：" + sysuser.getName());
 		}
 
-		if (uri.indexOf("wx") < 0){
-			
-		}else {
-			session.setAttribute(Constant.SESSION_LOGIN_WXFLAG,"Y");
-			isFromWeixin="Y";
-			
-			filterChain.doFilter(servletRequest, servletResponse);
+		if (uri.indexOf("wx") < 0) {
+			if (uri.equals("/")) { // 静态资源默认访问路径在/下，所以放过
+				filterChain.doFilter(servletRequest, servletResponse);
+			}
 
-		}
-		if (null != session.getAttribute(Constant.SESSION_LOGIN_WXFLAG)) {
-			isFromWeixin = session.getAttribute(Constant.SESSION_LOGIN_WXFLAG).toString();
-			logger.info("当前链接是来自于微信[" + isFromWeixin + "]");
-		}
+			if (isStaticResource(uri) || isAllowAddr(uri)) { // 判断是否是静态资源
+			} else {
+				if ("N".equals(isFromWeixin)) {
+					if (null == sysuser && (httpRequest.getRequestURI().indexOf("login") < 0)) {
+						logger.info("过滤器拦截，跳转到指定的首页：httpRequest.getRequestURI() " + httpRequest.getRequestURI());
+						wrapper.sendRedirect(httpRequest.getContextPath() + "/main/loginlayout");
 
-		if (uri.equals("/")) { // 静态资源默认访问路径在/下，所以放过
-			filterChain.doFilter(servletRequest, servletResponse);
-		}
-
-		if (isStaticResource(uri) || isAllowAddr(uri)) { // 判断是否是静态资源
-		} else {
-			if ("N".equals(isFromWeixin)) {
-				if (null == sysuser && (httpRequest.getRequestURI().indexOf("login") < 0)) {
-					logger.info("过滤器拦截，跳转到指定的首页：httpRequest.getRequestURI() " + httpRequest.getRequestURI());
-					wrapper.sendRedirect(httpRequest.getContextPath() + "/main/loginlayout");
-
+					}
 				}
 			}
+		} else {
+			session.setAttribute(Constant.SESSION_LOGIN_WXFLAG, "Y");
+			isFromWeixin = "Y";
+			logger.info("当前链接是来自于微信[" + isFromWeixin + "]");
+
 		}
+
 		filterChain.doFilter(servletRequest, servletResponse);
 
 	}
@@ -182,10 +179,18 @@ public class AddressFilter implements Filter {
 			return result;
 		}
 		String address[] = url.split("/");
-		if (null == address) {
+		if (null == address||address.length<0) {
 			return result;
 		}
-		String prex = address[address.length - 1];
+		logger.info("过滤器判断前台地址是否为合法，得到的URL【"+url+"】");
+		String prex="";
+		if(address.length>0) {
+		    prex = address[address.length - 1];
+		}
+		if(address.length==0) {
+		    prex = address[address.length - 1];
+		}
+		
 		logger.info("得到登录的地址的方法名称：prex[" + prex + "]");
 		return staticAllowAddr.contains(prex);
 

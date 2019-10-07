@@ -35,6 +35,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -638,14 +639,17 @@ public class WeiXinUtil {
 				}
 				
 				// 解析文本内容，字符开头以[报告下载]
-				if (justMsgTypeReport(strMsgContent,"报告下载]")
+				if (justMsgTypeReport(strMsgContent,"[报告下载]")
 					||justMsgTypeReport(strMsgContent,"【报告下载】")
 					||justMsgTypeReport(strMsgContent,"（报告下载）")
 					||justMsgTypeReport(strMsgContent,"［报告下载］")
 					||justMsgTypeReport(strMsgContent,"(报告下载)")	
 					||justMsgTypeReport(strMsgContent,"报告下载")) {
+					
+					strRtnMsgContent=dayReportUtil.dealDayReportDownLoad( request, strMsgContent, strFromUser);
 					//提示信息还没有完成
 					//strRtnMsgContent=WeiXinParamesUtil.helpInfor;
+					return strRtnMsgContent;
 				}								
 				
 				
@@ -667,6 +671,11 @@ public class WeiXinUtil {
 		}
 		return sEncryptMsg;
 	}
+	
+	
+	
+	
+	
 	/**
 	 * 
 	 * 判断用户请求文本类型是否包含指定的字符
@@ -701,6 +710,9 @@ public class WeiXinUtil {
 		if (sysuserQuery != null) {
 			String projectGroupId = "";
 			projectGroupId = sysUserService.getProjectGroupId(userInfo);
+			if (null == projectGroupId) {
+				projectGroupId="zt_usergroup";
+			}
 			sysuserQuery.setProjectGroupId(projectGroupId);
 			String remoteIP="";
 			try {
@@ -858,6 +870,31 @@ public class WeiXinUtil {
     	//String accessToken = wxAppJSAPIUtil.getTencentToken();
         String userInfo =wxAppJSAPIUtil.getTencentUserInfo(code,accessToken);
         return userInfo;
+
+    }
+    
+    
+    
+   
+    public static void SendFileMessage(String media_id,String type,String accessToken,String toUser){
+        //1.创建文件对象
+        FileMessage message=new FileMessage();
+        //1.1非必需
+        message.setTouser(toUser);  //不区分大小写
+        //textMessage.setToparty("1");
+        //txtMsg.setTotag(totag);
+        //txtMsg.setSafe(0);
+        String accessTokenlocal= WeiXinUtil.getAccessToken(WeiXinParamesUtil.corpId, WeiXinParamesUtil.agentSecret).getToken();
+        //1.2必需
+        message.setMsgtype(type);
+        message.setAgentid(WeiXinParamesUtil.agentId);
+
+        Media file=new Media();
+        file.setMedia_id(media_id);
+        message.setFile(file);
+        //3.发送消息：调用业务类，发送消息
+        SendMessageService sms=new SendMessageService();
+        sms.sendMessage(accessTokenlocal, message);
 
     }
 }

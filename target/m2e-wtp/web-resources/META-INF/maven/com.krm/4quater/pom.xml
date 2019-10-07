@@ -296,7 +296,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-quartz</artifactId>
 		</dependency>
-
+		<!-- 引入解析XLS工具类 -->
+<!-- https://mvnrepository.com/artifact/net.sf.jxls/jxls-core -->
+<dependency>
+    <groupId>net.sf.jxls</groupId>
+    <artifactId>jxls-core</artifactId>
+    <version>1.0.6</version>
+</dependency>
 	</dependencies>
 	<build>
 		<defaultGoal>compile</defaultGoal>
