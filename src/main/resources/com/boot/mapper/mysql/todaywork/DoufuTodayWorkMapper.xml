@@ -332,4 +332,22 @@
 		 )
 		</where>
 	</select>
+	
+		
+		<!-- 统计个人指定的时间段提交的日报日期列表 -->
+
+	<select id="countCommitTimes"
+		resultType="com.boot.util.CommonEntity">
+         select
+         distinct REPORT_DATE as REPORT_DATE
+         from doufu_today_work t
+		<where>
+		1=1
+		<if test="@com.boot.util.Ognl@isNotBlank(reporterName)"> and REPORTER_NAME = #{reporterName} </if>
+		<if test="@com.boot.util.Ognl@isNotBlank(dynamicSQL)"> and ${dynamicSQL} </if>
+		</where>
+		<if test="@com.boot.util.Ognl@isNotBlank(sortC) and @com.boot.util.Ognl@isNotBlank(order)"> 
+			ORDER BY t.${sortC} ${order}
+		</if>
+	</select>
 </mapper>

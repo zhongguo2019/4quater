@@ -26,4 +26,6 @@ public interface SysUserMapper extends Mapper<SysUser> {
     public List<CommonEntity>   getUserGroup(  @Param("username")  String username  );
     public List<CommonEntity>   getProdOfProj( @Param("projectname")  String projectname);
     public List<CommonEntity>   getModuOfProd(  @Param("productid") String productid);
+    public SysUser queryOneUser(Map<String, Object> params);
+    
 }

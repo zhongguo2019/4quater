@@ -13,6 +13,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,11 +31,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.boot.baseTest.SpringTestCase;
 import com.boot.configurations.QuatzConfig;
 import com.boot.util.CommonEntity;
+import com.boot.util.DateUtils;
 import com.boot.util.FileUtils;
 import com.boot.util.StringConvert;
 import com.boot.util.SysUserUtils;
 import com.boot.util.excel.template.utils.PoiUtil;
 import com.boot.util.qq.weixin.mp.aes.DayReportUtil;
+import com.boot.util.qq.weixin.mp.aes.WeiXinUtil;
 import com.boot.web.sys.service.SysUserService;
 import com.boot.web.todaywork.model.DoufuTodayWork;
 import com.boot.web.todaywork.service.DoufuTodayWorkService;
@@ -64,6 +67,8 @@ public class UserServiceTest extends SpringTestCase {
 
 	@Autowired
 	private WxUserGroupService wxUserGroupService;
+	
+
 
 	public void selectUserByIdTest() throws SchedulerException {
 
@@ -157,14 +162,7 @@ public class UserServiceTest extends SpringTestCase {
 
 	}
 
-	public List<String> splitGroupName(String groupName) {
-		String[] strSplit = groupName.split("\\|");
 
-		List<String> lst = Arrays.asList(strSplit);
-
-		return lst;
-
-	}
 
 	public void getWeek() {
 		long startTime1 = 1530613938532l;
@@ -187,7 +185,7 @@ public class UserServiceTest extends SpringTestCase {
 		System.out.println(dateEnd);
 	}
 
-	@Test
+	//@Test
 	public void testQurMsg() throws FileNotFoundException {
 		Map<String, Object> queryMap = new HashMap<String, Object>();
 	
@@ -203,7 +201,7 @@ public class UserServiceTest extends SpringTestCase {
 
 	// TODO Auto-generated method stub
 	
-	@Test
+	
 	public void testJXLWrite() throws ParsePropertyException, org.apache.poi.openxml4j.exceptions.InvalidFormatException, IOException {	
 	//List<TempCell> lst = new ArrayList();
 	String templatePath = "G:\\GITBRANCH_LOCAL\\sharewithothers\\4quater\\reporttemplate\\本半月工作计划及执行情况表_模版.xlsx";
@@ -239,9 +237,136 @@ public class UserServiceTest extends SpringTestCase {
 		 * e) { // TODO Auto-generated catch block e.printStackTrace(); }
 		 */
 	}
+	
+	//@Test
+	public void testCountCommitTimes() {
+		
+		
+		Map<String, Object> queryMap = new HashMap<String, Object>();
+		
+		queryMap.put("reporterName", "bechalin");
+		queryMap.put("dynamicSQL", "t.REPORT_DATE >='2019-09-01' and t.REPORT_DATE <='2019-09-30' ");
+		queryMap.put("sortC", "report_date,input_order");
+		queryMap.put("order", "asc");
+		List<CommonEntity>  lstResult = doufuTodayWorkService.countCommitTimes(queryMap);
+	    logger.info("提交的日期数量为："+lstResult.size());
+		
+	}
+	
+	@Test
+	public void testQueryNotCommit() {
+		String reportToday = DateUtils.DateToStr8(new Date());
+		String reportPreday = DateUtils.getPreDateByDate8(reportToday);
+		String msgContent = "昨天日报，小组成员都已经提交成功！";
+		List<Map<String, Object>> mplist =  getInfoUser();
+		
+		if(null == mplist) {
+			return;
+		}
+		for(int i=0;i<mplist.size();i++) {
+			Map<String, Object> mpinfoUser = mplist.get(i);
+			String infoUserCode = mpinfoUser.get("userCode").toString();
+			String instId = mpinfoUser.get("instid").toString();
+		    logger.info("istid"+instId);
+			List<String> lstGroupName = (List<String>) mpinfoUser.get("groupList");
+			 String notCommitInfo = null;
+			if(null != lstGroupName) {
+				 for(String gname:lstGroupName) {
+					 logger.info("拆分后的分组名称【"+gname +"】" );
+					 if(notCommitInfo == null) {
+					 notCommitInfo = queryNotCommitUser(gname, reportPreday);
+					 
+					 }else {
+					 notCommitInfo = notCommitInfo +"\n"+queryNotCommitUser(gname, reportPreday);
+					 }
+					 
+				 }
+				if(null == notCommitInfo) {
+				return;	
+				}
+			}
+			
+		}
+		
+	}
 
 
+	public List<Map<String, Object>> getInfoUser() {
+		List<Map<String, Object>> mplist = new ArrayList<Map<String, Object>>();
+
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("isMsg", "1");
+
+		List<WxUserGroup> lst = wxUserGroupService.entityList(params);
+		if (null == lst) {
+			return null;
+		}
+		for (int i = 0; i < lst.size(); i++) {
+			WxUserGroup wxUserGroup = lst.get(i);
+			logger.info("负责人代码【" + wxUserGroup.getUserCode() + "】" + "负责人姓名【" + wxUserGroup.getUsername() + "】"
+					+ "负责小组名称【" + wxUserGroup.getGroupCname() + "】");
+			String wxGroupName = wxUserGroup.getGroupCname();
+			Map<String, Object> infUser = new HashMap<String, Object>();
+			infUser.put("userCode", wxUserGroup.getUserCode());
+			infUser.put("instid", wxUserGroup.getInstId());
+			if ("".equals(wxGroupName) || null == wxGroupName) {
+
+			} else {
+				List<String> lstGroupName = splitGroupName(wxGroupName);
+				infUser.put("groupList", lstGroupName);
+				/*
+				 * if (null != lstGroupName) { for (String gname : lstGroupName) {
+				 * logger.info("拆分后的分组名称【" + gname + "】"); } }
+				 */
+			}
+			mplist.add(infUser);
+
+		}
+
+		return mplist;
+	}
+	
+	public List<String> splitGroupName(String groupName) {
+		String[] strSplit = groupName.split("\\|");
+
+		List<String> lst = Arrays.asList(strSplit);
+
+		return lst;
+
+	}	
+	
+	
 
 	
 	
+	public String queryNotCommitUser(String groupname, String reportdate){
+		String strRtn = "";
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("groupname", groupname);
+		params.put("reportdate", reportdate);
+		List<CommonEntity> lst = doufuTodayWorkService.queryNotCommitUser(params);
+		String userName, userAccount;
+		if (lst.size() != 0) {
+			for (int i = 0; i < lst.size(); i++) {
+				Map<String, Object> mpGroupName = (Map<String, Object>) lst.get(i);
+				userName = mpGroupName.get("name").toString();
+				userAccount = mpGroupName.get("account").toString();
+				if (i == 0) {
+					strRtn = userName;
+				} else {
+					strRtn = strRtn + "、" + userName;
+				}
+
+			}
+			if(!"".equals(strRtn)) {
+			strRtn ="项目组：【" +groupname+"】日期：【"+reportdate+"】\n未提交日报人员：\n"+strRtn+"\n请及时通知本人，尽快补上！";
+			}
+		}else {
+			strRtn ="项目组：【" +groupname+"】日期：【"+reportdate+"】 日报全部提交！";
+		}
+
+		return strRtn;
+
+	}
 }
+

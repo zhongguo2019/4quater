@@ -8,26 +8,26 @@ public class WeiXinParamesUtil {
 	 */
     //1.微信参数
     //token
-    public final static String token = "F8nRdfYNPYhAA4UWXccHJbX";
+     public final static String token = "F8nRdfYNPYhAA4UWXccHJbX";
     // encodingAESKey
     public final static String encodingAESKey = "5R0ACT0eLA1pHjG7mmYieu3Vk5VaFv8olHZuHIf5AOn";
     //企业ID
     public final static String corpId = "ww8249590afca6f785";
     //测试及开发使用企业ID 如果与自建小程序关联，要改成自建小程序的corid
-  //  public final static String corpId = "wxce18d28f195e164b";
+  //public final static String corpId = "wxce18d28f195e164b";
     
 
       //通讯录秘钥
     public final static String contactsSecret = "AwUEF1uWDE6-8OJdcmDMC9Pgx9QrdOifVzNCqe8isaw";
 
-// 生产中配置-----应用的凭证密钥
-//   public final static String agentSecret = "tAgAYMMHqEtNs1OX5GC4Z2MK7-hrFXuPr6zkjbkBsoA"; 
+// 生产中配置--我的日报---应用的凭证密钥
+    public final static String agentSecret = "tAgAYMMHqEtNs1OX5GC4Z2MK7-hrFXuPr6zkjbkBsoA"; 
     //企业应用的id，整型。可在应用的设置页面查看
-//   public final static int agentId = 1000002;
+    public final static int agentId = 1000002;
     
-// 测试中配置-----使用开始
-    public final static String agentSecret = "7ISBD7JF8AnVtRZtTYdxkbWP1vZNv7XuHWLFxdW2y9Y";
-    public final static int agentId = 1000003;
+// 测试中配置---我的半月报--应用的凭证密钥
+//    public final static String agentSecret = "7ISBD7JF8AnVtRZtTYdxkbWP1vZNv7XuHWLFxdW2y9Y";
+//    public final static int agentId = 1000003;
 
 	/**
 	 * 获取企业微信token地址及对应参数
@@ -142,6 +142,14 @@ public class WeiXinParamesUtil {
     		"YYYY-MM-DD至YYYY-MM-DD\r\n" + 
     		"或\r\n" + 
     		"[报告下载]\r\n" + 
+    		"YYYY-MM-DD\r\n" + 
+    		"-------------调阅成员-------------\r\n" + 
+    		"[调阅成员]\r\n" + 
+    		"姓名\r\n" + 
+    		"YYYY-MM-DD至YYYY-MM-DD\r\n" + 
+    		"或\r\n" + 
+    		"[调阅成员]\r\n" + 
+    		"姓名\r\n" + 
     		"YYYY-MM-DD";
     //测试使用结束
     public final static String dayReportFormat = "亲，格式不对，模版如下：\r\n" + 
@@ -199,5 +207,21 @@ public class WeiXinParamesUtil {
     		"2019-09-18\r\n" + 
     		"或\r\n" + 
     		"报告下载\r\n" + 
+    		"2019-09-18至2019-09-20"; 
+    public final static String dayReportQueryDownload = "亲，命令格式不对，报告下载操作的命令格式：\r\n" + 
+    		"调阅成员---关键字及格式\r\n" + 
+    		"姓名---关键字及格式\r\n" + 
+    		"日期 ---关键字及格式\r\n" + 
+    		"或是以下格式：\r\n" + 
+    		"调阅成员 ----关键字及格式\r\n" + 
+    		"姓名---关键字及格式\r\n" + 
+    		"日期至日期----关键字及格式\r\n" + 
+    		"如下：\r\n" + 
+    		"调阅成员\r\n" + 
+    		"赵祖龙\r\n" +     		
+    		"2019-09-18\r\n" + 
+    		"或\r\n" + 
+    		"调阅成员\r\n" + 
+    		"赵祖龙\r\n" +      		
     		"2019-09-18至2019-09-20"; 
 }

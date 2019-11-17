@@ -157,9 +157,11 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      * @throws ParseException
      */
     public static void main(String[] args) throws ParseException {
-        System.out.println(checkFormat("2015-01-01", "yyyyMMdd"));
-        System.out.println(checkFormat("2015-01-01", "yyyy-MM-dd"));
-        System.out.println(DateToTimestamp(new Date()));
+		/*
+		 * System.out.println(checkFormat("2015-01-01", "yyyyMMdd"));
+		 * System.out.println(checkFormat("2015-01-01", "yyyy-MM-dd"));
+		 */
+        System.out.println(getDateTime());
     }
 
     /**

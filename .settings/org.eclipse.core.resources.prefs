@@ -3,6 +3,7 @@ encoding//src/main/java=UTF-8
 encoding//src/main/java/com/boot/util/qq/weixin/mp/aes/AesException.java=UTF-8
 encoding//src/main/java/com/boot/web/file/controller/FilePreviewController.java=UTF-8
 encoding//src/main/resources=UTF-8
+encoding//src/main/resources/application.properties=UTF-8
 encoding//src/main/resources/beetl.properties=UTF-8
 encoding//src/test/java=UTF-8
 encoding/<project>=UTF-8

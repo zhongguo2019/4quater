@@ -50,6 +50,7 @@ import net.sf.json.JSONObject;
 
 import com.boot.util.excel.ExportExcel;
 import java.util.TreeMap;
+
 public class DayReportUtil {
 
 	SysUserService sysUserService = SpringContextHolder.getBean("sysUserService");
@@ -155,15 +156,14 @@ public class DayReportUtil {
 
 			query_start_date = queryDate.get("query_start_date").toString();
 			query_end_date = queryDate.get("query_end_date").toString();
-			if("".equals(query_end_date)) {
-				
-			}else {
-			int daybetween = DateUtils.daysBetween(query_start_date, query_end_date);
-			if (daybetween > 5) {
-				return "亲，只能查询五天之内的数据，请重新设置查询条件！";
+			if ("".equals(query_end_date)) {
+
+			} else {
+				int daybetween = DateUtils.daysBetween(query_start_date, query_end_date);
+				if (daybetween > 5) {
+					return "亲，只能查询五天之内的数据，请重新设置查询条件！";
+				}
 			}
-			}
-			
 
 		}
 		if (reportError.equals("0")) {
@@ -198,7 +198,7 @@ public class DayReportUtil {
 		query_start_date = "";
 		query_end_date = "";
 		SysUser sysuser = (SysUser) request.getSession().getAttribute(Constant.SESSION_LOGIN_USER);
-		String username = sysuser.getId();
+		String username = sysuser.getName();
 		// siftWorkContent2方法会将补报的时间从报文中得到。
 		Map<String, Object> queryDate = siftWorkContent3(strMsgContent);
 
@@ -213,10 +213,15 @@ public class DayReportUtil {
 			String createFlag = exportExcel(filename, lstHeader, lstData, username);
 			if ("sucuss".equals(createFlag)) {
 				String type = "file";
-				String accessToken = WeiXinUtil
-						.getAccessToken(WeiXinParamesUtil.corpId, WeiXinParamesUtil.contactsSecret).getToken();
+				/*
+				 * String accessToken = WeiXinUtil .getAccessToken(WeiXinParamesUtil.corpId,
+				 * WeiXinParamesUtil.contactsSecret).getToken();
+				 */
+				WeiXinUtil weiXinUtil = new WeiXinUtil();
+				String accessToken = "";
+
 				// 2.调用业务类，上传临时素材
-				JSONObject upload = WeiXinUtil.uploadTempMaterial(accessToken, type, filename);
+				JSONObject upload = WeiXinUtil.uploadTempMaterial(type, filename);
 				String media_id = upload.getString("media_id");
 				String errmsg = upload.getString("errmsg");
 				if ("ok".equals(errmsg)) {
@@ -229,6 +234,68 @@ public class DayReportUtil {
 
 		} else {
 			strRtnMsgContent = WeiXinParamesUtil.dayReportFormatDownload;
+		}
+		/*
+		 * if (null == strRtnMsgContent) { strRtnMsgContent =
+		 * "亲，没有查到需要下载的数据，请重新设置查询条件！"; }
+		 */
+
+		return strRtnMsgContent;
+	}
+
+	/**
+	 * 
+	 * 调阅成员的日报
+	 * 
+	 * @param text
+	 * @return
+	 * @throws IOException
+	 * @throws FileNotFoundException
+	 * @throws ParseException
+	 */
+	public String dealQueryDownLoad(HttpServletRequest request, String strMsgContent, String strFromUser)
+			throws FileNotFoundException, IOException, ParseException {
+		String strRtnMsgContent = "";
+		query_start_date = "";
+		query_end_date = "";
+
+		// siftWorkContent2方法会将补报的时间从报文中得到。
+		Map<String, Object> queryParam = siftWorkContent4(strMsgContent);
+
+		if (null == queryParam) {
+			reportError = "1";
+		}
+
+		if (reportError.equals("0")) {
+			List<String> lstHeader = getHeaderListDayReport();
+			List<Map<String, Object>> lstData = getDataListDayReport(request, queryParam);
+			String username = queryParam.get("query_name").toString();
+			String filename = getDownLoadFilneName(username);
+			String createFlag = exportExcel(filename, lstHeader, lstData, username);
+			if ("sucuss".equals(createFlag)) {
+				String type = "file";
+				/*
+				 * String accessToken = WeiXinUtil .getAccessToken(WeiXinParamesUtil.corpId,
+				 * WeiXinParamesUtil.contactsSecret).getToken();
+				 */
+				WeiXinUtil weiXinUtil = new WeiXinUtil();
+				String accessToken = "";
+
+				// 2.调用业务类，上传临时素材
+				JSONObject upload = WeiXinUtil.uploadTempMaterial( type, filename);
+				
+				String errmsg = upload.getString("errmsg");
+				if ("ok".equals(errmsg)) {
+					String media_id = upload.getString("media_id");
+					WeiXinUtil.SendFileMessage(media_id, type, accessToken, strFromUser);
+				} else {
+					strRtnMsgContent = "下载失败，错误码【" + errmsg + "】";
+				}
+
+			}
+
+		} else {
+			strRtnMsgContent = WeiXinParamesUtil.dayReportQueryDownload;
 		}
 		/*
 		 * if (null == strRtnMsgContent) { strRtnMsgContent =
@@ -338,7 +405,7 @@ public class DayReportUtil {
 		if (ipos == 0) {
 		}
 		if (contentArray.length != 0) {
-			String strline1 = contentArray[1].toString();
+			String strline1 = contentArray[1].toString().trim();
 			System.out.println("补报报文，第二行为：" + strline1);
 			if (isValidDate(strline1)) {
 				return true;
@@ -433,7 +500,48 @@ public class DayReportUtil {
 		if (contentArray.length < 2) {
 			return null;
 		}
-		String strQueryDate = contentArray[1].toString();
+		String strQueryDate = contentArray[1].toString().trim();
+		if (strQueryDate.indexOf("至") < 0) {
+			query_start_date = strQueryDate;
+			if (!isValidDate(query_start_date))
+				return null;
+		} else {
+			String[] dateArray = strQueryDate.split("至");
+			if (dateArray.length < 2) {
+				return null;
+			} else {
+				query_start_date = dateArray[0].toString();
+				query_end_date = dateArray[1].toString();
+				if (!isValidDate(query_start_date))
+					return null;
+				if (!isValidDate(query_end_date))
+					return null;
+			}
+		}
+
+		result.put("query_start_date", query_start_date);
+		result.put("query_end_date", query_end_date);
+		reportError = "0";
+		return result;
+	}
+
+	/**
+	 * 查询分拣任务。返回Map
+	 * 
+	 * @param text
+	 * @return
+	 */
+
+	public Map<String, Object> siftWorkContent4(String text) {
+		Map<String, Object> result = new HashMap<String, Object>();
+		String[] contentArray = text.trim().split("\n");
+
+		reportError = "1";
+		if (contentArray.length < 3) {
+			return null;
+		}
+		String strQueryName = contentArray[1].toString().trim();
+		String strQueryDate = contentArray[2].toString().trim();
 		if (strQueryDate.indexOf("至") < 0) {
 			query_start_date = strQueryDate;
 			if (!isValidDate(query_start_date))
@@ -454,6 +562,7 @@ public class DayReportUtil {
 		}
 
 		result.put("query_start_date", query_start_date);
+		result.put("query_name", strQueryName);
 		result.put("query_end_date", query_end_date);
 		reportError = "0";
 		return result;
@@ -521,10 +630,10 @@ public class DayReportUtil {
 		while (iter.hasNext()) {
 			Entry<String, List<String>> entry = iter.next();
 			String productName = entry.getKey();
-			System.out.println(productName);
+			// System.out.println(productName);
 			List<String> productWork = entry.getValue();
 			for (String w : productWork) {
-				System.out.println(productName + "|" + w);
+				// System.out.println(productName + "|" + w);
 				todaywork.add(productName + "|" + w);
 			}
 		}
@@ -541,10 +650,10 @@ public class DayReportUtil {
 		while (iter2.hasNext()) {
 			Entry<String, List<String>> entry = iter2.next();
 			String productName = entry.getKey();
-			System.out.println(productName);
+			// System.out.println(productName);
 			List<String> productWork = entry.getValue();
 			for (String w : productWork) {
-				System.out.println(productName + "|" + w);
+				// System.out.println(productName + "|" + w);
 				towarrowwork.add(productName + "|" + w);
 			}
 		}
@@ -592,10 +701,10 @@ public class DayReportUtil {
 		while (iter.hasNext()) {
 			Entry<String, List<String>> entry = iter.next();
 			String productName = entry.getKey();
-			System.out.println(productName);
+			// System.out.println(productName);
 			List<String> productWork = entry.getValue();
 			for (String w : productWork) {
-				System.out.println(productName + "|" + w);
+				// System.out.println(productName + "|" + w);
 				lst_bydate.add(productName + "|" + w);
 			}
 		}
@@ -631,8 +740,8 @@ public class DayReportUtil {
 			String productName = s1;
 			String workContent = s1;
 
-			logger.info("startPos【" + startPos + "】");
-			logger.info("s1.length()-1 【" + (s1.length() - 1) + "】");
+			// logger.info("startPos【" + startPos + "】");
+			// logger.info("s1.length()-1 【" + (s1.length() - 1) + "】");
 
 			if (startPos > 0) {
 				productName = s1.substring(0, startPos);
@@ -642,8 +751,8 @@ public class DayReportUtil {
 			}
 			if (startPos != s1.length() - 1 && startPos != 0) {
 				workContent = s1.substring(startPos + 1, s1.length());
-				logger.info("workContent【" + workContent + "】");
-				logger.info("s1 【" + s1 + "】");
+				// logger.info("workContent【" + workContent + "】");
+				// logger.info("s1 【" + s1 + "】");
 			}
 
 			String finishRate = "";
@@ -727,7 +836,7 @@ public class DayReportUtil {
 		List<DoufuTodayWork> lstQuery = doufuTodayWorkService.entityList(queryMap);
 		if (null == lstQuery)
 			return null;
-		queryResult= formatRtnQueryMsg( lstQuery); 
+		queryResult = formatRtnQueryMsg(lstQuery);
 		/*
 		 * for (DoufuTodayWork doufuTodayWork : lstQuery) { if (null == queryResult) {
 		 * queryResult = "【" + doufuTodayWork.getReportDate() + "】" + "【" +
@@ -753,59 +862,59 @@ public class DayReportUtil {
 	public String formatRtnQueryMsg(List<DoufuTodayWork> lstQuery) {
 		String queryResult = null;
 		String strolddate = null;
-		List<Map<String,List<DoufuTodayWork>>> lstMap = new ArrayList<Map<String, List<DoufuTodayWork>>>();
+		List<Map<String, List<DoufuTodayWork>>> lstMap = new ArrayList<Map<String, List<DoufuTodayWork>>>();
 		List<DoufuTodayWork> lstsplit = new ArrayList<DoufuTodayWork>();
-		if (null == lstQuery||lstQuery.size()==0)
+		if (null == lstQuery || lstQuery.size() == 0)
 			return null;
 		Map<String, List<DoufuTodayWork>> mpdayorder = new HashMap<String, List<DoufuTodayWork>>();
 		for (DoufuTodayWork doufuTodayWork : lstQuery) {
-		
-			logger.info("日期Key"+doufuTodayWork.getReportDate());
+
+			logger.info("日期Key" + doufuTodayWork.getReportDate());
 
 			List<DoufuTodayWork> lstExist = (List<DoufuTodayWork>) mpdayorder.get(doufuTodayWork.getReportDate());
 			if (null == lstExist) {
-				lstExist =new ArrayList<DoufuTodayWork>();
+				lstExist = new ArrayList<DoufuTodayWork>();
 				lstExist.add(doufuTodayWork);
 				mpdayorder.put(doufuTodayWork.getReportDate(), lstExist);
-				
-				} else {
+
+			} else {
 				lstExist.add(doufuTodayWork);
 				mpdayorder.put(doufuTodayWork.getReportDate(), lstExist);
 			}
-			
-			//strolddate = doufuTodayWork.getReportDate();
+
+			// strolddate = doufuTodayWork.getReportDate();
 		}
-		mpdayorder =	sortMapByKey(mpdayorder);
-		if(null == mpdayorder) {
+		mpdayorder = sortMapByKey(mpdayorder);
+		if (null == mpdayorder) {
 			return null;
 		}
-		Set set=mpdayorder.keySet();
-		Iterator it=set.iterator();
-		while(it.hasNext()){
-			String key=(String)it.next();
-			List<DoufuTodayWork> lstDou = (List<DoufuTodayWork>)mpdayorder.get(key);
-		//		System.out.println("MAP中的日期【"+key+"】");
-			if(null == queryResult) {
-				queryResult="【"+key+"】\n";
-			}else {
-				queryResult = queryResult+"【"+key+"】\n";
+		Set set = mpdayorder.keySet();
+		Iterator it = set.iterator();
+		while (it.hasNext()) {
+			String key = (String) it.next();
+			List<DoufuTodayWork> lstDou = (List<DoufuTodayWork>) mpdayorder.get(key);
+			// System.out.println("MAP中的日期【"+key+"】");
+			if (null == queryResult) {
+				queryResult = "【" + key + "】\n";
+			} else {
+				queryResult = queryResult + "【" + key + "】\n";
 			}
-			for(DoufuTodayWork dtw:lstDou) {
-				queryResult = queryResult+"【"+dtw.getProductName()+"】【"+dtw.getWorkContents()+"】\n";
-				 //System.out.println(dtw.getWorkContents());
+			for (DoufuTodayWork dtw : lstDou) {
+				queryResult = queryResult + "【" + dtw.getProductName() + "】【" + dtw.getWorkContents() + "】\n";
+				// System.out.println(dtw.getWorkContents());
 			}
 		}
-		//Iterator<Entry<String, List<DoufuTodayWork>>> iter = mpdayorder.entrySet().iterator();
+		// Iterator<Entry<String, List<DoufuTodayWork>>> iter =
+		// mpdayorder.entrySet().iterator();
 		logger.info(queryResult);
-
-		
 
 		return queryResult;
 	}
+
 	/**
-
+	 * 
 	 * 让 Map按key进行排序
-
+	 * 
 	 */
 
 	public static Map<String, List<DoufuTodayWork>> sortMapByKey(Map<String, List<DoufuTodayWork>> map) {
@@ -824,7 +933,6 @@ public class DayReportUtil {
 
 	}
 
-	
 	/**
 	 * 查询后台已经提交的日报
 	 * 
@@ -854,8 +962,21 @@ public class DayReportUtil {
 			dynamicSQL = "t.REPORT_DATE >='" + map.get("query_start_date").toString() + "' and t.REPORT_DATE <='"
 					+ map.get("query_end_date").toString() + "'";
 		}
+		String queryUser = "";
 
-		queryMap.put("reporterName", sysuser.getUsername());
+		if ("".equals(map.get("query_name")) || null == map.get("query_name")) {
+			queryUser = sysuser.getUsername();
+		} else {
+			String queryUserName = (String) map.get("query_name");
+			WeiXinUtil weiXinUtil = new WeiXinUtil();
+			SysUser sysUserQueryOne = weiXinUtil.getUserInfo(queryUserName);
+			if (null != sysUserQueryOne) {
+				queryUser = sysUserQueryOne.getUsername();
+			}
+		}
+//       logger.info("要调阅的用户姓名【"+queryUser+"】");
+		queryMap.put("reporterName", queryUser);
+
 		queryMap.put("dynamicSQL", dynamicSQL);
 		queryMap.put("sortC", "create_date,input_order,PRODUCT_NAME");
 		queryMap.put("order", "asc");

@@ -226,4 +226,14 @@ public class DoufuTodayWorkService extends ServiceMybatis<DoufuTodayWork>{
 		return doufuTodayWorkMapper.queryNotCommitUser(params);
 	}
 	
+	/**
+	 * 查询指定人员指定时间段提交的日期列表
+	 * @param params
+	 * @return
+	 */
+	public List<CommonEntity>  countCommitTimes(Map<String, Object> params){
+		logger.info("#=================根据条件查询未提交日报的人员列表========================#");
+		return doufuTodayWorkMapper.countCommitTimes(params);
+	}	
+	
 }

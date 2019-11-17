@@ -48,4 +48,10 @@ public interface DoufuTodayWorkMapper extends Mapper<DoufuTodayWork>{
 	 * 查询未提交的用户名称
 	 */
 	List<CommonEntity>  queryNotCommitUser(Map<String, Object> params);
+	
+	
+	/**
+	 * 查询指定时间段内指定的用户的提交日期列表
+	 */
+	List<CommonEntity>  countCommitTimes(Map<String, Object> params);
 }

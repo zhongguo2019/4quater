@@ -43,11 +43,13 @@ public class InforQuaterz implements Job {
 		for(int i=0;i<mplist.size();i++) {
 			Map<String, Object> mpinfoUser = mplist.get(i);
 			String infoUserCode = mpinfoUser.get("userCode").toString();
+			String instId = mpinfoUser.get("instid").toString();
+		
 			List<String> lstGroupName = (List<String>) mpinfoUser.get("groupList");
 			 String notCommitInfo = null;
 			if(null != lstGroupName) {
 				 for(String gname:lstGroupName) {
-					 logger.info("拆分后的分组名称【"+gname +"】" );
+					 logger.info("拆分后的分组名称【"+gname +"】部门ID【"+instId+"】" );
 					 if(notCommitInfo == null) {
 					 notCommitInfo = queryNotCommitUser(gname, reportPreday);
 					 
@@ -62,12 +64,10 @@ public class InforQuaterz implements Job {
 				WeiXinUtil weiXinUtil = new WeiXinUtil();
 				if ("".equals(notCommitInfo)) {
 					msgContent =notCommitInfo;
-					weiXinUtil.SendTextcardMessage("ZhaoZuLong", msgContent);
-					weiXinUtil.SendTextcardMessage(infoUserCode, msgContent);
+					weiXinUtil.SendTextcardMessage("",instId,msgContent);
 				} else {
 					msgContent = notCommitInfo;
-					weiXinUtil.SendTextcardMessage("ZhaoZuLong", msgContent);
-					weiXinUtil.SendTextcardMessage(infoUserCode, msgContent);
+					weiXinUtil.SendTextcardMessage("",instId, msgContent);
 				}
 			}
 			
@@ -94,6 +94,7 @@ public class InforQuaterz implements Job {
 			String wxGroupName = wxUserGroup.getGroupCname();
 			Map<String, Object> infUser = new HashMap<String, Object>();
 			infUser.put("userCode", wxUserGroup.getUserCode());
+			infUser.put("instid", wxUserGroup.getInstId());
 			if ("".equals(wxGroupName) || null == wxGroupName) {
 
 			} else {

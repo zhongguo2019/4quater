@@ -179,7 +179,16 @@ public class SysUserService extends ServiceMybatis<SysUser> {
 	public SysUser verifyLogin(Map<String, Object> userInfo) {
 		return selectUserByName(userInfo.get("username").toString());
 	}
-	
+    /**
+     * 
+     * 验证用户的有效性
+     * 
+     *
+     */ 
+
+	public SysUser queryOneUser(Map<String, Object> userInfo) {
+		return sysUserMapper.queryOneUser(userInfo);
+	}	
 
 	public List<CommonEntity>getUserModule(Map<String, Object> userInfo) {
 		 List<CommonEntity> list =  sysUserMapper.getUserGroup(userInfo.get("username").toString());

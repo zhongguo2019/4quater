@@ -35,7 +35,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,6 +44,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import com.boot.util.DateUtils;
+import com.boot.util.RedisUtil;
 import com.boot.util.Result;
 import com.boot.util.SpringContextHolder;
 import com.boot.util.beetl.function.DictFunction;
@@ -70,15 +70,15 @@ public class WeiXinUtil {
 	// 获取access_token的接口地址（GET） 限200（次/天）
 	public final static String access_token_url = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={corpId}&corpsecret={corpsecret}";
 	// 获取jsapi_ticket的接口地址（GET） 限200（次/天）
-	public final static String jsapi_ticket_url = "https://qyapi.weixin.qq.com/cgi-bin/get_jsapi_ticket?access_token=ACCESSTOKEN";
-	//发送临时素材到指定的目录
-	public  static String uploadTempMaterial_url = "https://qyapi.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE";
+	public final static String jsapi_ticket_url = "https://qyapi.weixin.qq.com/cgi-bin/get_jsapi_ticket?";
+
 
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	SysUserService sysUserService = SpringContextHolder.getBean("sysUserService");
-
+	RedisUtil redisUtil = SpringContextHolder.getBean("redisUtil");
 	DoufuTodayWorkService doufuTodayWorkService = SpringContextHolder.getBean("doufuTodayWorkService");
 	DayReportUtil dayReportUtil = new DayReportUtil();
+
 	/**
 	 * 1.发起https请求并获取结果
 	 * 
@@ -145,7 +145,7 @@ public class WeiXinUtil {
 
 	/**
 	 * 2.发送https请求之获取临时素材
-	 * 
+	 **  从服务器上下载指定的文件
 	 * @param requestUrl
 	 * @param savePath   文件的保存路径，此时还缺一个扩展名
 	 * @return
@@ -211,7 +211,7 @@ public class WeiXinUtil {
 	}
 
 	/**
-	 * @desc ：2.微信上传素材的请求方法
+	 * @desc ：2.微信上传素材的请求方法,访问指定的地址，上传文件
 	 * 
 	 * @param requestUrl 微信上传临时素材的接口url
 	 * @param file       要上传的文件
@@ -224,6 +224,8 @@ public class WeiXinUtil {
 			// 1.建立连接
 			URL url = new URL(requestUrl);
 			HttpURLConnection httpUrlConn = (HttpURLConnection) url.openConnection(); // 打开链接
+			httpUrlConn.setReadTimeout(1000);
+			httpUrlConn.setConnectTimeout(15000);
 
 			// 1.1输入输出设置
 			httpUrlConn.setDoInput(true);
@@ -243,10 +245,11 @@ public class WeiXinUtil {
 			sb.append("--"); // 必须多两道线
 			sb.append(BOUNDARY);
 			sb.append("\r\n");
-			sb.append("Content-Disposition: form-data;name=\"media\";filelength=\"" + file.length() + "\";filename=\""
+			sb.append("Content-Disposition: form-data;name=\"media\";filelength=" + file.length() + ";filename=\""
 					+ file.getName() + "\"\r\n");
 			sb.append("Content-Type:application/octet-stream\r\n\r\n");
 			byte[] head = sb.toString().getBytes("utf-8");
+			log.info("向服务器写入文件流，服务器地址：【" + sb.toString() + "】");
 			// 获得输出流
 			OutputStream outputStream = new DataOutputStream(httpUrlConn.getOutputStream());
 			// 将表头写入输出流中：输出表头
@@ -261,6 +264,7 @@ public class WeiXinUtil {
 				outputStream.write(bufferOut, 0, bytes);
 			}
 			in.close();
+			log.info("向服务器写入文件流完成！" + requestUrl + "\n");
 			// 4.将结尾部分输出到微信服务器
 			byte[] foot = ("\r\n--" + BOUNDARY + "--\r\n").getBytes("utf-8");// 定义最后数据分隔线
 			outputStream.write(foot);
@@ -283,9 +287,11 @@ public class WeiXinUtil {
 			inputStream.close();
 			inputStream = null;
 			httpUrlConn.disconnect();
+			log.info("成功接收服务器反回消息【" + buffer.toString() + "】");
 
 		} catch (IOException e) {
 			System.out.println("发送POST请求出现异常！" + e);
+			log.info("发送POST请求出现异常！" + e.toString());
 			e.printStackTrace();
 		}
 		return buffer.toString();
@@ -293,6 +299,7 @@ public class WeiXinUtil {
 
 	/**
 	 * 2.发起http请求获取返回结果
+	 * 
 	 * 
 	 * @param requestUrl 请求地址
 	 * @return
@@ -346,6 +353,7 @@ public class WeiXinUtil {
 
 		String requestUrl = access_token_url.replace("{corpId}", appid).replace("{corpsecret}", appsecret);
 		JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
+
 		// 如果请求成功
 		if (null != jsonObject) {
 			try {
@@ -370,7 +378,7 @@ public class WeiXinUtil {
 	 */
 	public static String getJsapiTicket(String accessToken) {
 
-		String requestUrl = jsapi_ticket_url.replace("ACCESSTOKEN", accessToken);
+		String requestUrl = jsapi_ticket_url+"access_token="+accessToken;
 		JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
 
 		String jsapi_ticket = "";
@@ -389,15 +397,13 @@ public class WeiXinUtil {
 		return jsapi_ticket;
 	}
 
-	
-	
 	/**
 	 * 3.获取企业微信的JSSDK配置信息
 	 * 
 	 * @param request
 	 * @return
 	 */
-	public static  JSONObject getWxConfigJSON(HttpServletRequest request) {
+	public static JSONObject getWxConfigJSON(HttpServletRequest request) {
 		JSONObject wxConfig = new JSONObject();
 		// 1.准备好参与签名的字段
 		String nonceStr = UUID.randomUUID().toString(); // 必填，生成签名的随机串
@@ -434,6 +440,7 @@ public class WeiXinUtil {
 		wxConfig.put("signature", signature);
 		return wxConfig;
 	}
+
 	/**
 	 * 3.获取企业微信的JSSDK配置信息
 	 * 
@@ -512,14 +519,15 @@ public class WeiXinUtil {
 		return null;
 	}
 
-	
 	/*
 	 * 
-	 *  
+	 * 
 	 * 方法名： 收到消息处理的主方法
 	 * 
 	 * @param
+	 * 
 	 * @return
+	 * 
 	 * @throws @throws
 	 */
 	public String msgDeal(WXBizMsgCrypt wxcpt, String strMsgSig, String strTimeStamp, String strReqNonce,
@@ -551,108 +559,82 @@ public class WeiXinUtil {
 			strFromUser = root.getElementsByTagName("FromUserName").item(0).getTextContent().toString();
 			strToUser = root.getElementsByTagName("ToUserName").item(0).getTextContent().toString();
 			strMsgType = root.getElementsByTagName("MsgType").item(0).getTextContent().toString();
-			
-			//后台通过微信登录，得到sys_user表中的用户信息，放到session中。
+
+			// 后台通过微信登录，得到sys_user表中的用户信息，放到session中。
 			userInit(request, strFromUser);
-			
+
 			logger.info("用户操作的类型[" + strMsgType + "]");
 			if (strMsgType.equals("event")) {
-				
+
 				String strEventName = root.getElementsByTagName("Event").item(0).getTextContent().toString();
 				String strEvenKey = root.getElementsByTagName("EventKey").item(0).getTextContent().toString();
 				dayReportUtil.dealEvent(request, strEvenKey);
 			}
 
 			if (strMsgType.equals("text")) {
-				
+
 				strRtnMsgContent = WeiXinParamesUtil.msgHelp;
 				strMsgContent = root.getElementsByTagName("Content").item(0).getTextContent().toString();
-				logger.info("--------------用户提交的消息内容[\n" + strMsgContent + "\n]");			
+				logger.info("--------------用户提交的消息内容[\n" + strMsgContent + "\n]");
 				// 解析文本内容，字符开头以[日报]
-				if (justMsgTypeReport(strMsgContent,"[日报]")
-					||justMsgTypeReport(strMsgContent,"【日报】")
-					||justMsgTypeReport(strMsgContent,"日报")
-					||justMsgTypeReport(strMsgContent,"(日报)")		
-					||justMsgTypeReport(strMsgContent,"（日报）")						
-					) {
-					strRtnMsgContent=dayReportUtil.dealDayReportInsert( request, strMsgContent, strFromUser);
+				if (justMsgTypeReport(strMsgContent, "[日报]") || justMsgTypeReport(strMsgContent, "【日报】")
+						|| justMsgTypeReport(strMsgContent, "日报") || justMsgTypeReport(strMsgContent, "(日报)")
+						|| justMsgTypeReport(strMsgContent, "（日报）")) {
+					strRtnMsgContent = dayReportUtil.dealDayReportInsert(request, strMsgContent, strFromUser);
 				}
-				
+
 				// 解析文本内容，字符开头以[补报]
-				if (justMsgTypeReport(strMsgContent,"[补报]")
-						||justMsgTypeReport(strMsgContent,"[补报]")
-						||justMsgTypeReport(strMsgContent,"【补报】")
-						||justMsgTypeReport(strMsgContent,"(补报)")		
-						||justMsgTypeReport(strMsgContent,"（补报）")							
-						||justMsgTypeReport(strMsgContent,"补报")								
-						) {
+				if (justMsgTypeReport(strMsgContent, "[补报]") || justMsgTypeReport(strMsgContent, "[补报]")
+						|| justMsgTypeReport(strMsgContent, "【补报】") || justMsgTypeReport(strMsgContent, "(补报)")
+						|| justMsgTypeReport(strMsgContent, "（补报）") || justMsgTypeReport(strMsgContent, "补报")) {
 					strRtnMsgContent = WeiXinParamesUtil.dayReportFormatAdd;
-					strRtnMsgContent=dayReportUtil.dealDayReportAdd( request, strMsgContent, strFromUser);
+					strRtnMsgContent = dayReportUtil.dealDayReportAdd(request, strMsgContent, strFromUser);
 				}
-				
-				
+
 				// 解析文本内容，字符开头以[查询]
-				if (justMsgTypeReport(strMsgContent,"[查询]")
-					||justMsgTypeReport(strMsgContent,"【查询】")
-					||justMsgTypeReport(strMsgContent,"（查询）")
-					||justMsgTypeReport(strMsgContent,"［查询］")
-					||justMsgTypeReport(strMsgContent,"(查询)")	
-					||justMsgTypeReport(strMsgContent,"查询")) {
-					strRtnMsgContent=dayReportUtil.dealDayReportQuery( request, strMsgContent, strFromUser);
-				}				
-				
-
-				
-				// 解析文本内容，字符开头以[帮助]
-				if (justMsgTypeReport(strMsgContent,"[帮助]")
-					||justMsgTypeReport(strMsgContent,"【帮助】")
-					||justMsgTypeReport(strMsgContent,"（帮助）")
-					||justMsgTypeReport(strMsgContent,"［帮助］")
-					||justMsgTypeReport(strMsgContent,"(帮助)")	
-					||justMsgTypeReport(strMsgContent,"帮助")) {
-					//提示信息还没有完成
-					strRtnMsgContent=WeiXinParamesUtil.helpInfor;
-				}				
-
-				
-				
-				// 解析文本内容，字符开头以[调阅小组]
-				if (justMsgTypeReport(strMsgContent,"[调阅小组]")
-					||justMsgTypeReport(strMsgContent,"【调阅小组】")
-					||justMsgTypeReport(strMsgContent,"（调阅小组）")
-					||justMsgTypeReport(strMsgContent,"［调阅小组］")
-					||justMsgTypeReport(strMsgContent,"(调阅小组)")	
-					||justMsgTypeReport(strMsgContent,"调阅小组")) {
-					//提示信息还没有完成
-					//strRtnMsgContent=WeiXinParamesUtil.helpInfor;
-				}				
-				
-				// 解析文本内容，字符开头以[调阅成员]
-				if (justMsgTypeReport(strMsgContent,"调阅成员]")
-					||justMsgTypeReport(strMsgContent,"【调阅成员】")
-					||justMsgTypeReport(strMsgContent,"（调阅成员）")
-					||justMsgTypeReport(strMsgContent,"［调阅成员］")
-					||justMsgTypeReport(strMsgContent,"(调阅成员)")	
-					||justMsgTypeReport(strMsgContent,"调阅成员")) {
-					//提示信息还没有完成
-					//strRtnMsgContent=WeiXinParamesUtil.helpInfor;
+				if (justMsgTypeReport(strMsgContent, "[查询]") || justMsgTypeReport(strMsgContent, "【查询】")
+						|| justMsgTypeReport(strMsgContent, "（查询）") || justMsgTypeReport(strMsgContent, "［查询］")
+						|| justMsgTypeReport(strMsgContent, "(查询)") || justMsgTypeReport(strMsgContent, "查询")) {
+					strRtnMsgContent = dayReportUtil.dealDayReportQuery(request, strMsgContent, strFromUser);
 				}
-				
+
+				// 解析文本内容，字符开头以[帮助]
+				if (justMsgTypeReport(strMsgContent, "[帮助]") || justMsgTypeReport(strMsgContent, "【帮助】")
+						|| justMsgTypeReport(strMsgContent, "（帮助）") || justMsgTypeReport(strMsgContent, "［帮助］")
+						|| justMsgTypeReport(strMsgContent, "(帮助)") || justMsgTypeReport(strMsgContent, "帮助")) {
+					// 提示信息还没有完成
+					strRtnMsgContent = WeiXinParamesUtil.helpInfor;
+				}
+
+				// 解析文本内容，字符开头以[调阅小组]
+				if (justMsgTypeReport(strMsgContent, "[调阅小组]") || justMsgTypeReport(strMsgContent, "【调阅小组】")
+						|| justMsgTypeReport(strMsgContent, "（调阅小组）") || justMsgTypeReport(strMsgContent, "［调阅小组］")
+						|| justMsgTypeReport(strMsgContent, "(调阅小组)") || justMsgTypeReport(strMsgContent, "调阅小组")) {
+					// 提示信息还没有完成
+					// strRtnMsgContent=WeiXinParamesUtil.helpInfor;
+				}
+
+				// 解析文本内容，字符开头以[调阅成员]
+				if (justMsgTypeReport(strMsgContent, "调阅成员]") || justMsgTypeReport(strMsgContent, "【调阅成员】")
+						|| justMsgTypeReport(strMsgContent, "（调阅成员）") || justMsgTypeReport(strMsgContent, "［调阅成员］")
+						|| justMsgTypeReport(strMsgContent, "(调阅成员)") || justMsgTypeReport(strMsgContent, "调阅成员")) {
+					// 提示信息还没有完成
+					strRtnMsgContent = dayReportUtil.dealQueryDownLoad(request, strMsgContent, strFromUser);
+					// return strRtnMsgContent;
+
+				}
+
 				// 解析文本内容，字符开头以[报告下载]
-				if (justMsgTypeReport(strMsgContent,"[报告下载]")
-					||justMsgTypeReport(strMsgContent,"【报告下载】")
-					||justMsgTypeReport(strMsgContent,"（报告下载）")
-					||justMsgTypeReport(strMsgContent,"［报告下载］")
-					||justMsgTypeReport(strMsgContent,"(报告下载)")	
-					||justMsgTypeReport(strMsgContent,"报告下载")) {
-					
-					strRtnMsgContent=dayReportUtil.dealDayReportDownLoad( request, strMsgContent, strFromUser);
-					//提示信息还没有完成
-					//strRtnMsgContent=WeiXinParamesUtil.helpInfor;
-					return strRtnMsgContent;
-				}								
-				
-				
+				if (justMsgTypeReport(strMsgContent, "[报告下载]") || justMsgTypeReport(strMsgContent, "【报告下载】")
+						|| justMsgTypeReport(strMsgContent, "（报告下载）") || justMsgTypeReport(strMsgContent, "［报告下载］")
+						|| justMsgTypeReport(strMsgContent, "(报告下载)") || justMsgTypeReport(strMsgContent, "报告下载")) {
+
+					strRtnMsgContent = dayReportUtil.dealDayReportDownLoad(request, strMsgContent, strFromUser);
+					// 提示信息还没有完成
+					// strRtnMsgContent=WeiXinParamesUtil.helpInfor;
+					// return strRtnMsgContent;
+				}
+
 				strRtnMsg = buildRtnMsg(strFromUser, WeiXinParamesUtil.corpId, strTimStamp, strRtnMsgContent,
 						strRtnMsgID, WeiXinParamesUtil.agentId);
 			}
@@ -663,19 +645,15 @@ public class WeiXinUtil {
 			e.printStackTrace();
 		}
 		String sRespData = strRtnMsg;
-		logger.info("回复串加密前:\n " + sRespData);
+//		logger.info("回复串加密前:\n " + sRespData);
 		String sEncryptMsg = null;
 		if (null != sRespData) {
 			sEncryptMsg = wxcpt.EncryptMsg(sRespData, strTimeStamp, strReqNonce);
-			logger.info("回复串加密后:\n " + sEncryptMsg);
+//			logger.info("回复串加密后:\n " + sEncryptMsg);
 		}
 		return sEncryptMsg;
 	}
-	
-	
-	
-	
-	
+
 	/**
 	 * 
 	 * 判断用户请求文本类型是否包含指定的字符
@@ -683,27 +661,27 @@ public class WeiXinUtil {
 	 * @param text
 	 * @return
 	 */
-	public static boolean justMsgTypeReport(String text,String findstr) {
+	public static boolean justMsgTypeReport(String text, String findstr) {
 		String[] contentArray = text.trim().split("\n");
 		int ipos = text.indexOf(findstr);
-		if (ipos==0) {
+		if (ipos == 0) {
 			return true;
-			
+
 		}
-		
-     	if(contentArray.length!=0) {
-	     String strline1= contentArray[0].toString();
-	    if( strline1.trim().indexOf(findstr)<0) {
-		    
-	    }else {
-	    	 return true;
-	    }
+
+		if (contentArray.length != 0) {
+			String strline1 = contentArray[0].toString();
+			if (strline1.trim().indexOf(findstr) < 0) {
+
+			} else {
+				return true;
+			}
 
 		}
 		return false;
 	}
 
-	public  void userInit(HttpServletRequest request, String username) {
+	public void userInit(HttpServletRequest request, String username) {
 		Map<String, Object> userInfo = new HashMap<String, Object>();
 		userInfo.put("username", username);
 		SysUser sysuserQuery = sysUserService.verifyLogin(userInfo);
@@ -711,10 +689,10 @@ public class WeiXinUtil {
 			String projectGroupId = "";
 			projectGroupId = sysUserService.getProjectGroupId(userInfo);
 			if (null == projectGroupId) {
-				projectGroupId="zt_usergroup";
+				projectGroupId = "zt_usergroup";
 			}
 			sysuserQuery.setProjectGroupId(projectGroupId);
-			String remoteIP="";
+			String remoteIP = "";
 			try {
 				remoteIP = getIpAddress(request);
 			} catch (IOException e) {
@@ -724,8 +702,8 @@ public class WeiXinUtil {
 			sysuserQuery.setLoginIp(remoteIP);
 
 			request.getSession().setAttribute(Constant.SESSION_LOGIN_USERNAME, username);
-			request.getSession().setAttribute(Constant.SESSION_LOGIN_USER, sysuserQuery);		
-			
+			request.getSession().setAttribute(Constant.SESSION_LOGIN_USER, sysuserQuery);
+
 			logger.info("通过微信登录到系统后台，将用户信息存储到全局的session中");
 
 		} else {
@@ -733,8 +711,19 @@ public class WeiXinUtil {
 		}
 
 	}
-	
-	
+
+	public SysUser getUserInfo(String username) {
+		Map<String, Object> userInfo = new HashMap<String, Object>();
+		userInfo.put("name", username);
+		SysUser sysuserQuery = sysUserService.queryOneUser(userInfo);
+		if (sysuserQuery != null) {
+			return sysuserQuery;
+		} else {
+			return null;
+		}
+
+	}
+
 	/**
 	 * 根据要发送给的用户信息内容组织返回给用户的XML内容
 	 * 
@@ -751,150 +740,185 @@ public class WeiXinUtil {
 		return strRtnMsg;
 
 	}
-	
+
 	/**
-     * 获取请求主机IP地址,如果通过代理进来，则透过防火墙获取真实IP地址;
-     * 
-     * @param request
-     * @return
-     * @throws IOException
-     */
-    public final static String getIpAddress(HttpServletRequest request) throws IOException {
-        // 获取请求主机IP地址,如果通过代理进来，则透过防火墙获取真实IP地址
+	 * 获取请求主机IP地址,如果通过代理进来，则透过防火墙获取真实IP地址;
+	 * 
+	 * @param request
+	 * @return
+	 * @throws IOException
+	 */
+	public final static String getIpAddress(HttpServletRequest request) throws IOException {
+		// 获取请求主机IP地址,如果通过代理进来，则透过防火墙获取真实IP地址
 
-        String ip = request.getHeader("X-Forwarded-For");
-   
+		String ip = request.getHeader("X-Forwarded-For");
 
-        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getHeader("Proxy-Client-IP");
-            }
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getHeader("WL-Proxy-Client-IP");
-            }
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getHeader("HTTP_CLIENT_IP");
-            }
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getHeader("HTTP_X_FORWARDED_FOR");
-              }
-            if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-                ip = request.getRemoteAddr();
-            }
-        } else if (ip.length() > 15) {
-            String[] ips = ip.split(",");
-            for (int index = 0; index < ips.length; index++) {
-                String strIp = (String) ips[index];
-                if (!("unknown".equalsIgnoreCase(strIp))) {
-                    ip = strIp;
-                    break;
-                }
-            }
-        }
-        return ip;
-    }
-    
-    /**
-     * @desc ：上传临时素材
-     *  
-     * @param accessToken   接口访问凭证 
-     * @param type   媒体文件类型，分别有图片（image）、语音（voice）、视频（video），普通文件(file) 
-     * @param fileUrl  本地文件的url。例如 "D/1.img"。
-     * @return JSONObject   上传成功后，微信服务器返回的参数，有type、media_id    、created_at
-     */
-    public static JSONObject uploadTempMaterial(String accessToken,String type,String fileUrl){
-        //1.创建本地文件
-        File file=new File(fileUrl);
-        
-        //2.拼接请求url
-        uploadTempMaterial_url=uploadTempMaterial_url.replace("ACCESS_TOKEN", accessToken)
-                .replace("TYPE", type);
-        
-        //3.调用接口，发送请求，上传文件到微信服务器
-        String result=WeiXinUtil.httpRequest(uploadTempMaterial_url, file);
-        
-        //4.json字符串转对象：解析返回值，json反序列化
-        result = result.replaceAll("[\\\\]", "");
-        System.out.println("result:" + result);
-        JSONObject resultJSON = JSONObject.fromObject(result);
-        
-        //5.返回参数判断
-        if (resultJSON != null) {
-            if (resultJSON.get("media_id") != null) {
-                System.out.println("上传" + type + "永久素材成功");
-                return resultJSON;
-            } else {
-                System.out.println("上传" + type + "永久素材失败");
-            }
-        }
-        return null;
-    }
-    
-    //2.发送文本卡片消息
-   
-    public void SendTextcardMessage(String toUser,String msgContent){
-        //0.设置消息内容
-        String content=msgContent;
+		if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+			if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+				ip = request.getHeader("Proxy-Client-IP");
+			}
+			if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+				ip = request.getHeader("WL-Proxy-Client-IP");
+			}
+			if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+				ip = request.getHeader("HTTP_CLIENT_IP");
+			}
+			if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+				ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+			}
+			if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+				ip = request.getRemoteAddr();
+			}
+		} else if (ip.length() > 15) {
+			String[] ips = ip.split(",");
+			for (int index = 0; index < ips.length; index++) {
+				String strIp = (String) ips[index];
+				if (!("unknown".equalsIgnoreCase(strIp))) {
+					ip = strIp;
+					break;
+				}
+			}
+		}
+		return ip;
+	}
 
-        //1.创建文本消息对象
-        TextMessage message=new TextMessage();
-        //1.1非必需
-        message.setTouser(toUser);  //不区分大小写
-        //textMessage.setToparty("1");
-        //txtMsg.setTotag(totag);
-        //txtMsg.setSafe(0);
+	/**
+	 * @desc ：上传临时素材
+	 * 
+	 * @param accessToken 接口访问凭证
+	 * @param type        媒体文件类型，分别有图片（image）、语音（voice）、视频（video），普通文件(file)
+	 * @param fileUrl     本地文件的url。例如 "D/1.img"。
+	 * @return JSONObject 上传成功后，微信服务器返回的参数，有type、media_id 、created_at
+	 */
+	public static JSONObject uploadTempMaterial(String type, String fileUrl) {
+		WeiXinUtil weiXinUtil = new WeiXinUtil();
+		// 1.创建本地文件
+		File file = new File(fileUrl);
+		String accessToken = weiXinUtil.getRedisToken().toString();
 
-        //1.2必需
-        message.setMsgtype("text");
-        message.setAgentid(WeiXinParamesUtil.agentId);
+		// 2.拼接请求url
 
-        Text text=new Text();
-        text.setContent(content);
-        message.setText(text);
+		String str_uploadurl = "https://qyapi.weixin.qq.com/cgi-bin/media/upload?";
+		log.info("uploadTempMaterial上传文件时请求的地址得到的redis token【" + accessToken + "");
+		str_uploadurl = str_uploadurl + "access_token=" + accessToken + "&type=" + "file";
+		log.info("uploadTempMaterial上传文件时请求的地址得到的uploadTempMaterial_url【" + str_uploadurl + "");
 
-        //2.获取access_token:根据企业id和通讯录密钥获取access_token,并拼接请求url
-        String accessToken= WeiXinUtil.getAccessToken(WeiXinParamesUtil.corpId, WeiXinParamesUtil.agentSecret).getToken();
-        System.out.println("accessToken:"+accessToken);
+		// 3.调用接口，发送请求，上传文件到微信服务器
+		String result = WeiXinUtil.httpRequest(str_uploadurl, file);
+		// 4.json字符串转对象：解析返回值，json反序列化
+		result = result.replaceAll("[\\\\]", "");
+		System.out.println("result:" + result);
+		JSONObject resultJSON = JSONObject.fromObject(result);
+		int errcode = resultJSON.getInt("errcode");
 
-        //3.发送消息：调用业务类，发送消息
-        SendMessageService sms=new SendMessageService();
-        sms.sendMessage(accessToken, message);
+		// 5.返回参数判断
+		if (resultJSON != null) {
 
-    }
-    
-    public static String  getTencentUserInfo(String code){
-      
-        //2.获取access_token:根据企业id和通讯录密钥获取access_token,并拼接请求url
-        String accessToken= WeiXinUtil.getAccessToken(WeiXinParamesUtil.corpId, WeiXinParamesUtil.agentSecret).getToken();
+			if (errcode == 40014) {
+				log.info("上传共享文件时，发现token失效，重新调用方法设定redis token" + resultJSON.toString());
+				weiXinUtil.setRedisToken();
+			}
 
-    	//String accessToken = wxAppJSAPIUtil.getTencentToken();
-        String userInfo =wxAppJSAPIUtil.getTencentUserInfo(code,accessToken);
-        return userInfo;
+			if (resultJSON.get("media_id") != null) {
+				System.out.println("上传" + type + "永久素材成功");
+				return resultJSON;
+			} else {
+				System.out.println("上传" + type + "永久素材失败");
+			}
+		}
+		return null;
+	}
 
-    }
-    
-    
-    
-   
-    public static void SendFileMessage(String media_id,String type,String accessToken,String toUser){
-        //1.创建文件对象
-        FileMessage message=new FileMessage();
-        //1.1非必需
-        message.setTouser(toUser);  //不区分大小写
-        //textMessage.setToparty("1");
-        //txtMsg.setTotag(totag);
-        //txtMsg.setSafe(0);
-        String accessTokenlocal= WeiXinUtil.getAccessToken(WeiXinParamesUtil.corpId, WeiXinParamesUtil.agentSecret).getToken();
-        //1.2必需
-        message.setMsgtype(type);
-        message.setAgentid(WeiXinParamesUtil.agentId);
+	// 2.发送文本卡片消息
 
-        Media file=new Media();
-        file.setMedia_id(media_id);
-        message.setFile(file);
-        //3.发送消息：调用业务类，发送消息
-        SendMessageService sms=new SendMessageService();
-        sms.sendMessage(accessTokenlocal, message);
+	public void SendTextcardMessage(String toUser, String toParty,String msgContent) {
+		// 0.设置消息内容
+		String content = msgContent;
 
-    }
+		// 1.创建文本消息对象
+		TextMessage message = new TextMessage();
+		
+		//消息接收者，具体人员为空，则发给指定的部门ID
+		if("".equals(toUser)) {
+			message.setToparty(toParty);	
+		}else {
+
+			message.setTouser(toUser); // 不区分大小写
+		}
+
+
+		// 1.2必需
+		message.setMsgtype("text");
+		message.setAgentid(WeiXinParamesUtil.agentId);
+
+		Text text = new Text();
+		text.setContent(content);
+		message.setText(text);
+
+    	// 3.发送消息：调用业务类，发送消息
+		SendMessageService sms = new SendMessageService();
+		sms.sendMessage(message);
+
+	}
+
+	public static String getTencentUserInfo(String code) {
+
+		// 2.获取access_token:根据企业id和通讯录密钥获取access_token,并拼接请求url
+		String accessToken = WeiXinUtil.getAccessToken(WeiXinParamesUtil.corpId, WeiXinParamesUtil.agentSecret)
+				.getToken();
+
+		// String accessToken = wxAppJSAPIUtil.getTencentToken();
+		String userInfo = wxAppJSAPIUtil.getTencentUserInfo(code, accessToken);
+		return userInfo;
+
+	}
+
+	public static void SendFileMessage(String media_id, String type, String accessToken, String toUser) {
+		// 1.创建文件对象
+		FileMessage message = new FileMessage();
+		// 1.1非必需
+		message.setTouser(toUser); // 不区分大小写
+		// textMessage.setToparty("1");
+		// txtMsg.setTotag(totag);
+		// txtMsg.setSafe(0);
+		// String accessTokenlocal= WeiXinUtil.getAccessToken(WeiXinParamesUtil.corpId,
+		// WeiXinParamesUtil.agentSecret).getToken();
+		String accessTokenlocal = accessToken;
+		// 1.2必需
+		message.setMsgtype(type);
+		message.setAgentid(WeiXinParamesUtil.agentId);
+
+		Media file = new Media();
+		file.setMedia_id(media_id);
+		message.setFile(file);
+		// 3.发送消息：调用业务类，发送消息
+		SendMessageService sms = new SendMessageService();
+		sms.sendMessage(message);
+
+	}
+
+	public boolean setRedisToken() {
+		AccessToken accessToken = new AccessToken();
+		accessToken = WeiXinUtil.getAccessToken(WeiXinParamesUtil.corpId, WeiXinParamesUtil.agentSecret);
+		logger.info("向企业微信申请token 放到redis 中【" + accessToken.getToken() + "】 获取时间【" + DateUtils.getDateTime() + "】");
+		redisUtil.del("token");
+		// return redisUtil.set("token",accessToken,accessToken.getExpiresIn());
+		return redisUtil.set("token", accessToken, 3600);
+	}
+
+	public String getRedisToken() {
+		AccessToken accessToken = new AccessToken();
+		accessToken = (AccessToken) redisUtil.get("token");
+		String accessTokenValue = "";
+		if (null != accessToken) {
+			accessTokenValue = accessToken.getToken();
+			logger.info("从redis中获取 token【" + accessToken.getToken() + "】");
+		} else {
+			logger.info("获取redis 中的token为空！");
+		}
+
+		return accessTokenValue;
+
+	}
+
 }

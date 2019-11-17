@@ -512,10 +512,13 @@ public class BaseAction {
 	@RequestMapping("/wxconnect")
 	@ResponseBody
 	String getWXConnect(HttpServletRequest request) throws Exception {
-
-		logger.info("------------------------------企业微信发来调用消息,处理开始------------------------------！");
+		WeiXinUtil weiXinUtil = new WeiXinUtil();
+		
+	//	logger.info("------------------------------企业微信发来调用消息,处理开始------------------------------！");
 		WXBizMsgCrypt wxcpt = new WXBizMsgCrypt(WeiXinParamesUtil.token, WeiXinParamesUtil.encodingAESKey,
 				WeiXinParamesUtil.corpId);
+		
+		
 		Map<String, Object> paramter = HttpUtil.getParameterMap(request);
 		String strMsgSig = HttpUtil.getDefaultKeyString(paramter, "msg_signature");
 		String strTimeStamp = HttpUtil.getDefaultKeyString(paramter, "timestamp");
@@ -527,7 +530,7 @@ public class BaseAction {
 	
 		//后台通过微信登录，得到sys_user表中的用户信息，放到session中。
 		if (null != paramter.get("echostr")) {
-			logger.info("------------------------------验证连接服务器地址,处理开始------------------------------！");
+	//		logger.info("------------------------------验证连接服务器地址,处理开始------------------------------！");
 			try {
 				strRtnEchoStr = wxcpt.VerifyURL(strMsgSig, strTimeStamp, strReqNonce, strEchostr);
 				// System.out.println("服务器验证成功，返回的明文: " + strRtnEchoStr);
@@ -538,53 +541,29 @@ public class BaseAction {
 				e.printStackTrace();
 				strRtnEchoStr = "------------------------------签名验证错误！------------------------------";
 			}
-			logger.info("------------------------------验证连接服务器地址,处理结束------------------------------！");
+		//	logger.info("------------------------------验证连接服务器地址,处理结束------------------------------！");
 			return strRtnEchoStr;
 		}
 
 		String strReqData = HttpUtil.getPostStringData(request);
-		//String strReqData =HttpHelper.getBodyString(request);
 		if ("".equals(strReqData) || null != strReqData) {
-			logger.info("------------------------------企业微信发来调用消息, 开处理-------------------");
-			WeiXinUtil weiXinUtil = new WeiXinUtil();
+//			logger.info("------------------------------企业微信发来调用消息, 开处理-------------------");
 			strRtnEchoStr = weiXinUtil.msgDeal(wxcpt, strMsgSig, strTimeStamp, strReqNonce, strReqData, request);
-			logger.info(
-					"------------------------------企业微信发来调用消息, 处理结束 -----------------\n 返回值 \n" + strRtnEchoStr + "");
 		}
+		/* logger.info("返回消息内容："+strRtnEchoStr); */
 		return strRtnEchoStr;
+		
 
 	}
 
 	@RequestMapping("/wxfirstpage")
 	String WXLogin(HttpServletRequest request) throws Exception {
-		logger.info("------------------------------企业微信发来调用消息,处理开始------------------------------！");
-		WXBizMsgCrypt wxcpt = new WXBizMsgCrypt(WeiXinParamesUtil.token, WeiXinParamesUtil.encodingAESKey,
-				WeiXinParamesUtil.corpId);
-		Map<String, Object> paramter = HttpUtil.getParameterMap(request);
-		String strMsgSig = HttpUtil.getDefaultKeyString(paramter, "msg_signature");
-		String strTimeStamp = HttpUtil.getDefaultKeyString(paramter, "timestamp");
-		String strReqNonce = HttpUtil.getDefaultKeyString(paramter, "nonce");
-		String strEchostr = HttpUtil.getDefaultKeyString(paramter, "echostr");
-		logger.info("服务器验证时传过来的加密字符[" + strEchostr + "]");
-		String strRtnEchoStr = ""; // 需要返回的明文
-		request.getSession().setAttribute(Constant.SESSION_LOGIN_WXFLAG, "Y");
-		String strReqData = HttpUtil.getPostStringData(request);
-		if ("".equals(strReqData) || null != strReqData) {
-			logger.info("------------------------------企业微信发来调用消息, 开处理-------------------");
-			try {
-				String sDecMsg = wxcpt.DecryptMsg(strMsgSig, strTimeStamp, strReqNonce, strReqData);
-			} catch (Exception e) {
-				// TODO
-				// 解密失败，失败原因请查看异常
-				e.printStackTrace();
-			}
-		}
+	
 		return "main/outlookmenu";
 	}
 
 	@RequestMapping("/fourQuadrant")
 	String fourQuadrant(HttpServletRequest request) throws UnsupportedEncodingException {
-		// logger.info("企业微信发来调用消息！");
 		return "main/fourQuadrant";
 	}
 
@@ -593,8 +572,7 @@ public class BaseAction {
 	String wxAppJSAPIgetAppid(HttpServletRequest request) throws UnsupportedEncodingException {
         JSONObject wxConfig = new JSONObject();
 		 wxConfig = WeiXinUtil.getWxConfigJSON(request);
-
-		return  wxConfig.toString();
+		 return  wxConfig.toString();
 	}
 	
 	@RequestMapping("/wxgetJSSUser")

@@ -88,9 +88,22 @@
 		<include refid="sysUserColumns" />
 		from sys_user
 		<where>
-			<if test="@com.boot.util.Ognl@isNotBlank(username)"> and username = #{username} </if>
+			<if test="@com.boot.util.Ognl@isNotBlank(username)"> and username = #{username} </if>	
 		</where>
 		<!-- where username = #{userName} -->
+	</select>
+	
+	
+		<!-- 列表查询,返回的是实体-->
+	<select id="queryOneUser" resultType="com.boot.web.sys.model.SysUser">
+        select  <include refid="sysUserColumns" />
+			from sys_user
+		<where>
+			1=1
+			<if test="@com.boot.util.Ognl@isNotBlank(username)"> and username = #{username} </if>	
+			<if test="@com.boot.util.Ognl@isNotBlank(name)"> and name = #{name} </if>
+
+		</where>
 	</select>
 
 	<!-- 查询用户所属的组信息，一个用户可以属于多个小组，要求同一时间，这个人必须在指定的一个组里 -->
@@ -142,4 +155,8 @@
 			<if test="@com.boot.util.Ognl@isNotBlank(productid)"> and zt_product.id=#{productid} </if>
 		</where>
 	</select>
+	
+
+	
+	
 </mapper>
