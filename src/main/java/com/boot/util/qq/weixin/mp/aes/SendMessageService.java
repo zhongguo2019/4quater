@@ -37,6 +37,8 @@ public class SendMessageService {
         //2.获取请求的url  
         String url=sendMessage_url.replace("ACCESS_TOKEN", accessToken);
 
+        log.info("sendMessage url\n"+url);
+        log.info("sendMessage jsonMessage\n"+jsonMessage);
         //3.调用接口，发送消息
         JSONObject jsonObject = WeiXinUtil.httpRequest(url, "POST", jsonMessage);  
         
@@ -50,7 +52,7 @@ public class SendMessageService {
     		 
     	 }
             if (0 != jsonObject.getInt("errcode")) {  
-                log.error("消息发送失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));  
+             log.error("消息发送失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));  
             }  
         }  
     }

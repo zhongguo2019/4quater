@@ -73,7 +73,7 @@ public class QuatzConfig {
         SchedulerFactory sf = new StdSchedulerFactory();
         Scheduler sched = sf.getScheduler();
         JobDetail job = newJob(InforQuaterz.class).withIdentity("job2", "group1").build();
-        //每个周一到周六，早上8点整点激活任务，从明天早上9点开始
+        //每个周二到周六，早上8点整点激活任务，从明天早上9点开始
         Trigger trigger = newTrigger()
         		.startAt(DateBuilder.tomorrowAt(6, 0, 0))
         		.withIdentity("trigger2", "group1")

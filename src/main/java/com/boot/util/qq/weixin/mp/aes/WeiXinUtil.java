@@ -861,15 +861,12 @@ public class WeiXinUtil {
 
 	}
 
-	public static String getTencentUserInfo(String code) {
+	public  String getTencentUserInfo(String code) {
 
 		// 2.获取access_token:根据企业id和通讯录密钥获取access_token,并拼接请求url
-		String accessToken = WeiXinUtil.getAccessToken(WeiXinParamesUtil.corpId, WeiXinParamesUtil.agentSecret)
-				.getToken();
-
-		// String accessToken = wxAppJSAPIUtil.getTencentToken();
-		String userInfo = wxAppJSAPIUtil.getTencentUserInfo(code, accessToken);
-		return userInfo;
+		String accessToken = getRedisToken();
+		String userId = wxAppJSAPIUtil.getTencentUserInfo(code, accessToken);
+		return userId;
 
 	}
 
@@ -900,6 +897,10 @@ public class WeiXinUtil {
 	public boolean setRedisToken() {
 		AccessToken accessToken = new AccessToken();
 		accessToken = WeiXinUtil.getAccessToken(WeiXinParamesUtil.corpId, WeiXinParamesUtil.agentSecret);
+		if(accessToken.getToken()==null ||"".equals(accessToken.getToken())) {
+			logger.error("未能得到企业微信的token!");
+			return false;
+		}
 		logger.info("向企业微信申请token 放到redis 中【" + accessToken.getToken() + "】 获取时间【" + DateUtils.getDateTime() + "】");
 		redisUtil.del("token");
 		// return redisUtil.set("token",accessToken,accessToken.getExpiresIn());

@@ -335,7 +335,6 @@
 	
 		
 		<!-- 统计个人指定的时间段提交的日报日期列表 -->
-
 	<select id="countCommitTimes"
 		resultType="com.boot.util.CommonEntity">
          select
@@ -350,4 +349,19 @@
 			ORDER BY t.${sortC} ${order}
 		</if>
 	</select>
+	
+		<!-- 统计个人指定的时间段提交的日报日期列表 -->
+	<select id="countMonthCommitTimes"
+		resultType="com.boot.util.CommonEntity">
+         select 
+         COUNT(distinct doufu_today_work.REPORT_DATE) as  commitcount,
+         wx_user.name as username
+         from doufu_today_work,wx_user 
+		<where>
+		 doufu_today_work.REPORTER_NAME=wx_user.account 
+		<if test="@com.boot.util.Ognl@isNotBlank(reporterName)"> and wx_user.dept  like "%"#{groupname}"%" </if>
+		</where>
+
+		GROUP by doufu_today_work.REPORTER_NAME ORDER by commitcount desc 
+	</select>	
 </mapper>

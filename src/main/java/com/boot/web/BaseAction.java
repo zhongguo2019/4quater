@@ -578,16 +578,18 @@ public class BaseAction {
 	@RequestMapping("/wxgetJSSUser")
 	@ResponseBody
 	String wxgetJSSUser(HttpServletRequest request) throws UnsupportedEncodingException {
+		
 		String data = request.getParameter("data") == null ? "" : request.getParameter("data");
 	    String usercode = null;
 		String strRtn=null;
+		WeiXinUtil weiXinUtil = new WeiXinUtil();
 		if (!"".equals(data)) {
 
 			data= URLDecoder.decode(URLDecoder.decode(data, "utf-8"), "utf-8");
 			logger.info("前台传入的data【"+data+"】");		
 			//List<Map<String, Object>> list = (List<Map<String, Object>>) JsonHelper.decode(data);
 			
-			strRtn = 	WeiXinUtil.getTencentUserInfo(data);
+			strRtn = 	weiXinUtil.getTencentUserInfo(data);
 		}else {
 			logger.info("前台传入的code为空！");
 		}

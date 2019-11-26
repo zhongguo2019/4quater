@@ -40,6 +40,8 @@ public class InforQuaterz implements Job {
 		if(null == mplist) {
 			return;
 		}
+		
+		// 发送每天日报的提交情况，查询到未提交的人名单，按部门ID进行通知
 		for(int i=0;i<mplist.size();i++) {
 			Map<String, Object> mpinfoUser = mplist.get(i);
 			String infoUserCode = mpinfoUser.get("userCode").toString();
@@ -150,4 +152,8 @@ public class InforQuaterz implements Job {
 		return strRtn;
 
 	}
+	
+	
+	
+	
 }

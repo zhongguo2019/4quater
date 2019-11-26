@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,6 +24,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.github.pagehelper.PageInfo;
 import com.google.common.collect.Lists;
+import com.alibaba.fastjson.JSONObject;
 import com.boot.util.BaseController;
 import com.boot.util.CommonEntity;
 import com.boot.util.Result;
@@ -104,7 +106,29 @@ public class DoufuTodayWorkController extends BaseController {
 		PageInfo<CommonEntity> page = doufuTodayWorkService.queryPageInfo(params);
 		return page;
 	}
-	
+	/**
+	 * 添加或更新
+	 * @param params
+	 * @return
+	 * @throws UnsupportedEncodingException 
+	 */
+	@RequestMapping(value="wxworksave", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+	@ResponseBody
+	public Result wxWorkSave(@RequestBody JSONObject jsonParam) throws UnsupportedEncodingException{
+		
+		logger.info("开始保存当天工作记录信息表");
+		int count = 1;
+		String data = jsonParam.toJSONString();
+		logger.info("前台传入的data为【"+data+"】");
+		if (!"".equals(data)) {
+			logger.info("前台传入的data为【"+data+"】");
+			}
+		if(count > 0){
+			logger.info("保存当天工作记录信息表成功！");
+			return Result.successResult();
+		}
+		return Result.errorResult();
+	}	
 	/**
 	 * 添加或更新
 	 * @param params

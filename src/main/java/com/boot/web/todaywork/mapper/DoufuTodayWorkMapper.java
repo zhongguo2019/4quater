@@ -54,4 +54,10 @@ public interface DoufuTodayWorkMapper extends Mapper<DoufuTodayWork>{
 	 * 查询指定时间段内指定的用户的提交日期列表
 	 */
 	List<CommonEntity>  countCommitTimes(Map<String, Object> params);
+	
+	/**
+	 * 按月统计人员的提交日期次数
+	 */	
+	List<CommonEntity>  countMonthCommitTimes(Map<String, Object> params);
+	
 }

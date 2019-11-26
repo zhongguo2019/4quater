@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -238,7 +239,7 @@ public class UserServiceTest extends SpringTestCase {
 		 */
 	}
 	
-	//@Test
+	
 	public void testCountCommitTimes() {
 		
 		
@@ -251,9 +252,33 @@ public class UserServiceTest extends SpringTestCase {
 		List<CommonEntity>  lstResult = doufuTodayWorkService.countCommitTimes(queryMap);
 	    logger.info("提交的日期数量为："+lstResult.size());
 		
+	    Map<String, Object> commitTimeMap = new HashMap<String, Object>();
+	    commitTimeMap.put("bechalin", lstResult.size());
+	    
 	}
 	
 	@Test
+	public  void queryCommitTimes(){
+		 Map<String,Object> mpRtn = new TreeMap<>();
+		 
+		List<Map<String, Object>> mplist =  getInfoUser();
+		
+		if(null == mplist) {
+			return ;
+		}
+		for(int i=0;i<mplist.size();i++) {
+			Map<String,Object> mpinfoUser = mplist.get(i);
+			List<String> lstGroupName = (List<String>) mpinfoUser.get("groupList");
+
+			logger.info("查询需要通知的用户组名为:"+lstGroupName.get(0));
+
+			
+		}
+		return ;
+		
+	}
+	
+	//@Test
 	public void testQueryNotCommit() {
 		String reportToday = DateUtils.DateToStr8(new Date());
 		String reportPreday = DateUtils.getPreDateByDate8(reportToday);

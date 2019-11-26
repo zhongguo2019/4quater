@@ -44,7 +44,7 @@ public class AddressFilter implements Filter {
 
 		HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
 		HttpSession session = httpRequest.getSession();
-		HttpServletRequest hrequest = (HttpServletRequest) servletRequest;
+//		HttpServletRequest hrequest = (HttpServletRequest) servletRequest;
 		HttpServletResponseWrapper wrapper = new HttpServletResponseWrapper((HttpServletResponse) servletResponse);
 		SysUser sysuser = null;
 		String userName = null;
@@ -58,7 +58,7 @@ public class AddressFilter implements Filter {
 
 		if (null != session.getAttribute(Constant.SESSION_LOGIN_USERNAME)) {
 			userName = session.getAttribute(Constant.SESSION_LOGIN_USERNAME).toString();
-			userInit(hrequest, userName);
+			userInit(httpRequest, userName);
 		}
 
 		if (null != session.getAttribute(Constant.SESSION_LOGIN_USER)) {
@@ -177,6 +177,9 @@ public class AddressFilter implements Filter {
 		staticAllowAddr.add("setRedisToken");
 		staticAllowAddr.add("getRedisToken");
 		staticAllowAddr.add("wxapp");
+		staticAllowAddr.add("wxgetJSSConfig");
+		staticAllowAddr.add("wxgetJSSUser");
+		staticAllowAddr.add("wxworksave");
 	}
 
 	public final boolean isAllowAddr(String url) {
