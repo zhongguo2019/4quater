@@ -60,4 +60,9 @@ public interface DoufuTodayWorkMapper extends Mapper<DoufuTodayWork>{
 	 */	
 	List<CommonEntity>  countMonthCommitTimes(Map<String, Object> params);
 	
+	/**
+	 * 得到指定的人员的提交过日报的日期列表
+	 */	
+	List<CommonEntity>  getReportDateList(Map<String, Object> params);
+	
 }

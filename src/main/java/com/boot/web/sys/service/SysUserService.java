@@ -165,8 +165,8 @@ public class SysUserService extends ServiceMybatis<SysUser> {
      * 
      *
      */ 
-    public SysUser selectUserByName(String username) {
-		return sysUserMapper.selectUserByName(username);  
+    public SysUser selectUserByName(Map<String, Object> params) {
+		return sysUserMapper.selectUserByName( params);  
 	}
     
     /**
@@ -177,7 +177,7 @@ public class SysUserService extends ServiceMybatis<SysUser> {
      */ 
 
 	public SysUser verifyLogin(Map<String, Object> userInfo) {
-		return selectUserByName(userInfo.get("username").toString());
+		return selectUserByName(userInfo);
 	}
     /**
      * 

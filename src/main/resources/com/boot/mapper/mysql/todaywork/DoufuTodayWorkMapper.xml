@@ -364,4 +364,18 @@
 
 		GROUP by doufu_today_work.REPORTER_NAME ORDER by commitcount desc 
 	</select>	
+	
+			<!-- 统计个人指定的时间段提交的日报日期列表 -->
+	<select id="getReportDateList"
+		resultType="com.boot.util.CommonEntity">
+        select distinct report_date  as report_date
+        from  doufu_today_work 
+		<where>
+         REPORT_DATE  <![CDATA[ < ]]> current_date
+		<if test="@com.boot.util.Ognl@isNotBlank(reporterName)"> and REPORTER_NAME = #{reporterName} </if>
+		</where>
+		order by REPORT_DATE desc
+	</select>	
+	
+	
 </mapper>

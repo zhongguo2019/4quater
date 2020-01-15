@@ -22,7 +22,7 @@ public interface SysUserMapper extends Mapper<SysUser> {
     public List<CommonEntity> findPageInfo(Map<String, Object> params);
 
     public int saveUser(SysUser sysUser);
-    public SysUser selectUserByName(@Param("username") String username);  
+    public SysUser selectUserByName(Map<String, Object> params);  
     public List<CommonEntity>   getUserGroup(  @Param("username")  String username  );
     public List<CommonEntity>   getProdOfProj( @Param("projectname")  String projectname);
     public List<CommonEntity>   getModuOfProd(  @Param("productid") String productid);
