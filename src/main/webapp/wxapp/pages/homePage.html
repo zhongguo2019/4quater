@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="plugin/util/layui/css/layui.css">
+    <link rel="stylesheet" href="plugin/css/navigation.css">
+    <link rel="stylesheet" href="plugin/css/mescroll.min.css">
+    <title>我的项目</title>
+    <script src="plugin/js/jquery-3.4.1.min.js"></script>
+
+    <script src="plugin/js/jweixin-1.2.0.js"></script>
+    <script src="plugin/js/echarts.min.js"></script>
+    <script src="plugin/js/mescroll.min.js"></script>
+    <script src="plugin/util/layui/layui.js"></script>
+    <script src="plugin/js/Ajax.js"></script>
+</head>
+<style>
+    /* 导航栏样式 */
+    .mobile-inner-nav a {
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: returnToNormal;
+        animation-name: returnToNormal;
+    }
+
+
+    @-webkit-keyframes returnToNormal {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    @keyframes returnToNormal {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    .mescroll {
+        position: fixed;
+        top: 44px;
+        bottom: 0;
+        height: auto;
+        /*如设置bottom:50px,则需height:auto才能生效*/
+    }
+    .touchMove{
+        position: initial;
+    }
+</style>
+
+<body style="height: 100%">
+    <div class="layui-container" style="height: 90%;padding-top: 20px;">
+
+        <div class="layui-row">
+            <div class="layui-col-xs6" style="text-align: center">
+                <button type="button" class="layui-btn layui-btn-sm"
+                    style="width: 110px;background-color: #44a9fb">重要紧急</button>
+            </div>
+            <div class="layui-col-xs6" style="text-align: center">
+                <button type="button" class="layui-btn layui-btn-blue layui-btn-sm"
+                    style="width: 110px;background-color: #44a9fb">重要不紧急</button>
+            </div>
+        </div>
+
+        <div class="layui-row" style="margin-top: 10px">
+            <div class="layui-col-xs6" style="text-align: center">
+                <button type="button" class="layui-btn layui-btn-sm"
+                    style="width: 110px;background-color: #44a9fb">不重要紧急</button>
+            </div>
+            <div class="layui-col-xs6" style="text-align: center">
+                <button type="button" class="layui-btn layui-btn-sm"
+                    style="width: 110px;background-color: #44a9fb">不重要不紧急</button>
+            </div>
+        </div>
+
+        <!-- 列表 -->
+        <!-- <div id="allModel" style="height: 80%;margin-top: 15px;">
+            <table id="workList" lay-filter="test" lay-size="sm"></table>
+        </div> -->
+
+        <!-- id可以改,而"mescroll"的class不能删 -->
+        <div id="mescroll" class="mescroll" style="margin-top: 25px;position: initial;height: 80%">
+            <!-- 这个div不能删,否则上拉加载的布局会错位.(可以改成ul或者其他容器标签) -->
+            <div>
+                <!-- 内容 -->
+                <ul id="newsList">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!--
+    &lt;!&ndash; 底部菜单 &ndash;&gt;
+    <div
+        style="display:flex;background-color: #fdf9f9;height: 50px;position: fixed;width: 100%;align-items: center;bottom: 0px;">
+        <div style="text-align: center;width: 20%;">
+            <div style="margin-top: 8px;color: #44a9fb;">
+                首页
+            </div>
+            <div style="background-color: #44a9fb;width:80%;height:3px;margin: 0 auto;margin-top: 5px"></div>
+        </div>
+        <div id="insertButton" style="text-align: center;width: 20%">
+            录入
+        </div>
+        <div style="text-align: center;width: 20%">
+            <div id="addButton" style="
+            background-color: #44a9fb;
+            width: 50px;
+            font-size: 26px;
+            margin: 0 auto;
+            color: #ffffff;
+            padding-bottom: 3px;
+            border-radius: 6px;
+            ">
+                +
+            </div>
+        </div>
+        <div style="text-align: center;width: 20%">
+            查询
+        </div>
+        <div style="text-align: center;width: 20%">
+            我
+        </div>
+    </div>-->
+    <!-- 列表详情弹出层 -->
+<div class="mescroll touchMove layui-card" id="detailPage" style="display: none">
+    <!-- <div class="layui-card-header"></div> -->
+    <div class="layui-card-body">
+        <div>
+            项目名称：<span id="projectName"></span>
+        </div>
+
+        <div class="layui-row" style="margin-top: 20px">
+            <div class="layui-col-md9">
+                项目内容：
+            </div>
+            <div id="projectDetails" class="layui-col-md3">
+                
+            </div>
+        </div>
+        <div id="projectProgress" class="layui-col-md3">
+            完成进度：95%
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/homePage.js"></script></body>
+
+<!-- 弹出层模板 -->
+
+
+
+
+<!-- 菜单加号弹出层 -->
+
+<div class="layui-card" id="addButtonDetail" style="display: none">
+    <!-- <div class="layui-card-header"></div> -->
+    <div class="layui-card-body">
+        <div>
+            <button type="button" class="layui-btn layui-btn-sm"
+                style="width: 100%;height: 50px;background-color: #44a9fb;font-size: 20px;">项目图表</button>
+        </div>
+    </div>
+</div>
+
+</html>
+
+<script>
+    function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    }
+
+    if (typeof WeixinJSBridge == "undefined") {
+        if (document.addEventListener) {
+            document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if (document.attachEvent) {
+            document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+            document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+        }
+    } else {
+        onBridgeReady();
+    }
+</script>

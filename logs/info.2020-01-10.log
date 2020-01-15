@@ -1,0 +1,365 @@
+2020-01-10 09:24:34,068 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 21948 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-10 09:24:34,071 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2020-01-10 09:24:38,492 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-10 09:24:38,496 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-10 09:24:38,600 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85ms. Found 0 repository interfaces.
+2020-01-10 09:24:38,780 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-10 09:24:39,307 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$22fc1de0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-10 09:24:39,352 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$b464c400] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-10 09:24:40,375 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2020-01-10 09:24:40,391 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2020-01-10 09:24:40,404 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-10 09:24:40,405 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-01-10 09:24:40,787 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-01-10 09:24:40,794 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-10 09:24:40,794 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6646 ms
+2020-01-10 09:24:41,018 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-10 09:24:43,264 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-10 09:24:43,266 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-10 09:24:44,749 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-10 09:24:45,391 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-10 09:24:46,527 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-10 09:24:46,532 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-10 09:24:46,550 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-10 09:24:46,550 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-10 09:24:46,551 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-10 09:24:46,552 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-10 09:24:46,553 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-10 09:24:46,553 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-10 09:24:46,568 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-10 09:24:46,909 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-10 09:24:47,145 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2020-01-10 09:24:47,183 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-10 09:24:47,184 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-10 09:24:47,185 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-10 09:24:47,185 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-01-10 09:24:47,773 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-10 09:24:47,774 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-10 09:24:47,774 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-10 09:24:47,774 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-10 09:24:47,774 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-10 09:24:47,774 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-10 09:24:47,774 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-10 09:24:47,774 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@19d49942
+2020-01-10 09:24:47,838 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-10 09:24:48,013 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-10 09:24:48,013 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-10 09:24:49,258 [main] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 向企业微信申请token 放到redis 中【OUGU2e-P8mYn1Rjk_7kqpVUWx1a1fKKGa2oaFWCBHTrJkOJzwSCqGgLY-ksyTpHf1sgY4gBO6jIxtrdIVcgb3FcJnAGOGV_Jk3gfheAiCue_VRfL3x7ocgUxISJ34oS56SMpPNuw8LHgHwos0JdosYlzaLdRcBRskvOe7HX9ym6EfUye3wW6C0ttYWI60o-cC4WMLiaDuWUzhp9_AuHcsA】 获取时间【2020-01-10 09:24:49】
+2020-01-10 09:24:49,310 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2020-01-10 09:24:49,352 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2020-01-10 09:24:49,355 [main] INFO  com.boot.Application - Started Application in 15.966 seconds (JVM running for 16.53)
+2020-01-10 09:45:39,035 [http-nio-9080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1573995656,1574516734] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-01-10 09:45:39,047 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-10 09:45:39,047 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-10 09:45:39,063 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2020-01-10 09:45:39,100 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-10 09:45:39,100 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 09:45:39,558 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/reportview.js】
+2020-01-10 09:45:39,558 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 09:45:39,767 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSUser】
+2020-01-10 09:45:39,767 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 09:45:39,790 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 前台传入的data【D7sl5_UzrYRJo-oyn6XHhVaRU0YBPQ8oJfLZvX8Ysbk】
+2020-01-10 09:45:39,835 [http-nio-9080-exec-5] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 从redis中获取 token【OUGU2e-P8mYn1Rjk_7kqpVUWx1a1fKKGa2oaFWCBHTrJkOJzwSCqGgLY-ksyTpHf1sgY4gBO6jIxtrdIVcgb3FcJnAGOGV_Jk3gfheAiCue_VRfL3x7ocgUxISJ34oS56SMpPNuw8LHgHwos0JdosYlzaLdRcBRskvOe7HX9ym6EfUye3wW6C0ttYWI60o-cC4WMLiaDuWUzhp9_AuHcsA】
+2020-01-10 09:45:40,306 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 09:45:40,306 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 09:45:40,334 [http-nio-9080-exec-5] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo，url
+https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=OUGU2e-P8mYn1Rjk_7kqpVUWx1a1fKKGa2oaFWCBHTrJkOJzwSCqGgLY-ksyTpHf1sgY4gBO6jIxtrdIVcgb3FcJnAGOGV_Jk3gfheAiCue_VRfL3x7ocgUxISJ34oS56SMpPNuw8LHgHwos0JdosYlzaLdRcBRskvOe7HX9ym6EfUye3wW6C0ttYWI60o-cC4WMLiaDuWUzhp9_AuHcsA&code=D7sl5_UzrYRJo-oyn6XHhVaRU0YBPQ8oJfLZvX8Ysbk
+2020-01-10 09:45:40,357 [http-nio-9080-exec-5] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo,userInfoJson
+{"errcode":0,"UserId":"ZhaoZuLong","DeviceId":"ea28e094-b605-4f19-82da-aca332842c32","errmsg":"ok"}
+2020-01-10 09:45:40,394 [http-nio-9080-exec-4] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"","limit":10,"page":1,"startdate":"","userCode":"Zhaozulong","username":""}】
+2020-01-10 09:45:40,882 [http-nio-9080-exec-4] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 09:45:40,882 [http-nio-9080-exec-4] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【ZhaoZuLong】
+2020-01-10 09:45:40,883 [http-nio-9080-exec-4] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 09:45:40,972 [http-nio-9080-exec-4] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 09:45:41,010 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 09:45:41,032 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 09:45:41,033 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 09:45:41,033 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 09:45:41,041 [http-nio-9080-exec-6] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"","limit":10,"page":1,"startdate":"","userCode":"Zhaozulong","username":""}】
+2020-01-10 09:45:41,060 [http-nio-9080-exec-6] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 09:45:41,060 [http-nio-9080-exec-6] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【ZhaoZuLong】
+2020-01-10 09:45:41,060 [http-nio-9080-exec-6] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 09:45:41,076 [http-nio-9080-exec-6] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 09:48:43,624 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/】
+2020-01-10 09:48:43,643 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 过滤器判断前台地址是否为合法，得到的URL【/】
+2020-01-10 09:48:43,643 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 得到登录的地址的方法名称：prex[]
+2020-01-10 09:48:43,643 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 过滤器拦截，跳转到指定的首页：httpRequest.getRequestURI() /
+2020-01-10 09:48:43,643 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 过滤器拦截，跳转到指定的首页：应用要跳转到的界面为【 /main/loginlayout】
+2020-01-10 10:00:05,188 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-10 10:00:05,226 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:05,226 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:05,226 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:05,396 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/reportview.js】
+2020-01-10 10:00:05,413 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:05,413 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:05,413 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:06,119 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 10:00:06,157 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:06,157 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:06,157 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:06,166 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"","limit":10,"page":1,"startdate":"","userCode":"Zhaozulong","username":""}】
+2020-01-10 10:00:06,189 [http-nio-9080-exec-3] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 10:00:06,189 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【ZhaoZuLong】
+2020-01-10 10:00:06,189 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 10:00:06,212 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 10:00:21,252 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-10 10:00:21,278 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:21,278 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:21,278 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:21,328 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 10:00:21,660 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:21,660 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:21,660 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:21,676 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"2020-01-16","limit":10,"page":1,"startdate":"2020-01-09","userCode":"Zhaozulong","username":"许春林"}】
+2020-01-10 10:00:21,759 [http-nio-9080-exec-8] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 10:00:21,760 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 仅提供五天内查询数据，超出时间查询，请联系管理员！
+2020-01-10 10:00:21,791 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【bechalin】
+2020-01-10 10:00:21,792 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 10:00:21,846 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 10:00:36,433 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-10 10:00:36,460 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:36,460 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:36,460 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:36,655 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/layui.css】
+2020-01-10 10:00:36,678 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:36,678 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:36,678 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:36,907 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jquery-3.4.1.min.js】
+2020-01-10 10:00:36,918 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jweixin-1.2.0.js】
+2020-01-10 10:00:36,918 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/echarts.min.js】
+2020-01-10 10:00:37,085 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:37,085 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:37,085 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:37,103 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:37,103 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:37,103 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:37,212 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:37,212 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:37,212 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:37,289 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/layui.js】
+2020-01-10 10:00:37,306 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:37,306 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:37,306 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:00:37,388 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/reportview.js】
+2020-01-10 10:00:37,408 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:00:37,408 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:00:37,408 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:01:25,772 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-10 10:01:25,795 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:01:25,795 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:01:25,795 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:01:25,894 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/layui.css】
+2020-01-10 10:01:25,917 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:01:25,917 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:01:25,917 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:01:26,012 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/layui.css】
+2020-01-10 10:01:26,033 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:01:26,033 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:01:26,033 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:01:26,893 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 10:01:26,924 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:01:26,924 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:01:26,924 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:01:26,934 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"","limit":10,"page":1,"startdate":"","userCode":"Zhaozulong","username":""}】
+2020-01-10 10:01:26,955 [http-nio-9080-exec-10] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 10:01:26,956 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【ZhaoZuLong】
+2020-01-10 10:01:26,956 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 10:01:26,969 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 10:01:44,715 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 10:01:44,720 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-10 10:01:44,736 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:01:44,736 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:01:44,736 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:01:44,742 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:01:44,742 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:01:44,742 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:01:44,743 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"2020-01-09","limit":10,"page":1,"startdate":"2020-01-01","userCode":"Zhaozulong","username":"许春林"}】
+2020-01-10 10:01:44,766 [http-nio-9080-exec-3] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 10:01:44,767 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 仅提供五天内查询数据，超出时间查询，请联系管理员！
+2020-01-10 10:01:44,775 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【bechalin】
+2020-01-10 10:01:44,775 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 10:01:44,836 [http-nio-9080-exec-3] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 10:08:29,452 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 13976 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-10 10:08:29,455 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2020-01-10 10:08:34,212 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-10 10:08:34,216 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-10 10:08:34,333 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98ms. Found 0 repository interfaces.
+2020-01-10 10:08:34,520 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-10 10:08:35,059 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$efcce5dd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-10 10:08:35,117 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$81358bfd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-10 10:08:36,143 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2020-01-10 10:08:36,160 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2020-01-10 10:08:36,172 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-10 10:08:36,173 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-01-10 10:08:36,532 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-01-10 10:08:36,539 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-10 10:08:36,539 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7013 ms
+2020-01-10 10:08:36,759 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-10 10:08:39,194 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-10 10:08:39,198 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-10 10:08:40,796 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-10 10:08:41,625 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-10 10:08:42,805 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-10 10:08:42,812 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-10 10:08:42,839 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-10 10:08:42,839 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-10 10:08:42,841 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-10 10:08:42,843 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-10 10:08:42,843 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-10 10:08:42,843 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-10 10:08:42,870 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-10 10:08:43,310 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-10 10:08:43,537 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2020-01-10 10:08:43,582 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-10 10:08:43,583 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-10 10:08:43,584 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-10 10:08:43,585 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-01-10 10:08:44,280 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-10 10:08:44,281 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-10 10:08:44,281 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-10 10:08:44,281 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-10 10:08:44,282 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-10 10:08:44,282 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-10 10:08:44,282 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-10 10:08:44,282 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@251ad030
+2020-01-10 10:08:44,330 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-10 10:08:44,526 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-10 10:08:44,526 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-10 10:08:45,729 [main] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 向企业微信申请token 放到redis 中【rpwYv-z7ok4csaMzMNFmHD9NQ1SqqqQY2q0_-TLPVhfIvMYpzfcm4QNiQ8Wm7D6yiLd5DZWQ81-Rynr8Mus6esVuW1d3wmeNLI0VGAtl6JvIfXt-EjkumajyJgvD4nWZdYNIDqXTsd-tL_LVrITj4KufHM1DTuD3o7XKPbY1tpFmOX3GXUj1m0ykJDvKIgrNtzfBdgpS2b81X-E_hWQE7Q】 获取时间【2020-01-10 10:08:45】
+2020-01-10 10:08:45,800 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2020-01-10 10:08:45,843 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2020-01-10 10:08:45,848 [main] INFO  com.boot.Application - Started Application in 17.05 seconds (JVM running for 17.607)
+2020-01-10 10:10:54,191 [http-nio-9080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1573995656,1574516734; JSESSIONID=0CFFB273360E1E209F0B538D5834962A] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-01-10 10:10:54,201 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-10 10:10:54,201 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-10 10:10:54,213 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-01-10 10:10:54,244 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-10 10:10:54,244 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:10:54,707 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/reportview.js】
+2020-01-10 10:10:54,707 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:10:55,394 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 10:10:55,394 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:10:55,586 [http-nio-9080-exec-4] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"","limit":10,"page":1,"startdate":"","userCode":"Zhaozulong","username":""}】
+2020-01-10 10:10:55,761 [http-nio-9080-exec-4] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 10:10:55,761 [http-nio-9080-exec-4] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【ZhaoZuLong】
+2020-01-10 10:10:55,761 [http-nio-9080-exec-4] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 10:10:55,837 [http-nio-9080-exec-4] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 10:11:06,114 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 10:11:06,172 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:11:06,172 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:11:06,172 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:11:06,181 [http-nio-9080-exec-6] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"2020-01-10","limit":10,"page":1,"startdate":"2020-01-09","userCode":"Zhaozulong","username":"许春林"}】
+2020-01-10 10:11:06,213 [http-nio-9080-exec-6] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 10:11:06,298 [http-nio-9080-exec-6] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【bechalin】
+2020-01-10 10:11:06,299 [http-nio-9080-exec-6] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 10:11:06,402 [http-nio-9080-exec-6] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 10:11:18,736 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 10:11:20,380 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:11:20,380 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:11:20,380 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:11:20,391 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"2020-01-10","limit":5,"page":1,"startdate":"2020-01-09","userCode":"Zhaozulong","username":"许春林"}】
+2020-01-10 10:11:20,421 [http-nio-9080-exec-8] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 10:11:20,432 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【bechalin】
+2020-01-10 10:11:20,432 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 10:11:20,743 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 10:11:24,593 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 10:11:24,629 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:11:24,629 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:11:24,629 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:11:24,636 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"2020-01-10","limit":5,"page":2,"startdate":"2020-01-09","userCode":"Zhaozulong","username":"许春林"}】
+2020-01-10 10:11:24,652 [http-nio-9080-exec-10] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 10:11:24,672 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【bechalin】
+2020-01-10 10:11:24,672 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 10:11:24,739 [http-nio-9080-exec-10] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 10:11:31,434 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-10 10:11:31,470 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-10 10:11:31,470 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-10 10:11:31,470 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:11:31,478 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"enddate":"2020-01-10","limit":10,"page":1,"startdate":"2020-01-09","userCode":"Zhaozulong","username":"许春林"}】
+2020-01-10 10:11:31,718 [http-nio-9080-exec-2] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-10 10:11:31,985 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 要调阅的用户姓名【bechalin】
+2020-01-10 10:11:31,985 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始分页查询【当天工作记录信息表】数据，带动态权限========================#
+2020-01-10 10:11:32,136 [http-nio-9080-exec-2] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================动态权限查询成功！=================================#
+2020-01-10 10:15:41,891 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/index.html】
+2020-01-10 10:15:41,892 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,119 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/layui.css】
+2020-01-10 10:15:42,119 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,160 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jquery-3.4.1.min.js】
+2020-01-10 10:15:42,161 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,245 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/08.png】
+2020-01-10 10:15:42,245 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,270 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/01.png】
+2020-01-10 10:15:42,270 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,362 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/02.png】
+2020-01-10 10:15:42,363 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,379 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/03.png】
+2020-01-10 10:15:42,379 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,387 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/layui.js】
+2020-01-10 10:15:42,387 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,387 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/echarts.min.js】
+2020-01-10 10:15:42,388 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,533 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/06.png】
+2020-01-10 10:15:42,533 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,536 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/07.png】
+2020-01-10 10:15:42,536 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,536 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/04.png】
+2020-01-10 10:15:42,536 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,536 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/05.png】
+2020-01-10 10:15:42,537 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,596 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jweixin-1.2.0.js】
+2020-01-10 10:15:42,596 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,627 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/index.js】
+2020-01-10 10:15:42,628 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,832 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSConfig】
+2020-01-10 10:15:42,832 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,832 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/font/iconfont.woff2】
+2020-01-10 10:15:42,832 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,837 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/carousel.js】
+2020-01-10 10:15:42,837 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:42,982 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/form.js】
+2020-01-10 10:15:42,982 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:43,108 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/layer.js】
+2020-01-10 10:15:43,108 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:43,128 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSUser】
+2020-01-10 10:15:43,128 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:43,129 [http-nio-9080-exec-8] INFO  com.boot.web.BaseAction - 前台传入的data【lAznfMvehHPo1c5rH8eQNhHl1n_88j5IWeI2Y2gE2eY】
+2020-01-10 10:15:43,167 [http-nio-9080-exec-8] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 从redis中获取 token【rpwYv-z7ok4csaMzMNFmHD9NQ1SqqqQY2q0_-TLPVhfIvMYpzfcm4QNiQ8Wm7D6yiLd5DZWQ81-Rynr8Mus6esVuW1d3wmeNLI0VGAtl6JvIfXt-EjkumajyJgvD4nWZdYNIDqXTsd-tL_LVrITj4KufHM1DTuD3o7XKPbY1tpFmOX3GXUj1m0ykJDvKIgrNtzfBdgpS2b81X-E_hWQE7Q】
+2020-01-10 10:15:43,241 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/modules/layer/default/layer.css】
+2020-01-10 10:15:43,241 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:43,255 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/element.js】
+2020-01-10 10:15:43,259 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-10 10:15:43,510 [http-nio-9080-exec-8] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo，url
+https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=rpwYv-z7ok4csaMzMNFmHD9NQ1SqqqQY2q0_-TLPVhfIvMYpzfcm4QNiQ8Wm7D6yiLd5DZWQ81-Rynr8Mus6esVuW1d3wmeNLI0VGAtl6JvIfXt-EjkumajyJgvD4nWZdYNIDqXTsd-tL_LVrITj4KufHM1DTuD3o7XKPbY1tpFmOX3GXUj1m0ykJDvKIgrNtzfBdgpS2b81X-E_hWQE7Q&code=lAznfMvehHPo1c5rH8eQNhHl1n_88j5IWeI2Y2gE2eY
+2020-01-10 10:15:43,510 [http-nio-9080-exec-8] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo,userInfoJson
+{"errcode":0,"UserId":"HuangWanJie","DeviceId":"10000567428411IG","errmsg":"ok"}
+2020-01-10 10:15:43,555 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/favicon.ico】

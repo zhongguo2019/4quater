@@ -1,0 +1,787 @@
+2020-01-06 14:52:43,073 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 16336 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-06 14:52:43,073 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2020-01-06 14:52:48,503 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-06 14:52:48,509 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 14:52:48,675 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 135ms. Found 0 repository interfaces.
+2020-01-06 14:52:48,873 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-06 14:52:49,398 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$68b649e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 14:52:49,447 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$fa1ef001] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 14:52:50,416 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2020-01-06 14:52:50,435 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2020-01-06 14:52:50,451 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-06 14:52:50,451 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-01-06 14:52:50,831 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-01-06 14:52:50,847 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-06 14:52:50,847 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7646 ms
+2020-01-06 14:52:51,084 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-06 14:52:53,857 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-06 14:52:53,870 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-06 14:52:55,131 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 14:52:55,812 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 14:52:56,988 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 14:52:56,991 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-06 14:52:57,008 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 14:52:57,008 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 14:52:57,008 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 14:52:57,008 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 14:52:57,008 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-06 14:52:57,008 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 14:52:57,025 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 14:52:57,414 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-06 14:52:57,641 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2020-01-06 14:52:57,689 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-06 14:52:57,689 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-06 14:52:57,689 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-06 14:52:57,689 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-01-06 14:52:58,400 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 14:52:58,412 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 14:52:58,412 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 14:52:58,412 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 14:52:58,412 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 14:52:58,412 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-06 14:52:58,412 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 14:52:58,412 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@485aa0d9
+2020-01-06 14:52:58,445 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-06 14:52:58,614 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-06 14:52:58,614 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 14:52:59,782 [main] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 向企业微信申请token 放到redis 中【a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ】 获取时间【2020-01-06 14:52:59】
+2020-01-06 14:52:59,853 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2020-01-06 14:52:59,885 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2020-01-06 14:52:59,885 [main] INFO  com.boot.Application - Started Application in 17.761 seconds (JVM running for 18.355)
+2020-01-06 14:53:35,813 [http-nio-9080-exec-3] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1573995656,1574516734] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-01-06 14:53:35,819 [http-nio-9080-exec-3] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-06 14:53:35,819 [http-nio-9080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-06 14:53:35,819 [http-nio-9080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2020-01-06 14:53:35,866 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/index.html】
+2020-01-06 14:53:35,867 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,164 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/layui.css】
+2020-01-06 14:53:36,164 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,168 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/echarts.min.js】
+2020-01-06 14:53:36,168 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,351 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jquery-3.4.1.min.js】
+2020-01-06 14:53:36,351 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,466 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jweixin-1.2.0.js】
+2020-01-06 14:53:36,467 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,504 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/layui.js】
+2020-01-06 14:53:36,504 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,520 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/index.js】
+2020-01-06 14:53:36,520 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,630 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/01.png】
+2020-01-06 14:53:36,631 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,660 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/04.png】
+2020-01-06 14:53:36,660 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,662 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/03.png】
+2020-01-06 14:53:36,662 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,680 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/02.png】
+2020-01-06 14:53:36,680 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,685 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/05.png】
+2020-01-06 14:53:36,685 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,693 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/08.png】
+2020-01-06 14:53:36,693 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,755 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/font/iconfont.woff2】
+2020-01-06 14:53:36,755 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,780 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSConfig】
+2020-01-06 14:53:36,781 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,789 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSUser】
+2020-01-06 14:53:36,789 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,805 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 前台传入的data【Rlw2cEorkasG1HSfacB-J1Q4ywv1cl-tjmuo5D7NBKI】
+2020-01-06 14:53:36,826 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/07.png】
+2020-01-06 14:53:36,826 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,826 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/images/06.png】
+2020-01-06 14:53:36,826 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,847 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/carousel.js】
+2020-01-06 14:53:36,847 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:36,876 [http-nio-9080-exec-4] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 从redis中获取 token【a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ】
+2020-01-06 14:53:37,003 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/form.js】
+2020-01-06 14:53:37,003 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:37,128 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/layer.js】
+2020-01-06 14:53:37,128 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:37,259 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/element.js】
+2020-01-06 14:53:37,259 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:37,263 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/modules/layer/default/layer.css】
+2020-01-06 14:53:37,263 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:37,375 [http-nio-9080-exec-4] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo，url
+https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ&code=Rlw2cEorkasG1HSfacB-J1Q4ywv1cl-tjmuo5D7NBKI
+2020-01-06 14:53:37,397 [http-nio-9080-exec-4] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo,userInfoJson
+{"errcode":0,"UserId":"ZhaoZuLong","DeviceId":"ea28e094-b605-4f19-82da-aca332842c32","errmsg":"ok"}
+2020-01-06 14:53:58,301 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/index.html】
+2020-01-06 14:53:58,301 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:58,976 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSUser】
+2020-01-06 14:53:58,976 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:58,978 [http-nio-9080-exec-9] INFO  com.boot.web.BaseAction - 前台传入的data【Mf0lJgAOX1koY8KIhOWvdLezoKECNqKMUckkr064TSM】
+2020-01-06 14:53:58,979 [http-nio-9080-exec-9] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 从redis中获取 token【a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ】
+2020-01-06 14:53:58,986 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSConfig】
+2020-01-06 14:53:58,986 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:53:59,262 [http-nio-9080-exec-9] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo，url
+https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ&code=Mf0lJgAOX1koY8KIhOWvdLezoKECNqKMUckkr064TSM
+2020-01-06 14:53:59,262 [http-nio-9080-exec-9] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo,userInfoJson
+{"errcode":0,"UserId":"ZhaoZuLong","DeviceId":"ea28e094-b605-4f19-82da-aca332842c32","errmsg":"ok"}
+2020-01-06 14:54:03,253 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/todaywork/todaywork_insert.html】
+2020-01-06 14:54:03,253 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:03,390 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/css/layui.css】
+2020-01-06 14:54:03,390 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:03,492 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/js/jweixin-1.2.0.js】
+2020-01-06 14:54:03,493 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:03,501 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/js/echarts.min.js】
+2020-01-06 14:54:03,501 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:03,503 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/css/ion.rangeSlider.min.css】
+2020-01-06 14:54:03,503 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:03,507 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/layui.js】
+2020-01-06 14:54:03,507 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:03,510 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/css/navigation.css】
+2020-01-06 14:54:03,510 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:03,590 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/js/Ajax.js】
+2020-01-06 14:54:03,590 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:03,638 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/js/ion.rangeSlider.min.js】
+2020-01-06 14:54:03,638 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:03,791 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/todaywork_insert.js】
+2020-01-06 14:54:03,791 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:04,212 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/lay/modules/form.js】
+2020-01-06 14:54:04,212 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:04,324 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/lay/modules/layer.js】
+2020-01-06 14:54:04,324 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:04,444 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/css/modules/layer/default/layer.css】
+2020-01-06 14:54:04,444 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:04,473 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/lay/modules/slider.js】
+2020-01-06 14:54:04,473 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:04,601 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/lay/modules/element.js】
+2020-01-06 14:54:04,601 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:04,730 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/lay/modules/table.js】
+2020-01-06 14:54:04,730 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:04,870 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/lay/modules/laytpl.js】
+2020-01-06 14:54:04,870 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:04,989 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/lay/modules/laypage.js】
+2020-01-06 14:54:04,989 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:05,117 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/lay/modules/util.js】
+2020-01-06 14:54:05,119 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:05,258 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSUser】
+2020-01-06 14:54:05,258 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:05,258 [http-nio-9080-exec-4] INFO  com.boot.web.BaseAction - 前台传入的data【zYXDbnhfEp7oKwXGcmp6kMnsQwMOXrBpJwprfJCrBes】
+2020-01-06 14:54:05,258 [http-nio-9080-exec-4] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 从redis中获取 token【a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ】
+2020-01-06 14:54:05,475 [http-nio-9080-exec-4] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo，url
+https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ&code=zYXDbnhfEp7oKwXGcmp6kMnsQwMOXrBpJwprfJCrBes
+2020-01-06 14:54:05,475 [http-nio-9080-exec-4] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo,userInfoJson
+{"errcode":0,"UserId":"ZhaoZuLong","DeviceId":"ea28e094-b605-4f19-82da-aca332842c32","errmsg":"ok"}
+2020-01-06 14:54:15,524 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/css/modules/layer/default/loading-2.gif】
+2020-01-06 14:54:15,524 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:15,527 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxworksave】
+2020-01-06 14:54:15,527 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:15,608 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 开始保存当天工作记录信息表
+2020-01-06 14:54:15,610 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的data为【{"userIfno":{"userCode":"ZhaoZuLong"},"submit":{"projectSummary":"","worktype":"submit"},"today":{"projectName_0":"大数据分析平台","projectMessage_0":"safasf","finishPercent_0":"30","worktype":"today"},"tomorrow":{"tomorrow_projectName_0":"","tomorrow_projectMessage_0":"","worktype":"tomorrow"}}】
+2020-01-06 14:54:15,611 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 前台传入的转换为日报格式后【[日报]
+今天
+[大数据分析平台]
+safasf[30%]
+明天
+[]
+
+总结
+
+】
+2020-01-06 14:54:15,611 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.controller.DoufuTodayWorkController - 根据code得到的用户信息为【ZhaoZuLong】
+2020-01-06 14:54:15,875 [http-nio-9080-exec-8] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 通过微信登录到系统后台，将用户信息存储到全局的session中
+2020-01-06 14:54:15,877 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始根据不同条件删除【当天工作记录信息表】数据========================#
+2020-01-06 14:54:15,912 [http-nio-9080-exec-8] INFO  com.boot.web.todaywork.service.DoufuTodayWorkService - #=================开始根据不同条件删除【当天工作记录信息表】数据========================#
+2020-01-06 14:54:16,155 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/util/layui/css/modules/layer/default/icon.png】
+2020-01-06 14:54:16,175 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:16,175 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:16,175 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:36,216 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-06 14:54:36,234 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:36,234 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:36,234 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:36,472 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/reportview.js】
+2020-01-06 14:54:36,484 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:36,484 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:36,484 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:36,640 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/table.js】
+2020-01-06 14:54:36,658 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:36,658 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:36,658 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:36,790 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/laytpl.js】
+2020-01-06 14:54:36,809 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:36,810 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:36,810 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:36,920 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/laypage.js】
+2020-01-06 14:54:36,940 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:36,940 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:36,940 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:37,063 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/util.js】
+2020-01-06 14:54:37,082 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:37,083 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:37,083 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:37,207 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/layedit.js】
+2020-01-06 14:54:37,220 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:37,220 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:37,220 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:37,418 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/laydate.js】
+2020-01-06 14:54:37,420 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:37,420 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:37,420 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:37,880 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/modules/laydate/default/laydate.css】
+2020-01-06 14:54:37,894 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:37,894 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:37,895 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:37,906 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSUser】
+2020-01-06 14:54:37,921 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:37,921 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:37,921 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 14:54:37,922 [http-nio-9080-exec-8] INFO  com.boot.web.BaseAction - 前台传入的data【maeUm3ixMKpVcVUkC9J8N3GWS06fjJn9vOyFiBTGHNA】
+2020-01-06 14:54:37,922 [http-nio-9080-exec-8] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 从redis中获取 token【a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ】
+2020-01-06 14:54:38,234 [http-nio-9080-exec-8] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo，url
+https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ&code=maeUm3ixMKpVcVUkC9J8N3GWS06fjJn9vOyFiBTGHNA
+2020-01-06 14:54:38,234 [http-nio-9080-exec-8] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo,userInfoJson
+{"errcode":0,"UserId":"ZhaoZuLong","DeviceId":"ea28e094-b605-4f19-82da-aca332842c32","errmsg":"ok"}
+2020-01-06 14:54:38,375 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/modules/layer/default/icon.png】
+2020-01-06 14:54:38,388 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 通过微信登录到系统后台，将用户信息存储到全局的sessio中
+2020-01-06 14:54:38,388 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 得到的用户名称为：赵祖龙
+2020-01-06 14:54:38,388 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:08:52,090 [main] INFO  com.boot.serviceTest.UserServiceTest - Starting UserServiceTest on USER-20190120FQ with PID 12736 (started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-06 15:08:52,090 [main] INFO  com.boot.serviceTest.UserServiceTest - No active profile set, falling back to default profiles: default
+2020-01-06 15:08:56,498 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-06 15:08:56,513 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 15:08:56,639 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110ms. Found 0 repository interfaces.
+2020-01-06 15:08:56,820 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-06 15:08:57,507 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1cf05017] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 15:08:57,606 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$ae58f637] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 15:08:58,560 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-06 15:08:58,565 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-06 15:09:01,083 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 15:09:01,328 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 15:09:03,033 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-06 15:09:03,365 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 15:09:03,382 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-06 15:09:03,398 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 15:09:03,398 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 15:09:03,398 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 15:09:03,398 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 15:09:03,398 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-06 15:09:03,398 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 15:09:03,415 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 15:09:05,100 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-06 15:09:05,475 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2020-01-06 15:09:05,609 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-06 15:09:05,609 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-06 15:09:05,609 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-06 15:09:05,609 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-01-06 15:09:07,282 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 15:09:07,297 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 15:09:07,298 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 15:09:07,298 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 15:09:07,298 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 15:09:07,298 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-06 15:09:07,298 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 15:09:07,298 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2adc9300
+2020-01-06 15:09:07,516 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-06 15:09:07,746 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-06 15:09:07,746 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 15:09:07,767 [main] INFO  com.boot.serviceTest.UserServiceTest - Started UserServiceTest in 16.2 seconds (JVM running for 17.314)
+2020-01-06 15:09:08,192 [main] INFO  com.boot.web.wxgroup.service.WxUserGroupService - #=================开始根据不同条件查询【微信用户分组信息表】列表数据，返回实体对象========================#
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 负责人代码【SiBaDaKeSi】负责人姓名【汪伟】负责小组名称【江苏农信驻场项目群】
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 负责人代码【ZhaoErXi】负责人姓名【赵二喜】负责小组名称【广东农信驻场项目群】
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 负责人代码【bechalin】负责人姓名【许春林】负责小组名称【江西农信驻场项目群】
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 负责人代码【YangYang】负责人姓名【杨华】负责小组名称【福建农信EAST4.0】
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 负责人代码【ZhaoErXi】负责人姓名【赵二喜】负责小组名称【南京银行MAST项目组】
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 负责人代码【AnDong】负责人姓名【葛安东】负责小组名称【民丰射阳农商行EAST】
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 查询需要通知的用户组名为:江苏农信驻场项目群
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 查询需要通知的用户组名为:广东农信驻场项目群
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 查询需要通知的用户组名为:江西农信驻场项目群
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 查询需要通知的用户组名为:福建农信EAST4.0
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 查询需要通知的用户组名为:南京银行MAST项目组
+2020-01-06 15:09:08,370 [main] INFO  com.boot.serviceTest.UserServiceTest - 查询需要通知的用户组名为:民丰射阳农商行EAST
+2020-01-06 15:09:08,392 [Thread-9] INFO  com.boot.util.spring.listener.ApplicationContextCloseListener - spring父容器关闭
+2020-01-06 15:09:08,409 [Thread-9] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-01-06 15:09:08,409 [Thread-9] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-01-06 15:09:08,409 [Thread-9] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2020-01-06 15:09:08,409 [Thread-9] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-01-06 15:09:08,414 [Thread-9] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-01-06 15:09:08,414 [Thread-9] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-06 15:09:08,414 [Thread-9] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+2020-01-06 15:09:09,581 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-01-06 15:09:09,586 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-01-06 15:28:21,691 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/help/projectChart.html】
+2020-01-06 15:28:21,691 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:28:21,969 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/js/mescroll.min.js】
+2020-01-06 15:28:21,970 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:28:22,158 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/projectChart.js】
+2020-01-06 15:28:22,158 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:28:22,172 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/css/mescroll.min.css】
+2020-01-06 15:28:22,172 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:28:22,552 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/plugin/js/jquery-3.4.1.min.js】
+2020-01-06 15:28:22,552 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:31:19,527 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 16952 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-06 15:31:19,527 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2020-01-06 15:31:25,106 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-06 15:31:25,111 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 15:31:25,223 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96ms. Found 0 repository interfaces.
+2020-01-06 15:31:25,439 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-06 15:31:26,219 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2915c907] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 15:31:26,275 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$ba7e6f27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 15:31:27,182 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2020-01-06 15:31:27,215 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2020-01-06 15:31:27,231 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-06 15:31:27,243 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-01-06 15:31:27,698 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-01-06 15:31:27,706 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-06 15:31:27,706 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8031 ms
+2020-01-06 15:31:27,964 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-06 15:31:31,017 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-06 15:31:31,027 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-06 15:31:32,614 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 15:31:32,931 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 15:31:51,290 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 15:31:51,297 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-06 15:31:51,332 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 15:31:51,332 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 15:31:51,332 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 15:31:51,332 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 15:31:51,332 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-06 15:31:51,332 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 15:31:51,351 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 15:31:51,781 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-06 15:31:52,066 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2020-01-06 15:31:52,124 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-06 15:31:52,124 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-06 15:31:52,124 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-06 15:31:52,124 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-01-06 15:31:52,946 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 15:31:52,961 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 15:31:52,961 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 15:31:52,961 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 15:31:52,961 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 15:31:52,961 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-06 15:31:52,961 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 15:31:52,961 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6096b636
+2020-01-06 15:31:53,033 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-06 15:31:53,240 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-06 15:31:53,242 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 15:31:54,289 [main] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 向企业微信申请token 放到redis 中【a9Y6unKEk8q6TY0TxqyXJQhSWLJH6Pnbm7Shf89oHPl9f2G8aH6AWy2VRhBWQ-kpcpk5CPUK6vFoN5H-qqngG6fBgog0WMUA0WMQPtXsvg1dGyNfMZTldEDFW7fmQ7jWeObA3kwdW7p3A5yyVuyZ29AdgCEtZ_KDHccShWwmSDhYeVxDwsq6_xiPMMhLmrf2iCAGHBwJYzQ34n4OhhUDuQ】 获取时间【2020-01-06 15:31:54】
+2020-01-06 15:31:54,399 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2020-01-06 15:31:54,471 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2020-01-06 15:31:54,472 [main] INFO  com.boot.Application - Started Application in 36.011 seconds (JVM running for 36.995)
+2020-01-06 15:56:47,573 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 14016 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-06 15:56:47,578 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2020-01-06 15:56:53,446 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-06 15:56:53,463 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 15:56:53,621 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 143ms. Found 0 repository interfaces.
+2020-01-06 15:56:53,819 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-06 15:56:54,336 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e7106c93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 15:56:54,383 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$787912b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 15:56:55,357 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2020-01-06 15:56:55,374 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2020-01-06 15:56:55,390 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-06 15:56:55,390 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-01-06 15:56:55,792 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-01-06 15:56:55,807 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-06 15:56:55,807 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8130 ms
+2020-01-06 15:56:56,060 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-06 15:56:58,776 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-06 15:56:58,780 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-06 15:57:00,254 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 15:57:55,320 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 15:57:56,391 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 15:57:56,403 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-06 15:57:56,419 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 15:57:56,419 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 15:57:56,419 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 15:57:56,419 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 15:57:56,419 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-06 15:57:56,419 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 15:57:56,434 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 15:57:56,740 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-06 15:57:56,968 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2020-01-06 15:57:57,015 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-06 15:57:57,015 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-06 15:57:57,015 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-06 15:57:57,015 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-01-06 15:57:57,656 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 15:57:57,670 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 15:57:57,671 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 15:57:57,671 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 15:57:57,671 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 15:57:57,671 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-06 15:57:57,671 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 15:57:57,671 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@a200a54
+2020-01-06 15:57:57,736 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-06 15:57:57,881 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-06 15:57:57,881 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 15:57:58,950 [main] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 向企业微信申请token 放到redis 中【xehKo77OwZhFRkCxJ7ung54y2Be96c2T6IGRDh7ejjmZaHjMkkJq4QCMM5qVFmXYTY9NAfGsxq47aNVCJbL8P3i-oOudq2525p5ek1nluJjg-XjCVEkAfFi1l7ZyI7QC4_Nj9_HsLAfLr_RJBNQfMSdvqSHJt71UQtMUclDFcmRakisJRqwMkq2UE1iXK-LS8GTZyA9GcxuExuET6V3t7Q】 获取时间【2020-01-06 15:57:58】
+2020-01-06 15:57:59,033 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2020-01-06 15:57:59,083 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2020-01-06 15:57:59,083 [main] INFO  com.boot.Application - Started Application in 72.4 seconds (JVM running for 73.127)
+2020-01-06 15:59:25,795 [http-nio-9080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1573995656,1574516734; JSESSIONID=5E6F47545421307A17EAA39592EDDBF2] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-01-06 15:59:25,814 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-06 15:59:25,814 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-06 15:59:25,832 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-01-06 15:59:25,874 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-06 15:59:25,874 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:35,550 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-06 15:59:35,550 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:35,707 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/layui.css】
+2020-01-06 15:59:35,708 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:35,731 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jquery-3.4.1.min.js】
+2020-01-06 15:59:35,731 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:35,944 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jweixin-1.2.0.js】
+2020-01-06 15:59:35,945 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:35,984 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/echarts.min.js】
+2020-01-06 15:59:35,984 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:35,999 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/layui.js】
+2020-01-06 15:59:35,999 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:36,012 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/reportview.js】
+2020-01-06 15:59:36,013 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:40,462 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/font/iconfont.woff2】
+2020-01-06 15:59:40,462 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:55,731 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-06 15:59:55,731 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:56,363 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/layui.css】
+2020-01-06 15:59:56,363 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:56,404 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jweixin-1.2.0.js】
+2020-01-06 15:59:56,405 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:56,407 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/reportview.js】
+2020-01-06 15:59:56,407 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:56,407 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/jquery-3.4.1.min.js】
+2020-01-06 15:59:56,407 [http-nio-9080-exec-9] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 15:59:56,407 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/echarts.min.js】
+2020-01-06 15:59:56,408 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:15,278 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-06 16:00:15,278 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:15,421 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/reportview.js】
+2020-01-06 16:00:15,421 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/layui.js】
+2020-01-06 16:00:15,421 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:15,421 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:16,060 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/layer.js】
+2020-01-06 16:00:16,060 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:16,069 [http-nio-9080-exec-8] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/favicon.ico】
+2020-01-06 16:00:16,179 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/modules/layer/default/layer.css】
+2020-01-06 16:00:16,179 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:16,184 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/form.js】
+2020-01-06 16:00:16,184 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:16,312 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/table.js】
+2020-01-06 16:00:16,313 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:16,453 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/laytpl.js】
+2020-01-06 16:00:16,453 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:16,857 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/laypage.js】
+2020-01-06 16:00:16,857 [http-nio-9080-exec-10] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:16,976 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/util.js】
+2020-01-06 16:00:16,976 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:17,355 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/layedit.js】
+2020-01-06 16:00:17,355 [http-nio-9080-exec-7] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:17,476 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/lay/modules/laydate.js】
+2020-01-06 16:00:17,476 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:17,600 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/modules/laydate/default/laydate.css】
+2020-01-06 16:00:17,600 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:17,618 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/main/wxgetJSSUser】
+2020-01-06 16:00:17,618 [http-nio-9080-exec-5] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:17,641 [http-nio-9080-exec-5] INFO  com.boot.web.BaseAction - 前台传入的data【IAQESiyPk2E_ZfjWjzgbSJuFK9RAQqXmefM7SjmrPpg】
+2020-01-06 16:00:17,701 [http-nio-9080-exec-5] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 从redis中获取 token【xehKo77OwZhFRkCxJ7ung54y2Be96c2T6IGRDh7ejjmZaHjMkkJq4QCMM5qVFmXYTY9NAfGsxq47aNVCJbL8P3i-oOudq2525p5ek1nluJjg-XjCVEkAfFi1l7ZyI7QC4_Nj9_HsLAfLr_RJBNQfMSdvqSHJt71UQtMUclDFcmRakisJRqwMkq2UE1iXK-LS8GTZyA9GcxuExuET6V3t7Q】
+2020-01-06 16:00:17,703 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/font/iconfont.woff2】
+2020-01-06 16:00:17,703 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:18,166 [http-nio-9080-exec-5] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo，url
+https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=xehKo77OwZhFRkCxJ7ung54y2Be96c2T6IGRDh7ejjmZaHjMkkJq4QCMM5qVFmXYTY9NAfGsxq47aNVCJbL8P3i-oOudq2525p5ek1nluJjg-XjCVEkAfFi1l7ZyI7QC4_Nj9_HsLAfLr_RJBNQfMSdvqSHJt71UQtMUclDFcmRakisJRqwMkq2UE1iXK-LS8GTZyA9GcxuExuET6V3t7Q&code=IAQESiyPk2E_ZfjWjzgbSJuFK9RAQqXmefM7SjmrPpg
+2020-01-06 16:00:18,184 [http-nio-9080-exec-5] INFO  com.boot.util.qq.weixin.mp.aes.wxAppJSAPIUtil - getTencentUserInfo,userInfoJson
+{"errcode":0,"UserId":"ZhaoZuLong","DeviceId":"ea28e094-b605-4f19-82da-aca332842c32","errmsg":"ok"}
+2020-01-06 16:00:18,571 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/modules/layer/default/icon.png】
+2020-01-06 16:00:18,571 [http-nio-9080-exec-2] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:29,200 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/modules/layer/default/loading-2.gif】
+2020-01-06 16:00:29,200 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 16:00:31,312 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-06 16:00:31,312 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 17:28:10,503 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 10008 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-06 17:28:10,503 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2020-01-06 17:28:15,943 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-06 17:28:15,959 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 17:28:16,091 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99ms. Found 0 repository interfaces.
+2020-01-06 17:28:16,300 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-06 17:28:17,093 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2aea9f6d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:28:17,172 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$bc53458d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:28:18,078 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2020-01-06 17:28:18,110 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2020-01-06 17:28:18,115 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-06 17:28:18,131 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-01-06 17:28:18,579 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-01-06 17:28:18,595 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-06 17:28:18,595 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7956 ms
+2020-01-06 17:28:18,837 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-06 17:28:21,929 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-06 17:28:21,946 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-06 17:28:23,635 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 17:28:23,996 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 17:29:07,557 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 17:29:07,565 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-06 17:29:07,581 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 17:29:07,581 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 17:29:07,581 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 17:29:07,597 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 17:29:07,597 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-06 17:29:07,597 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 17:29:07,618 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 17:29:08,013 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-06 17:29:08,291 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2020-01-06 17:29:08,361 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-06 17:29:08,362 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-06 17:29:08,362 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-06 17:29:08,362 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-01-06 17:29:09,138 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 17:29:09,139 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 17:29:09,140 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 17:29:09,140 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 17:29:09,140 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 17:29:09,140 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-06 17:29:09,140 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 17:29:09,140 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7bd5f420
+2020-01-06 17:29:09,201 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-06 17:29:09,365 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-06 17:29:09,381 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 17:29:10,425 [main] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 向企业微信申请token 放到redis 中【xehKo77OwZhFRkCxJ7ung54y2Be96c2T6IGRDh7ejjmZaHjMkkJq4QCMM5qVFmXYTY9NAfGsxq47aNVCJbL8P3i-oOudq2525p5ek1nluJjg-XjCVEkAfFi1l7ZyI7QC4_Nj9_HsLAfLr_RJBNQfMSdvqSHJt71UQtMUclDFcmRakisJRqwMkq2UE1iXK-LS8GTZyA9GcxuExuET6V3t7Q】 获取时间【2020-01-06 17:29:10】
+2020-01-06 17:29:10,496 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2020-01-06 17:29:10,564 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2020-01-06 17:29:10,568 [main] INFO  com.boot.Application - Started Application in 61.048 seconds (JVM running for 61.919)
+2020-01-06 17:29:30,055 [http-nio-9080-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1573995656,1574516734; JSESSIONID=2AA3CC3C6A1E170F5406B06202E1D7CF] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-01-06 17:29:30,067 [http-nio-9080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-06 17:29:30,067 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-06 17:29:30,085 [http-nio-9080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-01-06 17:29:30,114 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/pages/reportview/reportview.html】
+2020-01-06 17:29:30,114 [http-nio-9080-exec-1] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 17:29:30,312 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/js/reportview.js】
+2020-01-06 17:29:30,313 [http-nio-9080-exec-3] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 17:29:39,469 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/todaywork/doufuTodayWork/wxWorkQuery】
+2020-01-06 17:29:39,469 [http-nio-9080-exec-4] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 17:29:39,698 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - addressFilter 拦截到访问的地址及资源【/wxapp/layui/css/modules/layer/default/loading-2.gif】
+2020-01-06 17:29:39,698 [http-nio-9080-exec-6] INFO  com.boot.filter.AddressFilter - 当前链接是来自于微信[Y]
+2020-01-06 17:45:04,445 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 14496 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-06 17:45:04,445 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2020-01-06 17:45:10,251 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-06 17:45:10,259 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 17:45:10,421 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116ms. Found 0 repository interfaces.
+2020-01-06 17:45:10,635 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-06 17:45:11,249 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$564d93b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:45:11,304 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$e7b639d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:45:12,242 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2020-01-06 17:45:12,276 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2020-01-06 17:45:12,293 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-06 17:45:12,293 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-01-06 17:45:12,814 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-01-06 17:45:12,820 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-06 17:45:12,820 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8272 ms
+2020-01-06 17:45:13,093 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-06 17:45:16,300 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-06 17:45:16,317 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-06 17:45:17,582 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 17:45:17,920 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 17:46:27,192 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 17:46:27,200 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-06 17:46:27,236 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 17:46:27,236 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 17:46:27,236 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 17:46:27,236 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 17:46:27,236 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-06 17:46:27,236 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 17:46:27,253 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 17:46:27,664 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-06 17:46:27,971 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2020-01-06 17:46:28,028 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-06 17:46:28,028 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-06 17:46:28,028 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-06 17:46:28,028 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-01-06 17:46:28,843 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 17:46:28,844 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 17:46:28,845 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 17:46:28,845 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 17:46:28,845 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 17:46:28,845 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-06 17:46:28,845 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 17:46:28,845 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@59d8ba8
+2020-01-06 17:46:28,929 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-06 17:46:29,120 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-06 17:46:29,137 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 17:46:30,139 [main] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 向企业微信申请token 放到redis 中【xehKo77OwZhFRkCxJ7ung54y2Be96c2T6IGRDh7ejjmZaHjMkkJq4QCMM5qVFmXYTY9NAfGsxq47aNVCJbL8P3i-oOudq2525p5ek1nluJjg-XjCVEkAfFi1l7ZyI7QC4_Nj9_HsLAfLr_RJBNQfMSdvqSHJt71UQtMUclDFcmRakisJRqwMkq2UE1iXK-LS8GTZyA9GcxuExuET6V3t7Q】 获取时间【2020-01-06 17:46:30】
+2020-01-06 17:46:30,224 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2020-01-06 17:46:30,299 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2020-01-06 17:46:30,304 [main] INFO  com.boot.Application - Started Application in 86.909 seconds (JVM running for 87.783)
+2020-01-06 18:00:17,081 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 4244 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-06 18:00:17,091 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2020-01-06 18:00:22,440 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-06 18:00:22,457 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 18:00:22,597 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107ms. Found 0 repository interfaces.
+2020-01-06 18:00:22,809 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-06 18:00:23,587 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f7982f35] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 18:00:23,646 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$8900d555] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 18:00:24,520 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2020-01-06 18:00:24,551 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2020-01-06 18:00:24,583 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-06 18:00:24,583 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-01-06 18:00:25,061 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-01-06 18:00:25,070 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-06 18:00:25,070 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7863 ms
+2020-01-06 18:00:25,350 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-06 18:00:28,189 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-06 18:00:28,196 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-06 18:00:29,648 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 18:00:29,953 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 18:00:50,245 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 18:00:50,261 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-06 18:00:50,278 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 18:00:50,278 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 18:00:50,295 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 18:00:50,295 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 18:00:50,295 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-06 18:00:50,295 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 18:00:50,312 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 18:00:50,719 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-06 18:00:50,968 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2020-01-06 18:00:51,017 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-06 18:00:51,017 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-06 18:00:51,017 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-06 18:00:51,017 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-01-06 18:00:51,743 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 18:00:51,755 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 18:00:51,755 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 18:00:51,755 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 18:00:51,755 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 18:00:51,755 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-01-06 18:00:51,755 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 18:00:51,755 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@70e9af2b
+2020-01-06 18:00:51,826 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-06 18:00:52,008 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-06 18:00:52,008 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-01-06 18:00:52,968 [main] INFO  com.boot.util.qq.weixin.mp.aes.WeiXinUtil - 向企业微信申请token 放到redis 中【yYrJMNZtTKeUAY7p63rd_dCitbkPJvknWCC8iDuBdwXMYaFFDUfRYq-qCVcuK6JtF74s-5_IewxJxs_358TmIWvVMk6txNGLZz03KnGvT2NHoNlpxbp5pj606K-VDhp5bhnxAtA6WCpI1IXBTzAgT9DG4YxkMqnouDcwYyGKqbVYyQj7ws-S9EhZbG-2-NqcjpS5_AHHaWmRc-KHO_1Z7w】 获取时间【2020-01-06 18:00:52】
+2020-01-06 18:00:53,115 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9080"]
+2020-01-06 18:00:53,184 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9080 (http) with context path ''
+2020-01-06 18:00:53,184 [main] INFO  com.boot.Application - Started Application in 37.046 seconds (JVM running for 37.925)
+2020-01-06 18:08:11,752 [main] INFO  com.boot.Application - Starting Application on USER-20190120FQ with PID 16548 (G:\GITBRANCH_LOCAL\sharewithothers\4quater\target\classes started by zhaozulong in G:\GITBRANCH_LOCAL\sharewithothers\4quater)
+2020-01-06 18:08:11,763 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2020-01-06 18:08:19,823 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-06 18:08:19,837 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 18:08:19,993 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 136ms. Found 0 repository interfaces.
+2020-01-06 18:08:20,593 [main] INFO  org.springframework.context.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'beetlConf' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-01-06 18:08:21,700 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d2e589f0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 18:08:21,788 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.boot.configurations.RedisConfig$$EnhancerBySpringCGLIB$$644e3010] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 18:08:22,699 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9080 (http)
+2020-01-06 18:08:22,743 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9080"]
+2020-01-06 18:08:22,765 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-06 18:08:22,765 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-01-06 18:08:23,409 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-01-06 18:08:23,415 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-06 18:08:23,415 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 11546 ms
+2020-01-06 18:08:23,722 [main] INFO  org.springframework.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2020-01-06 18:08:28,316 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-01-06 18:08:28,316 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-01-06 18:08:30,229 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 18:08:30,630 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 18:08:38,721 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 18:08:38,740 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2020-01-06 18:08:38,993 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 18:08:38,993 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.1 created.
+2020-01-06 18:08:38,993 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2020-01-06 18:08:38,993 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-06 18:08:38,993 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-01-06 18:08:38,993 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.1
+2020-01-06 18:08:39,010 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.

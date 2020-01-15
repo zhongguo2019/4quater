@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cc373159-ebae-4cb5-b919-87e3d0b26024" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/filter/AddressFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/filter/AddressFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/util/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/util/DateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/util/qq/weixin/mp/aes/AesException.java.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/util/qq/weixin/mp/aes/DayReportUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/util/qq/weixin/mp/aes/DayReportUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/util/qq/weixin/mp/aes/SendMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/util/qq/weixin/mp/aes/SendMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/util/qq/weixin/mp/aes/WeiXinParamesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/util/qq/weixin/mp/aes/WeiXinParamesUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/util/qq/weixin/mp/aes/WeiXinUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/util/qq/weixin/mp/aes/WeiXinUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/web/BaseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/web/BaseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/web/WXBaseAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/web/sys/mapper/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/web/sys/mapper/SysUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/boot/web/sys/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/boot/web/sys/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/com/boot/mapper/mysql/sys/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/com/boot/mapper/mysql/sys/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/.idea/gzhapp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/WW_verify_lVmhEs2QJc2BJ8ix.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/data/test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/js/echarts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/js/jquery-3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/js/jweixin-1.2.0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/page/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/page/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/page/knowledge/knowledge.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/page/knowledge/knowledge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/page/knowledge/test01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/page/workUpdate/workUpdate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/page/workUpdate/workUpdate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/font/iconfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/transfer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gzhapp/util/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test/java/com/boot/baseTest/SendMessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../test/java/com/boot/baseTest/SendMessageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../target/classes/com/boot/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../target/classes/com/boot/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../target/classes/com/boot/filter/AddressFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../target/classes/com/boot/filter/AddressFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../target/classes/com/boot/web/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../target/classes/com/boot/web/BaseAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../target/m2e-wtp/web-resources/META-INF/maven/com.krm/4quater/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../target/m2e-wtp/web-resources/META-INF/maven/com.krm/4quater/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../target/m2e-wtp/web-resources/META-INF/maven/com.krm/4quater/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../target/m2e-wtp/web-resources/META-INF/maven/com.krm/4quater/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxapp/pages/help/projectChart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2014">
+              <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxapp/pages/reportview/reportview.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="988">
+              <caret line="52" column="79" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxapp/pages/todaywork/todaywork_insert.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2413">
+              <caret line="127" column="44" selection-start-line="127" selection-start-column="44" selection-end-line="127" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxapp/js/reportview.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1615">
+              <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxapp/js/todaywork_insert.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3249">
+              <caret line="171" column="56" selection-start-line="171" selection-start-column="36" selection-end-line="171" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxapp/pages/PersonalSubmitList/PersonalSubmitList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wxapp/js/PersonalSubmitList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="145" column="57" lean-forward="true" selection-start-line="145" selection-start-column="57" selection-end-line="145" selection-end-column="57" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>banner1</find>
+      <find>test</find>
+      <find>demoSet</find>
+      <find>projectin</find>
+      <find>carousel</find>
+      <find>test10</find>
+      <find>formDemo</find>
+      <find>my_range</find>
+      <find>productProfit</find>
+      <find>GetCookie</find>
+      <find>todayOptionAdd</find>
+      <find>formToday</find>
+      <find>userIfno</find>
+      <find>queryReport</find>
+      <find>工作内容</find>
+      <find>bechalin</find>
+      <find>工作</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/wxapp/pages/index.js" />
+        <option value="$PROJECT_DIR$/wxapp/pages/knowledge/knowledge.html" />
+        <option value="$PROJECT_DIR$/wxapp/js/projectInsert.js" />
+        <option value="$PROJECT_DIR$/wxapp/pages/todaywork/projectInsert.html" />
+        <option value="$PROJECT_DIR$/wxapp/chenbaixu/krmProjectReport/js/projectChart.js" />
+        <option value="$PROJECT_DIR$/wxapp/js/index.js" />
+        <option value="$PROJECT_DIR$/wxapp/pages/index.html" />
+        <option value="$PROJECT_DIR$/wxapp/chenbaixu/krmProjectReport/pages/projectInsert.html" />
+        <option value="$PROJECT_DIR$/wxapp/pages/help/projectChart.html" />
+        <option value="$PROJECT_DIR$/wxapp/js/projectChart.js" />
+        <option value="$PROJECT_DIR$/wxapp/pages/todaywork/todaywork_insert.html" />
+        <option value="$PROJECT_DIR$/wxapp/chenbaixu/krmProjectReport/js/projectInsert.js" />
+        <option value="$PROJECT_DIR$/wxapp/js/todaywork_insert.js" />
+        <option value="$PROJECT_DIR$/wxapp/pages/reportview/reportview.html" />
+        <option value="$PROJECT_DIR$/wxapp/js/reportview.js" />
+        <option value="$PROJECT_DIR$/wxapp/js/PersonalSubmitList(1).js" />
+        <option value="$PROJECT_DIR$/wxapp/js/PersonalSubmitList.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="1483" />
+    <option name="height" value="1013" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="wxapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="wxapp" type="462c0819:PsiDirectoryNode" />
+              <item name="chenbaixu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="wxapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="wxapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="wxapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="wxapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="PersonalSubmitList" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wxapp/js" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\GITBRANCH_LOCAL\sharewithothers\4quater\src\main\webapp\wxapp\pages" />
+      <recent name="G:\GITBRANCH_LOCAL\sharewithothers\4quater\src\main\webapp\wxapp\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\GITBRANCH_LOCAL\sharewithothers\4quater\src\main\webapp\wxapp\js" />
+      <recent name="G:\GITBRANCH_LOCAL\sharewithothers\4quater\src\main\webapp\wxapp\pages\reportview" />
+      <recent name="G:\GITBRANCH_LOCAL\sharewithothers\4quater\src\main\webapp\wxapp\pages\help" />
+      <recent name="G:\GITBRANCH_LOCAL\sharewithothers\4quater\src\main\webapp\wxapp\pages" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.projectChart.html">
+    <configuration name="projectChart.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webapp/wxapp/pages/help/projectChart.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/wxapp/js">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.projectChart.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc373159-ebae-4cb5-b919-87e3d0b26024" name="默认的" comment="" />
+      <created>1571816097796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571816097796</updated>
+      <workItem from="1571816098980" duration="7047000" />
+      <workItem from="1571971440133" duration="4990000" />
+      <workItem from="1571985258506" duration="172000" />
+      <workItem from="1571985492976" duration="15246000" />
+      <workItem from="1573461561530" duration="6793000" />
+      <workItem from="1573539890881" duration="599000" />
+      <workItem from="1574144821341" duration="30158000" />
+      <workItem from="1574394631085" duration="25726000" />
+      <workItem from="1574587601143" duration="931000" />
+      <workItem from="1574589315561" duration="4142000" />
+      <workItem from="1574817951900" duration="26867000" />
+      <workItem from="1575023319627" duration="12347000" />
+      <workItem from="1575434050110" duration="4467000" />
+      <workItem from="1578062472120" duration="2021000" />
+      <workItem from="1578293335655" duration="7121000" />
+      <workItem from="1578380804808" duration="17647000" />
+      <workItem from="1578468870039" duration="2456000" />
+      <workItem from="1578473316239" duration="3660000" />
+      <workItem from="1578477353051" duration="323000" />
+      <workItem from="1578534301404" duration="3288000" />
+      <workItem from="1578734008992" duration="787000" />
+      <workItem from="1579000733195" duration="1487000" />
+      <workItem from="1579060175259" duration="2503000" />
+      <workItem from="1579070600517" duration="987000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="181765000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19125395" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="运行" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" weight="0.13217768" />
+      <window_info anchor="bottom" id="调试" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/wxapp/js/todaywork_insert.js</url>
+          <line>221</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/wxapp/js/todaywork_insert.js</url>
+          <line>274</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/wxapp/js/todaywork_insert.js</url>
+          <line>84</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/workUpdate/workUpdate.js" />
+    <entry file="file://$PROJECT_DIR$/wxapp/layui/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="1996" selection-start-line="1" selection-start-column="1996" selection-end-line="1" selection-end-column="1996" />
+          <folding>
+            <element signature="e#62498#62637#2" expanded="true" />
+            <element signature="e#64091#64230#2" expanded="true" />
+            <element signature="e#64778#64917#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/workUpdate/workUpdate.html" />
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/projectInsert.html" />
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/js/projectInsert.js" />
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/todaywork/projectInsert.html" />
+    <entry file="file://$PROJECT_DIR$/wxapp/chenbaixu/krmProjectReport/js/projectChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/help/index.html" />
+    <entry file="file://$PROJECT_DIR$/wxapp/chenbaixu/krmProjectReport/pages/projectChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="92" column="12" selection-start-line="92" selection-end-line="109" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/js/projectChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5719">
+          <caret line="301" column="20" selection-start-line="301" selection-start-column="20" selection-end-line="301" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/knowledge/knowledge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/error.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/chenbaixu/krmProjectReport/pages/projectInsert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="177" column="85" lean-forward="true" selection-start-line="177" selection-start-column="85" selection-end-line="177" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/chenbaixu/krmProjectReport/js/projectInsert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1349">
+          <caret line="89" column="26" lean-forward="true" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/knowledge/knowledge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/js/dropload.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/help/projectChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2014">
+          <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/reportview/reportview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="52" column="79" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/todaywork/todaywork_insert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2413">
+          <caret line="127" column="44" selection-start-line="127" selection-start-column="44" selection-end-line="127" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/js/reportview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/js/todaywork_insert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3249">
+          <caret line="171" column="56" selection-start-line="171" selection-start-column="36" selection-end-line="171" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/js/PersonalSubmitList(1).js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="119" column="42" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/pages/PersonalSubmitList/PersonalSubmitList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxapp/js/PersonalSubmitList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="145" column="57" lean-forward="true" selection-start-line="145" selection-start-column="57" selection-end-line="145" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

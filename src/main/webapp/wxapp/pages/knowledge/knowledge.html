@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>项目集成管理平台【知识库】</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css"  media="all">
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/jweixin-1.2.0.js"></script>
+    <script src="../../js/echarts.min.js"></script>
+    <script src="../../layui/layui.js" charset="utf-8"></script>
+    <script src="knowledge.js"></script>
+</head>
+<style>
+    .chart_box {
+        width: 95%;
+        height: 300px;
+        margin: 0 auto;
+    }
+</style>
+<form class="layui-form" action="">
+<body class="layui-bg-black">
+
+  <div class="test-table-reload-btn" style="margin-bottom: 10px;">
+      搜索ID：
+      <div class="layui-inline" style="width: 300px;">
+          <input class="layui-input" name="id"  style="width: 300px;"  id="test-table-demoReload" autocomplete="off">
+      </div>
+      <button class="layui-btn" data-type="reload">搜索</button>
+  </div>
+
+<!--  <table class="layui-hide" id="test-table-reload" lay-filter="user"></table>-->
+  <table class="layui-hide" id="test"></table>
+</form>
+</body>
+
+
+</html>

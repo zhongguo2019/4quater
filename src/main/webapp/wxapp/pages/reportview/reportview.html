@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>【报告调阅】</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+
+    <script src="../../js/jweixin-1.2.0.js"></script>
+    <script src="../../js/echarts.min.js"></script>
+    <script src="../../layui/layui.js" charset="utf-8"></script>
+    <script src="../../js/reportview.js"></script>
+</head>
+<style>
+    .chart_box {
+        width: 95%;
+        height: 300px;
+        margin: 0 auto;
+    }
+</style>
+
+<body class="layui-bg-black">
+<div class="layui-form" id="queryWork" action="">
+    <div class="layui-form-item">
+
+
+        <div class="layui-inline" style="width: 250px; margin: 0;margin-top: 5px;">
+            <label class="layui-form-label" style="width:60px">开始日期</label>
+            <div class="layui-input-inline" style="width: 100px" >
+                <input name="startdate" class="layui-input" style="width: 150px;"  id="query_start_date" type="text" placeholder="yyyy-MM-dd"
+                       autocomplete="off" lay-verify="startdate">
+            </div>
+        </div>
+
+        <div class="layui-inline" style="width: 250px;margin: 0;margin-top: 5px;margin-left: 0px">
+<!--            <label class="layui-form-label"style="border:1px solid red;width:60px">结束日期</label>-->
+            <label class="layui-form-label"style="width:60px">结束日期</label>
+            <div class="layui-input-inline" style="width: 100px">
+                <input name="enddate" class="layui-input" style="width:150px;" id="query_end_date" type="text" placeholder="yyyy-MM-dd"
+                       autocomplete="off" lay-verify="enddate">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+
+        <div class="layui-inline" >
+            <div class="layui-inline" style="width: 250px; margin: 0;margin-top: 0px;margin-left: 0px"  >
+                <label class="layui-form-label" style="width:60px">人员名称</label>
+                <div class="layui-input-inline"style="width: 100px">
+                    <input name="username" id="query_name" class="layui-input" type="text" autocomplete="off" lay-verify="query_name" style="width:150px;" >
+                </div>
+            </div>
+            <!--     </div>
+
+         <div class="layui-inline"style="width: 400px; margin: 0;margin-top: 5px;margin-left: 20px">-->
+            <div class="layui-inline"  style="width: 100px; margin: 0;margin-top: 0px ;alignment: right;">
+                    <button class="layui-btn layui-btn-green layui-btn-radius" data-type="reload" id="queryBtn">查询</button>
+             <!--   <button id="queryReport" class="layui-btn layui-btn-fluid" data-type="reload" type="button" style="alignment: right;">开始调阅</button>-->
+            </div>
+        </div>
+    </div>
+
+
+    <!--  <table class="layui-hide" id="test-table-reload" lay-filter="user"></table>-->
+    <table class="layui-hide" id="reportviewtable"></table>
+</div>
+</body>
+
+
+</html>

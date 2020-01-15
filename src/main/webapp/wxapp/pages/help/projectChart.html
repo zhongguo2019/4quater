@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../plugin/util/layui/css/layui.css">
+    <link rel="stylesheet" href="../plugin/css/navigation.css">
+    <link rel="stylesheet" href="../plugin/css/mescroll.min.css">
+    <title>项目图表</title>
+    <script src="../plugin/js/jquery-3.4.1.min.js"></script>
+
+    <script src="../plugin/js/jweixin-1.2.0.js"></script>
+    <script src="../plugin/js/echarts.min.js"></script>
+    <script src="../plugin/js/mescroll.min.js"></script>
+    <script src="../plugin/util/layui/layui.js"></script>
+    <script src="../plugin/js/Ajax.js"></script>
+</head>
+<style>
+    /* 导航栏样式 */
+    .mobile-inner-nav a {
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: returnToNormal;
+        animation-name: returnToNormal;
+    }
+
+
+    @-webkit-keyframes returnToNormal {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    @keyframes returnToNormal {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    .mescroll {
+        position: fixed;
+        top: 44px;
+        bottom: 0;
+        height: auto;
+        /*如设置bottom:50px,则需height:auto才能生效*/
+    }
+
+    .touchMove {
+        position: initial;
+    }
+    .chartImage{
+        background: url('../plugin/images/blues.jpg') no-repeat 100%;
+    }
+</style>
+
+<body style="height: 100%" class="layui-bg-cyan">
+
+    <form class="layui-form" action="" style="padding-top: 5%;width: 100%;position: fixed;z-index: 999;background-color:  #fff;border-bottom: 1px solid #afafaf;">
+        <div class="layui-form-item" style="padding-right: 6%;">
+            <label class="layui-form-label">图表类别</label>
+            <div class="layui-input-block">
+                <select id="chartChange" name="chartChange" lay-filter="chartChange" lay-verify="required">
+                    <option value="0" selected>图例</option>
+                    <option value="1">资产负债管理</option>
+                    <option value="2">存款完成情况</option>
+                    <option value="3">收入支出</option>
+                    <option value="4">存款排名</option>
+                    <option value="5">存款实点</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <!-- 图例 -->
+    <div id="profitabilityChart" name="chartAll" class="layui-container" style="padding-top: 100px;padding-bottom: 20%;">
+        <div>
+            <div>净利润时序分析</div>
+            <div id="profitability" style="width: 600px;height:400px;z-index: 10;z-index: 10;"></div>
+        </div>
+
+        <div style="margin-top: 10%;">
+            <div>产品利润分析</div>
+            <div id="productProfit" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 10%;">
+            <div>利润贡献度分析</div>
+            <div id="contribute" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+        <div style="margin-top: 10%;">
+            <div>贷款产品分行利润贡献度分析</div>
+            <div id="productContribute" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 10%;">
+            <div>收入结构分析</div>
+            <div id="income" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 10%;">
+            <div>各项存款时序分析</div>
+            <div id="sequence" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+        <div style="margin-top: 10%;">
+            <div>分行存款时点计划完成情况分析</div>
+            <div id="sequenceFinish" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+        <div style="margin-top: 10%;">
+            <div>分行对公存款时点计划完成分析</div>
+            <div id="timePlan" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+        <div style="margin-top: 10%;">
+            <div>各分行存款结构分析(活期、定期)</div>
+            <div id="currentTerm" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+        <div style="margin-top: 10%;">
+            <div>各项贷款变化情况分析</div>
+            <div id="loanChange" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+        <div style="margin-top: 10%;">
+            <div>贷款结构分析</div>
+            <div id="loanFormation" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 10%;">
+            <div>贷款行业结构分析</div>
+            <div id="loanIndustry" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 10%;">
+            <div>公司贷款客户等级结构分析</div>
+            <div id="companyLoan" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 10%;">
+            <div>公司贷款期限结构分析</div>
+            <div id="companyLoanYear" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 10%;">
+            <div>发卡量分析</div>
+            <div id="publishCard" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 10%;">
+            <div>卡存款余额分析</div>
+            <div id="saveCard" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+        <div style="margin-top: 10%;">
+            <div>业务使用情况分析</div>
+            <div id="businessUse" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+    </div>
+
+
+    <!-- 资产负债管理 -->
+    <div id="incomeChart" name="chartAll" class="layui-container" style="padding-top: 100px;padding-bottom: 30%;display: none;">
+        <h2>一、资产负债管理</h2>
+        <div style="margin-top: 30%;">
+            <div>资产构成</div>
+            <div id="propertyCompose" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>负债构成</div>
+            <div id="liabilityStructure" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>各项贷款</div>
+            <div id="totalLoans" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+        <div style="margin-top: 30%;">
+            <div>各项存款</div>
+            <div id="totalSaves" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>存贷利差</div>
+            <div id="saveDifferLoan" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+    </div>
+
+
+
+    <!-- 存款完成情况 -->
+    <div id="saveChart" name="chartAll" class="layui-container" style="padding-top: 100px;padding-bottom: 30%;display: none;">
+        <h2>二、存款完成情况</h2>
+        <div style="margin-top: 30%;">
+            <div>各项存款完成情况</div>
+            <div id="totalDeposits" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>对公存款完成情况</div>
+            <div id="publicDeposits" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>储蓄存款完成情况</div>
+            <div id="savingsDeposits" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
+        </div>
+    </div>
+
+    <!-- 收入支出 -->
+    <div id="insertOutputChart" name="chartAll" class="layui-container" style="padding-top: 100px;padding-bottom: 30%;display: none;">
+        <h2>三、收入支出</h2>
+
+        <div style="margin-top: 30%;">
+            <div>收入构成</div>
+            <div id="incomeConsitute" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>收入构成趋势</div>
+            <div id="incomeCurrent" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+        <div style="margin-top: 30%;">
+            <div>支出构成</div>
+            <div id="outCurrent" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+        <div style="margin-top: 30%;">
+            <div>支出构成趋势</div>
+            <div id="outConsituteCurrent" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+        <div style="margin-top: 30%;">
+            <div>净利润变化趋势</div>
+            <div id="netProfitsChanges"" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+        <div style="margin-top: 30%;">
+            <div>重点指标</div>
+            <div id="importantTarget" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+            <div id="importantTargetTwo" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+            <div id="importantTargetThree" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>各分行贷款完成情况</div>
+            <div id="loanFinishSituation" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>各项存款余额、日均余额变化趋势</div>
+            <div id="savingsAndChange" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>各项贷款余额、日均余额变化趋势</div>
+            <div id="LoansAndChange" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>储蓄存款余额、日均余额变化趋势</div>
+            <div id="savingsDepositAndChange" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>对公存款余额、日均余额变化趋势</div>
+            <div id="companySavingsAndChange" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+    </div>
+
+
+    <!-- 存款排名 -->
+    <div id="savingsRanking" name="chartAll" class="layui-container" style="padding-top: 100px;padding-bottom: 30%;display: none;">
+        <h2>四、存款排名</h2>
+
+        <div style="margin-top: 30%;">
+            <div>地区排名</div>
+            <div id="areaRanking" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+        <div style="margin-top: 30%;">
+            <div>理财产品增速</div>
+            <div id="financeProductsSpeed" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>日均余额波动情况</div>
+            <div id="dailyAverage" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>任务完成情况</div>
+            <div id="missionFinishSituation" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+        <div style="margin-top: 30%;">
+            <div>理财产品日均</div>
+            <div id="financeProductsDailyAverage" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+    </div>
+
+    <!-- 存款实点 -->
+    <div id="savingsRealPoint" name="chartAll" class="layui-container" style="padding-top: 100px;padding-bottom: 30%;display: none;">
+
+        <h2>五、存款实点</h2>
+
+        <div style="margin-top: 30%;">
+            <div>产品占比</div>
+            <div id="productMix" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+
+
+        <div style="margin-top: 30%;">
+            <div>产品变动</div>
+            <div id="productChange" style="width: 600px;height:400px;z-index: 10;background-color: #2E3858;"></div>
+        </div>
+    </div>
+
+
+
+    <!-- 底部菜单 -->
+    <div style="display:flex;background-color: #fdf9f9;height: 50px;position: fixed;width: 100%;align-items: center;bottom: 0px;z-index:999">
+        <div id="homePage" style="text-align: center;width: 20%;">
+            <div>
+                首页
+            </div>
+        </div>
+        <div id="insertButton" style="text-align: center;width: 20%">
+            录入
+        </div>
+        <div style="text-align: center;width: 20%">
+            <div id="addButton" style="
+            background-color: #44a9fb;
+            width: 50px;
+            font-size: 26px;
+            margin: 0 auto;
+            color: #ffffff;
+            padding-bottom: 3px;
+            border-radius: 6px;
+            ">
+                +
+            </div>
+        </div>
+        <div style="text-align: center;width: 20%">
+            查询
+        </div>
+        <div style="text-align: center;width: 20%">
+            我
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/projectChart.js"></script>
+</body>
+
+<!-- 弹出层模板 -->
+<!-- 菜单加号弹出层 -->
+
+<div class="layui-card" id="addButtonDetail" style="display: none">
+    <!-- <div class="layui-card-header"></div> -->
+    <div class="layui-card-body">
+        <div>
+            <button id="goChart" type="button" class="layui-btn layui-btn-sm"
+                style="width: 100%;height: 50px;background-color: #44a9fb;font-size: 20px;">项目图表</button>
+        </div>
+    </div>
+</div>
+
+</html>

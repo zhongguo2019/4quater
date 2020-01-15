@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>【个人提交浏览】</title>
+  <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="dropload.css">
+  <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+  <script src="../../js/jquery-3.4.1.min.js"></script>
+
+  <script src="../../js/jweixin-1.2.0.js"></script>
+  <script src="../../js/echarts.min.js"></script>
+  <script src="../../layui/layui.js" charset="utf-8"></script>
+  <script src="../../js/PersonalSubmitList.js"></script>
+  <!-- 上拉加载插件 -->
+  <script src="../../js/dropload.min.js"></script>
+</head>
+<style>
+  .imgReturn {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+  }
+
+  .listTitle {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    height: 35px;
+    border-bottom: 1px solid #a2a2a2;
+  }
+
+  .span {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 1px;
+    z-index: 100;
+    display: none
+  }
+
+  .help {
+    width: 1rem;
+    height: 1rem;
+    border: .05rem #fff solid;
+    border-radius: 50%;
+    -webkit-animation: rotation 1s ease-in-out infinite;
+    -moz-animation: rotation 1s ease-in-out infinite;
+    animation: rotation 1s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -.5rem;
+    margin-left: -.5rem;
+  }
+
+  .help:after {
+    width: .15rem;
+    height: .15rem;
+    background-color: #fff;
+    border-radius: 100%;
+    position: absolute;
+    content: "";
+    left: .06rem;
+    top: .1rem;
+
+  }
+
+  @-webkit-keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes rotation {
+    0% {
+      -moz-transform: rotate(0deg);
+    }
+
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+<body style="background-color: #ffffff;">
+
+  <!-- 上拉加载的时间轴 -->
+  <div class="content">
+    <ul class="layui-timeline lists" style="background-color: #ffffff;padding-top: 10px;">
+
+    </ul>
+  </div>
+  <div class="span">
+    <div class="help"></div>
+  </div>
+</body>
+
+
+</html>

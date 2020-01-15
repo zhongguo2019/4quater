@@ -1,0 +1,60 @@
+{
+  "lists": [
+    {
+      "reporterId": "0",
+      "date": "今天"
+    },
+    {
+      "reporterId": "1",
+      "date": "2019-12-31"
+    },
+    {
+      "reporterId": "2",
+      "date": "2019-12-30"
+    },
+    {
+      "reporterId": "3",
+      "date": "2019-12-29"
+    },
+    {
+      "reporterId": "4",
+      "date": "2019-12-28"
+    },
+    {
+      "reporterId": "5",
+      "date": "2019-12-27"
+    },
+    {
+      "reporterId": "6",
+      "date": "2019-12-26"
+    },
+    {
+      "reporterId": "7",
+      "date": "2019-12-25"
+    },
+    {
+      "reporterId": "8",
+      "date": "2019-12-24"
+    },
+    {
+      "reporterId": "9",
+      "date": "2019-12-23"
+    },
+    {
+      "reporterId": "10",
+      "date": "2019-12-22"
+    },
+    {
+      "reporterId": "11",
+      "date": "2019-12-21"
+    },
+    {
+      "reporterId": "12",
+      "date": "2019-12-20"
+    },
+    {
+      "reporterId": "13",
+      "date": "2019-12-19"
+    }
+  ]
+}
