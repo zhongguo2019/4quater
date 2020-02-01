@@ -1,0 +1,761 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "name": "曲文凯",
+      "itemStyle": {"normal": {"color": "rgb(235,81,72)"}},
+      "symbolSize": 28.685715,
+      "x": -266.82776,
+      "y": 299.6904,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "1",
+      "name": "王靖昱",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -418.08344,
+      "y": 446.8853,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "2",
+      "name": "王超",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -212.76357,
+      "y": 245.29176,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "3",
+      "name": "廖燕芳",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -242.82404,
+      "y": 235.26283,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "4",
+      "name": "李骏翔",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -379.30386,
+      "y": 429.06424,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "5",
+      "name": "唐可焓",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -417.26337,
+      "y": 406.03506,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "6",
+      "name": "李高岭",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -332.6012,
+      "y": 485.16974,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "7",
+      "name": "刘立波",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -382.69568,
+      "y": 475.09113,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "8",
+      "name": "王勇",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -320.384,
+      "y": 387.17325,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "9",
+      "name": "李某某",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -344.39832,
+      "y": 451.16772,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "10",
+      "name": "王某某",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -89.34107,
+      "y": 234.56128,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "11",
+      "name": "赵某某",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 50,
+      "x": -87.93029,
+      "y": -6.8120565,
+      "attributes": {"modularity_class": 0}
+    },
+    {
+      "id": "12",
+      "name": "领导02",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -339.77908,
+      "y": -184.69139,
+      "attributes": {"modularity_class": 1}
+    },
+    {
+      "id": "13",
+      "name": "领导01",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -194.31313,
+      "y": 178.55301,
+      "attributes": {"modularity_class": 1}
+    },
+    {
+      "id": "14",
+      "name": "张三",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+       "symbolSize": 20,
+      "x": -158.05168,
+      "y": 201.99768,
+      "attributes": {"modularity_class": 1}
+    },
+    {
+      "id": "15",
+      "name": "王五",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+       "symbolSize": 20,
+      "x": -127.701546,
+      "y": 242.55057,
+      "attributes": {"modularity_class": 1}
+    },
+    {
+      "id": "16",
+      "name": "王某某01",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 25.942856,
+      "x": -385.2226,
+      "y": -393.5572,
+      "attributes": {"modularity_class": 1}
+    },
+    {
+      "id": "17",
+      "name": "王某某02",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20.457146,
+      "x": -516.55884,
+      "y": -393.98975,
+      "attributes": {"modularity_class": 1}
+    },
+    {
+      "id": "18",
+      "name": "王某某03",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20.457146,
+      "x": -464.79382,
+      "y": -493.57944,
+      "attributes": {"modularity_class": 1}
+    },
+    {
+      "id": "19",
+      "name": "王某某04",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20.457146,
+      "x": -515.1624,
+      "y": -456.9891,
+      "attributes": {"modularity_class": 1}
+    },
+    {
+      "id": "20",
+      "name": "王某某05",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20.457146,
+      "x": -408.12122,
+      "y": -464.5048,
+      "attributes": {"modularity_class": 1}
+    },
+    {
+      "id": "21",
+      "name": "项目1",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 25,
+      "x": -456.44113,
+      "y": -425.13303,
+      "attributes": {"modularity_class": 2}
+    },
+    {
+      "id": "22",
+      "name": "项目2",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 25,
+      "x": -459.1107,
+      "y": -362.5133,
+      "attributes": {"modularity_class": 2}
+    },
+    {
+      "id": "23",
+      "name": "项目3",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 25,
+      "x": -313.42786,
+      "y": -289.44803,
+      "attributes": {"modularity_class": 2}
+    },
+    {
+      "id": "24",
+      "name": "项目4",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 25,
+      "x": 4.6313396,
+      "y": -273.8517,
+      "attributes": {"modularity_class": 2}
+    },
+    {
+      "id": "25",
+      "name": "项目5",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 25,
+      "x": 82.80825,
+      "y": -203.1144,
+      "attributes": {"modularity_class": 2}
+    },
+    {
+      "id": "26",
+      "name": "项目6",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 31.428574,
+      "x": 78.64646,
+      "y": -31.512747,
+      "attributes": {"modularity_class": 2}
+    },
+    {
+      "id": "27",
+      "name": "项目7",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 25,
+      "x": -81.46074,
+      "y": -204.20204,
+      "attributes": {"modularity_class": 2}
+    },
+    {
+      "id": "28",
+      "name": "项目8",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 12.228573,
+      "x": -225.73984,
+      "y": 82.41631,
+      "attributes": {"modularity_class": 2}
+    },
+    {
+      "id": "29",
+      "name": "项目9",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 23.2,
+      "x": -385.6842,
+      "y": -20.206686,
+      "attributes": {"modularity_class": 2}
+    },
+    {
+      "id": "30",
+      "name": "项目10",
+      "itemStyle": {"normal": {"color": "rgb(236,81,72)"}},
+      "symbolSize": 20,
+      "x": -403.92447,
+      "y": -197.69823,
+      "attributes": {"modularity_class": 2}
+    }
+  ],
+  "links": [
+    {
+      "id": "0",
+      "name": null,
+      "source": "1",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "1",
+      "name": null,
+      "source": "2",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "2",
+      "name": null,
+      "source": "3",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "3",
+      "name": null,
+      "source": "3",
+      "target": "2",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "4",
+      "name": null,
+      "source": "4",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "5",
+      "name": null,
+      "source": "5",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "6",
+      "name": null,
+      "source": "6",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "7",
+      "name": null,
+      "source": "7",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "8",
+      "name": null,
+      "source": "8",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "9",
+      "name": null,
+      "source": "9",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "13",
+      "name": null,
+      "source": "11",
+      "target": "0",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": null,
+      "name": null,
+      "source": "11",
+      "target": "2",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "11",
+      "name": null,
+      "source": "11",
+      "target": "3",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "10",
+      "name": null,
+      "source": "11",
+      "target": "10",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "14",
+      "name": null,
+      "source": "12",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "15",
+      "name": null,
+      "source": "13",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "16",
+      "name": null,
+      "source": "14",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "17",
+      "name": null,
+      "source": "15",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "18",
+      "name": null,
+      "source": "17",
+      "target": "16",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "19",
+      "name": null,
+      "source": "18",
+      "target": "16",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "20",
+      "name": null,
+      "source": "18",
+      "target": "17",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "21",
+      "name": null,
+      "source": "19",
+      "target": "16",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "22",
+      "name": null,
+      "source": "19",
+      "target": "17",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "23",
+      "name": null,
+      "source": "19",
+      "target": "18",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "24",
+      "name": null,
+      "source": "20",
+      "target": "16",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "25",
+      "name": null,
+      "source": "20",
+      "target": "17",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "26",
+      "name": null,
+      "source": "20",
+      "target": "18",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "27",
+      "name": null,
+      "source": "20",
+      "target": "19",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "28",
+      "name": null,
+      "source": "21",
+      "target": "16",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "29",
+      "name": null,
+      "source": "21",
+      "target": "17",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "30",
+      "name": null,
+      "source": "21",
+      "target": "18",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "31",
+      "name": null,
+      "source": "21",
+      "target": "19",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "32",
+      "name": null,
+      "source": "21",
+      "target": "20",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "33",
+      "name": null,
+      "source": "22",
+      "target": "16",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "34",
+      "name": null,
+      "source": "22",
+      "target": "17",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "35",
+      "name": null,
+      "source": "22",
+      "target": "18",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "36",
+      "name": null,
+      "source": "22",
+      "target": "19",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "37",
+      "name": null,
+      "source": "22",
+      "target": "20",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "38",
+      "name": null,
+      "source": "22",
+      "target": "21",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "47",
+      "name": null,
+      "source": "23",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "46",
+      "name": null,
+      "source": "23",
+      "target": "12",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "39",
+      "name": null,
+      "source": "23",
+      "target": "16",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "40",
+      "name": null,
+      "source": "23",
+      "target": "17",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "41",
+      "name": null,
+      "source": "23",
+      "target": "18",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "42",
+      "name": null,
+      "source": "23",
+      "target": "19",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "43",
+      "name": null,
+      "source": "23",
+      "target": "20",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "44",
+      "name": null,
+      "source": "23",
+      "target": "21",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "45",
+      "name": null,
+      "source": "23",
+      "target": "22",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": null,
+      "name": null,
+      "source": "24",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "48",
+      "name": null,
+      "source": "24",
+      "target": "23",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "52",
+      "name": null,
+      "source": "25",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "51",
+      "name": null,
+      "source": "25",
+      "target": "23",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "50",
+      "name": null,
+      "source": "25",
+      "target": "24",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": null,
+      "name": null,
+      "source": "26",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": null,
+      "name": null,
+      "source": "26",
+      "target": "16",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "53",
+      "name": null,
+      "source": "26",
+      "target": "24",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "56",
+      "name": null,
+      "source": "26",
+      "target": "25",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "57",
+      "name": null,
+      "source": "27",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "58",
+      "name": null,
+      "source": "27",
+      "target": "23",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": null,
+      "name": null,
+      "source": "27",
+      "target": "24",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "59",
+      "name": null,
+      "source": "27",
+      "target": "25",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "61",
+      "name": null,
+      "source": "27",
+      "target": "26",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "62",
+      "name": null,
+      "source": "28",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "63",
+      "name": null,
+      "source": "28",
+      "target": "27",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "66",
+      "name": null,
+      "source": "29",
+      "target": "11",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "64",
+      "name": null,
+      "source": "29",
+      "target": "23",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "65",
+      "name": null,
+      "source": "29",
+      "target": "27",
+      "lineStyle": {"normal": {}}
+    },
+    {
+      "id": "67",
+      "name": null,
+      "source": "30",
+      "target": "23",
+      "lineStyle": {"normal": {}}
+    }
+  ]
+}

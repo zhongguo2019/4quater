@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>关联关系</title>
+</head>
+<body>
+<div id="container" style="height:800px;width: 80%"></div>
+<script type="text/javascript" src="javascript/echarts.min.js"></script>
+<script type="text/javascript" src="javascript/dataTool.min.js"></script>
+<script type="text/javascript" src="javascript/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+
+
+    function setGraph(id,name){
+
+    var app = {};
+    option = null;
+    myChart.showLoading();
+    $.get("data/relationships_data.json", function (jsonstr) {
+        myChart.hideLoading();
+
+        var graph = jsonstr;
+
+        var categories = [{"name": "人员"},{"name": "领导"},{"name": "项目"}];
+
+        graph.nodes.forEach(function (node) {
+            node.itemStyle = null;
+            node.value = node.symbolSize;
+            if(node.id==id){
+                node.symbolSize = 100;
+            }else{
+                node.symbolSize = 30;
+            }
+            ;
+            node.label = {
+                normal: {
+                    show: node.symbolSize > 10
+                }
+            };
+            node.category = node.attributes.modularity_class;
+        });
+        option = {
+            title: {
+                text: '人员关系图',
+                subtext: 'Circular layout',
+                top: 'bottom',
+                left: 'right'
+            },
+            tooltip: {},
+            legend: [{
+                data: categories.map(function (a) {
+                    return a.name;
+                })
+            }],
+            animationDurationUpdate: 1500,
+            animationEasingUpdate: 'quinticInOut',
+            series: [
+                {
+                    name: 'Les Miserables',
+                    type: 'graph',
+                    layout: 'circular',
+                    circular: {
+                        rotateLabel: true
+                    },
+                    data: graph.nodes,
+                    links: graph.links,
+                    categories: categories,
+                    roam: true,
+                    label: {
+                        position: 'right',
+                        formatter: '{b}'
+                    },
+                    lineStyle: {
+                        color: 'source',
+                        curveness: 0.3
+                    }
+                }
+            ]
+        };
+        myChart.setOption(option);
+    }, 'json');
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+    };
+
+    setGraph('0','');
+    myChart.on('click', function (params) {
+        setGraph(params.data.id,params.name);
+    });
+</script>
+
+</body>
+</html>

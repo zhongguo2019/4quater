@@ -618,8 +618,7 @@ public class DoufuTodayWorkController extends BaseController {
 			jsonValue.put("code", 0);
 			jsonValue.put("msg", returnMsg);
 			jsonValue.put("count", 0);
-			String dataTest = "{zhaozulong:1}";
-			jsonValue.put("data", dataTest);
+			jsonValue.put("data", "{}");
 			return jsonValue.toString();
 		}
 

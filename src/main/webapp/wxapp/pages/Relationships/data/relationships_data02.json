@@ -1,0 +1,15 @@
+{
+  "nodes":[{"id":"0","name":"赵某某","itemStyle":{"normal":{"color":"rgb(235,81,72)"}},"symbolSize":4,"attributes":{"modularity_class":"1"}},
+            {"id":"1","name":"广东反洗钱","itemStyle":{"normal":{"color":"rgb(235,81,72)"}},"symbolSize":4,"attributes":{"modularity_class":"1"}},
+            {"id":"2","name":"广东1104项目","itemStyle":{"normal":{"color":"rgb(235,81,72)"}},"symbolSize":4,"attributes":{"modularity_class":"1"}},
+            {"id":"3","name":"江西数据平台","itemStyle":{"normal":{"color":"rgb(235,81,72)"}},"symbolSize":4,"attributes":{"modularity_class":"1"}}
+          ],
+  "links":[{"id":"0","name":null,"source":"0","target":"1","lineStyle":{"normal":{}}},
+            {"id":"1","name":null,"source":"0","target":"2","lineStyle":{"normal":{}}},
+            {"id":"2","name":null,"source":"0","target":"3","lineStyle":{"normal":{}}},
+            {"id":"3","name":null,"source":"1","target":"2","lineStyle":{"normal":{}}},
+             {"id":"4","name":null,"source":"1","target":"3","lineStyle":{"normal":{}}},
+            {"id":"5","name":null,"source":"2","target":"3","lineStyle":{"normal":{}}}
+  ]
+}
+

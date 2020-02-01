@@ -16,7 +16,7 @@ jQuery(function () {
 
         //获取当前用户用户userId
 
-        var urlCode = location.href.split("code=")[1].split('&')[0];
+      var urlCode = location.href.split("code=")[1].split('&')[0];
         console.log(urlCode);
         var userCode = getcookie("userId");
         //userCode = 'Zhaozulong';
@@ -44,25 +44,19 @@ jQuery(function () {
             table.render({
                 elem: '#reportviewtable'
                 , url: 'http://krmsoft.natapp1.cc/todaywork/doufuTodayWork/wxWorkQuery'
-                //, url: 'test.json'
                 , method: 'post' //如果无需自定义HTTP类型，可不加该参数
                 , contentType: 'application/json'
                 , where: {
-                    userCode: getcookie("userId")//用户id
+                   userCode: getcookie("userId")//用户id
+                 //   userCode:'Zhaozulong'
                     , username: $("#query_name").val()
                     , startdate: $("#query_start_date").val()
                     , enddate: $("#query_end_date").val()
                 }
                 , done: function (res, curr, count) {//加载完成事件
                     layer.closeAll('dialog'); //关闭信息框
-                    //如果是异步请求数据方式，res即为你接口返回的信息。
-                    //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
-                    console.log(res);
-                    console.log(curr);          //得到当前页码
-                    console.log(count);          //得到数据总量
                 }
                 , cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
-                //, skin: 'line' //表格风格
                 , even: true
                 , page: true //是否显示分页
                 , loading: true//是否显示加载条
@@ -88,23 +82,32 @@ jQuery(function () {
 
 
         //得到前台用户录入的查询条件
-        var formData = new FormData($("#queryWork")[0]);
+       // var formData = new FormData($("#queryWork")[0]);
+        var formData = new FormData(document.getElementById('queryWork')[0]);
         var jsonData01 = {};
         formData.forEach((value, key) => jsonData01[key] = value);
         jsonData01.userCode = getcookie("userId");
         var jsonQuery = {};
         jsonQuery = JSON.stringify(jsonData01);
         console.log(jsonQuery);
-        var startdate = $('#query_start_date');
-        var enddate = $('#query_end_date');
-        var username = $('#query_name');
+
 
 
         //查询按钮，调用后台查询方法
         $('#queryBtn').on('click', function () {
+            var startdate = $('#query_start_date');
+            var enddate = $('#query_end_date');
+            var username = $('#query_name');
+            var oDate1 = new Date(startdate.val());
+            var oDate2 = new Date(enddate.val());
+
+            if(oDate1>oDate2){
+                layer.alert("<em style='color:red'>" +'查询条件选择错误，结束日期要大于开始日期！'+ "</em>", {icon: 5});
+                return false;
+            }
+
             var loading = layer.msg("<em style='color:red'>" + '正在查询数据。。。。。。' + "</em>", { time: 100000, icon: 16 });
             var type = $(this).data('type');
-
             //执行重载
             table.reload('worklisttable', {
                 page: {
@@ -118,43 +121,7 @@ jQuery(function () {
             }, 'data');
 
         });
-
     });
-
-    /*   jQuery("#queryReport").on('click', function () {
-
-           var queryUrl = "http://krmsoft.natapp1.cc/todaywork/doufuTodayWork/wxWorkQuery";
-
-           var formData = new FormData(jQuery("#queryWork")[0]);
-
-           var jsonData01 = {};
-           formData.forEach((value, key) => jsonData01[key] = value);
-           jsonData01.userCode=getcookie("userId");
-           var jsonQuery = {};
-            jsonQuery = JSON.stringify(jsonData01);
-            console.log(jsonData01);
-
-
-
-          var loading = layer.msg("<em style='color:red'>" + '正在查询数据。。。。。。'+ "</em>", {time: 0, icon: 16});
-           jQuery.ajax({
-               method: "POST",
-               url: queryUrl,       //提交表单的地址
-               contentType: "application/json;charset-UTF-8",
-               data:  jsonQuery,
-               dataType: 'json',
-               success: function (res) {
-                   layer.close(loading);
-
-               },
-               error: function () {
-                  layer.close(loading);
-                 //  layer.msg("日报查询失败！", {icon: 2});
-               }
-           });
-
-       });*/
-
 })
 
 
