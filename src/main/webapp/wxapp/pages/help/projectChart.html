@@ -69,19 +69,21 @@
         position: initial;
     }
     .chartImage{
-        background: url('../plugin/images/blues.jpg') no-repeat 100%;
+        background: url('../../images/blues.jpg') no-repeat 100%;
     }
+    .layui-form-select{color: #000000 !important}
+
 </style>
 
-<body style="height: 100%" class="layui-bg-cyan">
+<body style="height: 100%" >
 
-    <form class="layui-form" action="" style="padding-top: 5%;width: 100%;position: fixed;z-index: 999;background-color:  #fff;border-bottom: 1px solid #afafaf;">
-        <div class="layui-form-item" style="padding-right: 6%;">
+    <form class="layui-form" action="" style="padding-top: 5%;width: 100%;z-index: 999;border-bottom: 1px ">
+        <div class="layui-form-item" >
             <label class="layui-form-label">图表类别</label>
-            <div class="layui-input-block">
-                <select id="chartChange" name="chartChange" lay-filter="chartChange" lay-verify="required">
-                    <option value="0" selected>图例</option>
-                    <option value="1">资产负债管理</option>
+            <div class="layui-input-block"  >
+                <select id="chartChange"   name="chartChange" lay-filter="chartChange" lay-verify="required">
+                    <option value="0" selected  >图例</option>
+                    <option value="1" >资产负债管理</option>
                     <option value="2">存款完成情况</option>
                     <option value="3">收入支出</option>
                     <option value="4">存款排名</option>
@@ -190,32 +192,32 @@
 
 
     <!-- 资产负债管理 -->
-    <div id="incomeChart" name="chartAll" class="layui-container" style="padding-top: 100px;padding-bottom: 30%;display: none;">
+    <div id="incomeChart" name="chartAll" class="layui-container" style="padding-top: 10px;padding-bottom: 30%;display: none; ">
         <h2>一、资产负债管理</h2>
-        <div style="margin-top: 30%;">
+        <div style="margin-top: 20px;">
             <div>资产构成</div>
             <div id="propertyCompose" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
         </div>
 
 
-        <div style="margin-top: 30%;">
+        <div  style="margin-top: 20px;">
             <div>负债构成</div>
             <div id="liabilityStructure" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
         </div>
 
 
-        <div style="margin-top: 30%;">
+        <div  style="margin-top: 20px;" >
             <div>各项贷款</div>
             <div id="totalLoans" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
         </div>
 
-        <div style="margin-top: 30%;">
+        <div  style="margin-top: 20px;" >
             <div>各项存款</div>
             <div id="totalSaves" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
         </div>
 
 
-        <div style="margin-top: 30%;">
+        <div  style="margin-top: 20px;" >
             <div>存贷利差</div>
             <div id="saveDifferLoan" class="chartImage" style="width: 600px;height:400px;z-index: 10;"></div>
         </div>
@@ -366,7 +368,7 @@
 
 
 
-    <!-- 底部菜单 -->
+<!--    &lt;!&ndash; 底部菜单 &ndash;&gt;
     <div style="display:flex;background-color: #fdf9f9;height: 50px;position: fixed;width: 100%;align-items: center;bottom: 0px;z-index:999">
         <div id="homePage" style="text-align: center;width: 20%;">
             <div>
@@ -395,7 +397,7 @@
         <div style="text-align: center;width: 20%">
             我
         </div>
-    </div>
+    </div>-->
 
     <script type="text/javascript" src="../../js/projectChart.js"></script>
 </body>

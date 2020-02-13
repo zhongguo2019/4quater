@@ -2,108 +2,144 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>北京科瑞明软件有限公司--项目工程部</title>
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../layui/css/layui.css"  media="all">
-    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/jweixin-1.2.0.js"></script>
-    <script src="../js/echarts.min.js"></script>
-    <script src="../layui/layui.js" charset="utf-8"></script>
-    <script src="../js/index.js" charset="utf-8"></script>
+    <title>项目日报工具__操作说明</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../plugin/util/layui/css/layui.css">
+    <link rel="stylesheet" href="../plugin/css/navigation.css">
+    <link rel="stylesheet" href="../plugin/css/mescroll.min.css">
+    <script src="../plugin/js/jquery-3.4.1.min.js"></script>
+    <script src="../plugin/js/jweixin-1.2.0.js"></script>
+    <script src="../plugin/js/echarts.min.js"></script>
+    <script src="../plugin/js/mescroll.min.js"></script>
+    <script src="../plugin/util/layui/layui.js"></script>
+    <script src="../plugin/js/Ajax.js"></script>
+    <script type="text/javascript" src="../../js/help.js"></script>
+
 </head>
 <body class="layui-bg-cyan">
+<div class="layui-tab layui-tab-card" >
+    <ul class="layui-tab-title" style="background-color: #2D93CA">
+        <li  class="layui-this "   style="background-color: #2D93CA">日报录入</li>
+        <li  class="layui-this "   style="background-color: #2D93CA">日报查询</li>
+        <li  class="layui-this "   style="background-color: #2D93CA">日报下载</li>
+        <li  class="layui-this "   style="background-color: #2D93CA">日报补报</li>
+        <li  class="layui-this "   style="background-color: #2D93CA">我的日报</li>
+    </ul>
+    <div class="layui-tab-content" style="height: 700px">
+        <div class="layui-tab-item layui-show">
+           用于完成当天工作内容的录入，操作方式如下：<br>
+           一、直接发文本提交，格式如下：<br>
+            [日报]<br>
+            今天<br>
+            [XXXX报送系统]<br>
+            1、人行统计报送工作内容描述XXXX。[XX%]<br>
+            2、人行统计报送工作内容描述XXXX。[XX%]<br>
+            [XXXX系统]<br>
+            1、XXXX。[XX%]<br>
+            2、XXXX。[XX%]<br>
+            [XXXX系统]<br>
+            1、XXXX。[XX%]<br>
+            2、XXXX。[XX%]<br>
+            明天<br>
+            [[XXXX]<br>
+            1、XXXX。[XX%]<br>
+            2、XXXX。[XX%]<br>
+            总结<br>
+            XXXXXXX 内容不超200字。<br>
+            <br>
+            案例如下：<br>
+            [日报]<br>
+            今天<br>
+            [福建EAST4.0项目]<br>
+            1、历史数据检查及同步到监管平台gbase [100]<br>
+            2、时点为报表历史数据加工[100]<br>
+            3、历史时点数据校验[100]<br>
+            明天<br>
+            [福建EAST4.0项目]<br>
+            1、历史时点数据校验及上报工作[100]<br>
+            总结<br>
+            1、目前EAST4.0一阶段投产完成，二阶段针对数据检核结果问题分析以及优化过程，以及历史数据补报工作<br><br>
+            二、功能界面提交日报，操作步骤如下：<br>
+            点击功能菜单，日报管理->日报录入<br><br>
 
-<fieldset class="layui-elem-field layui-field-title" style="margin-top: 0px;">
-    <legend>项目工程部</legend>
-</fieldset>
-<div class="layui-collapse" lay-accordion="" id="banner1" >
-    <div class="layui-colla-item">
-        <h2 class="layui-colla-title"><strong>江苏农信项目群</strong></h2>
-        <div class="layui-colla-content " style="color: #FFFFFF;">
-        <p >
-            负责人：汪伟 <br>
-            简介： <br>
-            江苏农信项目群，始建于2016年公司承接的统一监管报送平台项目，先后为行内实施了以下系统：统一监管报送平台门户、1104监管报送子系统、人行统计报送子系统、金标报送子系统、EAST报送子系统、客户风险子系统、内报表分析子系统、电子银行分析平台。
-            <br> 涉及技术：<br>
-            ETL调度脚本SHELL实现，调试平台使用MOIA,监管报送集市在大数据平台上构建,WAS集群，F5<br>
-            项目沉淀： <br>
-            大数据平台建设技术方案，大数据架构方案，统一监管报送集市，电子银行统计分析平台，行内报表平台
-        </p>
-    </div>
-    </div>
-    <div class="layui-colla-item">
-        <h2 class="layui-colla-title"><strong>江西农信项目群</strong></h2>
-        <div class="layui-colla-content " style="color: #FFFFFF;" >
-            <p  >
-                负责人：许春林<br>
-                简介：<br>
-                经过10多年与江西农信开发合作，公司在江西农信已经实施了近20个规模不等的监管报送接口，并且于2017年实施了统一监管报送集市模型，到目前实现的报送接口如下：<br>
-                1、统一监管报送平台 2、1104报送子系统 3、人行统计报子系统 4、客户风险报送子系统 5、人行标准化报送子系统 6、人行支付结算报送子系统 7、境外银行卡交易子系统 8、个人账户报送子系统 9、人行中债报送子系统 10、客户投诉报送子系统 11、外管局报送 12、信贷小微报送 13、助农取款报送 14、现金统计报送 15、人行支付结算合规报送等
-                <br>涉及技术：<br>
-                ETL调度脚本SHELL实现，公司元数据调度管理平台，DB2开发，WAS集群
-                <br> 项目沉淀：<br>
-                统一监管报送集市，元数据调度管理平台，统一监管报送平台与行内门户统一用核心账号
-            </p>
-        </div>
-    </div>
-    <div class="layui-colla-item">
-        <h2 class="layui-colla-title"><strong>广东农信项目群</strong></h2>
-        <div class="layui-colla-content" style="color: #FFFFFF;">
-            <p >
-                负责人：赵二喜<br>
-                简介：<br>
-                经过10多年与广东农信开发合作，广东农信一直都处于业务发展的最前沿，也是公司部分产品的需求发源地，共投入的项目内容如下：<br>
-                1、监管报送数据治理咨询项目 2、1104报送子系统 3、人行统计报子系统 4、客户风险报送子系统 5、人行标准化报送子系统 6、人行支付结算报送子系统 7、外管局报送子系统 8、反洗钱报送子系统
-                <br>涉及技术：<br>
-                ETL调度脚本SHELL实现，MOIA调度，DB2开发，WAS集群
-                <br> 项目沉淀：<br>
-                监管报送数据质量治理咨询、1104监管报送、人行统计报送、外管局报送
-            </p>
 
         </div>
-    </div>
-    <div class="layui-colla-item">
-        <h2 class="layui-colla-title"><strong>南京银行MAST项目</strong></h2>
-        <div class="layui-colla-content" style="color: #FFFFFF;">
-            负责人：赵二喜<br>
-            简介：<br>
-            南京银行是公司第一个基于大数据的合规风险监测系统项目，系统主要实现以下功能：<br>
-            1、合规模型定制 2、模型探索 3、风险预警 4、风险地图 5、管理驾驶仓 6、问题管理 7、查询查证 8、OA待办CIM系统接口
-            <br>涉及技术：<<br>
-            ETL调度脚本SHELL实现，CONROL-M调度，CDH大数据开发，WAS集群
-            <br> 项目沉淀：<br>
-            领导驾驶仓ECHART图表展示、风险地图、大数据数据模型探索
+        <div class="layui-tab-item">
+            用于查询已经录入的日报内容，只能查询5在区间内的数据,操作方式：：<br>
+            一、直接发文本提交，格式如下：<br>
+            [查询]<br>
+            YYYY-MM-DD至YYYY-MM-DD<br>
+            或<br>
+           [查询]<br>
+            YYYY-MM-DD<br>
+            <br>
+            案例如下：<br>
+            查询<br>
+            2019-09-25至2019-09-30<br>
+
+            二、直接发文本，调阅成员，格式如下：<br>
+            [调阅成员]<br>
+            姓名<br>
+            YYYY-MM-DD至YYYY-MM-DD<br>
+            或<br>
+            [调阅成员]<br>
+            姓名<br>
+            YYYY-MM-DD<br><br>
+            案例如下：<br>
+            [调阅成员]<br>
+            许春林<br>
+            2019-09-20至2019-09-25<br>
+            <br>
+            三、界面录入，操作步骤如下：<br>
+            点击功能菜单，日报管理->日报调阅<br>
         </div>
-    </div>
-<div class="layui-colla-item">
-    <h2 class="layui-colla-title"><strong>其它项目浏览</strong></h2>
-    <div class="layui-colla-content" style="color: #FFFFFF;">
-        <u>湖南农信项目群</u><br>
-        <u>青海农信项目群</u><br>
-        <u>东亚银行项目群</u><br>
-        <u>新疆农信项目群</u><br>
-        <u>福建农信项目群</u><br>
+        <div class="layui-tab-item">
+            用于将已经提交的一段时间的日报内容后台生成表格，下载到用户手机，可以通过命令方式：<br>
+            [报告下载]<br>
+            YYYY-MM-DD至YYYY-MM-DD<br>
+            或<br>
+            [报告下载]<br>
+            YYYY-MM-DD<br><br>
+            案例如下：<br>
+            [报告下载]<br>
+            2019-09-25至2019-09-30<br>
+
+            </div>
+       <div class="layui-tab-item">
+         对于当天未及时提交日报的情况，通过文本形式提交，格式如下：<br>
+           [补报]<br>
+           YYYY-MM-DD ----如：2019-09-10<br>
+           [XXXX]<br>
+           1、XXXX。[XX%]<br>
+           2、XXXX。[XX%]<br>
+           [[XXXX]<br>
+           1、XXXX。[XX%]<br>
+           2、XXXX。[XX%]<br><br>
+           案例如下：<br>
+           [补报]<br>
+           2020-01-20<br>
+           [福建EAST4.0项目]<br>
+           1、历史数据检查及同步到监管平台gbase [80]<br>
+           2、时点为报表历史数据加工[80]<br>
+           3、历史时点数据校验[60]<br>
+           明天<br>
+           [福建EAST4.0项目]<br>
+           1、历史时点数据校验[70]<br>
+           2、时点为报表历史数据加工[90]<br>
+           总结<br>
+           1、目前EAST4.0一阶段投产完成，二阶段针对数据检核结果问题分析以及优化过程，以及历史数据补报工作<br>
+       </div>
+        <div class="layui-tab-item">
+            我的日报功能以时间线形式展示已经提交的日报，类似微信的朋友圈形式：<br>
+            操作方式：<br>
+            日报管理->我的日报<br>
+
+
+        </div>
+<!--        <div class="layui-tab-item">6</div>-->
     </div>
 </div>
-<fieldset class="layui-elem-field layui-field-title" >
-    <legend>团队风采</legend>
-</fieldset>
-    <div class="layui-carousel" id="test10"  >
-        <div carousel-item="">
-            <div class="layui-bg-cyan"><img src="../images/01.png"  style="max-width:100%;"></div>
-            <div class="layui-bg-cyan"><img src="../images/08.png"  style="max-width:100%;"></div>
-            <div class="layui-bg-cyan"><img src="../images/02.png"  style="max-width:100%;"></div>
-            <div class="layui-bg-cyan"><img src="../images/03.png"  style="max-width:100%;"></div>
-            <div class="layui-bg-cyan"><img src="../images/04.png"  style="max-width:100%;"></div>
-            <div class="layui-bg-cyan"><img src="../images/05.png"  style="max-width:100%;"></div>
-            <div class="layui-bg-cyan"><img src="../images/06.png"  style="max-width:100%;"></div>
-            <div class="layui-bg-cyan"><img src="../images/07.png"  style="max-width:100%;"></div>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>

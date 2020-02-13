@@ -288,13 +288,13 @@ function tipsOne() {
                         alignWithLabel: true
                     },
                     nameTextStyle: {
-                        color: '#FFFFFF'
+                        color: '#000000'
                     },
                     axisLabel: {
                         'interval': 0,
                         'rotate': rotate,//文字旋转,
                         textStyle: {
-                            color: '#fff'
+                            color: '#000000'
                         }
                     }
                 }
@@ -306,7 +306,7 @@ function tipsOne() {
 
                     axisLabel: {
                         textStyle: {
-                            color: '#fff'
+                            color: '#000000'
                         }
                     },
                     splitArea: {//间隔区域样式
@@ -5744,6 +5744,7 @@ function tipsSix() {
 };
 
 
+/*
 //事件处理
 
 //点击 首页
@@ -5759,4 +5760,4 @@ $("#insertButton").on('click', function () {
 //点击项目图表按钮
 $(document).on('click', '#goChart', function () {
     location.reload();
-});
+});*/
